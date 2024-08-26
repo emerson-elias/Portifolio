@@ -1,0 +1,13 @@
+@use '/src/Components/sass/variables' as var;
+
+#cursor {
+    position: fixed;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: var.$Secundary_Color;
+    pointer-events: none; 
+    transform: translate(-5em);
+    z-index: 9999;
+    mix-blend-mode: difference;
+}

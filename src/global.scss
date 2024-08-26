@@ -1,0 +1,16 @@
+@use '/src/Components/sass/variables' as var;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var.$gray_primary;
+}
+::-webkit-scrollbar {
+    width: 0;  
+    display: none;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+} 
