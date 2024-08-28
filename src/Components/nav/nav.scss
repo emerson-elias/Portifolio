@@ -112,6 +112,7 @@ header {
             background-color: var.$gray_primary;
             z-index: 999; 
             opacity: 0;
+
             
             @include responsive.screen_tablet_rotate{
                 padding: 30px;
@@ -128,7 +129,6 @@ header {
                 margin-top: 120px;
                 margin: 20px;
                 padding: 1vmax;
-                font-family: var.$font_Primary;
                 z-index: 1;
 
                 @include responsive.screen_tablet_rotate{
@@ -168,7 +168,8 @@ header {
                     text-wrap: nowrap;
                     transform: translateY(-50vh);
                     color: var.$Color_White_B9;
-                    transition: 1s ease-in;
+                    font-family: var.$font_Primary;
+                    transition: 1s ease;
 
                     @include responsive.screen_laptop{
                         font-size: 50px;
@@ -197,6 +198,7 @@ header {
                 height: auto;
                 z-index: 1;
                 pointer-events: none;
+
 
                 @include responsive.screen_tablet_rotate{
                     top: 40%;
@@ -241,4 +243,46 @@ header {
             }
         }
     }
+}
+/* ======================= CLASSES AUXILIARES ============================*/
+
+.collapse-true {
+    transform: translate(0%) !important;
+    opacity: 1 !important;
+}
+
+.header_aux {
+    @include responsive.screen_small{
+        backdrop-filter: blur(20px) !important;
+    }
+}
+
+/*===================== BARRAS QUE FORMAM O BURGUER E A SETA =================*/
+
+.burguer-aux{
+    transform: rotate(360deg) !important;
+    margin-right: 15px !important;
+}
+
+.animate-aux{
+    transform: translateY(0) !important;
+    transition: 1s ease-out !important;
+}
+
+.b-one{
+    width: 36px !important;
+    height: 3px !important;
+    transform: rotate(-30deg) !important;
+    transition: var.$Transition_ease;
+}
+.b-dwo{
+    transition: var.$Transition_ease;
+    width: 60px !important;
+    transform: translateX(15px);
+}
+.b-there{
+    width: 36px !important;
+    height: 3px !important;
+    transform: rotate(30deg) !important;
+    transition: var.$Transition_ease;
 }

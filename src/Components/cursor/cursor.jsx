@@ -11,8 +11,8 @@ export default function Cursor() {
     const Move_Cursor = (e) => {
       gsap.to(cursor, {
         duration: 0.3,
-        x: e.clientX - cursor.offsetWidth / 1.7,
-        y: e.clientY - cursor.offsetHeight / 1.4,
+        x: e.clientX - cursor.offsetWidth / 2,
+        y: e.clientY - cursor.offsetHeight / 2,
         ease: "power2.out"
       })
     }
