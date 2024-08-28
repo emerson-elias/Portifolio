@@ -1,5 +1,7 @@
-import Nav_bar from "./Components/nav/nav"
+import Banner from "./Components/banner/banner.jsx"
 import Cursor from "./Components/cursor/cursor.jsx"
+import Nav_bar from "./Components/nav/nav"
+
 import "./global.scss"
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <>
       <Cursor/>
       <Nav_bar/>
+      <Banner/>
     </>
   )
 }

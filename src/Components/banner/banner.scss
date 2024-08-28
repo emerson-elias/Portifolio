@@ -1,0 +1,190 @@
+@use '/src/Components/sass/components';
+@use '/src/Components/sass/key-Frames';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/variables' as var;
+
+
+.banner {
+    @include mixins.align(relative, flex, center, center);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+
+    @include responsive.screen_small{
+        height: 110vh;
+    }
+
+    .banner-text-linear{
+        position: absolute;
+        width: inherit;
+        height: inherit;                 
+        white-space: nowrap;
+        box-sizing: border-box;
+        pointer-events: none;
+
+        h1{
+            position: relative;
+            top: 42vh;
+            display: inline-block;
+            font-size: 60vh;
+            color: transparent;
+            font-family: var.$font_Tertiary;
+            -webkit-text-stroke: 1px var.$Secundary_Color;
+            animation: text-linear-banner 60s linear infinite;
+
+            @include responsive.screen_small{
+                -webkit-text-stroke: 1px var.$Secundary_Color;
+            }
+        }   
+    }
+
+    .row{
+        @include mixins.align(relative, flex, space-between, center);
+        width: 90vw;
+        height: auto;
+        
+        @include responsive.screen_laptop{
+            flex-direction: column;
+            padding: 100px 0 0 0;
+            
+        }
+
+        .layer-1{
+            position: relative;
+            width: auto;
+            height: 50vh;
+
+            @include responsive.screen_laptop{
+                width: inherit;
+                height: 10vh;
+            }
+
+            h1{
+                font-size: 2vmax;
+                color: var.$Color_White;
+                text-wrap: nowrap;
+                font-weight: 600;
+                font-family: var.$font_Primary; 
+                
+                @include responsive.screen_tablet{
+                    font-size: 20px;
+                }
+            }                                           
+        }
+
+        .layer-2{
+            position: relative;
+            width: 62%;
+            height: auto;
+            -webkit-font-smoothing: antialiased;
+
+            @include responsive.screen_laptop{
+                width: 70%;               
+            }
+            @include responsive.screen_tablet{
+                top: -30px;
+                width: 95%;
+            }
+
+            h1{
+                font-size: 10vmax;
+                color: #ffffffe3;
+                text-wrap: nowrap;
+                font-weight: 500;
+                font-family: var.$font_Primary; 
+                
+                @include responsive.screen_laptop{
+                    font-size: 100px;
+                }
+                @include responsive.screen_tablet_rotate{
+                    text-align: center;
+                    font-size: 50px;
+                }
+                @include responsive.screen_small{
+                    font-size: 60px;             
+                }
+
+                &:nth-child(2){              
+                    margin-left: 5vmax;
+
+                    @include responsive.screen_small{
+                        margin: 0;
+                    }
+
+                    span{
+                        color: var.$Secundary_Color;
+                    }
+                }
+            }
+
+            p{
+                margin-top: 1vmax;
+                width: 70%;
+                margin-left: 20%;
+                font-size: 1.3vmax;
+                color: var.$Color_White;
+                word-spacing: 0.01vmax;
+                letter-spacing: 0.1vmax;
+                line-height: 1.5vmax;
+                font-family: var.$font_Primary;
+
+                @include responsive.screen_laptop{
+                    margin-left: 0;
+                    width: 100%;
+                    font-size: 25px;
+                    word-spacing: 8px;
+                    letter-spacing: 1px;
+                    line-height: 25px;
+                }
+                @include responsive.screen_tablet_rotate{
+                    font-size: 15px;
+                }
+                @include responsive.screen_small{
+                    margin-top: 25px;
+                    font-size: 16px;
+                }
+            }
+        }
+        
+        .layer-3{
+            position: relative;
+            top: 15vh;
+            left: 4%;
+            width: 20%;
+            height: 50vh;
+            transition: 0.1s all ease;                      
+
+            @include responsive.screen_laptop{
+                top: 0;
+                left: 50%;
+                width: 50%;
+                height: 25vh;
+            }
+            @include responsive.screen_small{
+                width: 100%;
+                top: 20px;
+                left: 40%;
+            }
+
+            #magnect-1, #magnect-2 {
+                @include mixins.align(absolute, flex, center, center);
+                top: 0;
+                left: 0;     
+                width: 10vmax;
+                height: 10vmax;
+                border-radius: 100%;
+                background-color: transparent;
+                border: 2px solid var.$Color_White;
+                cursor: pointer;
+                
+                svg{
+                    position: relative;
+                    width: 5vmax;
+                    transform: rotate(180deg);
+                }
+            }
+        }                    
+    }
+}
