@@ -13,14 +13,16 @@ export default function Banner() {
         const elementSecond = magnect2Ref.current
 
         function animix_follow_cursor(container, el_first, el_second) {
-            
+
             if (container && el_first && el_second) {
                 container.addEventListener('mousemove', (e) => {
                     const rect = container.getBoundingClientRect()
                     const Width1 = el_first.offsetWidth / 2
                     const Height1 = el_first.offsetHeight / 2
+
                     const Width2 = el_second.offsetWidth / 2
                     const Height2 = el_second.offsetHeight / 2
+                    
                     const x = e.clientX - rect.left
                     const y = e.clientY - rect.top
 
