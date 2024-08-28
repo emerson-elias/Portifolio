@@ -1,4 +1,4 @@
-{  
+{
   "homepage": "https://emerson-elias.github.io/UPDADE-Portifolio-Com-Reack",
   "name": "new-portifolio",
   "private": true,
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gsap": "^3.12.5",
