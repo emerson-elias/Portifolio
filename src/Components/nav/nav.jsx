@@ -89,7 +89,7 @@ export default function NavBar() {
                         </a>
 
                         <a className="cv" href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer" >
-                            <i className="fa-solid fa-file-csv"></i>
+                            <i className="fa-regular fa-file"></i>
                         </a>
                     </div>
                     

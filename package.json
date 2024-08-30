@@ -1,6 +1,6 @@
 {
   "homepage": "https://emerson-elias.github.io/Portifolio_REACT",
-  "name": "new-portifolio",
+  "name": "portifolio_react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "gsap": "^3.12.5",
     "node-sass": "^9.0.0",
     "normalize.css": "^8.0.1",
