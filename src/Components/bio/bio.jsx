@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import './about.scss'
+import './bio.scss'
 import gsap from 'gsap'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -115,7 +115,7 @@ export default function About() {
             </div>
 
             <div className="btn-sobre-mim" ref={btn_container}>
-                <a href="pages/about.html" target="_blank" ref={btn_one}>
+                <a href="Components/pages/page_about.jsx" target="_blank" ref={btn_one}>
                     me conheça +
                 </a>
                 <a id="a_dwo" ref={btn_dwo}></a>
