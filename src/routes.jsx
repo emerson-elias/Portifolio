@@ -1,20 +1,17 @@
-import { createBrowserRouter } from "react-router-dom"
-import Home from "./Components/rotas/home"
-import About from "./Components/rotas/about"
+import { createBrowserRouter } from "react-router-dom";
+import Home from "./Components/routes/home";
+import About from "./Components/routes/about";
 
-
-
-
-const router = createBrowserRouter([
+const rotas = createBrowserRouter([
    {
-    path: "/",
-    element: <Home />
+      path: "/",
+      element: <Home />
    }
    ,
    {
-    path: "about",
-    element: <About />
+      path: "/about",
+      element: <About />
    }
 ])
 
-export default router
+export default rotas
