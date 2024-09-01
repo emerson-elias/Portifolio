@@ -1,0 +1,45 @@
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/variables' as var;
+
+
+.button-top {
+    position: fixed;    
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    transition: var.$Transition_ease;
+    z-index: 1;
+
+    @include responsive.screen_small{ 
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    .cicle {
+        @include mixins.align(relative, flex, center, center);
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        backdrop-filter: blur(10px);
+        border: 1px solid var.$Color_White;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var.$Secundary_Color;
+            border: transparent;
+        }
+
+        .fa-arrow-up-from-bracket {
+            color: var.$Color_White;
+            font-size: 15px;
+        }
+        
+        &:hover .fa-arrow-up-from-bracket{
+            color: var.$gray_primary;
+        }
+    }               
+}

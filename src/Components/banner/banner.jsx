@@ -65,6 +65,8 @@ export default function Banner() {
       <section className="banner-text-linear">
         <h1> - criando - experiências</h1>
         <h1> - criando - experiências</h1>
+        <h1> - criando - experiências</h1>
+        <h1> - criando - experiências</h1>
       </section>
 
       <section className="row">

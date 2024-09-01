@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import './nav.scss'
+import { Link } from "react-router-dom"
 
 export default function NavBar() {
     useEffect(() => {
@@ -57,10 +58,14 @@ export default function NavBar() {
             <nav className="navbar">
 
                 <div className="active-bar">
-                    <span>emerson</span>
-                    <span>
-                        <span className="game-icons--polar-star"></span> moraes
-                    </span>
+
+                    <Link to={"/"}>
+                        <span>emerson</span>
+                            <span>
+                                <span className="game-icons--polar-star"></span> moraes
+                            </span>
+                    </Link>
+
                 </div>
 
                 <li className="burguer">
@@ -70,10 +75,11 @@ export default function NavBar() {
                 </li>
 
                 <ul id="ancora">
-                    <li><a id="animate" href="pages/about.html">Sobre mim</a></li>
+
+                    <li><Link id="animate" to={"/about"}>Sobre mim</Link></li>
                     <li><a id="animate" href="#tecnologias">Tecnologias</a></li>
                     <li><a id="animate" href="#projetos">Projetos</a></li>
-                    <li><a id="animate" href="#contatos">Contato</a></li>
+                    <li><Link id="animate" to={"/contatc"}>Contato</Link></li>
 
                     <div className="midia">
                         <a className="linkedin" href="https://www.linkedin.com/in/emerson-elias-9b2894228/" target="_blank" rel="noopener noreferrer" >
@@ -92,7 +98,7 @@ export default function NavBar() {
                             <i className="fa-regular fa-file"></i>
                         </a>
                     </div>
-                    
+
                 </ul>
             </nav>
         </header>

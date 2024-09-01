@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./Components/routes/home";
-import About from "./Components/routes/about";
+import Home from "./routes/home";
+import About from "./routes/about/about";
 
 const rotas = createBrowserRouter([
    {

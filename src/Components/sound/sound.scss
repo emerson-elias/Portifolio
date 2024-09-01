@@ -1,0 +1,44 @@
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/variables' as var;
+
+.sound-container{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 85%;
+    pointer-events: none; 
+    z-index: 9;             
+
+    .sound{
+        position: relative;
+        display: block;
+        left: -2.5%;
+        width: 10vmax;
+        height: 2vmax;
+        transform: rotate(-90deg);                   
+        pointer-events: all;
+        cursor: pointer;  
+
+        @include responsive.screen_laptop{
+            width: 135px;
+            height: auto;
+            left: -35px;
+        }
+        @include responsive.screen_small{
+            top: -30px;
+            left: -48px;
+        }
+
+        span{
+            font-size: 1.2vmax;
+            font-family: var.$font_Primary;
+            letter-spacing: 2px;
+            color: var.$Color_White;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop{
+                font-size: 17px;
+            }
+        }
+    }
+}
