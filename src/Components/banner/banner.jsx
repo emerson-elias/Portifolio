@@ -67,6 +67,10 @@ export default function Banner() {
         <h1> - criando - experiências</h1>
         <h1> - criando - experiências</h1>
         <h1> - criando - experiências</h1>
+        <h1> - criando - experiências</h1>
+        <h1> - criando - experiências</h1>
+        <h1> - criando - experiências</h1>
+        <h1> - criando - experiências</h1>
       </section>
 
       <section className="row">

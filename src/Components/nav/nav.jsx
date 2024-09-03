@@ -79,7 +79,7 @@ export default function NavBar() {
                     <li><Link id="animate" to={"/about"}>Sobre mim</Link></li>
                     <li><a id="animate" href="#tecnologias">Tecnologias</a></li>
                     <li><a id="animate" href="#projetos">Projetos</a></li>
-                    <li><Link id="animate" to={"/contatc"}>Contato</Link></li>
+                    <li><a id="animate" href="#contatos">Contato</a></li>
 
                     <div className="midia">
                         <a className="linkedin" href="https://www.linkedin.com/in/emerson-elias-9b2894228/" target="_blank" rel="noopener noreferrer" >

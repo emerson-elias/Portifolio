@@ -1,0 +1,189 @@
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/key-Frames';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/variables' as var;
+
+
+.footer-container{
+    @include mixins.align(relative, flex, center, center);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .text-linear{
+        position: absolute;
+        top: 15vh;  
+        width: 100vw;
+        height: auto;
+        white-space: nowrap;
+        z-index: -1;
+
+        @include responsive.screen_small{
+            top: 180px;
+        }
+
+        h1{
+            position: relative;
+            display: inline-block;
+            font-size: 20vmax;
+            color: transparent;
+            text-wrap: nowrap;
+            -webkit-text-stroke: 1px var.$Secundary_Color;
+            font-family: var.$font_Tertiary;
+            animation: text-linear-left 50s linear infinite;
+        }
+    }
+
+    .row{
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        top: 12vh;
+        width: 100vw;
+        height: auto;
+
+        &::after{
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            margin-top: 37.5vh;
+            transform: translate(-50%, -50%) scale(1.5);
+            width: 100vw;
+            height: 80vh;
+            background-color: var.$Secundary_Color;
+            border-radius: 100%;
+            z-index: -1;
+            pointer-events: none;
+
+            @include responsive.screen_small{
+                width: 500px;
+            }
+        }
+
+        .btn-contact{
+            position: relative;
+            width: auto;
+            height: auto;
+            margin: 4vmax;
+            padding: 1.1vmax 2vmax;
+            border-radius: 5vmax;
+            font-size: 1.1vmax;
+            font-family: var.$font_Tertiary;
+            letter-spacing: 2px;
+            border: none;
+            color: var.$gray_primary;
+            cursor: pointer;
+
+            @include responsive.screen_small{
+                font-size: 14px;
+            }
+        }
+
+        .information{
+            position: relative;
+            width: 40%;
+            height: auto;
+            margin-bottom: 3vmax;
+
+            @include responsive.screen_small{
+                width: 70%;
+                margin: 0;
+            }
+
+            p{
+                text-align: center;
+                font-size: 1.3vmax;
+                font-family: var.$font_Secondary;
+                color: var.$gray_primary;
+                letter-spacing: 1px;
+                line-height: 1.5vmax;
+
+                @include responsive.screen_small{
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+
+            .layer{
+                position: relative;
+                width: initial;
+                height: auto;
+                text-align: center;
+
+                h1{
+                    font-family: var.$font_Primary;
+                    margin: 2vmax 0 .2vmax 0;
+                    font-size: 1.4vmax;
+
+                    @include responsive.screen_small{
+                        font-size: 14px;
+                    }
+                }
+                span{
+                    font-size: 1.1vmax; 
+                    cursor: pointer;
+                    
+                    @include responsive.screen_small{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        
+        .social-row{
+            position: relative;
+
+            @include responsive.screen_small{
+                top: 50px;
+            }
+
+            h1{
+                font-family: var.$font_Primary;
+                text-align: center;
+                font-size: 1.4vmax;
+                margin: 1.5vmax;
+
+                @include responsive.screen_small{
+                    font-size: 14px;
+                }
+            }
+
+            .midia{
+                @include mixins.align(relative, flex, center, center);
+                width: 100%;
+                height: auto;
+
+                .cv, .instagram, .linkedin, .git-icon-footer{
+                    @include mixins.align(relative, flex, center, center);
+                    width: 7vh;
+                    height: 7vh;
+                    margin: 0 12px 0 12px;
+                    border-radius: 100%;
+                    text-decoration: none;
+                    border: 1px solid var.$gray_primary;
+                    transition: var.$Transition_ease;
+
+                    @include responsive.screen_small{
+                       width: 6vh;
+                       height: 6vh;
+                    }
+
+                    &:hover{
+                        transform: scale(1.7);
+                        border: none;
+                        border: 1px solid var.$Secundary_Color;
+                    }
+                    
+                    i{
+                        font-size: 4vh;
+                        color: var.$gray_primary;
+
+                        @include responsive.screen_small{
+                            font-size: 3vh;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}

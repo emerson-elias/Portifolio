@@ -4,6 +4,7 @@ import Banner from "../Components/banner/banner.jsx"
 import Cursor from "../Components/cursor/cursor.jsx"
 import Sound from "../Components/sound/sound.jsx"
 import Topo from "../Components/topo/topo.jsx"
+import Footer from "../Components/footer/footer.jsx"
 
 export default function Home(){
 
@@ -15,6 +16,7 @@ export default function Home(){
             <Bio />
             <Sound />
             <Topo />
+            <Footer />
         </>
     )
 }

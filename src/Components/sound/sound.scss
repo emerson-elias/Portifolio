@@ -25,7 +25,6 @@
             left: -35px;
         }
         @include responsive.screen_small{
-            top: -30px;
             left: -48px;
         }
 
@@ -34,7 +33,6 @@
             font-family: var.$font_Primary;
             letter-spacing: 2px;
             color: var.$Color_White;
-            text-transform: uppercase;
 
             @include responsive.screen_laptop{
                 font-size: 17px;

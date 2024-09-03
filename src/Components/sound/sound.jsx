@@ -26,11 +26,11 @@ export default function Sound() {
 
     return (
         <section className="sound-container">
-            <div className="sound" onClick={handleSound}>
+            <a className="sound" onClick={handleSound}>
                 <span>sound : </span>
                 <span>{soundState}</span>
                 <audio ref={musicRef} loop src={music}></audio>
-            </div>
+            </a>
         </section>
     )
 }
