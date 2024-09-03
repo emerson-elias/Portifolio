@@ -7,11 +7,10 @@
     height: 4vw;
     border-radius: 50%;
     background-color: var.$Secundary_Color;
-    pointer-events: none; 
+    pointer-events: none;
     transform: translate(-5em);
     z-index: 9999;
     mix-blend-mode: difference;
-    pointer-events: none;
 
     @include responsive.screen_tablet{
         display: none;
