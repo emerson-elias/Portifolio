@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import './footer.scss'
 
 export default function Footer() {
@@ -24,16 +24,18 @@ export default function Footer() {
 
             <section className='row'>
 
-                <button className='btn-contact' ref={btnRef} onClick={EmailClick}>
-                    entre em contato
-                </button>
+                <a href="#" className='btn-container'>
+                    <button className='btn-contact' ref={btnRef} onClick={EmailClick}>
+                        entre em contato
+                    </button>
+                </a>
 
                 <div className="information">
                     <p>mande-me uma mensagem, vamos trabalhar juntos e desenvolver experiências incríveis:</p>
 
                     <div className='layer'>
                         <h1> ① escreva um e-mail</h1>
-                        <span id="email" onClick={EmailClick}>emersonees707@gmail.com</span>
+                        <a onClick={EmailClick}>emersonees707@gmail.com</a>
                     </div>
 
                 </div>

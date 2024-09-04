@@ -60,22 +60,34 @@
             }
         }
 
-        .btn-contact{
+        .btn-container{
             position: relative;
             width: auto;
             height: auto;
             margin: 4vmax;
-            padding: 1.1vmax 2vmax;
             border-radius: 5vmax;
-            font-size: 1.1vmax;
-            font-family: var.$font_Tertiary;
-            letter-spacing: 2px;
-            border: none;
-            color: var.$gray_primary;
-            cursor: pointer;
 
-            @include responsive.screen_small{
-                font-size: 14px;
+            .btn-contact{
+                position: relative;
+                width: auto;
+                height: auto;    
+                padding: 1.1vmax 2vmax;
+                border-radius: 5vmax;
+                font-size: 1.1vmax;
+                font-family: var.$font_Tertiary;
+                letter-spacing: 2px;
+                border: 1px solid var.$Color_White;
+                color: var.$gray_primary;
+                cursor: pointer;
+    
+                @include responsive.screen_small{
+                    font-size: 14px;
+                }
+    
+                &:hover{
+                   background-color: var.$Secundary_Color;
+                   border: 1px solid var.$gray_primary;
+                }
             }
         }
 
@@ -119,7 +131,7 @@
                         font-size: 14px;
                     }
                 }
-                span{
+                a{
                     font-size: 1.1vmax; 
                     cursor: pointer;
                     

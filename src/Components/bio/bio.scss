@@ -3,7 +3,7 @@
 @use '/src/Components/sass/responsive';
 @use '/src/Components/sass/variables' as var;
 
-.about-container{
+.container{
     @include mixins.align(relative, flex, center, center);
     flex-direction: column;                
     width: 100vw;

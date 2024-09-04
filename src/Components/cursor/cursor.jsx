@@ -17,9 +17,9 @@ export default function Cursor() {
       })
     }
 
-    const Cusor_Elememt_Enter = () => {
+    const Cursor_Elememt_Enter = () => {
       gsap.to(cursor, {
-        scale: 4, // Aumenta o tamanho do cursor
+        scale: 20, // Aumenta o tamanho do cursor
         duration: 0.3,
         ease: "power2.out"
       })
@@ -37,7 +37,7 @@ export default function Cursor() {
     document.addEventListener('mousemove', Move_Cursor)
 
     document.querySelectorAll('a').forEach(anchor => {
-      anchor.addEventListener('mouseover', Cusor_Elememt_Enter)
+      anchor.addEventListener('mouseover', Cursor_Elememt_Enter)
       anchor.addEventListener('mouseout', Cursor_Element_Out)
     })
 
@@ -46,7 +46,7 @@ export default function Cursor() {
       document.removeEventListener('mousemove', Move_Cursor)
 
       document.querySelectorAll('a').forEach(anchor => {
-        anchor.removeEventListener('mouseover', Cusor_Elememt_Enter)
+        anchor.removeEventListener('mouseover', Cursor_Elememt_Enter)
         anchor.removeEventListener('mouseout', Cursor_Element_Out)
       })
     }

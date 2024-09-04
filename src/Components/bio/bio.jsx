@@ -74,7 +74,7 @@ export default function About() {
     }, [])
 
     return (
-        <section className="about-container">
+        <section className="container">
 
             <div className="about-titlle">
                 <h1>palavras</h1>
