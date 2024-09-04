@@ -40,21 +40,15 @@
   }
 }
 
-@keyframes text-linear-banner{
+/*==============================================================================================*/
+
+        /* SLIDE DOS CERTIFICADOS */
+@keyframes slider-linear{
   0%{
       transform: translateX(0%);
   }
   100%{
       transform: translateX(-100%);
-  }
-}
-
-@keyframes slider-linear-banner{
-  0%{
-      transform: translate(100%);
-  }
-  100%{
-      transform: translate(-100%);
   }
 }
 

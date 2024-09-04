@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react"
+
 import Nav_bar from "../../Components/nav/nav.jsx"
 import Cursor from "../../Components/cursor/cursor.jsx"
 import Footer from "../../Components/footer/footer.jsx"
@@ -6,8 +8,17 @@ import Topo from "../../Components/topo/topo.jsx"
 
 import img from "../../assets/img/Me-hero.png"
 import '../about/about.scss'
+import Certificados from "./certificados/certificados.jsx"
 
 export default function About() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+
+
+    }, [])
+
+
     return (
         <>
             <Cursor />
@@ -91,55 +102,26 @@ export default function About() {
 
                         <p>Depois de concluir o curso, decidi me aventurar em uma nova cidade em busca de oportunidades. Mesmo diante dos desafios, nunca deixei de lado meus estudos e minha determinação em aprender cada vez mais, sempre buscando crescer na carreira e como pessoa.</p>
 
-                        <h3>Estou muito feliz por você estar aqui!</h3>
+                        <h3>Baixe meu currículo !</h3>
 
                     </div>
 
                 </div>
 
-                <div className="footer-cicle-animate">
-                    <span>cv</span>
-                    
+                <div className="cicle-animate">
                     <a href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer">
-                        
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428.9632 199.70691">
                             <ellipse cx="214.4816" cy="119.29561" rx="213.4816" ry="79.4113" fill="none" stroke="white" strokeWidth="2"></ellipse>
                             <ellipse cx="214.4816" cy="80.4113" rx="213.4816" ry="79.4113" fill="none" stroke="white" strokeWidth="2"></ellipse>
+                            <text x="50%" y="50%" textAnchor="middle" dy=".3em" fill="#ffffffb9" stroke="#ffffffb9">cv</text>
                         </svg>
                     </a>
+
                 </div>
 
             </section>
 
-            <section className="hobbies-container">
-
-                <div className="hobbies">
-
-                    <div className="slader-img">
-                    <img src="/img/controls.jpg" alt="" />
-                    </div>
-
-                    <div className="slader-img">
-                    <img src="/img/games.jpg" alt="" /> 
-                    </div>
-
-                    <div className="slader-img">
-                    <img src="/img/mario.jpg" alt="" />
-                    </div>
-
-                    <div className="slader-img">
-                    <img src="/img/pexel.jpg" alt="" />
-                    </div>
-
-                    <div className="slader-img">
-                    <img src="/img/pexels.jpg" alt="" />
-                    </div>
-                                 
-                    
-                </div>
-
-                
-            </section>
+            <Certificados />
             <Sound />
             <Topo />
             <Footer />

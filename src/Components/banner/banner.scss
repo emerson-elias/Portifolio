@@ -32,7 +32,7 @@
             color: transparent;
             font-family: var.$font_Tertiary;
             -webkit-text-stroke: 1px var.$Secundary_Color;
-            animation: text-linear-banner 60s linear infinite;
+            animation: slider-linear 60s linear infinite;
 
             @include responsive.screen_small{
                 -webkit-text-stroke: 1px var.$Secundary_Color;
