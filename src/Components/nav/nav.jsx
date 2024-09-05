@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './nav.scss'
-import { Link } from "react-router-dom"
+import { Link , useLocation} from "react-router-dom"
 
 export default function NavBar() {
     useEffect(() => {
@@ -53,6 +53,20 @@ export default function NavBar() {
         }
     }, [])
 
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.hash) {
+          
+            setTimeout(() => {
+                const element = document.querySelector(location.hash)
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                }
+            }, 0)
+        }
+    }, [location])
+
     return (
         <header>
             <nav className="navbar">
@@ -77,8 +91,8 @@ export default function NavBar() {
                 <ul id="ancora">
 
                     <li><Link id="animate" to={"/about"}>Sobre mim</Link></li>
-                    <li><a id="animate" href="#tecnologias">Tecnologias</a></li>
-                    <li><a id="animate" href="#projetos">Projetos</a></li>
+                    <li><Link id="animate" to="/#tecnologias">Tecnologias</Link></li>
+                    <li><Link id="animate" to="/#projetos">Projetos</Link></li>
                     <li><a id="animate" href="#contatos">Contato</a></li>
 
                     <div className="midia">

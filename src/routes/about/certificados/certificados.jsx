@@ -22,10 +22,10 @@ export default function Certificados() {
             <div className="certificados">
                 <div className="layer-1">
                     <div className="img">
-                        <img src="./img/controls.jpg" alt="" />
+                        <img src="./img/certificado-mineração.png" alt="" />
                     </div>
                     <div className="img">
-                        <img src="./img/games.jpg" alt="" />
+                        <img src="./img/certificado-potencializa.png" alt="" />
                     </div>
                     <div className="img">
                         <img src="./img/mario.jpg" alt="" />
@@ -40,7 +40,7 @@ export default function Certificados() {
 
                 <div className="layer-2">
                     <div className="img">
-                        <img src="./img/controls.jpg" alt="" />
+                        <img src="./img/certificado-monitor.png" alt="" />
                     </div>
                     <div className="img">
                         <img src="./img/games.jpg" alt="" />

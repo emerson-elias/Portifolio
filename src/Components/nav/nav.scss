@@ -262,7 +262,7 @@ header {
 
 .header_aux {
     @include responsive.screen_small{
-        backdrop-filter: blur(20px) !important;
+        background-color: var.$gray_primary !important;
     }
 }
 
