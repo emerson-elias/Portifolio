@@ -30,10 +30,10 @@
 
             h1 {
                 padding: 0 3vmax;
-                font-size: 15vmax;
+                font-size: 20vmax;
                 font-family: var.$font_Tertiary;
                 color: transparent;
-                -webkit-text-stroke: 1.5px var.$Secundary_Color;
+                -webkit-text-stroke: 1px var.$Secundary_Color;
                 animation: slider-linear 30s linear infinite;
                 will-change: transform;
             }
@@ -65,7 +65,7 @@
                     font-size: 25px;
                     padding-left: 35px;
 
-                    &:nth-child(5){
+                    &:nth-child(6){
                         margin-top: 120px;
                     }
                 }        

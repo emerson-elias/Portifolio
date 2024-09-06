@@ -121,7 +121,12 @@ export default function About() {
 
                 <div className="word-row-2">
                     <span>developer</span>
-                    <span>games</span>
+                    <span>games
+                        <svg className="o-ui-arrow" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                            <path d="M3.10162 3.10156L62.9999 62.9999" strokeLinecap="round" strokeLinejoin="round" stroke="#fff"></path> 
+                            <path d="M63 1.00001L63 63L0.999989 63" strokeLinecap="round" strokeLinejoin="round" stroke="#fff"></path> 
+                        </svg>
+                    </span>
                     <span>pizzas</span>
                     <span>poesias</span>
                 </div>

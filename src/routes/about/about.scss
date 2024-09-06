@@ -108,6 +108,11 @@
                 @include responsive.screen_small{
                     right: 7%;
                 }
+
+                svg{
+                    position: relative;
+                    right: 70vw;
+                }
             }
             &:nth-child(3){
                 text-align: center
