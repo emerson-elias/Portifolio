@@ -121,12 +121,10 @@ header {
             background-color: var.$gray_primary;
             z-index: 999; 
             opacity: 0;
-
             
             @include responsive.screen_tablet_rotate{
                 padding: 30px;
                 margin: 0;
-                flex-wrap: wrap;  
             }
             @include responsive.screen_small{
                 padding-top: 40px;
@@ -143,8 +141,7 @@ header {
                 @include responsive.screen_tablet_rotate{
                     margin: 0;
                     width: 40vw;
-                    height: 40vh;
-                    flex-wrap: wrap;            
+                    height: 40vh;        
                 }
                 @include responsive.screen_small{
                    margin: 10px 0 20px 0;

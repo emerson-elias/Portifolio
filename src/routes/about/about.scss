@@ -12,58 +12,115 @@
     height: auto;
     overflow: hidden;
 
-    span{
+    .word-row-1{
         position: relative;
         width: inherit;
         height: auto;
-        margin: 1vmax;
-        font-size: 10vmax;
-        font-family: var.$font_Primary;
-        color: var.$Color_White_B9;
 
-        @include responsive.screen_small{
-            font-size: 60px;
-        }
-
-        &:nth-child(1){
-            text-align: start;
-            padding-left: 4%;
-
-            svg{
-                position: absolute;
-                top: -30%;
-                left: 70%;
-                animation: girar_left 15s linear infinite;
+        span{
+            position: relative;
+            display: block;
+            width: inherit;
+            height: auto;
+            margin: 1vmax;
+            font-size: 10vmax;
+            font-family: var.$font_Primary;
+            color: var.$Color_White_B9;
+    
+            @include responsive.screen_small{
+                font-size: 60px;
+                margin: 30px 0;
+            }
+    
+            &:nth-child(1){
+                text-align: start;
+                padding-left: 4%;
+    
+                svg{
+                    position: absolute;
+                    top: -30%;
+                    left: 70%;
+                    animation: girar_left 15s linear infinite;
+                }
+            }
+            &:nth-child(2){
+                text-align: center;
+                padding-left: 7%;
+            }
+            &:nth-child(3){
+                text-align: start;
+                padding-left: 3%;
+            }
+            &:nth-child(4){
+                text-align: end;
+                padding-right: 8%;
+            }
+            &:nth-child(5){
+                position: relative;
+                margin-top: -1%;
+                text-align: start;
+                padding-left: 15%;
+            }
+            &:nth-child(6){
+                position: relative;
+                text-align: end;
+                padding-right: 13%;
+                
+                @include responsive.screen_small{
+                    padding-right: 20px;
+                }
             }
         }
-        &:nth-child(2){
-            text-align: center;
-            padding-left: 7%;
-        }
-        &:nth-child(3){
-            text-align: start;
-            padding-left: 3%;
-        }
-        &:nth-child(4){
-            text-align: end;
-            padding-right: 8%;
-        }
-        &:nth-child(5){
+    }
+
+    .word-row-2{
+        position: relative;
+        margin-top: 15vh;
+        width: inherit;
+        height: auto;
+
+        span{
             position: relative;
-            margin-top: -1%;
-            text-align: start;
-            padding-left: 15%;
-        }
-        &:nth-child(6){
-            text-align: center;
-            padding-right: 2%;
-            color: var.$Secundary_Color;
-        }
-        &:nth-child(7){
-            position: relative;
-            margin-top: -1%;
-            text-align: end;
-            padding-right: 2%;
+            display: block;
+            width: inherit;
+            height: auto;
+            margin: 1vmax;
+            font-size: 10vmax;
+            font-family: var.$font_Primary;
+            color: var.$Color_White_B9;
+
+            @include responsive.screen_small{
+                   font-size: 55px;
+                   margin: 30px 0;
+               }
+
+            &:nth-child(1){
+                left: 2%;
+
+                @include responsive.screen_small{
+                    left: 30px;
+                }
+            }
+            &:nth-child(2){
+                text-align: end;
+                right: 3%;
+
+                @include responsive.screen_small{
+                    right: 7%;
+                }
+            }
+            &:nth-child(3){
+                text-align: center
+            }
+            &:nth-child(4){
+                top: 2vh;
+                left: 15%;
+
+                @include responsive.screen_small{
+                    top: 0;
+                    left: 30px;
+                }
+            }
         }
     }
 
@@ -110,17 +167,19 @@
             }     
 
             p{
-                font-size: 1.2vmax;
+                font-size: 1.3vmax;
                 color: var.$Color_White_B9;
                 font-family: "Ubuntu", sans-serif;
                 font-weight: 400;
                 line-height: 1.5;
                 margin: 3%;
-                text-align: start;
-                text-indent: 70px;
 
                 @include responsive.screen_laptop{
                     font-size: 15px;
+                    text-align: center;
+                }      
+                @include responsive.screen_small{
+                    font-size: 17px;
                 }
 
                 a{

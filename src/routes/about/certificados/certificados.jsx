@@ -15,44 +15,54 @@ export default function Certificados() {
                 </div>
 
                 <div className="tittle">
-                    <h1>Crie metas na vida e alcance-as, sempre seremos eternos alunos</h1>
+                    <span>Crie</span>
+                    <span>metas</span>
+                    <span>na</span>
+                    <span>vida e</span>
+                    <span>as</span>
+                    <span>alcance,</span>
+                    <span>sempre</span>
+                    <span>seremos</span>
+                    <span>eternos</span>
+                    <span>alunos</span>
                 </div>
             </section>
 
             <div className="certificados">
+
                 <div className="layer-1">
-                    <div className="img">
+                    <div className="box-img">
                         <img src="./img/certificado-mineração.png" alt="" />
                     </div>
-                    <div className="img">
+                    <div className="box-img">
+                        <img src="./img/certificado-monitor.png" alt="" />
+                    </div>
+                    <div className="box-img">
                         <img src="./img/certificado-potencializa.png" alt="" />
                     </div>
-                    <div className="img">
-                        <img src="./img/mario.jpg" alt="" />
+                    <div className="box-img">
+                        <img src="./img/diploma.png" alt="" />
                     </div>
-                    <div className="img">
-                        <img src="./img/pexel.jpg" alt="" />
-                    </div>
-                    <div className="img">
-                        <img src="./img/pexels.jpg" alt="" />
+                    <div className="box-img">
+                        <img src="./img/certificado-mineração.png" alt="" />
                     </div>
                 </div>
 
                 <div className="layer-2">
-                    <div className="img">
+                    <div className="box-img">
+                        <img src="./img/certificado-potencializa.png" alt="" />
+                    </div>
+                    <div className="box-img">
+                        <img src="./img/diploma.png" alt="" />
+                    </div>
+                    <div className="box-img">
+                        <img src="./img/certificado-mineração.png" alt="" />
+                    </div>
+                    <div className="box-img">
                         <img src="./img/certificado-monitor.png" alt="" />
                     </div>
-                    <div className="img">
-                        <img src="./img/games.jpg" alt="" />
-                    </div>
-                    <div className="img">
-                        <img src="./img/mario.jpg" alt="" />
-                    </div>
-                    <div className="img">
-                        <img src="./img/pexel.jpg" alt="" />
-                    </div>
-                    <div className="img">
-                        <img src="./img/pexels.jpg" alt="" />
+                    <div className="box-img">
+                        <img src="./img/certificado-potencializa.png" alt="" />
                     </div>
                 </div>
             </div>
