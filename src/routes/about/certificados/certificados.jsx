@@ -6,7 +6,6 @@ export default function Certificados() {
     return (
         <section className="certificados-container">
 
-
             <section className="row">
 
                 <div className="slider-text">
@@ -32,37 +31,37 @@ export default function Certificados() {
 
                 <div className="layer-1">
                     <div className="box-img">
-                        <img src="./img/certificado-mineração.png" alt="" />
+                        <img src="./certificados/certificado-mineração.png" alt="mineração" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/certificado-monitor.png" alt="" />
+                        <img src="./certificados/certificado-monitor.png" alt="monitor" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/certificado-potencializa.png" alt="" />
+                        <img src="./certificados/certificado-potencializa.png" alt="potencializa" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/diploma.png" alt="" />
+                        <img src="./certificados/diploma.png" alt="diploma" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/certificado-mineração.png" alt="" />
+                        <img src="./certificados/certificado-mineração.png" alt="mineração" />
                     </div>
                 </div>
 
                 <div className="layer-2">
                     <div className="box-img">
-                        <img src="./img/certificado-potencializa.png" alt="" />
+                        <img src="./certificados/certificado-potencializa.png" alt="potencializa" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/diploma.png" alt="" />
+                        <img src="./certificados/diploma.png" alt="diploma" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/certificado-mineração.png" alt="" />
+                        <img src="./certificados/certificado-mineração.png" alt="mineração" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/certificado-monitor.png" alt="" />
+                        <img src="./certificados/certificado-monitor.png" alt="monitor" />
                     </div>
                     <div className="box-img">
-                        <img src="./img/certificado-potencializa.png" alt="" />
+                        <img src="./certificados/certificado-potencializa.png" alt="potencializa" />
                     </div>
                 </div>
             </div>

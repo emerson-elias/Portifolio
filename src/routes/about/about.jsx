@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 
 import Nav_bar from "../../Components/nav/nav.jsx"
 import Cursor from "../../Components/cursor/cursor.jsx"
@@ -9,15 +9,13 @@ import Topo from "../../Components/topo/topo.jsx"
 import img from "../../assets/img/Me-hero.png"
 import '../about/about.scss'
 import Certificados from "./certificados/certificados.jsx"
+import Tranks from "./thanks/thanks.jsx"
 
 export default function About() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-
-
     }, [])
-
 
     return (
         <>
@@ -131,6 +129,7 @@ export default function About() {
             </section>
 
             <Certificados />
+            <Tranks />
             <Sound />
             <Topo />
             <Footer />

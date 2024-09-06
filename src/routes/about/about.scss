@@ -142,9 +142,16 @@
         img{
             width: 30%;
             border-radius: 2vmax;
+            filter: grayscale(100%);
+            transition: var.$Transition_ease;
 
             @include responsive.screen_small{
                 width: 220px;
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: var.$Transition_ease;
             }
         }
 
