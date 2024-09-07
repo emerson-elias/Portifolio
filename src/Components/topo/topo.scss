@@ -17,29 +17,25 @@
     @include responsive.screen_small{ 
         margin-right: 15px;
         margin-bottom: 20px;
-    }
-
-    .cicle {
-        @include mixins.align(relative, flex, center, center);
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-        backdrop-filter: blur(10px);
-        border: 1px solid var.$Color_White;
+    } 
+    
+    a{
         cursor: pointer;
-
-        &:hover{
-            background-color: var.$Secundary_Color;
-            border: transparent;
-        }
-
-        .fa-arrow-up-from-bracket {
-            color: var.$Color_White;
-            font-size: 15px;
-        }
         
-        &:hover .fa-arrow-up-from-bracket{
-            color: var.$gray_primary;
+        svg{
+            width: 3vmax;
+            color: var.$Color_White;
+
+            @include responsive.screen_laptop{
+                width: 50px;
+            }
+            @include responsive.screen_small{
+                width: 37px;
+            }
         }
-    }               
+
+        &:hover svg{
+            color: var.$Secundary_Color;
+        }
+    }
 }

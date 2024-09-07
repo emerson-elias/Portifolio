@@ -108,7 +108,7 @@ export default function About() {
 
                 </div>
 
-                <div className="cicle-animate">
+                <div className="cicle">
                     <a href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428.9632 199.70691">
                             <ellipse cx="214.4816" cy="119.29561" rx="213.4816" ry="79.4113" fill="none" stroke="white" strokeWidth="2"></ellipse>

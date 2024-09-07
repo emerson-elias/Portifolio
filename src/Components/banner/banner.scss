@@ -47,8 +47,7 @@
         
         @include responsive.screen_laptop{
             flex-direction: column;
-            padding: 100px 0 0 0;
-            
+            padding: 100px 0 0 0;       
         }
 
         .layer-1{
@@ -66,7 +65,7 @@
                 color: var.$Color_White;
                 text-wrap: nowrap;
                 font-weight: 600;
-                font-family: var.$font_Primary; 
+                font-family: var.$font_Primary;
                 
                 @include responsive.screen_tablet{
                     font-size: 20px;
@@ -76,7 +75,8 @@
 
         .layer-2{
             position: relative;
-            width: 62%;
+            width: 70%;
+            margin-left: 2%;
             height: auto;
             -webkit-font-smoothing: antialiased;
 
@@ -88,22 +88,34 @@
                 width: 95%;
             }
 
-            h1{
-                font-size: 10vmax;
-                color: #ffffffe3;
-                text-wrap: nowrap;
-                font-weight: 500;
-                font-family: var.$font_Primary; 
-                
-                @include responsive.screen_laptop{
-                    font-size: 100px;
-                }
-                @include responsive.screen_tablet_rotate{
-                    text-align: center;
-                    font-size: 50px;
-                }
-                @include responsive.screen_small{
-                    font-size: 60px;             
+            .box{
+                position: relative;
+                width: initial;
+                height: auto;
+                overflow: hidden;
+
+                h1{
+                    font-size: 10vmax;
+                    color: #ffffffe3;
+                    text-wrap: nowrap;
+                    font-weight: 500;
+                    font-family: var.$font_Primary;
+                    animation: up-in 1s ease-in-out;
+                    
+                    @include responsive.screen_laptop{
+                        font-size: 100px;
+                    }
+                    @include responsive.screen_tablet_rotate{
+                        text-align: center;
+                        font-size: 50px;
+                    }
+                    @include responsive.screen_small{
+                        font-size: 60px;             
+                    }
+
+                    span{
+                        color: var.$Secundary_Color;
+                    }
                 }
 
                 &:nth-child(2){              
@@ -111,10 +123,6 @@
 
                     @include responsive.screen_small{
                         margin: 0;
-                    }
-
-                    span{
-                        color: var.$Secundary_Color;
                     }
                 }
             }
@@ -151,10 +159,11 @@
         .layer-3{
             position: relative;
             top: 15vh;
-            left: 4%;
-            width: 20%;
+            width: 15%;
             height: 50vh;
-            transition: 0.1s all ease;                      
+            transition: 0.1s all ease;  
+            -webkit-animation: bounce-in-top 1.1s both;
+	        animation: bounce-in-top 1.1s both;   
 
             @include responsive.screen_laptop{
                 top: 0;

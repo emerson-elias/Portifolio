@@ -19,7 +19,7 @@ export default function Cursor() {
 
     const Cursor_Elememt_Enter = () => {
       gsap.to(cursor, {
-        scale: 20, // Aumenta o tamanho do cursor
+        scale: 15, // Aumenta o tamanho do cursor
         duration: 0.3,
         ease: "power2.out"
       })

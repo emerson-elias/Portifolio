@@ -16,33 +16,33 @@ export default function Banner() {
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
 
-      gsap.to(element_first, { 
-        duration: 0.3, 
-        x: x - element_first.offsetWidth / 2, 
-        y: y - element_first.offsetHeight / 2, 
-        ease: 'power1.out' 
+      gsap.to(element_first, {
+        duration: 0.3,
+        x: x - element_first.offsetWidth / 2,
+        y: y - element_first.offsetHeight / 2,
+        ease: 'power1.out'
       })
 
-      gsap.to(element_second, { 
-        duration: 0.6, 
-        x: x - element_second.offsetWidth / 2, 
-        y: y - element_second.offsetHeight / 2, 
-        ease: 'power1.out' 
+      gsap.to(element_second, {
+        duration: 0.6,
+        x: x - element_second.offsetWidth / 2,
+        y: y - element_second.offsetHeight / 2,
+        ease: 'power1.out'
       })
     }
 
     const handleMouseLeave = () => {
-      gsap.to(element_first, { 
-        duration: 0.3, 
-        x: 0, 
-        y: 0, 
-        ease: 'power1.out' 
+      gsap.to(element_first, {
+        duration: 0.3,
+        x: 0,
+        y: 0,
+        ease: 'power1.out'
       })
 
-      gsap.to(element_second, { 
-        duration: 0.6, 
-        x: 0, 
-        y: 0, 
+      gsap.to(element_second, {
+        duration: 0.6,
+        x: 0,
+        y: 0,
         ease: 'power1.out'
       })
     }
@@ -74,16 +74,25 @@ export default function Banner() {
       </section>
 
       <section className="row">
+
         <div className="layer-1">
           <h1>creative ⟶</h1>
         </div>
 
         <div className="layer-2">
-          <h1>front-end</h1>
-          <h1><span>dev</span>eloper</h1>
+
+          <div className="box">
+            <h1>front-end</h1>
+          </div>
+
+          <div className="box">
+            <h1><span>dev</span>eloper</h1>
+          </div>
+
           <p>─ Sou desenvolvedor naturalista de São Luís,
             amo programação, ─ designs minimalistas e ornamentados, músicas, jogos, natureza e pizza.
           </p>
+          
         </div>
 
         <div className="layer-3" ref={layer3Ref}>
@@ -96,7 +105,7 @@ export default function Banner() {
 
           <div id="magnect-2" ref={magnect2Ref}></div>
         </div>
-        
+
       </section>
     </section>
   )

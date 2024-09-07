@@ -1,4 +1,5 @@
 @use '/src/Components/sass/components';
+@use '/src/Components/sass/key-Frames';
 @use '/src/Components/sass/responsive';
 @use '/src/Components/sass/mixins';
 @use '/src/Components/sass/variables' as var;
@@ -29,12 +30,13 @@
     
             @include responsive.screen_small{
                 font-size: 60px;
-                margin: 30px 0;
+                margin: 50px 0;
             }
     
             &:nth-child(1){
                 text-align: start;
                 padding-left: 4%;
+                animation: left 2s ease;
     
                 svg{
                     position: absolute;
@@ -46,25 +48,31 @@
             &:nth-child(2){
                 text-align: center;
                 padding-left: 7%;
+                animation: right 2s ease;
             }
             &:nth-child(3){
                 text-align: start;
                 padding-left: 3%;
+                animation: rotateX 2s ease;
             }
             &:nth-child(4){
                 text-align: end;
                 padding-right: 8%;
+                animation: rotateZ 2s ease;
+                
             }
             &:nth-child(5){
                 position: relative;
                 margin-top: -1%;
                 text-align: start;
                 padding-left: 15%;
+                animation: left 2s ease;
             }
             &:nth-child(6){
                 position: relative;
                 text-align: end;
                 padding-right: 13%;
+                animation: right 2s ease;
                 
                 @include responsive.screen_small{
                     padding-right: 20px;
@@ -90,9 +98,9 @@
             color: var.$Color_White_B9;
 
             @include responsive.screen_small{
-                   font-size: 55px;
-                   margin: 30px 0;
-               }
+                font-size: 55px;
+                margin: 40px 10px;
+            }
 
             &:nth-child(1){
                 left: 2%;
@@ -192,6 +200,7 @@
                 }      
                 @include responsive.screen_small{
                     font-size: 17px;
+                    padding: 0 10px;
                 }
 
                 a{
@@ -213,7 +222,7 @@
         }
     }
 
-    .cicle-animate{
+    .cicle{
         position: relative;
         margin: 5% 0 0 50%;
 
