@@ -10,9 +10,10 @@ header {
     height: auto;
     box-sizing: border-box;
     z-index: 99;
+    transition: var.$Transition_ease;
 
     @include responsive.screen_tablet_rotate{
-        height: 20vh !important;
+        height: 20vh;
     }
 
     .navbar {
@@ -260,6 +261,7 @@ header {
 .header_aux {
     @include responsive.screen_small{
         background-color: var.$gray_primary !important;
+        transition: var.$Transition_ease !important;
     }
 }
 
