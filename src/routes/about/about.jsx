@@ -135,7 +135,6 @@ export default function About() {
 
             <Certificados />
             <Tranks />
-            <Sound />
             <Topo />
             <Footer />
         </>

@@ -3,31 +3,29 @@
 
 .sound-container{
     position: fixed;
-    width: auto;
+    width: 12vmax;
     height: auto;
-    left: -3.5vmax;
-    bottom: 4vmax;
+    left: -4.2vmax;
+    bottom: 5vmax;
+    transform: rotate(-90deg);   
     z-index: 9; 
 
     @include responsive.screen_laptop{
-        left: -45px;
-        bottom: 60px;
+        width: 150px;
+        left: -50px;
+        bottom: 80px;
     }
     @include responsive.screen_small{
-        left: -50px;
+        left: -60px;
     }
 
     .sound{
-        position: relative;
-        display: block;
-        width: auto;
-        height: auto;
-        padding: 1vmax;
-        transform: rotate(-90deg);                   
+        padding: 1vmax;        
         pointer-events: all;
-        cursor: pointer;  
+        cursor: pointer; 
 
         span{
+            text-align: center;
             font-size: 1.2vmax;
             font-family: var.$font_Primary;
             letter-spacing: 2px;
