@@ -51,6 +51,10 @@
                 text-align: center;
                 padding-left: 7%;
                 animation: right 2s ease;
+
+                @include responsive.screen_small {
+                    padding: 0;
+                }
             }
 
             &:nth-child(3) {
@@ -279,6 +283,7 @@
                         text-decoration: none;
                         font-style: italic;
                         margin: 0 3px;
+                        text-wrap: nowrap;
                         cursor: pointer;
                     }
                 }
@@ -310,7 +315,7 @@
                         }
 
                         text {
-                            font-size: 7vmax;
+                            font-size: 2vmax;
                             font-family: var.$font_Primary;
                             -webkit-animation: flicker 2s linear infinite both;
                             animation: flicker 2s linear infinite both;

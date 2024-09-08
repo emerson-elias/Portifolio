@@ -52,10 +52,10 @@
 
             @include responsive.screen_tablet{
                 font-size: 20px;
-            }
-            
+            }    
             @include responsive.screen_small{
                 font-size: 17px;
+                text-align: center;
             }
 
             svg{

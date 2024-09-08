@@ -3,7 +3,6 @@ import { useEffect } from "react"
 import Nav_bar from "../../Components/nav/nav.jsx"
 import Cursor from "../../Components/cursor/cursor.jsx"
 import Footer from "../../Components/footer/footer.jsx"
-import Sound from "../../Components/sound/sound.jsx"
 import Topo from "../../Components/topo/topo.jsx"
 
 import img from "../../assets/img/Me-hero.png"
@@ -13,7 +12,7 @@ import Tranks from "./thanks/thanks.jsx"
 
 export default function About() {
 
-    useEffect(() => {
+     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
 
@@ -146,11 +145,12 @@ export default function About() {
 
                             <div className="cicle">
                                 <a href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428.9632 199.70691">
-                                        <ellipse cx="214.4816" cy="119.29561" rx="213.4816" ry="79.4113" fill="none" stroke="white" strokeWidth="2"></ellipse>
-                                        <ellipse cx="214.4816" cy="80.4113" rx="213.4816" ry="79.4113" fill="none" stroke="white" strokeWidth="2"></ellipse>
-                                        <text x="50%" y="50%" textAnchor="middle" dy=".3em" fill="#ffffffb9" stroke="#ffffffb9">cv</text>
+
+                                    <svg width="104" height="54" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.66 4.442C19.968 3.87 51.687 7.98 59.806 10.15c8.119 2.17 42.004 11.335 42.193 22.216.19 10.881-23.966 21.44-51.095 18.938C23.775 48.802 2.174 36.415 2.001 25.7 1.828 14.986 19.498 5.55 42.092 2.767c22.595-2.785 62.01 7.677 49.853 28.879" stroke="#caa986" strokeWidth="3" fill="none" fillRule="evenodd"></path>
+                                        <text x="29%" y="50%" textAnchor="middle" dy=".3em" fill="#ffffffb9">cv</text>
                                     </svg>
+
                                 </a>
                             </div>
 
