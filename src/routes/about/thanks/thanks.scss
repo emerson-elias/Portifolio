@@ -1,5 +1,118 @@
+@use '/src/Components/sass/components';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/variables' as var;
+
+
 .thanks-container{
-    position: relative;
+    @include mixins.align(relative, flex, center, center);
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    margin-top: 40vh;
+    padding: 50vh 0;
+
+    @include responsive.screen_laptop{
+        padding: 250px 0;
+    }
+    @include responsive.screen_tablet{
+        padding: 150px 0;
+    }
+    @include responsive.screen_small{
+        margin-top: 150px;
+        padding: 0;
+    }
+
+    .row{
+        @include mixins.align(relative, flex, space-between, center);
+        width: 80vw;
+        height: 80vh;
+
+        @include responsive.screen_laptop{
+            width: 90vw;
+        }
+        @include responsive.screen_small{
+            flex-direction: column;
+            height: auto;
+            width: 75vw;
+        }
+
+        .layer-1{
+            position: relative;
+            width: 40%;
+            height: inherit;
+  
+            @include responsive.screen_tablet{
+                width: inherit;
+                padding-right: 30px;
+            }
+            @include responsive.screen_small{
+                margin: 100px 0;
+                padding: 0;
+            }
+
+            p{
+                font-size: 1.7vmax;
+                font-family: var.$font_Primary;
+                color: var.$Color_White_B9;
+                line-height: 1.2;
+                letter-spacing: 2px;
+
+                @include responsive.screen_laptop{
+                    font-size: 25px;
+                }
+            }
+
+            svg{
+                position: relative;
+                margin-top: 10vmax;
+
+                .stroke{
+                    stroke: var.$Color_White_B9;
+                    fill: none;
+                    stroke-miterlimit: 2;
+                    stroke-width: 2px;
+                }
+            }
+        }
+
+        .layer-2{
+            position: relative;
+            width: 40%;
+            height: inherit;
+            padding-top: 5vmax;
+
+            @include responsive.screen_tablet{
+                width: inherit;
+                padding-left: 30px;
+            }
+            @include responsive.screen_small{
+                padding: 0;
+            }
+
+            h1{
+                font-size: 3vmax;
+                font-family: var.$font_Primary;
+                margin: 3vmax 0;
+                color: var.$Color_White_B9;
+                line-height: 1.1;
+
+                @include responsive.screen_laptop{
+                    font-size: 30px;
+                }
+            }
+
+            p{
+                text-align: end;
+                font-size: 1.7vmax;
+                font-family: var.$font_Primary;
+                color: var.$Color_White_B9;
+                line-height: 1.2;
+                letter-spacing: 2px;
+
+                @include responsive.screen_laptop{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
 }

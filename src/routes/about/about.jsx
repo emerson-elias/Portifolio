@@ -101,7 +101,7 @@ export default function About() {
                         </div>
 
                         <div className="layers">
-                            <h1>Quem eu Sou.</h1>
+                            <h1>Quem eu Sou</h1>
 
                             <p>Olá! meu nome é Emerson Elias, tenho 26 anos e
                                 atualmente moro na cidade de Marabá-PA.
@@ -110,7 +110,7 @@ export default function About() {
                         </div>
 
                         <div className="layers">
-                            <h1>O que faço.</h1>
+                            <h1>O que faço</h1>
 
                             <p>Sou desenvolvedor front-end, mas estou atuando no
                                 <a href="https://www.grupolideronline.com.br/" target="_blank">Grupo Líder </a>
@@ -120,7 +120,7 @@ export default function About() {
                         </div>
 
                         <div className="layers">
-                            <h1>De onde Sou.</h1>
+                            <h1>De onde Sou</h1>
 
                             <p>Sou naturalista de São Luís - MA, uma linda ilha,
                                 mais conhecida como "ilha do amor" que é repleta de belezas naturais
@@ -130,7 +130,7 @@ export default function About() {
                         </div>
 
                         <div className="layers">
-                            <h1>Por que Programação ?</h1>
+                            <h1>Por que Programação?</h1>
 
                             <p>Sou apaixonado pela programação desde cedo,
                                 logo quando completei meu ensino médio fiz o curso de Desenvolvimento de Sistemas, na instituíção
@@ -141,7 +141,7 @@ export default function About() {
                         </div>
 
                         <div className="layers">
-                            <h1>Baixe meu currículo !</h1>
+                            <h1>Baixe meu currículo!</h1>
 
                             <div className="cicle">
                                 <a href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer">
@@ -173,7 +173,7 @@ export default function About() {
                 </div>
 
             </section>
-
+    
             <Certificados />
             <Tranks />
             <Topo />
