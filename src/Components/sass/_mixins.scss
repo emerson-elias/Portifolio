@@ -1,5 +1,6 @@
-@use 'variables';
+@use 'variables' as var;
 @use 'components';
+@use 'responsive';
 
 @mixin align($position, $flex, $centralization, $align){
     position: $position;
@@ -10,7 +11,7 @@
 
 @mixin text_formatting($align, $style, $weight, $spacing){
     text-align: $align;
-    font-family: variables.$font_Tertiary;
+    font-family: var.$font_Tertiary;
     font-style: $style;
     font-weight: $weight;
     letter-spacing: $spacing;
@@ -23,11 +24,11 @@
     right: 0;   
     font-size: 10vw;
     font-style: italic;
-    font-family: variables.$font_Primary;
+    font-family: var.$font_Primary;
     text-transform: uppercase;
     text-wrap: nowrap;
     letter-spacing: 2px;
-    color: variables.$Color_White_Smoker;
+    color: var.$Color_White_Smoker;
     pointer-events: none;
 }
 
@@ -54,13 +55,31 @@
     border-radius: 10px;
     text-align: center;
     transform: translateY(10px);
-    color: variables.$Color_White;
-    font-family: variables.$font_Primary;
+    color: va.$Color_White;
+    font-family: var.$font_Primary;
     font-size: 1vmax;
     font-weight: 900;
     letter-spacing: 2px;
     z-index: 1;
     opacity: 0;
-    transition: variables.$Transition_ease;
+    transition: var.$Transition_ease;
     pointer-events: none;
+}
+
+@mixin skills (){
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0.8vmax 2.5vmax;
+    margin: 0.5vmax;
+    border-radius: 50px;
+    border: 1px solid var.$Color_White_B9;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: var.$font_Primary;
+    color: var.$Color_White_B9;
+
+    @include responsive.screen_small{
+        margin: 7px;
+    }
 }

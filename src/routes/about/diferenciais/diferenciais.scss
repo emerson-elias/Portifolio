@@ -1,0 +1,142 @@
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/variables' as var;
+
+.diferenciais-container {
+    @include mixins.align(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 20vh;
+
+    @include responsive.screen_small {
+        margin: 0;
+    }
+
+    .row-1 {
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: 80vw;
+        height: 80vh;
+
+        .tittle {
+            position: relative;
+            width: inherit;
+            height: auto;
+            margin: 5vh 0;
+
+            h1 {
+                text-align: center;
+                font-size: 2.5vmax;
+                letter-spacing: 3px;
+                font-family: var.$font_Primary;
+                color: var.$Color_White_B9;
+
+                @include responsive.screen_small {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .systens {
+            @include mixins.align(relative, flex, center, center);
+            flex-wrap: wrap;
+            width: 40vw;
+            height: auto;
+
+            @include responsive.screen_laptop {
+                width: 100%;
+            }
+
+            span {
+                @include mixins.skills();
+            }
+        }
+    }
+
+    .svg-animate {
+        @include mixins.align(relative, flex, center, center);
+        width: inherit;
+        height: auto;
+        margin: 10vh 0;
+
+        svg {
+            position: relative;
+            width: 3%;
+            animation: girar_left 10s linear infinite;
+
+            @include responsive.screen_small {
+                width: 50px;
+            }
+        }
+
+    }
+
+    .row-2 {
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: 90vw;
+        height: 80vh;
+
+        @include responsive.screen_laptop {
+            height: auto;
+        }
+
+        .tittle {
+            position: relative;
+            width: inherit;
+            height: auto;
+            margin: 5vh 0;
+
+            h1 {
+                text-align: center;
+                font-size: 2.5vmax;
+                letter-spacing: 3px;
+                font-family: var.$font_Primary;
+                color: var.$Color_White_B9;
+
+                @include responsive.screen_small {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .layers {
+            @include mixins.align(relative, flex, space-between, center);
+            flex-wrap: wrap;
+            width: inherit;
+            height: auto;
+
+            @include responsive.screen_laptop {
+                flex-direction: column
+            }
+
+            .skills {
+                @include mixins.align(relative, flex, center, center);
+                flex-wrap: wrap;
+                width: 42vw;
+                height: auto;
+
+                @include responsive.screen_laptop {
+                    width: 90%;
+                    margin: 50px 0;
+                }
+
+                h1 {
+                    position: relative;
+                    display: block;
+                    width: inherit;
+                    text-align: center;
+                    margin: 1.5vmax 0;
+                    letter-spacing: 2px;
+                    font-family: var.$font_Primary;
+                    color: var.$Color_White_B9;
+                }
+
+                span {
+                    @include mixins.skills();
+                }
+            }
+        }
+    }
+}

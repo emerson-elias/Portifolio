@@ -9,6 +9,7 @@ import img from "../../assets/img/Me-hero.png"
 import '../about/about.scss'
 import Certificados from "./certificados/certificados.jsx"
 import Tranks from "./thanks/thanks.jsx"
+import Diferenciais from "./diferenciais/diferenciais.jsx"
 
 export default function About() {
 
@@ -176,6 +177,7 @@ export default function About() {
     
             <Certificados />
             <Tranks />
+            <Diferenciais />
             <Topo />
             <Footer />
         </>
