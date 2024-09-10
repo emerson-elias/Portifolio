@@ -70,6 +70,7 @@
                     fill: none;
                     stroke-miterlimit: 2;
                     stroke-width: 2px;
+                    stroke: var.$Secundary_Color;
                 }
             }
         }
@@ -97,6 +98,10 @@
 
                 @include responsive.screen_laptop{
                     font-size: 30px;
+                }
+
+                span{
+                    color: var.$Secundary_Color;
                 }
             }
 

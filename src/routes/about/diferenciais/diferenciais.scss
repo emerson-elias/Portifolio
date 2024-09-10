@@ -35,6 +35,10 @@
                 @include responsive.screen_small {
                     font-size: 25px;
                 }
+
+                span{
+                    color: var.$Secundary_Color;
+                }
             }
         }
 

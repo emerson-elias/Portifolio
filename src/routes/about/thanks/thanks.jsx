@@ -17,7 +17,7 @@ export default function Tranks() {
                 </div>
 
                 <div className="layer-2">
-                    <h1>Sou muito sortudo e grato pelo que já tenho!</h1>
+                    <h1>Sou muito sortudo e <span>grato</span> pelo que já tenho!</h1>
 
                     <p> Sou um trabalhador imparável que quer aprender novos programas
                         e sujar as mãos, criando produtos e experiências

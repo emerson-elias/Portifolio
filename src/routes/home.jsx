@@ -3,9 +3,9 @@ import Nav_Bar from "../Components/nav/nav.jsx"
 import Bio from "../Components/bio/bio.jsx"
 import Banner from "../Components/banner/banner.jsx"
 import Cursor from "../Components/cursor/cursor.jsx"
-import Sound from "../Components/sound/sound.jsx"
 import Topo from "../Components/topo/topo.jsx"
 import Footer from "../Components/footer/footer.jsx"
+import Project from "../Components/project/project.jsx"
 
 export default function Home(){
 
@@ -19,6 +19,7 @@ export default function Home(){
             <Nav_Bar />
             <Banner />
             <Bio />
+            <Project />
             <Topo />
             <Footer />
         </>

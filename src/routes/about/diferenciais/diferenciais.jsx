@@ -7,7 +7,7 @@ export default function Diferenciais() {
             <div className="row-1">
 
                 <div className="tittle">
-                    <h1>Programas & Softwares</h1>
+                    <h1>Programas <span>&</span> Softwares</h1>
                 </div>
 
                 <div className="systens">

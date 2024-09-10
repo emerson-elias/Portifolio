@@ -34,16 +34,7 @@ export default function NavBar() {
         window.addEventListener('scroll', () => {
             const header = document.getElementsByTagName('header')[0]
             header.classList.toggle('header_aux', window.scrollY > 100)
-        })
-
-        document.querySelectorAll('a[href^="#"]').forEach((ancora) => {
-            ancora.addEventListener('click', function (el) {
-                el.preventDefault()
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                })
-            })
-        })
+        })    
 
         return () => {
             elements.liItems.forEach((item) => {
@@ -63,7 +54,7 @@ export default function NavBar() {
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' })
                 }
-            }, 0)
+            }, 1)
         }
     }, [location])
 

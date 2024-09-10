@@ -8,7 +8,7 @@
     flex-direction: column;                
     width: 100vw;
     height: auto;
-    padding: 50vh 0;
+    padding: 50vh 0 30vh 0;
 
     @include responsive.screen_small{
         padding: 150px 0;
@@ -123,7 +123,7 @@
             height: 3vmax;
             text-align: center;
             background-color: transparent;
-            border: 1px solid var.$Color_White;
+            border: 1px solid var.$Color_White_B9;
             border-radius: 50px;
             text-decoration: none;
             color: var.$Color_White_B9;
