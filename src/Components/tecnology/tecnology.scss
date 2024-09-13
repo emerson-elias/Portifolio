@@ -1,0 +1,47 @@
+@use '/src/Components/sass/components';
+@use '/src/Components/sass/key-Frames';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/variables' as var;
+
+
+.tecnology-container {
+    @include mixins.align(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+
+    @include responsive.screen_small{
+        
+    }
+
+    .tittle {
+        position: relative;
+        width: inherit;
+        height: auto;
+        padding-right: 8vmax;
+
+        @include responsive.screen_small{
+            padding: 0;
+        }
+
+        h1 {
+            text-align: end;
+            font-size: 7vmax;
+            font-weight: 500;
+            color: var.$Color_White_B9;
+            font-family: var.$font_Primary;
+            letter-spacing: 3px;
+
+            @include responsive.screen_small{
+                text-align: center;
+                font-size: 40px;
+            }
+        }
+    }
+
+    .row{
+        @include mixins.align(relative, flex, space-between, center);
+
+    }
+}

@@ -74,13 +74,13 @@ export default function About() {
     }, [])
 
     return (
-        <section className="container">
+        <section className="bio-container">
 
-            <div className="about-titlle">
+            <div className="bio-titlle">
                 <h1>palavras</h1>
             </div>
 
-            <div className="about-bio">
+            <div className="bio">
                 <span>entusiasta</span>
                 <span>de</span>
                 <span data-aos="zoom-out">programação, <i className="fa-solid fa-code"></i></span>
