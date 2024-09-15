@@ -54,7 +54,7 @@ export default function NavBar() {
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' })
                 }
-            }, 1)
+            }, 4)
         }
     }, [location])
 

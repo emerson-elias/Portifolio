@@ -7,6 +7,7 @@ import Topo from "../Components/topo/topo.jsx"
 import Footer from "../Components/footer/footer.jsx"
 import Project from "../Components/project/project.jsx"
 import Tecnology from "../Components/tecnology/tecnology.jsx"
+import Tools from "../Components/tools/tools.jsx"
 
 export default function Home(){
 
@@ -23,6 +24,7 @@ export default function Home(){
             <Project />
             <Topo />
             <Tecnology />
+            <Tools />
             <Footer />
         </>
     )

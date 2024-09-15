@@ -2,6 +2,11 @@ import { Link, useLocation } from "react-router-dom"
 
 import '../project/project.scss'
 
+import Banner_Project_1 from "../../../public/imgs/rdne-6.jpg"
+import Banner_Project_2 from "../../../public/imgs/rahimegul.jpg"
+import Banner_Project_3 from "../../../public/imgs/nanda.jpg"
+import Banner_Project_4 from "../../../public/imgs/rdne.jpg"
+
 export default function Project() {
 
     return (
@@ -27,7 +32,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src="../imgs/rdne-6.jpg" alt="Isto é Pousada" />
+                        <img src={Banner_Project_1} alt="" />
                     </div>
 
                     <div className="info">
@@ -42,7 +47,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src="../imgs/rdne.jpg" alt="" />
+                        <img src={Banner_Project_2} alt="" />
                     </div>
 
                     <div className="info">
@@ -56,7 +61,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src="../imgs/nanda.jpg" alt="" />
+                        <img src={Banner_Project_3} alt="" />
                     </div>
 
                     <div className="info">
@@ -71,7 +76,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src="../imgs/rahimegul.jpg" alt="" />
+                        <img src={Banner_Project_4} alt="" />
                     </div>
 
                     <div className="info">

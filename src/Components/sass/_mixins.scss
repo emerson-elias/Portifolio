@@ -2,13 +2,14 @@
 @use 'components';
 @use 'responsive';
 
-@mixin align($position, $flex, $centralization, $align){
+@mixin align($position, $flex, $centralization, $align) {
     position: $position;
     display: $flex;
     justify-content: $centralization;
     align-items: $align;
 }
 
+/*
 @mixin text_formatting($align, $style, $weight, $spacing){
     text-align: $align;
     font-family: var.$font_Tertiary;
@@ -31,8 +32,8 @@
     color: var.$Color_White_Smoker;
     pointer-events: none;
 }
-
-@mixin formatting-icon($widht, $height, $color-bg){
+*/
+@mixin formatting-icon($widht, $height, $color-bg) {
     display: inline-block;
     width: $widht;
     height: $height;
@@ -46,6 +47,7 @@
     mask-size: 100% 100%;
 }
 
+/*
 @mixin description-liguagens(){
     position: absolute;
     left: 25%;
@@ -65,8 +67,8 @@
     transition: var.$Transition_ease;
     pointer-events: none;
 }
-
-@mixin skills (){
+*/
+@mixin skills () {
     position: relative;
     width: auto;
     height: auto;
@@ -79,7 +81,7 @@
     font-family: var.$font_Primary;
     color: var.$Color_White_B9;
 
-    @include responsive.screen_small{
+    @include responsive.screen_small {
         margin: 7px;
     }
 }
