@@ -1,5 +1,9 @@
-
 import '../certificados/certificados.scss';
+
+import MINERACAO from '../../../assets/certificados/certificado-mineração.png'
+import MONITOR from '../../../assets/certificados/certificado-monitor.png'
+import POTENCIALIZA from '../../../assets/certificados/certificado-potencializa.png'
+import DIPLOMA from '../../../assets/certificados/diploma.png'
 
 export default function Certificados() {
 
@@ -31,37 +35,37 @@ export default function Certificados() {
 
                 <div className="layer-1">
                     <div className="box-img">
-                        <img src="./certificados/certificado-mineração.png" alt="mineração" />
+                        <img src={MINERACAO} alt="mineração" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/certificado-monitor.png" alt="monitor" />
+                        <img src={MONITOR} alt="monitor" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/certificado-potencializa.png" alt="potencializa" />
+                        <img src={POTENCIALIZA} alt="potencializa" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/diploma.png" alt="diploma" />
+                        <img src={DIPLOMA} alt="diploma" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/certificado-mineração.png" alt="mineração" />
+                    <img src={MINERACAO} alt="mineração" />
                     </div>
                 </div>
 
                 <div className="layer-2">
                     <div className="box-img">
-                        <img src="./certificados/certificado-potencializa.png" alt="potencializa" />
+                        <img src={POTENCIALIZA} alt="potencializa" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/diploma.png" alt="diploma" />
+                        <img src={DIPLOMA} alt="diploma" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/certificado-mineração.png" alt="mineração" />
+                    <img src={MINERACAO} alt="mineração" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/certificado-monitor.png" alt="monitor" />
+                    <img src={MONITOR} alt="monitor" />
                     </div>
                     <div className="box-img">
-                        <img src="./certificados/certificado-potencializa.png" alt="potencializa" />
+                        <img src={POTENCIALIZA} alt="potencializa" />
                     </div>
                 </div>
             </div>
