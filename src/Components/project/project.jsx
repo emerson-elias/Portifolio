@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom"
 import '../project/project.scss'
 
 import Banner_Project_1 from '../../assets/img/rdne.jpg'
-import Banner_Project_2 from "../../assets/img/rahimegul.jpg"
-import Banner_Project_3 from "../../assets/img//nanda.jpg"
-import Banner_Project_4 from "../../assets/img/rdne.jpg"
+import Banner_Project_2 from '../../assets/img/rahimegul.jpg'
+import Banner_Project_3 from '../../assets/img//nanda.jpg'
+import Banner_Project_4 from '../../assets/img/rdne.jpg'
 
 export default function Project() {
 

@@ -1,20 +1,6 @@
 import '../tecnology/tecnology.scss'
 
-import HTML from '../assets/img/tecnologias/html.png'
-import CSS from '../assets/img/tecnologias/css.png'
-import SASS from '../assets/img/tecnologias/sass.png'
-import REACT from '../assets/img/tecnologias/reactt.png'
-import JS from '../assets/img/tecnologias/js.png'
-import TS from '../assets/img/tecnologias/ts.png'
-import PHP from '../assets/img/tecnologias/php.png'
-import GTI from '../assets/img/tecnologias/github.png'
-import VERCEL from '../assets/img/tecnologias/vercel.png'
-import FIGMA from '../assets/img/tecnologias/figma.png'
-import SQL from '../assets/img/tecnologias/sql-server.png'
-import JAVA from '../assets/img/tecnologias/java.png'
-import TAILWIND from '../assets/img/tecnologias/tailwind.png'
-import BOOTSTRAP from '../assets/img/tecnologias/bootstrap.png'
-import MATERIALIZE from '../assets/img/tecnologias/materialize.png'
+
 
 export default function Tecnology() {
     
@@ -32,7 +18,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={HTML} alt="HTML" />
+                            <img  alt="HTML" />
                         </div>
                         <div className="card-text">
                             <span>html</span>
@@ -41,7 +27,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={CSS} alt="CSS" />
+                            <img  alt="CSS" />
                         </div>
                         <div className="card-text">
                             <span>CSS</span>
@@ -50,7 +36,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={SASS} alt="SASS" />
+                            <img  alt="SASS" />
                         </div>
                         <div className="card-text">
                             <span>SASS</span>
@@ -60,7 +46,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={REACT} alt="REACT" />
+                            <img  alt="REACT" />
                         </div>
                         <div className="card-text">
                             <span>REACT</span>
@@ -69,7 +55,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={JS} alt="JS" />
+                            <img  alt="JS" />
                         </div>
                         <div className="card-text">
                             <span>JAVASCRIPT</span>
@@ -78,7 +64,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={TS} alt="TS" />
+                            <img  alt="TS" />
                         </div>
                         <div className="card-text">
                             <span>TYPESCRIPT</span>
@@ -87,7 +73,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={PHP} alt="PHP" />
+                            <img  alt="PHP" />
                         </div>
                         <div className="card-text">
                             <span>PHP</span>
@@ -96,7 +82,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={GTI} alt="GTI" />
+                            <img  alt="GTI" />
                         </div>
                         <div className="card-text">
                             <span>GIT</span>
@@ -105,7 +91,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={VERCEL} alt="VERCEL" />
+                            <img  alt="VERCEL" />
                         </div>
                         <div className="card-text">
                             <span>VERCEL</span>
@@ -114,7 +100,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={FIGMA} alt="FIGMA" />
+                            <img  alt="FIGMA" />
                         </div>
                         <div className="card-text">
                             <span>FIGMA</span>
@@ -123,7 +109,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={SQL} alt="SQL" />
+                            <img  alt="SQL" />
                         </div>
                         <div className="card-text">
                             <span>SQL</span>
@@ -132,7 +118,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={JAVA} alt="JAVA" />
+                            <img alt="JAVA" />
                         </div>
                         <div className="card-text">
                             <span>JAVA</span>
@@ -141,7 +127,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={TAILWIND} alt="TAILWIND" />
+                            <img alt="TAILWIND" />
                         </div>
                         <div className="card-text">
                             <span>TAILWIND</span>
@@ -150,7 +136,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={BOOTSTRAP} alt="BOOTSTRAP" />
+                            <img  alt="BOOTSTRAP" />
                         </div>
                         <div className="card-text">
                             <span>BOOTSTRAP</span>
@@ -159,7 +145,7 @@ export default function Tecnology() {
 
                     <div className="card">
                         <div className="icon-tec">
-                            <img src={MATERIALIZE} alt="MATERIALIZE" />
+                            <img  alt="MATERIALIZE" />
                         </div>
                         <div className="card-text">
                             <span>MATERIALIZE</span>
