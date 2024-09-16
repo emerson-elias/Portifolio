@@ -7,10 +7,39 @@
 
 .tools-container {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: auto;
-    padding: 10vmax 0;
+    padding-bottom: 20vmax;
     overflow: hidden;
+
+    .tittle-svg{
+        @include mixins.align(relative, flex, end, end);
+        width: inherit;
+        height: auto;
+
+        .layer{
+            position: relative;
+            width: auto;
+            height: auto;
+            margin-right: 10vmax;
+
+            svg{
+                position: relative;
+                width: 10vmax;
+                transform: rotate(180deg);
+                border-radius: 50%;
+                padding: 2vmax;
+            }
+            h1{
+                text-align: center;
+                font-size: 3vmax;
+                margin-top: 2vmax;
+                letter-spacing: 2px;
+                color: var.$Color_White_B9;
+                font-family: var.$font_Primary;
+            }
+        }
+    }
 
     .wrapper-one, .wrapper-dwo {
         @include mixins.align(relative, flex, center, center);

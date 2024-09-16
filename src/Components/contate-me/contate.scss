@@ -1,0 +1,53 @@
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/variables' as var;
+
+
+.contate-container{
+    @include mixins.align(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+
+    background-color: rgba(102, 51, 153, 0);
+
+    span{
+        width: 90vw;
+        font-size: 7vmax;
+        color: var.$Color_White_B9;
+        font-family: var.$font_Primary;
+        letter-spacing: 3px;
+
+        background-color: rgba(0, 255, 255, 0);
+
+        @include responsive.screen_small {
+            font-size: 40px;
+            width: 85vw;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        &:nth-child(1){
+            text-align: start;
+        }
+
+        &:nth-child(2){
+            text-align: center;
+            padding-left: 25%;
+        }
+
+        &:nth-child(3){
+            text-align: start;
+            padding-left: 10%;
+        }
+
+        &:nth-child(4){
+            text-align: center;
+        }
+
+        &:nth-child(5){
+            text-align: end;
+        }    
+    }
+}

@@ -1,4 +1,4 @@
-import '../certificados/certificados.scss';
+import '../certificados/certificados.scss'
 
 import MINERACAO from '../../../assets/certificados/certificado-mineração.png'
 import MONITOR from '../../../assets/certificados/certificado-monitor.png'

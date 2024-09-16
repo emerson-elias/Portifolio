@@ -10,7 +10,7 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
-    padding: 20vh 0;
+    padding-top: 20vh;
     overflow: hidden;
 
     .tittle {
@@ -38,16 +38,26 @@
             }
         }
 
-        span {
-            position: relative;
+        svg{
             width: 20vw;
-            height: 1px;
-            background-color: var.$Color_White_B9;
+
+            @include responsive.screen_small {
+                width: 120px;
+            }
+
+            .stroke{
+                stroke: var.$Color_White_B9;
+                fill: none;
+                stroke-miterlimit: 2;
+                stroke-width: 2px;
+                stroke: var.$Secundary_Color;
+            }
         }
     }
 
     .row {
         @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
         width: 100vw;
         height: auto;
 
@@ -284,6 +294,36 @@
 
                 &:hover span{
                     color: var.$Color_White;
+                }
+            }
+        }
+
+        .description{
+            @include mixins.align(relative, flex, center, center);
+            flex-direction: column;
+            width: 90vw; 
+            height: auto;
+            padding-top: 30vh;
+
+            span{
+                width: inherit;
+                margin: 1vmax 0;
+                font-size: 7vmax;
+                text-align: center;
+                color: var.$Color_White_B9;
+                font-family: var.$font_Primary;
+
+                @include responsive.screen_small {
+                    font-size: 40px;
+                    width: 90%;
+                    margin: 15px 0;
+                }
+
+                &:nth-child(1){
+                    text-align: start;
+                }
+                &:nth-child(3){
+                    text-align: end;
                 }
             }
         }

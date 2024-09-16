@@ -112,7 +112,7 @@
             height: auto;
 
             @include responsive.screen_laptop {
-                flex-direction: column
+                flex-direction: column;
             }
 
             .skills {

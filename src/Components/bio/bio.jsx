@@ -77,7 +77,7 @@ export default function About() {
         <section className="bio-container">
 
             <div className="bio-titlle">
-                <h1>palavras</h1>
+                <h1>biografia</h1>
             </div>
 
             <div className="bio">
