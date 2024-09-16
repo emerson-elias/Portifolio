@@ -15,18 +15,15 @@ import JAVA from '../../../public/imgs/tecnologias/java.png'
 import TAILWIND from '../../../public/imgs/tecnologias/tailwind.png'
 import BOOTSTRAP from '../../../public/imgs/tecnologias/bootstrap.png'
 import MATERIALIZE from '../../../public/imgs/tecnologias/materialize.png'
-import BULMA from '../../../public/imgs/tecnologias/bulma.png'
 
 export default function Tecnology() {
+    
     return (
         <section className="tecnology-container">
 
-            <section className="boll-bg">
-                <span className="icon-park-outline--loading"></span>
-            </section>
-
             <div className="tittle" id='tecnologias'>
-                <h1>tecnologias</h1>
+                <h1>skills</h1>
+                <span></span>
             </div>
 
             <div className="row">

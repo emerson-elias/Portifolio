@@ -10,82 +10,15 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
-    padding-bottom: 20vh;
+    padding: 20vh 0;
     overflow: hidden;
 
-    .boll-bg{
-        position: absolute;
-        top: 30vh;
-        right: 70vw;
-        width: 55vw;
-        height: 55vw;
-        border: 2px solid var.$Color_White_Smoker_dwo;
-        border-radius: 50%;
-        animation: girar_left 30s linear infinite;
-       
-
-        @include responsive.screen_laptop{
-            right: 60%;
-            width: 650px;
-            height: 650px;
-        }
-
-        .icon-park-outline--loading {
-            @include mixins.formatting-icon(inherit, inherit, var.$Color_White_Smoker);
-            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='0.1'%3E%3Cpath d='M4 24c0 11.046 8.954 20 20 20v0c11.046 0 20-8.954 20-20S35.046 4 24 4'/%3E%3Cpath d='M36 24c0-6.627-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12v0'/%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 20%;
-            right: 0;
-            bottom: 0;
-            width: 7vw;
-            height: 7vw;
-            background-color: transparent;
-            backdrop-filter: blur(10px);
-            border: 1px solid var.$Color_White;
-            border-radius: 50%;
-            z-index: 0;
-
-            @include responsive.screen_laptop{
-                width: 100px;
-                height: 100px;
-                left: 15%;
-            }
-        }
-
-        &::after{
-            content: '';
-            position: absolute;
-            left: 20%;
-            right: 0;
-            bottom: 0;
-            width: 7vw;
-            height: 7vw;
-            background-color: transparent;
-            backdrop-filter: blur(10px);
-            border: 1px solid var.$Color_White;
-            border-radius: 50%;
-            z-index: 0;
-
-            @include responsive.screen_laptop{
-                width: 100px;
-                height: 100px;
-                left: 15%;
-            }
-        }
-      
-    }
-
     .tittle {
-        position: relative;
-        width: inherit;
+        @include mixins.align(relative, flex, space-around, center);
+        flex-direction: row-reverse;
+        width: 90vw;
         height: auto;
-        margin: 30vh 0;
-        padding-right: 8vmax;
+        padding: 20vh 5vmax;
 
         @include responsive.screen_small {
             padding: 0;
@@ -93,7 +26,6 @@
         }
 
         h1 {
-            text-align: end;
             font-size: 7vmax;
             font-weight: 500;
             color: var.$Color_White_B9;
@@ -104,6 +36,13 @@
                 text-align: center;
                 font-size: 40px;
             }
+        }
+
+        span {
+            position: relative;
+            width: 20vw;
+            height: 1px;
+            background-color: var.$Color_White_B9;
         }
     }
 
@@ -117,39 +56,33 @@
             width: 90vw;
             height: auto;
             flex-wrap: wrap;
-
-            @include responsive.screen_small{
-                justify-content: space-evenly;
-            }
+            will-change: transform;
 
             .card {
-                @include mixins.align(relative, flex, center, center);
-                flex-direction: column;
-                width: 25vw;
-                height: 20vmax;
-                margin: 2vmax;
-                padding: 2vmax 0;
+                @include mixins.align(relative, flex, space-between, center);
+                width: auto;
+                height: auto;
+                margin: 1vmax;
+                padding: 1vmax 2.5vmax;
                 border: 1px solid var.$Color_White_B9;
-                border-radius: 10px;
-                background-color: var.$gray_primary;
+                border-radius: 50px;
+                background-color: transparent;
                 transition: var.$Transition_ease;
-                overflow: hidden;
+                will-change: transform;
+                pointer-events: painted;
 
-                @include responsive.screen_tablet{
-                    width: 250px;
-                    height: 200px;
-                }
-                @include responsive.screen_small{
-                    margin: 15px 15px;
+                @include responsive.screen_small {
+                    padding: 7px 20px;
                 }
 
                 &:nth-child(1) {
 
                     &:hover {
                         background-color: var.$HTML;
+                        border-color: var.$HTML;
                         transition: var.$Transition_ease;
-                        -webkit-animation: wobble-ver-left 0.8s both;
-                        animation: wobble-ver-left 0.8s both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -157,9 +90,10 @@
 
                     &:hover {
                         background-color: var.$CSS;
+                        border-color: var.$CSS;
                         transition: var.$Transition_ease;
-                        -webkit-animation: wobble-hor-bottom 0.8s both;
-                        animation: wobble-hor-bottom 0.8s both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -167,9 +101,10 @@
 
                     &:hover {
                         background-color: var.$SASS;
+                        border-color: var.$SASS;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -177,9 +112,10 @@
 
                     &:hover {
                         background-color: var.$REACT;
+                        border-color: var.$REACT;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-right 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-right 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -187,9 +123,10 @@
 
                     &:hover {
                         background-color: var.$JS;
+                        border-color: var.$JS;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -197,9 +134,10 @@
 
                     &:hover {
                         background-color: var.$TS;
+                        border-color: var.$TS;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -207,9 +145,10 @@
 
                     &:hover {
                         background-color: var.$PHP;
+                        border-color: var.$PHP;
                         transition: var.$Transition_ease;
-                        -webkit-animation: wobble-hor-top 0.8s both;
-                        animation: wobble-hor-top 0.8s both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -217,9 +156,10 @@
 
                     &:hover {
                         background-color: var.$GIT;
+                        border-color: var.$GIT;
                         transition: var.$Transition_ease;
-                        -webkit-animation: jello-horizontal 0.9s both;
-                        animation: jello-horizontal 0.9s both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -227,9 +167,10 @@
 
                     &:hover {
                         background-color: var.$VERCEL;
+                        border-color: var.$VERCEL;
                         transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 0.5s linear infinite both;
-                        animation: vibrate-3 0.5s linear infinite both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -237,9 +178,10 @@
 
                     &:hover {
                         background-color: var.$FIGMA;
+                        border-color: var.$FIGMA;
                         transition: var.$Transition_ease;
-                        -webkit-animation: wobble-hor-top 0.8s both;
-                        animation: wobble-hor-top 0.8s both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -247,9 +189,10 @@
 
                     &:hover {
                         background-color: var.$SQL;
+                        border-color: var.$SQL;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-right 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-right 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -257,9 +200,10 @@
 
                     &:hover {
                         background-color: var.$JAVA;
+                        border-color: var.$JAVA;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -267,9 +211,10 @@
 
                     &:hover {
                         background-color: var.$TAILWIND;
+                        border-color: var.$TAILWIND;
                         transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 0.5s linear infinite both;
-                        animation: vibrate-3 0.5s linear infinite both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -277,9 +222,10 @@
 
                     &:hover {
                         background-color: var.$BOOSTRAP;
+                        border-color: var.$BOOSTRAP;
                         transition: var.$Transition_ease;
-                        -webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                        animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
@@ -287,26 +233,28 @@
 
                     &:hover {
                         background-color: var.$MATERIALIZE;
+                        border-color: var.$MATERIALIZE;
                         transition: var.$Transition_ease;
-                        -webkit-animation: wobble-ver-left 0.8s both;
-                        animation: wobble-ver-left 0.8s both;
+                        -webkit-animation: vibrate-3 1s linear infinite forwards;
+                        animation: vibrate-3 1s linear infinite forwards;
                     }
                 }
 
                 .icon-tec {
                     @include mixins.align(relative, flex, center, center);
                     width: inherit;
-                    height: 12vmax;
+                    height: auto;
 
                     img {
-                        margin-bottom: 1.1vmax;
-                        width: 7vw;
+                        margin-right: 1.1vmax;
+                        width: 2.5vw;
+                        height: auto;
                         object-fit: cover;
                         filter: grayscale(100%);
                         transition: var.$Transition_ease;
 
-                        @include responsive.screen_tablet{
-                            width: 70px;
+                        @include responsive.screen_tablet {
+                            width: 35px;
                         }
                     }
                 }
@@ -323,14 +271,19 @@
                     text-align: center;
 
                     span {
-                        font-size: 3vmax;
+                        font-size: 2vmax;
+                        letter-spacing: 2px;
                         color: var.$Color_White_B9;
                         font-family: var.$font_Primary;
 
-                        @include responsive.screen_tablet{
-                            font-size: 25px;
+                        @include responsive.screen_tablet {
+                            font-size: 22px;
                         }
                     }
+                }
+
+                &:hover span{
+                    color: var.$Color_White;
                 }
             }
         }

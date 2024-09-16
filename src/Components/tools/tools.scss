@@ -16,10 +16,13 @@
         @include mixins.align(relative, flex, center, center);
         width: 110%;
         height: 20vh; 
-        border: 1px solid var.$Color_White_B9;
+        border: 2px solid var.$Secundary_Color;
         border-left: none;
         border-right: none;
-        background-color: var.$gray_primary;
+
+        @include responsive.screen_small{
+            height: 80px;
+        }
 
         .itemLeft,
         .itemRight {
@@ -34,70 +37,65 @@
             a {   
                 text-wrap: nowrap;
                 text-decoration: none;
-                color: var.$Color_White_Smoker_dwo;
                 font-size: 5vmax;
-                font-family: var.$font_Primary;
+                letter-spacing: 3px;
+                font-family: var.$font_Secondary;
                 transition: var.$Transition_ease;
 
                 @include responsive.screen_small {
                     font-size: 50px;
                 }
-
-                &:hover {
-                    color: var.$Secundary_Color;
-                    transition: var.$Transition_ease;
-                }
             }
         }
 
         .itemLeft {
-            left: max(calc(600px * 6), 100%);
+            left: max(calc(600px * 7), 100%);
             animation-name: scrollLeft;
         }
-
         .itemRight {
-            right: max(calc(600px * 6), calc(100% + 600px));
+            right: max(calc(600px * 7), calc(100% + 600px));
             animation-name: scrollRight;
         }
-
-
         .item1 {
             animation-delay: calc(60s / 8 * (8 - 1) * -1);
         }
-
         .item2 {
             animation-delay: calc(60s / 8 * (8 - 2) * -1);
         }
-
         .item3 {
             animation-delay: calc(60s / 8 * (8 - 3) * -1);
         }
-
         .item4 {
             animation-delay: calc(60s / 8 * (8 - 4) * -1);
         }
-
         .item5 {
             animation-delay: calc(60s / 8 * (8 - 5) * -1);
         }
-
         .item6 {
             animation-delay: calc(60s / 8 * (8 - 6) * -1);
         }
-
         .item7 {
             animation-delay: calc(60s / 8 * (8 - 7) * -1);
         }
-
         .item8 {
             animation-delay: calc(60s / 8 * (8 - 8) * -1);
         }
     }
 
     .wrapper-one{
-        transform: rotate(10deg) translateX(-5%);
+        transform: rotate(7deg) translateX(-5%);
+        background-color: var.$Secundary_Color;
+
+        a{
+            color: var.$gray_primary;
+        }
     }
     .wrapper-dwo{
-        transform: rotate(-10deg) translateX(-5%);
+        transform: rotate(-7deg) translateX(-5%);
+        background-color: var.$gray_primary;
+
+        a{
+            color: var.$Secundary_Color;
+        }
     }
 }

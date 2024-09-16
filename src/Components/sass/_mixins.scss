@@ -76,12 +76,13 @@
     margin: 0.5vmax;
     border-radius: 50px;
     border: 1px solid var.$Color_White_B9;
-    font-size: 18px;
+    font-size: 1.2vmax;
     letter-spacing: 2px;
     font-family: var.$font_Primary;
     color: var.$Color_White_B9;
 
     @include responsive.screen_small {
         margin: 7px;
+        font-size: 19px;
     }
 }
