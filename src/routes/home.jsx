@@ -23,7 +23,7 @@ export default function Home(){
             <Bio />
             <Project />
             <Topo />
-            <Tecnology />
+            
             <Tools />
             <Footer />
         </>
