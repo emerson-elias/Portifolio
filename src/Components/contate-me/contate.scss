@@ -10,16 +10,12 @@
     height: auto;
     overflow: hidden;
 
-    background-color: rgba(102, 51, 153, 0);
-
     span{
         width: 90vw;
         font-size: 7vmax;
         color: var.$Color_White_B9;
         font-family: var.$font_Primary;
         letter-spacing: 3px;
-
-        background-color: rgba(0, 255, 255, 0);
 
         @include responsive.screen_small {
             font-size: 40px;
