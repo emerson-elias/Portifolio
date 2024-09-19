@@ -2,10 +2,10 @@ import { Link, useLocation } from "react-router-dom"
 
 import '../project/project.scss'
 
-import IMG_BANNER_1 from './banners-img/rdne-6.jpg'
-import IMG_BANNER_2 from './banners-img/rdne.jpg'
-import IMG_BANNER_3 from './banners-img/nanda.jpg'
-import IMG_BANNER_4 from './banners-img/rahimegul.jpg'
+import IMG_BANNER_1 from './banners-img/1.jpg'
+import IMG_BANNER_2 from './banners-img/2.jpg'
+import IMG_BANNER_3 from './banners-img/3.jpg'
+import IMG_BANNER_4 from './banners-img/4.jpg'
 
 export default function Project() {
 
@@ -32,7 +32,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src={IMG_BANNER_1} alt="" />
+                        <img src={IMG_BANNER_1} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
@@ -47,7 +47,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src={IMG_BANNER_2} alt="" />
+                        <img src={IMG_BANNER_2} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
@@ -61,7 +61,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src={IMG_BANNER_3} alt="" />
+                        <img src={IMG_BANNER_3} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
@@ -76,7 +76,7 @@ export default function Project() {
                     </div>
 
                     <div className="view">
-                        <img src={IMG_BANNER_4} alt="" />
+                        <img src={IMG_BANNER_4} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
