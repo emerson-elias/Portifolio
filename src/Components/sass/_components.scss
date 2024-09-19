@@ -4,15 +4,15 @@
 
 @font-face {
     font-family: 'aquire light';
-    src: url(/src/assets/fonts/Aquire/Aquire-Light.otf);
+    src: url('/assets/fonts/Aquire/Aquire-Light.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'aquire regular';
-    src: url(/src/assets/fonts/Aquire/Aquire-Regular.otf);
+    src: url('/assets/fonts/Aquire/Aquire-Regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'aquire bold';
-    src: url(/src/assets/fonts/Aquire/Aquire-Bold.otf);
+    src: url('/assets/fonts/Aquire/Aquire-Bold.otf') format('opentype');
 }

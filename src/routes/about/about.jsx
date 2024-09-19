@@ -5,7 +5,7 @@ import Cursor from "../../Components/cursor/cursor.jsx"
 import Footer from "../../Components/footer/footer.jsx"
 import Topo from "../../Components/topo/topo.jsx"
 
-import img from "../../assets/img/Me-hero.png"
+import img from "/assets/img/Me-hero.png"
 import '../about/about.scss'
 import Certificados from "./certificados/certificados.jsx"
 import Tranks from "./thanks/thanks.jsx"
