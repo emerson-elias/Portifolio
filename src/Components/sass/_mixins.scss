@@ -82,7 +82,7 @@
     color: var.$Color_White_B9;
 
     @include responsive.screen_small {
-        margin: 7px;
+        margin: 8px;
         font-size: 19px;
     }
 }

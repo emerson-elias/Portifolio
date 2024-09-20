@@ -83,6 +83,7 @@
 
                 @include responsive.screen_small {
                     padding: 7px 20px;
+                    margin: 10px;
                 }
 
                 &:nth-child(1) {
@@ -264,7 +265,7 @@
                         transition: var.$Transition_ease;
 
                         @include responsive.screen_tablet {
-                            width: 35px;
+                            width: 30px;
                         }
                     }
                 }
@@ -287,7 +288,7 @@
                         font-family: var.$font_Primary;
 
                         @include responsive.screen_tablet {
-                            font-size: 22px;
+                            font-size: 18px;
                         }
                     }
                 }

@@ -12,7 +12,7 @@ export default function Project() {
     return (
         <section className="project-container">
 
-            <div className="tittle" id='projetos'>
+            <div className="title" id='projetos'>
                 <h1>Projetos</h1>
 
                 <a href="">
