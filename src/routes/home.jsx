@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import React, { useEffect } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -17,14 +17,16 @@ import Contate from "../Components/contate-me/contate.jsx"
 export default function Home(){
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-
         AOS.init({
-            duration: 2000,
-            offset: -70,
+          duration: 3000,
+          offset: -70,
         })
 
-    }, [])    
+        return () => {
+            AOS.refresh()
+        }
+
+      }, [])   
 
     return(
         <>

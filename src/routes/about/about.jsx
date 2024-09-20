@@ -23,6 +23,9 @@ export default function About() {
             duration: 2000,
             offset: -70,
         })
+        return () => {
+            AOS.refresh()
+        }
 
     }, [])
 

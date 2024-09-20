@@ -92,7 +92,7 @@ export default function Banner() {
           <p>─ Sou desenvolvedor naturalista de São Luís,
             amo programação, ─ designs minimalistas e ornamentados, músicas, jogos, natureza e pizza.
           </p>
-          
+
         </div>
 
         <div className="layer-3" ref={layer3Ref}>

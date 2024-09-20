@@ -4,13 +4,13 @@ export default function Diferenciais() {
     return (
         <section className='diferenciais-container'>
 
-            <div className="row-1">
+            <div className="row-1" data-aos="zoom-out">
 
                 <div className="tittle">
                     <h1>Programas <span>&</span> Softwares</h1>
                 </div>
 
-                <div className="systens" data-aos="zoom-out">
+                <div className="systens">
                     <span>figma</span>
                     <span>canvas</span>
                     <span>vs code</span>

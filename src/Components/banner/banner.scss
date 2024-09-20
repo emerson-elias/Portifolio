@@ -78,7 +78,6 @@
             width: 70%;
             margin-left: 2%;
             height: auto;
-            -webkit-font-smoothing: antialiased;
 
             @include responsive.screen_laptop{
                 width: 90%;               
@@ -130,7 +129,7 @@
                 margin-top: 1vmax;
                 width: 70%;
                 margin-left: 20%;
-                font-size: 1.3vmax;
+                font-size: 1.7vmax;
                 color: var.$Color_White;
                 word-spacing: 0.01vmax;
                 letter-spacing: 0.1vmax;

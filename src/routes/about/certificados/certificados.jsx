@@ -1,8 +1,3 @@
-import { useEffect } from "react"
-
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-
 import '../certificados/certificados.scss'
 
 import MINERACAO from '/assets/certificados/certificado-mineração.png'
@@ -12,16 +7,6 @@ import DIPLOMA from '/assets/certificados/diploma.png'
 
 export default function Certificados() {
 
-    
-    useEffect(() => {
-     
-
-        AOS.init({
-            duration: 2000,
-            offset: -70,
-        })
-
-    }, [])
 
     return (
         <section className="certificados-container">
