@@ -28,7 +28,7 @@
             letter-spacing: 2px;
 
             @include responsive.screen_small{
-                font-size: 14px;
+                font-size: 18px;
             }
         }
     }
@@ -48,14 +48,14 @@
             color: var.$Color_White_B9;
             font-family: var.$font_Primary;
             font-size: 2vmax;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             line-height: 1.5;  
 
             @include responsive.screen_tablet{
                 font-size: 20px;
             }    
             @include responsive.screen_small{
-                font-size: 17px;
+                font-size: 19px;
                 text-align: center;
             }
 

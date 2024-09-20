@@ -10,7 +10,7 @@ export default function Diferenciais() {
                     <h1>Programas <span>&</span> Softwares</h1>
                 </div>
 
-                <div className="systens">
+                <div className="systens" data-aos="zoom-out">
                     <span>figma</span>
                     <span>canvas</span>
                     <span>vs code</span>
@@ -38,7 +38,7 @@ export default function Diferenciais() {
 
                 <div className="layers">
 
-                    <div className="skills">
+                    <div className="skills" data-aos="zoom-out">
                         <h1>Pessoal</h1>
 
                         <span>Empatia</span>
@@ -53,7 +53,7 @@ export default function Diferenciais() {
                         <span>Confiança</span>
                     </div>
 
-                    <div className="skills">
+                    <div className="skills" data-aos="zoom-out">
                         <h1>profissional</h1>
 
                         <span>Adaptabilidade</span>

@@ -100,7 +100,6 @@
                     text-wrap: nowrap;
                     font-weight: 500;
                     font-family: var.$font_Primary;
-                    animation: up-in 1s ease-in-out;
                     
                     @include responsive.screen_laptop{
                         font-size: 100px;

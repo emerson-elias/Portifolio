@@ -1,4 +1,8 @@
 import { useEffect } from "react"
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import Nav_Bar from "../Components/nav/nav.jsx"
 import Bio from "../Components/bio/bio.jsx"
 import Banner from "../Components/banner/banner.jsx"
@@ -14,6 +18,12 @@ export default function Home(){
 
     useEffect(() => {
         window.scrollTo(0, 0)
+
+        AOS.init({
+            duration: 2000,
+            offset: -70,
+        })
+
     }, [])    
 
     return(
