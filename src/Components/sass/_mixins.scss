@@ -9,30 +9,6 @@
     align-items: $align;
 }
 
-/*
-@mixin text_formatting($align, $style, $weight, $spacing){
-    text-align: $align;
-    font-family: var.$font_Tertiary;
-    font-style: $style;
-    font-weight: $weight;
-    letter-spacing: $spacing;
-}
-
-@mixin text-bg($top){
-    position: absolute;
-    top: $top;
-    left: 3vw;
-    right: 0;   
-    font-size: 10vw;
-    font-style: italic;
-    font-family: var.$font_Primary;
-    text-transform: uppercase;
-    text-wrap: nowrap;
-    letter-spacing: 2px;
-    color: var.$Color_White_Smoker;
-    pointer-events: none;
-}
-*/
 @mixin formatting-icon($widht, $height, $color-bg) {
     display: inline-block;
     width: $widht;
@@ -47,36 +23,15 @@
     mask-size: 100% 100%;
 }
 
-/*
-@mixin description-liguagens(){
-    position: absolute;
-    left: 25%;
-    width: 18vw;
-    height: auto;
-    padding: 20px 10px;
-    border-radius: 10px;
-    text-align: center;
-    transform: translateY(10px);
-    color: va.$Color_White;
-    font-family: var.$font_Primary;
-    font-size: 1vmax;
-    font-weight: 900;
-    letter-spacing: 2px;
-    z-index: 1;
-    opacity: 0;
-    transition: var.$Transition_ease;
-    pointer-events: none;
-}
-*/
 @mixin skills () {
     position: relative;
     width: auto;
     height: auto;
-    padding: 0.8vmax 2.5vmax;
+    padding: 0.8vmax 2.1vmax;
     margin: 0.5vmax;
     border-radius: 50px;
     border: 1px solid var.$Color_White_B9;
-    font-size: 1.2vmax;
+    font-size: 1.5vmax;
     letter-spacing: 2px;
     font-family: var.$font_Primary;
     color: var.$Color_White_B9;

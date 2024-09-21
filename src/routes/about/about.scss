@@ -23,11 +23,7 @@
         height: auto;
         margin-bottom: 10vmax;
         overflow: hidden;
-
-        @include responsive.screen_small {
-            margin-bottom: 150px;
-        }
-
+        
         span {
             width: inherit;
             height: auto;

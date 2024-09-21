@@ -5,12 +5,11 @@ import Cursor from "../../Components/cursor/cursor.jsx"
 import Footer from "../../Components/footer/footer.jsx"
 import Topo from "../../Components/topo/topo.jsx"
 
-import img from "/assets/img/Me-hero.png"
-import '../about/about.scss'
 import Certificados from "./certificados/certificados.jsx"
-import Tranks from "./thanks/thanks.jsx"
 import Diferenciais from "./diferenciais/diferenciais.jsx"
 
+import img from "/assets/img/Me-hero.png"
+import '../about/about.scss'
 
 export default function About() {
 
@@ -23,7 +22,7 @@ export default function About() {
         <>
             <Cursor />
             <Nav_bar />
-
+            
             <section className="about-container">
                 <div className="word-row-1">
                     <span>designs</span>
@@ -177,8 +176,7 @@ export default function About() {
 
             </section>
     
-            <Certificados />
-            <Tranks />
+            <Certificados />        
             <Diferenciais />
             <Topo />
             <Footer />
