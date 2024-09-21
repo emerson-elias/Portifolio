@@ -1,4 +1,4 @@
-
+import { useEffect } from "react"
 
 import Nav_bar from "../../Components/nav/nav.jsx"
 import Cursor from "../../Components/cursor/cursor.jsx"
@@ -11,9 +11,13 @@ import Certificados from "./certificados/certificados.jsx"
 import Tranks from "./thanks/thanks.jsx"
 import Diferenciais from "./diferenciais/diferenciais.jsx"
 
+
 export default function About() {
 
- 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        
+    }, [])  
 
     return (
         <>

@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 
 import Nav_Bar from "../Components/nav/nav.jsx"
 import Bio from "../Components/bio/bio.jsx"
@@ -12,7 +13,10 @@ import Contate from "../Components/contate-me/contate.jsx"
 
 export default function Home(){
 
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        
+    }, [])  
 
     return(
         <>
