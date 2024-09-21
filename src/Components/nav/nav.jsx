@@ -83,7 +83,7 @@ export default function NavBar() {
 
                     <li><Link id="animate" to={"/about"}>Sobre mim</Link></li>
                     <li><Link id="animate" to="/#tecnologias">Tecnologias</Link></li>
-                    <li><Link id="animate" to="/#projetos">Projetos</Link></li>
+                    <li><Link id="animate" to={"/projetos"}>Projetos</Link></li>
                     <li><a id="animate" href="#contatos">Contato</a></li>
 
                     <div className="midia">
