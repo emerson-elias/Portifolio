@@ -66,9 +66,9 @@ export default function NavBar() {
 
                     <Link to={"/"}>
                         <span>emerson</span>
-                            <span>
-                                <span className="game-icons--polar-star"></span> moraes
-                            </span>
+                        <span>
+                            <i className="game-icons--polar-star"></i> moraes
+                        </span>
                     </Link>
 
                 </div>

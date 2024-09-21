@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "gsap": "^3.12.5",
     "node-sass": "^9.0.0",
     "normalize.css": "^8.0.1",

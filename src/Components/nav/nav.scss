@@ -60,7 +60,7 @@ header {
                     }
                      
                     .game-icons--polar-star {
-                        @include mixins.formatting-icon(1.5vw, 1.5vw, var.$Color_White);
+                        @include mixins.formatting-icon(1.7vw, 1.7vw, var.$Color_White);
                         animation: girar_left 12s linear infinite;
                         pointer-events: none;
     
@@ -70,6 +70,9 @@ header {
                             width: 20px;
                             height: 20px;
                         }
+                    }
+                    &:hover i{
+                        background-color: var.$Secundary_Color;
                     }
                 }
 

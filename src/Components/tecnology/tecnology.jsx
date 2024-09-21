@@ -36,7 +36,7 @@ export default function Tecnology() {
 
           {technologies.map((tech, index) => (
 
-            <div key={index} className="card" data-aos="zoom-in-up">
+            <div key={index} className="card">
 
               <div className="icon-tec">
                 <img src={tech.img} alt={tech.name} />
@@ -53,9 +53,9 @@ export default function Tecnology() {
         </div>
 
         <div className="description">
-          <span data-aos="fade-right">performance</span>
-          <span data-aos="fade-down">dinamismo</span>
-          <span data-aos="fade-left">experiencia</span>
+          <span>performance</span>
+          <span>dinamismo</span>
+          <span>experiencia</span>
         </div>
 
       </div>

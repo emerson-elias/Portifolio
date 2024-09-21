@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <footer className='footer-container' id='contatos'>
 
-            <section className='text-linear' data-aos="fade-up">
+            <section className='text-linear'>
                 <h1> - entre em contato comigo</h1>
                 <h1> - entre em contato comigo</h1>
             </section>

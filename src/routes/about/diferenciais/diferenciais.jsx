@@ -4,7 +4,7 @@ export default function Diferenciais() {
     return (
         <section className='diferenciais-container'>
 
-            <div className="row-1" data-aos="zoom-out">
+            <div className="row-1">
 
                 <div className="tittle">
                     <h1>Programas <span>&</span> Softwares</h1>
@@ -38,7 +38,7 @@ export default function Diferenciais() {
 
                 <div className="layers">
 
-                    <div className="skills" data-aos="zoom-out">
+                    <div className="skills">
                         <h1>Pessoal</h1>
 
                         <span>Empatia</span>
@@ -53,7 +53,7 @@ export default function Diferenciais() {
                         <span>Confiança</span>
                     </div>
 
-                    <div className="skills" data-aos="zoom-out">
+                    <div className="skills">
                         <h1>profissional</h1>
 
                         <span>Adaptabilidade</span>

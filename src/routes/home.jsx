@@ -1,7 +1,3 @@
-import React, { useEffect } from 'react'
-
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 import Nav_Bar from "../Components/nav/nav.jsx"
 import Bio from "../Components/bio/bio.jsx"
@@ -16,17 +12,7 @@ import Contate from "../Components/contate-me/contate.jsx"
 
 export default function Home(){
 
-    useEffect(() => {
-        AOS.init({
-          duration: 3000,
-          offset: -70,
-        })
 
-        return () => {
-            AOS.refresh()
-        }
-
-      }, [])   
 
     return(
         <>

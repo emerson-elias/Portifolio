@@ -7,7 +7,7 @@ export default function Tranks() {
 
             <div className="row">
                 <div className="layer-1">
-                    <p data-aos="zoom-in-right"> Sou bem curioso e sempre acredito que algo pode melhorar,
+                    <p> Sou bem curioso e sempre acredito que algo pode melhorar,
                         vivo em busca dos meus sonhos
                         e estou de olho no futuro
                     </p>
@@ -17,9 +17,9 @@ export default function Tranks() {
                 </div>
 
                 <div className="layer-2">
-                    <h1 data-aos="zoom-out">Sou muito sortudo e <span>grato</span> pelo que já tenho!</h1>
+                    <h1>Sou muito sortudo e <span>grato</span> pelo que já tenho!</h1>
 
-                    <p data-aos="zoom-in-left"> Sou um trabalhador imparável que quer aprender novos programas
+                    <p> Sou um trabalhador imparável que quer aprender novos programas
                         e sujar as mãos, criando produtos e experiências
                         centrados no usuário com uma ótima aparência
                     </p>

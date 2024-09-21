@@ -1,7 +1,4 @@
-import { useEffect } from "react"
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 import Nav_bar from "../../Components/nav/nav.jsx"
 import Cursor from "../../Components/cursor/cursor.jsx"
@@ -16,18 +13,7 @@ import Diferenciais from "./diferenciais/diferenciais.jsx"
 
 export default function About() {
 
-     useEffect(() => {
-        window.scrollTo(0, 0)
-
-        AOS.init({
-            duration: 2000,
-            offset: -70,
-        })
-        return () => {
-            AOS.refresh()
-        }
-
-    }, [])
+ 
 
     return (
         <>
@@ -174,15 +160,15 @@ export default function About() {
                 </div>
 
                 <div className="word-row-2">
-                    <span data-aos="fade-right">developer</span>
-                    <span data-aos="fade-left">games
+                    <span>developer</span>
+                    <span>games
                         <svg className="o-ui-arrow" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.10162 3.10156L62.9999 62.9999" strokeLinecap="round" strokeLinejoin="round" stroke="#fff"></path>
                             <path d="M63 1.00001L63 63L0.999989 63" strokeLinecap="round" strokeLinejoin="round" stroke="#fff"></path>
                         </svg>
                     </span>
-                    <span data-aos="fade-left">pizzas</span>
-                    <span data-aos="fade-right">poesias</span>
+                    <span>pizzas</span>
+                    <span>poesias</span>
                 </div>
 
             </section>
