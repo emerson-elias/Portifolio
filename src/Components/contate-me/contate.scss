@@ -8,42 +8,54 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
+    margin: 10vh 0 20vh 0;
     overflow: hidden;
+
+    @include responsive.screen_small {
+        margin: 70px 0;
+    }
 
     span{
         width: 90vw;
+        margin: 0.5vmax 0;
         font-size: 7vmax;
+        text-align: start;
         color: var.$Color_White_B9;
-        font-family: var.$font_Primary;
+        font-family: var.$font_Tertiary;
         letter-spacing: 3px;
+        text-wrap: nowrap;
 
         @include responsive.screen_small {
-            font-size: 40px;
+            font-size: 45px;
             width: 85vw;
             margin: 10px 0;
-            padding: 0;
-        }
-
-        &:nth-child(1){
-            text-align: start;
-        }
-
-        &:nth-child(2){
-            text-align: center;
-            padding-left: 25%;
-        }
-
-        &:nth-child(3){
-            text-align: start;
-            padding-left: 10%;
         }
 
         &:nth-child(4){
-            text-align: center;
+            color: transparent;
+            -webkit-text-stroke: 0.1vw var.$Secundary_Color;
+        }
+    }
+
+    .o-ui-arrow{
+        position: absolute;
+        left: 70%;
+        width: 10vw;
+        height: auto;
+        color: var.$Color_White_B9;
+        transform: rotate(100deg);
+        transition: var.$Transition_ease;
+
+        @include responsive.screen_laptop{
+            width: 130px;
+        }
+        @include responsive.screen_small{
+            width: 70px;
         }
 
-        &:nth-child(5){
-            text-align: end;
-        }    
+        &:hover{
+            transform: rotate(100deg) scale(1.4);
+            transition: var.$Transition_ease;
+        }
     }
 }

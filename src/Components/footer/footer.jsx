@@ -31,7 +31,7 @@ export default function Footer() {
                 </a>
 
                 <div className="information">
-                    <p>mande-me uma mensagem, vamos trabalhar juntos e desenvolver experiências incríveis:</p>
+                    <p>mande-me uma mensagem, vamos trabalhar juntos e desenvolver experiências incríveis</p>
 
                     <div className='layer'>
                         <h1> ① escreva um e-mail</h1>

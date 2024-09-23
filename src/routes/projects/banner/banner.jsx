@@ -5,7 +5,7 @@ export default function Banner() {
         <section className="projects-container">
 
             <div className="banner-img">
-                <img src="./assets/img/pexels.jpg" alt="BANNE" />
+                <img src="./assets/img/pexels.jpg" loading="lazy" alt="BANNE" />
             </div>
 
             <div className="svg">

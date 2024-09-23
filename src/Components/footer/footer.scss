@@ -28,9 +28,13 @@
             font-size: 20vmax;
             color: transparent;
             text-wrap: nowrap;
-            -webkit-text-stroke: 1px var.$Secundary_Color;
+            -webkit-text-stroke: 0.1vw var.$Secundary_Color;
             font-family: var.$font_Tertiary;
             animation: slider-linear 50s linear infinite;
+
+            @include responsive.screen_small{
+                -webkit-text-stroke: 1px var.$Secundary_Color;
+            }
         }
     }
 
