@@ -52,7 +52,7 @@ export default function Tecnology() {
 
         </div>
 
-        <div className="description">
+        <div className="text-large">
           <span>performance</span>
           <span>dinamismo</span>
           <span>experiencia</span>

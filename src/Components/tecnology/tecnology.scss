@@ -74,12 +74,11 @@
                 height: auto;
                 margin: 1vmax;
                 padding: 1vmax 2.5vmax;
-                border: 0.1vw solid var.$Color_White_B9;
+                border: 1px solid var.$Color_White_B9;
                 border-radius: 50px;
                 background-color: transparent;
                 transition: var.$Transition_ease;
                 will-change: transform;
-                pointer-events: painted;
 
                 @include responsive.screen_small {
                     padding: 7px 20px;
@@ -299,7 +298,7 @@
             }
         }
 
-        .description{
+        .text-large{
             @include mixins.align(relative, flex, center, center);
             flex-direction: column;
             width: 90vw; 
@@ -310,21 +309,19 @@
                 width: inherit;
                 margin: 1vmax 0;
                 font-size: 7vmax;
-                text-align: center;
+                text-align: end;
                 color: var.$Color_White_B9;
-                font-family: var.$font_Primary;
+                font-family: var.$font_Tertiary;
 
                 @include responsive.screen_small {
-                    font-size: 40px;
-                    width: 90%;
-                    margin: 15px 0;
+                    font-size: 42px;
+                    width: 95%;
+                    margin: 10px 0;
                 }
 
-                &:nth-child(1){
-                    text-align: start;
-                }
-                &:nth-child(3){
-                    text-align: end;
+                &:nth-child(2){
+                    color: transparent;
+                    -webkit-text-stroke: 0.1vw var.$Secundary_Color;
                 }
             }
         }
