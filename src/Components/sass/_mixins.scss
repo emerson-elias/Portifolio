@@ -27,7 +27,7 @@
     position: relative;
     width: auto;
     height: auto;
-    padding: 0.8vmax 2.1vmax;
+    padding: 0.5vmax 1.3vmax;
     margin: 0.5vmax;
     border-radius: 50px;
     border: 1px solid var.$Color_White_B9;
@@ -36,8 +36,12 @@
     font-family: var.$font_Primary;
     color: var.$Color_White_B9;
 
+    @include responsive.screen_laptop{
+        font-size: 3vmax;
+    }
+
     @include responsive.screen_small {
         margin: 8px;
-        font-size: 19px;
+        font-size: 22px;
     }
 }

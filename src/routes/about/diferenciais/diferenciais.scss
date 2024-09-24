@@ -4,147 +4,222 @@
 
 .diferenciais-container {
     @include mixins.align(relative, flex, center, center);
-    flex-direction: column;
     width: 100vw;
     height: auto;
-    padding-top: 30vh;
     margin-bottom: 20vh;
+   // overflow: hidden;
 
-    background-color: rgba(102, 51, 153, 0);
+    background-color: rgba(71, 153, 51, 0);
 
+    
     @include responsive.screen_small {
         margin: 0;
-        padding-top: 100px;
+        padding-top: 200px;
     }
 
-    .row-1 {
-        @include mixins.align(relative, flex, center, center);
-        flex-direction: column;
-        width: 80vw;
-        height: 80vh;
-
-        .tittle {
-            position: relative;
-            width: inherit;
-            height: auto;
-            margin: 5vh 0;
-
-            h1 {
-                text-align: center;
-                font-size: 3vmax;
-                letter-spacing: 3px;
-                font-family: var.$font_Primary;
-                color: var.$Color_White_B9;
-
-                @include responsive.screen_small {
-                    font-size: 25px;
-                }
-
-                span{
-                    color: var.$Secundary_Color;
-                }
-            }
-        }
-
-        .systens {
-            @include mixins.align(relative, flex, center, center);
-            flex-wrap: wrap;
-            width: 47vw;
-            height: auto;
-
-            @include responsive.screen_laptop {
-                width: 100%;
-            }
-
-            span {
-                @include mixins.skills();
-            }
-        }
-    }
-
-    .svg-animate {
-        @include mixins.align(relative, flex, center, center);
-        width: inherit;
+    .omega{
+        @include mixins.align(relative, flex, space-between, center);
+        width: 90vw;
+        height: 200vh;
         height: auto;
-        margin: 5vh 0;
 
-        svg {
-            position: relative;
-            width: 5%;
-            animation: girar_left 10s linear infinite;
+        background-color: rgba(205, 134, 63, 0);
 
-            @include responsive.screen_small {
-                width: 50px;
+        @include responsive.screen_laptop{
+            flex-direction: column;
+        }
+        
+        @include responsive.screen_small {
+            width: 90%;
+        }
+
+        .cicle-animate {
+            @include mixins.align(sticky, flex, space-between, center);
+            top: 0;
+            flex-direction: column;
+            width: 45vw;
+            height: 200vh;
+           // margin: 5vh 0;
+    
+            background-color: rgba(128, 128, 0, 0);
+
+            @include responsive.screen_laptop{
+                position: relative;
+                width: inherit;
+                flex-direction: row;
+                justify-content: start;
+                height: auto;
             }
-        }
+    
+            .cicle-1 {
+                position: sticky;
+                top: 15vh;
+                margin-right: 12vw;
+                width: 30vw; 
+                height: 30vw;
+                border: 0.1vw solid var.$Secundary_Color;
+                border-radius: 50%;
+                background-color: var.$Secundary_Color;
 
-    }
+                @include responsive.screen_laptop{
+                    position: relative;
+                    margin: 0;
+                }
+                @include responsive.screen_small {
+                    top: 0;
+                    width: 150px;
+                    height: 150px;
+                }
+               
+            }
+            .cicle-2 {
+                position: sticky;
+                top: 0;
+                margin-left: 5vw;
+                width: 30vw; 
+                height: 30vw; 
+                border: 0.5vw double var.$Secundary_Color;
+                border-radius: 50%;
+                background-color: transparent;
+                mix-blend-mode: difference;
 
-    .row-2 {
-        @include mixins.align(relative, flex, center, center);
-        flex-direction: column;
-        width: 95vw;
-        height: 80vh;
-
-        @include responsive.screen_laptop {
-            height: auto;
-        }
-
-        .tittle {
-            position: relative;
-            width: inherit;
-            height: auto;
-            margin: 5vh 0;
-
-            h1 {
-                text-align: center;
-                font-size: 3vmax;
-                letter-spacing: 3px;
-                font-family: var.$font_Primary;
-                color: var.$Color_White_B9;
+                @include responsive.screen_laptop{
+                    position: relative;
+                    margin: 0;
+                    transform: translateX(-15vw)
+                }
 
                 @include responsive.screen_small {
-                    font-size: 25px;
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
+    
+        .row{
+            @include mixins.align(relative, flex, center, center);
+            flex-direction: column;
+            width: 45vw;
+    
+            background-color: rgba(0, 255, 255, 0);
 
-        .layers {
-            @include mixins.align(relative, flex, space-between, center);
-            flex-wrap: wrap;
-            width: inherit;
-            height: auto;
-
-            @include responsive.screen_laptop {
-                flex-direction: column;
+            @include responsive.screen_laptop{
+                width: inherit;
             }
 
-            .skills {
+    
+            .layers-one{
                 @include mixins.align(relative, flex, center, center);
-                flex-wrap: wrap;
-                width: 47vw;
-                height: auto;
-
-                @include responsive.screen_laptop {
-                    width: 90%;
-                    margin: 50px 0;
-                }
-
-                h1 {
+                flex-direction: column;
+                width: initial;
+                height: 100vh;
+        
+                background-color: rgba(255, 0, 0, 0);
+        
+                .tittle {
                     position: relative;
-                    display: block;
-                    width: inherit;
-                    text-align: center;
-                    margin: 1.5vmax 0;
-                    letter-spacing: 2px;
-                    font-family: var.$font_Primary;
-                    color: var.$Color_White_B9;
-                }
+                    width: 100%;
+                    height: auto;
+                   // margin: 5vh 0;
+    
+                    background-color: rgba(0, 0, 255, 0);
+        
+                    h1 {
+                        text-align: start;
+                        font-size: 4vmax;
+                        letter-spacing: 3px;
+                        font-family: var.$font_Tertiary;
+                        color: var.$Color_White_B9;
 
-                span {
-                    @include mixins.skills();
+                        @include responsive.screen_laptop{
+                            font-size: 6vmax;
+                        }
+        
+                        @include responsive.screen_small {
+                            font-size: 40px;
+                        }
+                    }
+               
+                    span{
+                        text-align: start;
+                        font-size: 3vmax;
+                        letter-spacing: 3px;
+                        font-family: var.$font_Primary;
+                        color: var.$Secundary_Color;
+                    }
+                }
+        
+                .systens {
+                    @include mixins.align(relative, flex, start, center);
+                    flex-wrap: wrap;
+                    width: inherit;
+                    height: auto;
+                    margin-top: 10vh;
+    
+                    background-color: rgba(190, 16, 126, 0);
+        
+                    @include responsive.screen_laptop {
+                        width: 100%;
+                    }
+        
+                    span {
+                        @include mixins.skills();
+                    }
+                }
+            }
+        
+    
+        
+            .layers-dwo{
+                @include mixins.align(relative, flex, center, center);
+                flex-direction: column;
+                width: initial;
+                height: 100vh;
+
+                background-color: rgba(102, 51, 153, 0);
+        
+                @include responsive.screen_laptop {
+                    height: auto;
+                }
+        
+                .tittle {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    //margin: 5vh 0;
+
+                    background-color: rgba(0, 255, 255, 0);
+        
+                    h1 {
+                        text-align: start;
+                        font-size: 4vmax;
+                        letter-spacing: 3px;
+                        font-family: var.$font_Tertiary;
+                        color: var.$Color_White_B9;
+        
+                        @include responsive.screen_laptop{
+                            font-size: 6vmax;
+                        }
+
+                        @include responsive.screen_small {
+                            font-size: 38px;
+                        }
+                    }
+                }
+        
+                .skills {
+                    @include mixins.align(relative, flex, start, center);
+                    flex-wrap: wrap;
+                    width: inherit;
+                    height: auto;
+                    margin-top: 10vh;
+        
+                    span {
+                        @include mixins.skills();
+                    }             
                 }
             }
         }
     }
+
 }

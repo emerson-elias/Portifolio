@@ -31,6 +31,12 @@
             transition: var.$Transition_ease;
             transform: rotate(-10deg);
             filter: grayscale(100%);
+            animation: fade 2s ease;
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: var.$Transition_ease;
+            }
         }
     }
 
@@ -67,10 +73,11 @@
 
         span {
             position: relative;
-            width: inherit;
-            font-size: 18vmax;
+            width: 95vw;
+            font-size: 15vmax;
             font-family: var.$font_Primary;
-            color: var.$gray_Secundary_Color;
+            color: var.$Color_White_B9;
+            mix-blend-mode: difference;
 
             &:nth-child(2) {
                 text-align: end;

@@ -7,7 +7,7 @@
     position: relative;
     width: 100vw;
     height: auto;
-    margin: 20vh 0;
+    margin: 20vh 0 70vh 0;
 
     @include responsive.screen_small {
         margin: 0;

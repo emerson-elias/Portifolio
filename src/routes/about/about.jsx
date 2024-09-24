@@ -24,6 +24,13 @@ export default function About() {
             <Nav_bar />
             
             <section className="about-container">
+
+                <div className="imgs-banners">
+                    <img src="/assets/img/natureza.jpg" alt="natureza" />
+                    <img src="/assets/img/livro.jpg" alt="livro" />
+                    <img src="/assets/img/minimalismo.jpg" alt="minimalismo" />
+                </div>
+                
                 <div className="word-row-1">
                     <span>designs</span>
                     <span>minimalismo</span>
