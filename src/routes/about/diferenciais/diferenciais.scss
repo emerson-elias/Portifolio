@@ -7,10 +7,6 @@
     width: 100vw;
     height: auto;
     margin-bottom: 20vh;
-   // overflow: hidden;
-
-    background-color: rgba(71, 153, 51, 0);
-
     
     @include responsive.screen_small {
         margin: 0;
@@ -23,12 +19,9 @@
         height: 200vh;
         height: auto;
 
-        background-color: rgba(205, 134, 63, 0);
-
         @include responsive.screen_laptop{
             flex-direction: column;
-        }
-        
+        }      
         @include responsive.screen_small {
             width: 90%;
         }
@@ -39,9 +32,6 @@
             flex-direction: column;
             width: 45vw;
             height: 200vh;
-           // margin: 5vh 0;
-    
-            background-color: rgba(128, 128, 0, 0);
 
             @include responsive.screen_laptop{
                 position: relative;
@@ -57,7 +47,6 @@
                 margin-right: 12vw;
                 width: 30vw; 
                 height: 30vw;
-                border: 0.1vw solid var.$Secundary_Color;
                 border-radius: 50%;
                 background-color: var.$Secundary_Color;
 
@@ -69,9 +58,9 @@
                     top: 0;
                     width: 150px;
                     height: 150px;
-                }
-               
+                }   
             }
+            
             .cicle-2 {
                 position: sticky;
                 top: 0;
@@ -88,7 +77,6 @@
                     margin: 0;
                     transform: translateX(-15vw)
                 }
-
                 @include responsive.screen_small {
                     width: 150px;
                     height: 150px;
@@ -100,29 +88,23 @@
             @include mixins.align(relative, flex, center, center);
             flex-direction: column;
             width: 45vw;
-    
-            background-color: rgba(0, 255, 255, 0);
+            height: auto;
 
             @include responsive.screen_laptop{
                 width: inherit;
             }
 
-    
-            .layers-one{
-                @include mixins.align(relative, flex, center, center);
+            .layers-one , .layers-dwo{
+                @include mixins.align(relative, flex, space-around, center);
                 flex-direction: column;
                 width: initial;
                 height: 100vh;
-        
-                background-color: rgba(255, 0, 0, 0);
+                padding: 10vh 0;
         
                 .tittle {
                     position: relative;
                     width: 100%;
                     height: auto;
-                   // margin: 5vh 0;
-    
-                    background-color: rgba(0, 0, 255, 0);
         
                     h1 {
                         text-align: start;
@@ -133,8 +115,7 @@
 
                         @include responsive.screen_laptop{
                             font-size: 6vmax;
-                        }
-        
+                        }    
                         @include responsive.screen_small {
                             font-size: 40px;
                         }
@@ -149,14 +130,11 @@
                     }
                 }
         
-                .systens {
+                .systens, .skills {
                     @include mixins.align(relative, flex, start, center);
                     flex-wrap: wrap;
                     width: inherit;
                     height: auto;
-                    margin-top: 10vh;
-    
-                    background-color: rgba(190, 16, 126, 0);
         
                     @include responsive.screen_laptop {
                         width: 100%;
@@ -166,60 +144,77 @@
                         @include mixins.skills();
                     }
                 }
-            }
-        
-    
-        
-            .layers-dwo{
-                @include mixins.align(relative, flex, center, center);
-                flex-direction: column;
-                width: initial;
-                height: 100vh;
 
-                background-color: rgba(102, 51, 153, 0);
-        
-                @include responsive.screen_laptop {
-                    height: auto;
-                }
-        
-                .tittle {
+                .btn-project, .btn-contatc{
                     position: relative;
                     width: 100%;
                     height: auto;
-                    //margin: 5vh 0;
 
-                    background-color: rgba(0, 255, 255, 0);
-        
-                    h1 {
-                        text-align: start;
-                        font-size: 4vmax;
-                        letter-spacing: 3px;
-                        font-family: var.$font_Tertiary;
+                    button{
+                        position: relative;
+                        width: auto;
+                        height: auto;
+                        padding: 0.5vmax 3vmax;
+                        background-color: transparent;
+                        font-size: 2vmax;
+                        border: 0.1vw solid var.$Color_White_B9;
+                        border-radius: 10vw;
+                        font-family: var.$font_Secondary;
                         color: var.$Color_White_B9;
-        
+                        transition: var.$Transition_ease;
+                        overflow: hidden;
+                        cursor: pointer;
+
                         @include responsive.screen_laptop{
-                            font-size: 6vmax;
+                            font-size: 3.5vmax;
+                            padding-left: 50px;
+                        }              
+                        @include responsive.screen_small {             
+                            font-size: 22px;
                         }
 
-                        @include responsive.screen_small {
-                            font-size: 38px;
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 2vw;
+                            height: 2vw;
+                            border-radius: 50%;
+                            top: 50%;
+                            left: 5%;
+                            transform: translate(-50%, -50%);
+                            background-color: var.$Secundary_Color;
+                            mix-blend-mode: difference;
+                            transition: var.$Transition_ease;
+
+                            @include responsive.screen_laptop{
+                                width: 30px;
+                                height: 30px;
+                            }
+                            @include responsive.screen_small {
+                                width: 40px;
+                                height: 40px;
+                                left: 7%;
+                            }
+                        }
+
+                        &:hover{
+                            background-color: var.$Secundary_Color;
+                            color: var.$gray_primary;
+                            transition: var.$Transition_ease;
+                            border-color: var.$Secundary_Color;
+                        }
+
+                        &:hover::after{
+                            left: 95%;
+                            transition: var.$Transition_ease;
+
+                            @include responsive.screen_small {       
+                                left: 93%;
+                            }
                         }
                     }
                 }
-        
-                .skills {
-                    @include mixins.align(relative, flex, start, center);
-                    flex-wrap: wrap;
-                    width: inherit;
-                    height: auto;
-                    margin-top: 10vh;
-        
-                    span {
-                        @include mixins.skills();
-                    }             
-                }
-            }
+            }          
         }
     }
-
 }

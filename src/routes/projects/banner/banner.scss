@@ -17,6 +17,7 @@
 
         @include responsive.screen_laptop {
             width: 400px;
+            height: 100vh;
         }
         @include responsive.screen_small {
             width: 280px;

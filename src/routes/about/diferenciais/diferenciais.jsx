@@ -1,6 +1,20 @@
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 import '../diferenciais/diferenciais.scss'
 
 export default function Diferenciais() {
+
+    const btnContactRef = useRef(null)
+
+    function EmailClick() {
+        const email = 'emersonees808@gmail.com'
+        const subject = 'Vamos trabalhar juntos :)'
+        const body = 'Olá Emerson Elias.\n\nVi seus projetos no seu portifólio e gostaria de saber mais sobre suas habilidades, vamos trabalhar juntos?.\n\nAtenciosamente:\n---- Seu Nome ----'
+        const mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
+
+        window.location.href = mailtoLink
+    }
+
     return (
         <section className='diferenciais-container'>
 
@@ -33,6 +47,15 @@ export default function Diferenciais() {
                             <span>vercel</span>
                             <span>spotify</span>
                         </div>
+
+                        <div className="btn-project">
+                            <Link to={"/projetos"}>
+                                <button>
+                                    concheça meu trabalho
+                                </button>
+                            </Link>
+                        </div>
+
                     </div>
 
                     <div className="layers-dwo">
@@ -43,16 +66,25 @@ export default function Diferenciais() {
                         <div className="skills">
                             <span>Empatia</span>
                             <span>Gentileza</span>
-                            <span>Honestidade</span>
+                            <span>Foco</span>
                             <span>Flexibilidade</span>
                             <span>Respeito</span>
-                            <span>Compreensão</span>
+                            <span>Ética</span>
                             <span>Confiança</span>
                             <span>Adaptabilidade</span>
                             <span>Proatividade</span>
-                            <span>Autodisciplina</span>
+                            <span>disciplina</span>
                             <span>Colaboração</span>
                         </div>
+
+                        <div className="btn-contatc">
+                            <a href="#">
+                                <button ref={btnContactRef} onClick={EmailClick}>
+                                    gostou? fale comigo!
+                                </button>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
