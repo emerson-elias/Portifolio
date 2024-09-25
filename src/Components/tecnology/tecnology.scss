@@ -10,318 +10,167 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
+    margin-top: 20vh;
     padding-top: 20vh;
-    overflow: hidden;
 
-    .tittle {
-        @include mixins.align(relative, flex, space-around, center);
-        flex-direction: row-reverse;
-        width: 90vw;
-        height: auto;
-        padding: 20vh 5vmax;
-
-        @include responsive.screen_small {
-            padding: 0;
-            margin: 120px 0;
-        }
-
-        h1 {
-            font-size: 7vmax;
-            font-weight: 500;
-            color: var.$Color_White_B9;
-            font-family: var.$font_Primary;
-            letter-spacing: 3px;
-
-            @include responsive.screen_small {
-                text-align: center;
-                font-size: 40px;
-            }
-        }
-
-        svg{
-            width: 20vw;
-
-            @include responsive.screen_small {
-                width: 120px;
-            }
-
-            .stroke{
-                stroke: var.$Color_White_B9;
-                fill: none;
-                stroke-miterlimit: 2;
-                stroke-width: 2px;
-                stroke: var.$Secundary_Color;
-            }
-        }
+    @include responsive.screen_tablet {
+        margin: 0;
     }
 
     .row {
-        @include mixins.align(relative, flex, center, center);
-        flex-direction: column;
-        width: 100vw;
+        @include mixins.align(relative, flex, space-between, stretch);
+        width: 90vw;
         height: auto;
 
-        .layers {
-            @include mixins.align(relative, flex, space-evenly, center);
-            width: 90vw;
-            height: auto;
-            flex-wrap: wrap;
-            will-change: transform;
+        @include responsive.screen_tablet {
+            flex-direction: column;
+            align-items: center;
+            width: 83%;
+        }
 
-            .card {
-                @include mixins.align(relative, flex, space-between, center);
-                width: auto;
-                height: auto;
-                margin: 1vmax;
-                padding: 1vmax 2.5vmax;
-                border: 1px solid var.$Color_White_B9;
-                border-radius: 50px;
-                background-color: transparent;
-                transition: var.$Transition_ease;
-                will-change: transform;
+        .container-title {
+            width: 30vw;
+            min-height: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
 
-                @include responsive.screen_small {
-                    padding: 7px 20px;
-                    margin: 10px;
-                }
+            @include responsive.screen_tablet {
+                width: 100%;
+            }
 
-                &:nth-child(1) {
+            .box {
+                position: sticky;
+                top: 20vh;
 
-                    &:hover {
-                        background-color: var.$HTML;
-                        border-color: var.$HTML;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
+                h1 {
+                    top: 20vh;
+                    font-size: 6vmax;
+                    letter-spacing: 3px;
+                    font-family: var.$font_Primary;
+                    color: var.$Color_White_B9;
+
+                    @include responsive.screen_small {
+                        font-size: 50px;
                     }
                 }
 
-                &:nth-child(2) {
+                p {
+                    width: 20vw;
+                    font-size: 2vmax;
+                    letter-spacing: 2px;
+                    line-height: 1.1;
+                    font-family: var.$font_Primary;
+                    color: var.$Color_White_B9;
+                    margin: 5vh 0;
 
-                    &:hover {
-                        background-color: var.$CSS;
-                        border-color: var.$CSS;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
+                    @include responsive.screen_small {
+                        font-size: 25px;
+                        width: inherit;
                     }
                 }
 
-                &:nth-child(3) {
-
-                    &:hover {
-                        background-color: var.$SASS;
-                        border-color: var.$SASS;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(4) {
-
-                    &:hover {
-                        background-color: var.$REACT;
-                        border-color: var.$REACT;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(5) {
-
-                    &:hover {
-                        background-color: var.$JS;
-                        border-color: var.$JS;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(6) {
-
-                    &:hover {
-                        background-color: var.$TS;
-                        border-color: var.$TS;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(7) {
-
-                    &:hover {
-                        background-color: var.$PHP;
-                        border-color: var.$PHP;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(8) {
-
-                    &:hover {
-                        background-color: var.$GIT;
-                        border-color: var.$GIT;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(9) {
-
-                    &:hover {
-                        background-color: var.$VERCEL;
-                        border-color: var.$VERCEL;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(10) {
-
-                    &:hover {
-                        background-color: var.$FIGMA;
-                        border-color: var.$FIGMA;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(11) {
-
-                    &:hover {
-                        background-color: var.$SQL;
-                        border-color: var.$SQL;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(12) {
-
-                    &:hover {
-                        background-color: var.$JAVA;
-                        border-color: var.$JAVA;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(13) {
-
-                    &:hover {
-                        background-color: var.$TAILWIND;
-                        border-color: var.$TAILWIND;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(14) {
-
-                    &:hover {
-                        background-color: var.$BOOSTRAP;
-                        border-color: var.$BOOSTRAP;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                &:nth-child(15) {
-
-                    &:hover {
-                        background-color: var.$MATERIALIZE;
-                        border-color: var.$MATERIALIZE;
-                        transition: var.$Transition_ease;
-                        -webkit-animation: vibrate-3 1s linear infinite forwards;
-                        animation: vibrate-3 1s linear infinite forwards;
-                    }
-                }
-
-                .icon-tec {
-                    @include mixins.align(relative, flex, center, center);
-                    width: inherit;
-                    height: auto;
-
-                    img {
-                        margin-right: 1.1vmax;
-                        width: 2.5vw;
-                        height: auto;
-                        object-fit: cover;
-                        filter: grayscale(100%);
-                        transition: var.$Transition_ease;
-
-                        @include responsive.screen_tablet {
-                            width: 30px;
-                        }
-                    }
-                }
-
-                &:hover img {
-                    filter: grayscale(0%);
-                    transition: var.$Transition_ease;
-                }
-
-                .card-text {
+                button {
                     position: relative;
-                    width: inherit;
+                    width: auto;
                     height: auto;
-                    text-align: center;
+                    padding: 0.5vmax 3vmax;
+                    background-color: transparent;
+                    font-size: 1.9vmax;
+                    border: 0.1vw solid var.$Color_White_B9;
+                    border-radius: 10vw;
+                    font-family: var.$font_Secondary;
+                    color: var.$Color_White_B9;
+                    transition: var.$Transition_ease;
+                    overflow: hidden;
+                    cursor: pointer;
 
-                    span {
-                        font-size: 2vmax;
-                        letter-spacing: 2px;
-                        color: var.$Color_White_B9;
-                        font-family: var.$font_Primary;
+                    @include responsive.screen_laptop {
+                        font-size: 3vmax;
+                        padding-left: 30px;
+                    }
+                    @include responsive.screen_small {
+                        font-size: 22px;
+                        padding: 15px 50px;
+                    }
 
-                        @include responsive.screen_tablet {
-                            font-size: 18px;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 2vw;
+                        height: 2vw;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 6%;
+                        transform: translate(-50%, -50%);
+                        background-color: var.$Secundary_Color;
+                        mix-blend-mode: difference;
+                        transition: var.$Transition_ease;
+
+                        @include responsive.screen_laptop {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        @include responsive.screen_small {
+                            width: 40px;
+                            height: 40px;
+                            left: 9%;
                         }
                     }
-                }
 
-                &:hover span{
-                    color: var.$Color_White;
+                    &:hover::after {
+                        left: 94%;
+                        transition: var.$Transition_ease;
+
+                        @include responsive.screen_small {
+                            left: 93%;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: var.$Secundary_Color;
+                        color: var.$gray_primary;
+                        transition: var.$Transition_ease;
+                        border-color: var.$Secundary_Color;
+                    }
                 }
             }
         }
 
-        .text-large{
-            @include mixins.align(relative, flex, center, center);
-            flex-direction: column;
-            width: 90vw; 
+        .tecnologias {
+            position: relative;
+            width: 60vw;
             height: auto;
-            padding-top: 30vh;
+            overflow: hidden;
 
-            span{
-                width: inherit;
-                margin: 1vmax 0;
-                font-size: 7vmax;
-                text-align: end;
-                color: var.$Color_White_B9;
-                font-family: var.$font_Tertiary;
+            @include responsive.screen_tablet {
+                width: 100%;
+                margin-top: 50px;
+            }
 
-                @include responsive.screen_small {
-                    font-size: 42px;
-                    width: 95%;
-                    margin: 10px 0;
+            .layers {
+                @include mixins.align(relative, flex, space-between, stretch);
+                width: 100%;
+                height: auto;
+                padding: 3vh 0;
+                border-bottom: 0.1vw solid var.$gray_Secundary_Color;
+
+                span {
+                    font-size: 8vmax;
+                    font-family: var.$font_Secondary;
+                    color: var.$gray_Secundary_Color;
+                    transition: var.$Transition_ease;
+
+                    @include responsive.screen_small {
+                        font-size: 50px;
+                    }
                 }
 
-                &:nth-child(2){
-                    color: transparent;
-                    -webkit-text-stroke: 0.1vw var.$Secundary_Color;
+                &:hover span {
+                    padding-left: 5vw;
+                    transform: skew(-20deg);
+                    color: var.$Color_White_B9;
+                    transition: var.$Transition_ease;
                 }
             }
         }

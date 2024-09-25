@@ -1,5 +1,7 @@
 import React from 'react'
 import '../tecnology/tecnology.scss'
+import Word from './word/word';
+import { Link } from 'react-router-dom';
 
 const technologies = [
   { name: 'HTML', img: 'assets/icon-tec/html.png' },
@@ -21,45 +23,90 @@ const technologies = [
 
 export default function Tecnology() {
   return (
-    <section className="tecnology-container">
+    <>
+      <section className="tecnology-container">
 
-      <div className="tittle" id='tecnologias'>
-        <h1 data-aos="zoom-in-up">skills</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 427.2167 111.07167">
-          <path className="stroke noscaling" d="M.76489,107.73543L89.1395,2.79832l-1.84195,104.93711S158.63088,2.79832,213.11986,2.79832c72.11846,0,74.25064,104.93711,128.34435,104.93711,56,0,84.78811-104.93711,84.78811-104.93711"></path>
-        </svg>
-      </div>
+        <div className="row">
 
-      <div className="row">
+          <div className="container-title">
 
-        <div className="layers">
-
-          {technologies.map((tech, index) => (
-
-            <div key={index} className="card">
-
-              <div className="icon-tec">
-                <img src={tech.img} alt={tech.name} />
-              </div>
-
-              <div className="card-text">
-                <span>{tech.name}</span>
-              </div>
-
+            <div className="box">
+              <h1 id='tecnologias'>skills</h1>   
+              <p>Essas são as tecnologias que estou trabalhando no momento</p>
+              <Link to={"/projetos"}>
+                <button>meus projetos</button>
+              </Link>
             </div>
 
-          ))}
+          </div>
 
+          <div className="tecnologias">
+
+            <div className="layers">
+              <span>HTML</span>
+            </div>
+
+            <div className="layers">
+              <span>CSS</span>
+            </div>
+
+            <div className="layers">
+              <span>SASS</span>
+            </div>
+
+            <div className="layers">
+              <span>REACT</span>
+            </div>
+
+            <div className="layers">
+              <span>JAVASCRIPT</span>
+            </div>
+
+            <div className="layers">
+              <span>TYPESCRIPT</span>
+            </div>
+
+            <div className="layers">
+              <span>PHP</span>
+            </div>
+
+            <div className="layers">
+              <span>GIT</span>
+            </div>
+
+            <div className="layers">
+              <span>VERCEL</span>
+            </div>
+
+            <div className="layers">
+              <span>FIGMA</span>
+            </div>
+
+            <div className="layers">
+              <span>SQL</span>
+            </div>
+
+            <div className="layers">
+              <span>JAVA</span>
+            </div>
+
+            <div className="layers">
+              <span>TAILWIND</span>
+            </div>
+
+            <div className="layers">
+              <span>BOOTSTRAP</span>
+            </div>
+
+            <div className="layers">
+              <span>MATERIALIZE</span>
+            </div>
+
+          </div>
         </div>
+      </section>
 
-        <div className="text-large">
-          <span>performance</span>
-          <span>dinamismo</span>
-          <span>experiencia</span>
-        </div>
-
-      </div>
-
-    </section>
-  );
+      <Word />
+    </>
+  )
 }

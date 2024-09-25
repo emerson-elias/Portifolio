@@ -25,13 +25,12 @@
         h1 {
             text-align: start;
             font-size: 7vmax;
-            font-weight: 500;
             color: var.$Color_White_B9;
             font-family: var.$font_Primary;
             letter-spacing: 3px;
 
             @include responsive.screen_small{
-                font-size: 40px;
+                font-size: 50px;
             }
         }
 
@@ -42,7 +41,7 @@
 
             @include responsive.screen_small{
                 width: 100px;
-                padding-left: 60px;
+                padding-left: 10px;
             }
 
             .svg {
@@ -59,7 +58,7 @@
     
                 &::after {
                     position: absolute;
-                    content: 'all';
+                    content: 'todos';
                     width: inherit;
                     height: auto;
                     top: 50%;
@@ -226,6 +225,7 @@
         @include mixins.align(relative, flex, center, center);
         width: inherit;
         height: auto;
+        margin-top: 10vh;
         padding-left: 50vw;
 
         @include responsive.screen_small{
@@ -235,7 +235,7 @@
         a{
             @include mixins.align(relative, flex, space-around, center);
             text-decoration: none;
-            width: 15vw;
+            width: 25vw;
             height: auto;
             cursor: pointer;
 
@@ -245,12 +245,12 @@
 
             h1 {
                 text-align: start;
-                font-size: 1.5vmax;
-                font-weight: 500;
+                font-size: 2.5vmax;
                 color: var.$Color_White_B9;
                 font-family: var.$font_Primary;
                 letter-spacing: 3px;
                 padding-right: 2vmax;
+                text-wrap: nowrap;
     
                 @include responsive.screen_small{
                     font-size: 20px;
