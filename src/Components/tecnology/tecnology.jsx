@@ -31,11 +31,15 @@ export default function Tecnology() {
           <div className="container-title">
 
             <div className="box">
-              <h1 id='tecnologias'>skills</h1>   
+
+              <h1 id="tecnologias">skills</h1>
+
               <p>Essas são as tecnologias que estou trabalhando no momento</p>
+
               <Link to={"/projetos"}>
                 <button>meus projetos</button>
               </Link>
+
             </div>
 
           </div>

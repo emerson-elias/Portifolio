@@ -14,8 +14,9 @@ import '../about/about.scss'
 export default function About() {
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-        
+        if (window.pageYOffset > 0) {
+            window.scrollTo(0, 0);
+        }
     }, [])  
 
     return (

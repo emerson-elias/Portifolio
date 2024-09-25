@@ -30,7 +30,7 @@
             letter-spacing: 3px;
 
             @include responsive.screen_small{
-                font-size: 50px;
+                font-size: 40px;
             }
         }
 
@@ -41,7 +41,6 @@
 
             @include responsive.screen_small{
                 width: 100px;
-                padding-left: 10px;
             }
 
             .svg {
@@ -53,7 +52,8 @@
                 cursor: pointer;
 
                 @include responsive.screen_small{
-                    width: 100%;
+                    width: 50%;
+                    margin-left: 30px;
                 }
     
                 &::after {

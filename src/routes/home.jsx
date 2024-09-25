@@ -14,9 +14,10 @@ import Contate from "../Components/contate-me/contate.jsx"
 export default function Home(){
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-        
-    }, [])  
+        if (window.pageYOffset > 0) {
+            window.scrollTo(0, 0);
+        }
+    }, [])     
 
     return(
         <>

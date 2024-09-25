@@ -4,3 +4,161 @@
 @use '/src/Components/sass/mixins';
 @use '/src/Components/sass/variables' as var;
 
+.all-project-container {
+    @include mixins.align(relative, flex, center, center);
+    width: 100vw;
+    height: auto;
+    margin-bottom: 40vh;
+    overflow: hidden;
+
+    @include responsive.screen_tablet{
+        margin-bottom: 180px;
+    }
+
+    .row {
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+
+        .title{
+            position: relative;
+            width: inherit;
+            height: auto;
+            margin: 25vh 0;
+
+            @include responsive.screen_tablet{
+                margin: 100px 0;
+            }
+            @include responsive.screen_small{
+                width: 90%;
+                margin: 0 0 170px 0;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 15%;
+                transform: translate(-50%, -50%);
+                width: 15vw;
+                height: 0.1vw;
+                background-color: var.$gray_Secundary_Color;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 85%;
+                transform: translate(-50%, -50%);
+                width: 15vw;
+                height: 0.1vw;
+                background-color: var.$gray_Secundary_Color;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            h1{
+                text-align: center;
+                font-size: 3vmax;
+                font-family: var.$font_Primary;
+                color: var.$Color_White_B9;
+                letter-spacing: 2px;
+            }
+        }
+
+        .layers {
+            @include mixins.align(relative, flex, space-between, center);
+            width: 100vw;
+            padding: 3vh 6vw;
+            height: auto;
+            border-bottom: 0.1vw solid #ffffff7e;
+
+            @include responsive.screen_small {
+                padding: 15px 40px;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;   
+                width: 100vw;
+                height: 0%;
+                transform: translate(-50%, -50%);
+                background-color: var.$Secundary_Color;
+                transition: 0.3s all;
+                pointer-events: none; 
+                z-index: -1;                         
+            }                       
+            &:hover::after{
+                height: 100%;
+                transition: 0.3s all;
+                pointer-events: none;
+            }
+
+            .title-project{
+                position: relative;
+                width: 70vw;
+                height: auto;
+
+                @include responsive.screen_small {
+                    width: 270px;
+                }
+
+                h1 {
+                    text-align: start;
+                    font-size: 5vmax;
+                    color: var.$Color_White_B9;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 3px;
+                    transition: 0.3s all;
+
+                    @include responsive.screen_small {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            &:hover h1{
+                color: var.$gray_primary;
+                transition: 0.3s all;
+                padding-left: 3vw;
+                transform: skew(-25deg);
+            }
+
+            .svg {
+                position: relative;
+                width: 7vw;
+                height: 7vw;
+                padding: 1vmax;
+                transform: rotate(90deg);
+                cursor: pointer;
+
+                @include responsive.screen_small {
+                    width: 70px;
+                    height: 70px;
+                    margin-left: 30px;
+                }
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                    color: var.$Color_White_B9;
+                    pointer-events: none;
+                }
+            }
+
+            &:hover svg{
+                color: var.$gray_primary;
+            }
+        }
+    }
+}
