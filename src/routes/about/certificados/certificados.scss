@@ -4,126 +4,154 @@
 @use '/src/Components/sass/variables' as var;
 
 .certificados-container {
-    position: relative;
+    @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: auto;
-    margin: 20vh 0 70vh 0;
-
-    @include responsive.screen_small {
-        margin: 0;
-    }
+    overflow: hidden;
 
     .row {
-        position: sticky;
-        top: 25vh;
-        width: 100vw;
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: 90vw;
         height: auto;
 
-        .slider-text {
-            position: absolute;
-            display: flex;
-            top: 20vh;
-            width: 100vw;
-            height: auto;
-            pointer-events: none;
-            overflow: hidden;
-
-            @include responsive.screen_small {
-                top: 130px;
-            }
-
-            h1 {
-                padding: 0 3vmax;
-                font-size: 20vmax;
-                font-family: var.$font_Tertiary;
-                color: transparent;
-                -webkit-text-stroke: 1px var.$Secundary_Color;
-                animation: slider-linear 30s linear infinite;
-                will-change: transform;
-            }
-        }
-
-        .tittle {
+        .title{
             position: relative;
-            width: 45%;
+            width: inherit;
             height: auto;
-            margin-left: 4vmax;
+            margin: 25vh 0;
 
-            @include responsive.screen_small {
-                width: 100%;
-                margin: 0;
+            @include responsive.screen_tablet{
+                margin: 100px 0;
+            }
+            @include responsive.screen_small{
+                width: 90%;
+                margin: 0 0 170px 0;
             }
 
-            span {
-                display: inline-block;
-                margin: 0 0.5vmax;
+            &::after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 15%;
+                transform: translate(-50%, -50%);
+                width: 15vw;
+                height: 0.1vw;
+                background-color: var.$gray_Secundary_Color;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 85%;
+                transform: translate(-50%, -50%);
+                width: 15vw;
+                height: 0.1vw;
+                background-color: var.$gray_Secundary_Color;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            h1{
+                text-align: center;
                 font-size: 3vmax;
                 font-family: var.$font_Primary;
                 color: var.$Color_White_B9;
                 letter-spacing: 2px;
-                line-height: 1.2;
-                pointer-events: none;
-                
-                @include responsive.screen_small {
-                    display: block;
-                    font-size: 25px;
-                    padding-left: 35px;
-
-                    &:nth-child(6){
-                        margin-top: 160px;
-                    }
-                }
-                
-                &:nth-child(2){
-                    color: var.$Secundary_Color;
-                }
-                &:nth-child(6){
-                    color: var.$Secundary_Color;
-                }
             }
         }
-    }
 
-    .certificados {
-        @include mixins.align(relative, flex, space-between, center);
-        top: -10vh;
-        left: 52%;
-        width: 45%;
-        height: auto;
-
-        @include responsive.screen_small {
-            justify-content: center;
-            align-items: end;
-            flex-direction: column;
-            width: 100%;
-            left: 0;
-            padding-right: 10px;
-        }
-
-        .layer-1, .layer-2 {
-            position: relative;
-            display: block;
-            width: 50%;
+        .layers {
+            @include mixins.align(relative, flex, space-between, center);
+            width: 100vw;
+            padding: 3vh 6vw;
             height: auto;
+            border-bottom: 0.1vw solid #ffffff7e;
 
-            .box-img {
-                position: relative;
-                width: 100%;
+            @include responsive.screen_small {
+                padding: 10px 40px;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;   
+                width: 100vw;
+                height: 0%;
+                transform: translate(-50%, -50%);
+                background-color: var.$Secundary_Color;
+                transition: 0.3s all;
+                pointer-events: none; 
+                z-index: -1;                         
+            }                       
+            &:hover::after{
                 height: 100%;
-                padding: 2vmax;
+                transition: 0.3s all;
+                pointer-events: none;
+            }
 
-                img {
+            .title-project{
+                position: relative;
+                width: 70vw;
+                height: auto;
+
+                @include responsive.screen_small {
+                    width: 270px;
+                }
+
+                h1 {
+                    text-align: start;
+                    font-size: 6vmax;
+                    color: var.$Color_White_B9;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 3px;
+                    transition: 0.3s all;
+
+                    @include responsive.screen_small {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            &:hover h1{
+                color: var.$gray_primary;
+                transition: 0.3s all;
+                padding-left: 3vw;
+                transform: skew(-25deg);
+            }
+
+            .svg {
+                position: relative;
+                width: 6vw;
+                height: 6vw;
+                padding: 1vmax;
+                transform: rotate(90deg);
+                cursor: pointer;
+
+                @include responsive.screen_small {
+                    width: 70px;
+                    height: 70px;
+                    margin-left: 30px;
+                }
+
+                svg {
                     width: 100%;
-                    object-fit: cover;
-                    border-radius: 1vmax;
-                    transform: rotate(-10deg);
-                    transition: var.$Transition_ease;
+                    height: auto;
+                    color: var.$Color_White_B9;
+                    pointer-events: none;
                 }
+            }
 
-                &:hover img {
-                    transition: var.$Transition_ease;
-                    transform: scale(1.4) rotate(0deg);
-                }
+            &:hover svg{
+                color: var.$gray_primary;
             }
         }
     }

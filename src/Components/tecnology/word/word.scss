@@ -18,13 +18,13 @@
         span{
             width: inherit;
             margin: 1vmax 0;
-            font-size: 6vmax;
+            font-size: 5vmax;
             text-align: end;
             color: var.$Color_White_B9;
             font-family: var.$font_Tertiary;
 
             @include responsive.screen_small {
-                font-size: 42px;
+                font-size: 40px;
                 width: 95%;
                 margin: 10px 0;
             }

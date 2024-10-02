@@ -18,7 +18,7 @@
     span{
         width: 90vw;
         margin: 0.5vmax 0;
-        font-size: 6vmax;
+        font-size: 5vmax;
         text-align: start;
         color: var.$Color_White_B9;
         font-family: var.$font_Tertiary;
@@ -26,7 +26,7 @@
         text-wrap: nowrap;
 
         @include responsive.screen_small {
-            font-size: 45px;
+            font-size: 40px;
             width: 85vw;
             margin: 10px 0;
         }
@@ -54,7 +54,7 @@
         }
 
         &:hover{
-            transform: rotate(100deg) scale(1.4);
+            transform: rotate(100deg) scale(1.2);
             transition: var.$Transition_ease;
         }
     }

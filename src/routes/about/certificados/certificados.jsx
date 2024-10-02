@@ -7,69 +7,88 @@ import DIPLOMA from '/assets/certificados/diploma.png'
 
 export default function Certificados() {
 
-
     return (
         <section className="certificados-container">
+ <div className="row">
 
-            <section className="row">
+                    <div className="title">
+                        <h1>desafios aumentam</h1>
+                        <h1> conforme o progresso</h1>
+                    </div>
 
-                <div className="slider-text">
-                    <h1>certificados</h1>
-                    <h1>certificados</h1>
+                    <div className="layers">
+                        <div className="title-project">
+                            <h1>01 minimaslimo</h1>
+                        </div>
+
+                        <a className='svg' title="Acesse o projeto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                                <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="layers">
+                        <div className="title-project">
+                            <h1>02 speed food</h1>
+                        </div>
+
+                        <a className='svg' title="Acesse o projeto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                                <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="layers">
+                        <div className="title-project">
+                            <h1>03 carros</h1>
+                        </div>
+
+                        <a className='svg' title="Acesse o projeto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                                <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="layers">
+                        <div className="title-project">
+                            <h1>04 natureza</h1>
+                        </div>
+
+                        <a className='svg' title="Acesse o projeto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                                <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="layers">
+                        <div className="title-project">
+                            <h1>05 isto é pousada</h1>
+                        </div>
+
+                        <a className='svg' title="Acesse o projeto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                                <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="layers">
+                        <div className="title-project">
+                            <h1>06 pablo</h1>
+                        </div>
+
+                        <a className='svg' title="Acesse o projeto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                                <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-
-                <div className="tittle">
-                    <span>Crie</span>
-                    <span>metas</span>
-                    <span>na</span>
-                    <span>vida e</span>
-                    <span>as</span>
-                    <span>alcance,</span>
-                    <span>sempre</span>
-                    <span>seremos</span>
-                    <span>eternos</span>
-                    <span>alunos</span>
-                </div>
-            </section>
-
-            <div className="certificados">
-
-                <div className="layer-1">
-                    <div className="box-img">
-                        <img src={MINERACAO} alt="mineração" />
-                    </div>
-                    <div className="box-img">
-                        <img src={MONITOR} alt="monitor" />
-                    </div>
-                    <div className="box-img">
-                        <img src={POTENCIALIZA} alt="potencializa" />
-                    </div>
-                    <div className="box-img">
-                        <img src={DIPLOMA} alt="diploma" />
-                    </div>
-                    <div className="box-img">
-                    <img src={MINERACAO} alt="mineração" />
-                    </div>
-                </div>
-
-                <div className="layer-2">
-                    <div className="box-img">
-                        <img src={POTENCIALIZA} alt="potencializa" />
-                    </div>
-                    <div className="box-img">
-                        <img src={DIPLOMA} alt="diploma" />
-                    </div>
-                    <div className="box-img">
-                    <img src={MINERACAO} alt="mineração" />
-                    </div>
-                    <div className="box-img">
-                    <img src={MONITOR} alt="monitor" />
-                    </div>
-                    <div className="box-img">
-                        <img src={POTENCIALIZA} alt="potencializa" />
-                    </div>
-                </div>
-            </div>
+           
         </section>
     )
 }

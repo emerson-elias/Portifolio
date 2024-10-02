@@ -267,6 +267,10 @@
                 @include responsive.screen_small{
                     width: 15%;
                 }
+
+                svg{
+                    pointer-events: none;
+                }
             }
         }
     }

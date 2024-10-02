@@ -20,7 +20,7 @@
             height: 100vh;
         }
         @include responsive.screen_small {
-            width: 280px;
+            width: 250px;
         }
 
         img {
@@ -85,8 +85,8 @@
             }
 
             @include responsive.screen_small {
-                text-align: center !important;
-                font-size: 11vmax;
+                text-align: center;
+                font-size: 75px;
             }
         }
     }

@@ -45,8 +45,8 @@
                 position: sticky;
                 top: 15vh;
                 margin-right: 12vw;
-                width: 30vw; 
-                height: 30vw;
+                width: 25vw; 
+                height: 25vw;
                 border-radius: 50%;
                 background-color: var.$Secundary_Color;
 
@@ -65,8 +65,8 @@
                 position: sticky;
                 top: 0;
                 margin-left: 5vw;
-                width: 30vw; 
-                height: 30vw; 
+                width: 25vw; 
+                height: 25vw; 
                 border: 0.5vw double var.$Secundary_Color;
                 border-radius: 50%;
                 background-color: transparent;
@@ -117,7 +117,7 @@
                             font-size: 6vmax;
                         }    
                         @include responsive.screen_small {
-                            font-size: 40px;
+                            font-size: 35px;
                         }
                     }
                
