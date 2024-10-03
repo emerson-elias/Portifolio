@@ -10,7 +10,7 @@
     
     @include responsive.screen_small {
         margin: 0;
-        padding-top: 200px;
+        padding-top: 60px;
     }
 
     .omega{
@@ -48,7 +48,8 @@
                 width: 25vw; 
                 height: 25vw;
                 border-radius: 50%;
-                background-color: var.$Secundary_Color;
+                background-color: transparent;
+                border: 0.5vw double var.$Secundary_Color;
 
                 @include responsive.screen_laptop{
                     position: relative;

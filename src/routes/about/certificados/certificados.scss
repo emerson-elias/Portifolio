@@ -5,67 +5,60 @@
 
 .certificados-container {
     @include mixins.align(relative, flex, center, center);
+    flex-direction: column;
     width: 100vw;
     height: auto;
+    margin: 0 0 20vh 0;
     overflow: hidden;
+
+    @include responsive.screen_small{
+        margin-top: 150px;
+    }
+
+    .word-big{
+        position: relative;
+        width: 90vw;
+        height: auto;
+        overflow: hidden;
+
+        span{
+            display: block;
+            font-size: 10vmax;
+            color: var.$Color_White_B9;
+            font-family: var.$font_Primary;
+            letter-spacing: 2px;
+            word-break: break-all;
+
+            &:nth-child(1){
+                text-align: start;
+            }
+            &:nth-child(2){
+                text-align: end;
+                color: transparent;
+                font-size: 5vmax;
+                -webkit-text-stroke: 0.1vw var.$Secundary_Color;
+            }
+            &:nth-child(3){
+                text-align: end;
+                padding-right: 7vw;
+            }
+
+            @include responsive.screen_small {
+                font-size: 50px;
+                margin: 35px 0;
+            }
+        }
+    }
 
     .row {
         @include mixins.align(relative, flex, center, center);
         flex-direction: column;
         width: 90vw;
         height: auto;
+        margin: 25vh 0;
 
-        .title{
-            position: relative;
-            width: inherit;
-            height: auto;
-            margin: 25vh 0;
-
-            @include responsive.screen_tablet{
-                margin: 100px 0;
-            }
-            @include responsive.screen_small{
-                width: 90%;
-                margin: 0 0 170px 0;
-            }
-
-            &::after{
-                position: absolute;
-                content: '';
-                top: 50%;
-                left: 15%;
-                transform: translate(-50%, -50%);
-                width: 15vw;
-                height: 0.1vw;
-                background-color: var.$gray_Secundary_Color;
-
-                @include responsive.screen_small {
-                    display: none;
-                }
-            }
-
-            &::before{
-                position: absolute;
-                content: '';
-                top: 50%;
-                left: 85%;
-                transform: translate(-50%, -50%);
-                width: 15vw;
-                height: 0.1vw;
-                background-color: var.$gray_Secundary_Color;
-
-                @include responsive.screen_small {
-                    display: none;
-                }
-            }
-
-            h1{
-                text-align: center;
-                font-size: 3vmax;
-                font-family: var.$font_Primary;
-                color: var.$Color_White_B9;
-                letter-spacing: 2px;
-            }
+        @include responsive.screen_small{
+            margin: 50px 0;
         }
 
         .layers {
@@ -74,6 +67,7 @@
             padding: 3vh 6vw;
             height: auto;
             border-bottom: 0.1vw solid #ffffff7e;
+            will-change: transform;
 
             @include responsive.screen_small {
                 padding: 10px 40px;
@@ -82,11 +76,10 @@
             &::after{
                 position: absolute;
                 content: '';
-                top: 50%;
-                left: 50%;   
+                top: 0%;
+                left: 0%;   
                 width: 100vw;
                 height: 0%;
-                transform: translate(-50%, -50%);
                 background-color: var.$Secundary_Color;
                 transition: 0.3s all;
                 pointer-events: none; 
@@ -117,6 +110,7 @@
 
                     @include responsive.screen_small {
                         font-size: 30px;
+                        margin: 15px 0;
                     }
                 }
             }
@@ -128,30 +122,31 @@
                 transform: skew(-25deg);
             }
 
-            .svg {
-                position: relative;
-                width: 6vw;
-                height: 6vw;
-                padding: 1vmax;
-                transform: rotate(90deg);
-                cursor: pointer;
+            .certi-icon{
+                position: absolute;
+                top: 70%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
 
-                @include responsive.screen_small {
-                    width: 70px;
-                    height: 70px;
-                    margin-left: 30px;
-                }
-
-                svg {
-                    width: 100%;
+                img{
+                    width: 25vw;
                     height: auto;
-                    color: var.$Color_White_B9;
                     pointer-events: none;
                 }
             }
 
-            &:hover svg{
-                color: var.$gray_primary;
+            .year{
+                position: relative;
+                width: 10vw;
+                height: auto;
+
+                h1{
+                    font-size: 4vmax;
+                    font-family: var.$font_Primary;
+                    color: var.$gray_primary;
+                    transition: 0.3s all;
+                }
             }
         }
     }
