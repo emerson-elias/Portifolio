@@ -55,7 +55,7 @@
                 font-size: 20px;
             }    
             @include responsive.screen_small{
-                font-size: 19px;
+                font-size: 22px;
                 text-align: center;
             }
 
@@ -132,9 +132,9 @@
             font-size: 1.5vmax;
 
             @include responsive.screen_small{
-                width: 150px;
+                width: 170px;
                 height: 35px;
-                font-size: 17px;
+                font-size: 19px;
             }
 
             &:nth-child(2){
