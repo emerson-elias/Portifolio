@@ -8,11 +8,15 @@
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: auto;
-    margin-bottom: 40vh;
+    margin-bottom: 30vh;
+    padding: 20vh 0;
     overflow: hidden;
 
     @include responsive.screen_tablet {
         margin-bottom: 180px;
+    }
+    @include responsive.screen_small {
+        padding: 0;
     }
 
     .row {
@@ -30,7 +34,6 @@
             @include responsive.screen_tablet {
                 margin: 100px 0;
             }
-
             @include responsive.screen_small {
                 width: 95%;
                 margin: 0 0 170px 0;
@@ -148,6 +151,26 @@
                 transition: 0.3s all;
                 padding-left: 3vw;
                 transform: skew(-25deg);
+            }
+
+            .box-img-project{
+                position: absolute;
+                top: -10vh;
+                left: 48vw;
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                pointer-events: none;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+
+                img{
+                    position: relative;
+                    width: 30vw;
+                    border-radius: 10%;
+                }
             }
 
             .svg {
