@@ -20,7 +20,6 @@ export default function Certificados() {
         imgs.forEach((img) => {
             gsap.set(img, {
                 opacity: 0,
-                scale: 0,
             })
         })
 
@@ -39,8 +38,7 @@ export default function Certificados() {
                 x: moveX,
                 y: moveY,
                 duration: 0.5,
-                opacity: 1,  
-                scale: 1,    
+                opacity: 1,    
                 ease: 'power1.out',
             })
         }
@@ -51,8 +49,7 @@ export default function Certificados() {
                 x: 0,
                 y: 0,
                 duration: 0.5,
-                opacity: 0, 
-                scale: 0,  
+                opacity: 0,  
                 ease: 'power1.out',
             })
         }

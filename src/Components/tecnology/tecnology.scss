@@ -86,7 +86,7 @@
                     cursor: pointer;
 
                     @include responsive.screen_laptop {
-                        font-size: 3vmax;
+                        font-size: 20px;
                         padding-left: 30px;
                     }
                     @include responsive.screen_small {
@@ -108,8 +108,8 @@
                         transition: var.$Transition_ease;
 
                         @include responsive.screen_laptop {
-                            width: 30px;
-                            height: 30px;
+                            width: 25px;
+                            height: 25px;
                         }
                         @include responsive.screen_small {
                             width: 40px;
@@ -141,7 +141,6 @@
             position: relative;
             width: 60vw;
             height: auto;
-            overflow: hidden;
 
             @include responsive.screen_tablet {
                 width: 100%;
@@ -154,6 +153,7 @@
                 height: auto;
                 padding: 3vh 0;
                 border-bottom: 0.1vw solid var.$gray_Secundary_Color;
+                will-change: transform;
 
                 span {
                     font-size: 8vmax;
@@ -171,6 +171,74 @@
                     transform: skew(-20deg);
                     color: var.$Color_White_B9;
                     transition: var.$Transition_ease;
+                }
+
+                .box-img{
+                    @include mixins.align(absolute, flex, center, center);
+                    top: -5vw;
+                    left: 30vw;
+                    right: 0;
+                    bottom: 0;
+                    width: 20vw;
+                    height: 20vw;
+                    border-radius: 10%;
+                    pointer-events: none;
+                    will-change: transform;
+
+                    @include responsive.screen_small{
+                        display: none;
+                    }
+
+                    img{
+                        position: relative;
+                        width: 12vw;
+                        object-fit: cover;
+                    }
+                }
+                .box-html{
+                    background-color: var.$HTML;
+                }
+                .box-css{
+                    background-color: var.$CSS;
+                }
+                .box-sass{
+                    background-color: var.$SASS;
+                }
+                .box-react{
+                    background-color: var.$REACT;
+                }
+                .box-javascript{
+                    background-color: var.$JS;
+                }
+                .box-typescript{
+                    background-color: var.$TS;
+                }
+                .box-php{
+                    background-color: var.$PHP;
+                }
+                .box-git{
+                    background-color: var.$GIT;
+                }
+                .box-vercel{
+                    background-color: var.$VERCEL;
+                }
+                .box-figma{
+                    background-color: var.$FIGMA;
+                }
+                .box-sql{
+                    background-color: var.$SQL;
+                }
+                .box-java{
+                    background-color: var.$JAVA;
+                }
+                .box-tailwind{
+                    background-color: var.$TAILWIND;
+                }
+                .box-bootstrap{
+                    background-color: var.$BOOTSTRAP;
+                }
+                .box-materialize{
+                    background-color: var.$MATERIALIZE;
                 }
             }
         }

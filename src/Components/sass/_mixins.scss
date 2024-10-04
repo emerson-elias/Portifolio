@@ -36,7 +36,7 @@
     font-family: var.$font_Primary;
     color: var.$Color_White_B9;
 
-    @include responsive.screen_laptop{
+    @include responsive.screen_laptop {
         font-size: 3vmax;
     }
 

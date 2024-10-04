@@ -11,7 +11,7 @@
     margin-bottom: 40vh;
     overflow: hidden;
 
-    @include responsive.screen_tablet{
+    @include responsive.screen_tablet {
         margin-bottom: 180px;
     }
 
@@ -21,21 +21,22 @@
         width: 90vw;
         height: auto;
 
-        .title{
+        .title {
             position: relative;
             width: inherit;
             height: auto;
             margin: 25vh 0;
 
-            @include responsive.screen_tablet{
+            @include responsive.screen_tablet {
                 margin: 100px 0;
             }
-            @include responsive.screen_small{
-                width: 90%;
+
+            @include responsive.screen_small {
+                width: 95%;
                 margin: 0 0 170px 0;
             }
 
-            &::after{
+            &::after {
                 position: absolute;
                 content: '';
                 top: 50%;
@@ -50,7 +51,7 @@
                 }
             }
 
-            &::before{
+            &::before {
                 position: absolute;
                 content: '';
                 top: 50%;
@@ -65,16 +66,24 @@
                 }
             }
 
-            h1{
+            h1 {
                 text-align: center;
                 font-size: 3vmax;
                 font-family: var.$font_Tertiary;
                 letter-spacing: 2px;
                 color: var.$Color_White_B9;
 
-                span{
+                @include responsive.screen_small {
+                    font-size: 25px;
+                }
+
+                span {
                     color: transparent;
                     -webkit-text-stroke: 0.05vw var.$Secundary_Color;
+
+                    @include responsive.screen_small {
+                        -webkit-text-stroke-width: 1px;
+                    }
                 }
             }
         }
@@ -84,33 +93,34 @@
             width: 100vw;
             padding: 3vh 6vw;
             height: auto;
-            border-bottom: 0.1vw solid #ffffff60;
+            border-bottom: 0.1vw solid var.$gray_Secundary_Color;
             will-change: transform;
 
             @include responsive.screen_small {
                 padding: 10px 40px;
             }
 
-            &::after{
+            &::after {
                 position: absolute;
                 content: '';
                 top: 50%;
-                left: 50%;   
+                left: 50%;
                 width: 100vw;
                 height: 0%;
                 transform: translate(-50%, -50%);
                 background-color: var.$Secundary_Color;
                 transition: 0.3s all;
-                pointer-events: none; 
-                z-index: -1;                         
-            }                       
-            &:hover::after{
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            &:hover::after {
                 height: 100%;
                 transition: 0.3s all;
                 pointer-events: none;
             }
 
-            .title-project{
+            .title-project {
                 position: relative;
                 width: 70vw;
                 height: auto;
@@ -133,7 +143,7 @@
                 }
             }
 
-            &:hover h1{
+            &:hover h1 {
                 color: var.$gray_primary;
                 transition: 0.3s all;
                 padding-left: 3vw;
@@ -163,7 +173,7 @@
                 }
             }
 
-            &:hover svg{
+            &:hover svg {
                 transition: 0.3s all;
                 color: var.$gray_primary;
                 transform: scale(1.5);

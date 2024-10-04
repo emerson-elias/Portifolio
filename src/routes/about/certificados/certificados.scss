@@ -55,7 +55,7 @@
         flex-direction: column;
         width: 90vw;
         height: auto;
-        margin: 25vh 0;
+        margin: 30vh 0;
 
         @include responsive.screen_small{
             margin: 50px 0;
@@ -66,7 +66,7 @@
             width: 100vw;
             padding: 3vh 6vw;
             height: auto;
-            border-bottom: 0.1vw solid #ffffff7e;
+            border-bottom: 0.1vw solid var.$gray_Secundary_Color;
             will-change: transform;
 
             @include responsive.screen_small {
@@ -109,7 +109,7 @@
                     transition: 0.3s all;
 
                     @include responsive.screen_small {
-                        font-size: 30px;
+                        font-size: 35px;
                         margin: 15px 0;
                     }
                 }
@@ -133,6 +133,10 @@
                     width: 25vw;
                     height: auto;
                     pointer-events: none;
+
+                    @include responsive.screen_small{
+                        width: 170px;
+                    }
                 }
             }
 
@@ -146,6 +150,10 @@
                     font-family: var.$font_Primary;
                     color: var.$gray_primary;
                     transition: 0.3s all;
+
+                    @include responsive.screen_small{
+                        display: none;
+                    }
                 }
             }
         }
