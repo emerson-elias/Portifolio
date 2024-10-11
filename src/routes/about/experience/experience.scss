@@ -1,0 +1,169 @@
+@use '/src/Components/sass/components';
+@use '/src/Components/sass/key-Frames';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/variables' as var;
+
+.experience-container {
+    @include mixins.align(relative, flex, center, center);
+    width: 100vw;
+    height: auto;
+    margin-bottom: 30vh;
+    overflow: hidden;
+
+    @include responsive.screen_tablet{
+        margin-bottom: 25vh;
+    }
+    @include responsive.screen_small{
+        margin: 120px 0 100px 0; 
+    }
+
+    .row {
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+
+        @include responsive.screen_tablet {
+            width: 100vw;
+        }
+
+        .box-tittle {
+            position: relative;
+            width: 80vw;
+            height: auto;
+
+            span {
+                padding-left: 7vw;
+                font-size: 3vmax;
+                color: var.$Color_White_B9;
+                font-family: var.$font_Primary;
+                letter-spacing: 2px;
+            }
+
+            h1 {
+                font-size: 7vmax;
+                color: var.$Color_White_B9;
+                font-family: var.$font_Primary;
+                letter-spacing: 2px;
+
+                @include responsive.screen_small {
+                    text-align: center;
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .box-layers {
+            @include mixins.align(relative, flex, end, end);
+            flex-direction: column;
+            width: inherit;
+            height: auto;
+
+            .text-description {
+                position: relative;
+                width: 70%;
+                height: auto;
+                margin: 10vh 0;
+
+                @include responsive.screen_tablet{
+                    width: 85vw;
+                    margin: 10vh auto;
+                }
+                @include responsive.screen_small{
+                    width: 75vw;
+                }
+
+                p {
+                    text-align: start;
+                    font-size: 1.5vmax;
+                    color: var.$Color_White_B9;
+                    font-family: "Ubuntu", sans-serif;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+
+                    @include responsive.screen_laptop {
+                        font-size: 18px;
+                    }
+                    @include responsive.screen_small {
+                        text-align: center;
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .layers {
+                @include mixins.align(relative, flex, space-between, center);
+                width: 70%;
+                height: auto;
+                padding: 6vh 0;
+                transition: var.$Transition_ease;
+                border-bottom: 0.1vw solid var.$gray_Secundary_Color;
+                will-change: transform;
+    
+                @include responsive.screen_tablet{
+                    width: inherit;
+                    padding: 30px 40px;
+                }
+                @include responsive.screen_small{
+                    align-items: start;
+                    flex-direction: column;
+                }
+                
+                &:hover{
+                    transform: skew(-25deg);
+                    transition: var.$Transition_ease;
+                }
+    
+                h1, p{
+                    font-size: 2vmax;
+                    color: var.$Color_White_B9;
+                    font-family: var.$font_Tertiary;
+                    letter-spacing: 2px;
+                    word-wrap: break-all;
+    
+                    @include responsive.screen_laptop {
+                        font-size: 25px;
+                    }
+                }
+    
+                h1{
+                    width: 20vw;
+                    
+                    @include responsive.screen_tablet{
+                        width: 100%;
+                    }
+                }
+    
+                span {
+                    font-size: 1.5vmax;
+                    color: var.$Color_White_B9;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 2px;
+    
+                    @include responsive.screen_laptop {
+                        font-size: 20px;
+                    }
+                    @include responsive.screen_small {
+                        margin: 20px 0;
+                    }
+                }
+            }
+
+            .btn-projects{
+                position: relative;
+                width: initial;
+                height: auto;
+                margin: 20vh 2vw 0 0;
+
+                @include responsive.screen_small{
+                    margin: 100px auto;
+                }
+
+                button {
+                    @include mixins.btn();
+                }
+            }
+        }  
+    }
+}

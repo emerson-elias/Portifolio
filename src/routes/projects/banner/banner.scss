@@ -71,6 +71,7 @@
         width: inherit;
         height: auto;
         pointer-events: none;
+        will-change: transform;
 
         span {
             position: relative;
@@ -79,6 +80,8 @@
             font-family: var.$font_Primary;
             color: var.$Color_White_B9;
             mix-blend-mode: difference;
+            -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 
             &:nth-child(2) {
                 text-align: end;

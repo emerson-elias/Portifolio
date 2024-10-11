@@ -70,69 +70,8 @@
                     }
                 }
 
-                button {
-                    position: relative;
-                    width: auto;
-                    height: auto;
-                    padding: 0.5vmax 3vmax;
-                    background-color: transparent;
-                    font-size: 1.9vmax;
-                    border: 0.1vw solid var.$Color_White_B9;
-                    border-radius: 10vw;
-                    font-family: var.$font_Secondary;
-                    color: var.$Color_White_B9;
-                    transition: var.$Transition_ease;
-                    overflow: hidden;
-                    cursor: pointer;
-
-                    @include responsive.screen_laptop {
-                        font-size: 20px;
-                        padding-left: 30px;
-                    }
-                    @include responsive.screen_small {
-                        font-size: 22px;
-                        padding: 15px 50px;
-                    }
-
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        width: 2vw;
-                        height: 2vw;
-                        border-radius: 50%;
-                        top: 50%;
-                        left: 6%;
-                        transform: translate(-50%, -50%);
-                        background-color: var.$Secundary_Color;
-                        mix-blend-mode: difference;
-                        transition: var.$Transition_ease;
-
-                        @include responsive.screen_laptop {
-                            width: 25px;
-                            height: 25px;
-                        }
-                        @include responsive.screen_small {
-                            width: 40px;
-                            height: 40px;
-                            left: 9%;
-                        }
-                    }
-
-                    &:hover::after {
-                        left: 94%;
-                        transition: var.$Transition_ease;
-
-                        @include responsive.screen_small {
-                            left: 93%;
-                        }
-                    }
-
-                    &:hover {
-                        background-color: var.$Secundary_Color;
-                        color: var.$gray_primary;
-                        transition: var.$Transition_ease;
-                        border-color: var.$Secundary_Color;
-                    }
+                button {                  
+                    @include mixins.btn();           
                 }
             }
         }

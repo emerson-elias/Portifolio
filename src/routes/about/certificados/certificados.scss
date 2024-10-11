@@ -8,20 +8,23 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
-    margin: 0 0 20vh 0;
+    margin: 15vh 0 18vh 0;
     overflow: hidden;
 
-    @include responsive.screen_small{
+    @include responsive.screen_tablet{
+        margin-bottom: 5vh;
+    }
+    @include responsive.screen_small {
         margin-top: 150px;
     }
 
-    .word-big{
+    .word-big {
         position: relative;
         width: 90vw;
         height: auto;
         overflow: hidden;
 
-        span{
+        span {
             display: block;
             font-size: 10vmax;
             color: var.$Color_White_B9;
@@ -29,16 +32,18 @@
             letter-spacing: 2px;
             word-break: break-all;
 
-            &:nth-child(1){
+            &:nth-child(1) {
                 text-align: start;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 text-align: end;
                 color: transparent;
                 font-size: 5vmax;
                 -webkit-text-stroke: 0.1vw var.$Secundary_Color;
             }
-            &:nth-child(3){
+
+            &:nth-child(3) {
                 text-align: end;
                 padding-right: 7vw;
             }
@@ -48,6 +53,20 @@
                 margin: 35px 0;
             }
         }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 60%;
+
+            @include responsive.screen_laptop{
+                left: 50%;
+            }
+            @include responsive.screen_small {
+                left: 10%;
+                width: 150px;
+            }
+        }
     }
 
     .row {
@@ -55,16 +74,16 @@
         flex-direction: column;
         width: 90vw;
         height: auto;
-        margin: 30vh 0;
+        margin: 25vh 0;
 
-        @include responsive.screen_small{
+        @include responsive.screen_small {
             margin: 50px 0;
         }
 
         .layers {
             @include mixins.align(relative, flex, space-between, center);
             width: 100vw;
-            padding: 3vh 6vw;
+            padding: 4vh 6vw;
             height: auto;
             border-bottom: 0.1vw solid var.$gray_Secundary_Color;
             will-change: transform;
@@ -73,25 +92,26 @@
                 padding: 10px 40px;
             }
 
-            &::after{
+            &::after {
                 position: absolute;
                 content: '';
                 top: 0%;
-                left: 0%;   
+                left: 0%;
                 width: 100vw;
                 height: 0%;
                 background-color: var.$Secundary_Color;
                 transition: 0.3s all;
-                pointer-events: none; 
-                z-index: -1;                         
-            }                       
-            &:hover::after{
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            &:hover::after {
                 height: 100%;
                 transition: 0.3s all;
                 pointer-events: none;
             }
 
-            .title-project{
+            .title-project {
                 position: relative;
                 width: 70vw;
                 height: auto;
@@ -115,43 +135,43 @@
                 }
             }
 
-            &:hover h1{
+            &:hover h1 {
                 color: var.$gray_primary;
                 transition: 0.3s all;
                 padding-left: 3vw;
                 transform: skew(-25deg);
             }
 
-            .certi-icon{
+            .certi-icon {
                 position: absolute;
                 top: 70%;
                 left: 60%;
                 transform: translate(-50%, -50%);
                 pointer-events: none;
 
-                img{
+                img {
                     width: 25vw;
                     height: auto;
                     pointer-events: none;
 
-                    @include responsive.screen_small{
+                    @include responsive.screen_small {
                         width: 190px;
                     }
                 }
             }
 
-            .year{
+            .year {
                 position: relative;
                 width: 10vw;
                 height: auto;
 
-                h1{
+                h1 {
                     font-size: 4vmax;
                     font-family: var.$font_Primary;
                     color: var.$gray_primary;
                     transition: 0.3s all;
 
-                    @include responsive.screen_small{
+                    @include responsive.screen_small {
                         display: none;
                     }
                 }

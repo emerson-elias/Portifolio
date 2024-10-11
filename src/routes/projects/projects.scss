@@ -94,7 +94,7 @@
         .layers {
             @include mixins.align(relative, flex, space-between, center);
             width: 100vw;
-            padding: 3vh 6vw;
+            padding: 4vh 6vw;
             height: auto;
             border-bottom: 0.1vw solid var.$gray_Secundary_Color;
             will-change: transform;

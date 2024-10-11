@@ -6,11 +6,12 @@ import Footer from "../../Components/footer/footer.jsx"
 import Topo from "../../Components/topo/topo.jsx"
 
 import Certificados from "./certificados/certificados.jsx"
-import Diferenciais from "./diferenciais/diferenciais.jsx"
 
 import hero from "/assets/img/Me-hero.png"
 import '../about/about.scss'
 import Banner_About from "./about-banner/banner-about.jsx"
+import Contate_Me from "../../Components/contate-me/contate.jsx"
+import Experience from "./experience/experience.jsx"
 
 export default function About() {
 
@@ -98,7 +99,8 @@ export default function About() {
             </section>
 
             <Certificados />
-            <Diferenciais />
+            <Experience />
+            <Contate_Me />
             <Topo />
             <Footer />
         </>

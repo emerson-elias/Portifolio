@@ -45,6 +45,7 @@
         color: var.$Color_White_B9;
         transform: rotate(100deg);
         transition: var.$Transition_ease;
+        will-change: transform;
 
         @include responsive.screen_laptop{
             width: 130px;
@@ -54,7 +55,7 @@
         }
 
         &:hover{
-            transform: rotate(100deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
             transition: var.$Transition_ease;
         }
     }

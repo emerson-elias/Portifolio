@@ -9,7 +9,7 @@ import Footer from "../Components/footer/footer.jsx"
 import Project from "../Components/project/project.jsx"
 import Tecnology from "../Components/tecnology/tecnology.jsx"
 import Tools from "../Components/tools/tools.jsx"
-import Contate from "../Components/contate-me/contate.jsx"
+import Contate_Me from "../Components/contate-me/contate.jsx"
 
 export default function Home(){
 
@@ -29,7 +29,7 @@ export default function Home(){
             <Topo />
             <Tecnology />
             <Tools />
-            <Contate />
+            <Contate_Me />
             <Footer />
         </>
     )

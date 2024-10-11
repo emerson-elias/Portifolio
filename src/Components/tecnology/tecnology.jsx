@@ -1,9 +1,9 @@
-import { useEffect, useRef, React } from 'react';
-import { Link } from 'react-router-dom';
-import gsap from 'gsap';
+import { useEffect, useRef, React } from 'react'
+import { Link } from 'react-router-dom'
+import gsap from 'gsap'
 
-import '../tecnology/tecnology.scss';
-import Word from './word/word';
+import '../tecnology/tecnology.scss'
+import Word from './word/word'
 
 export default function Tecnology() {
 

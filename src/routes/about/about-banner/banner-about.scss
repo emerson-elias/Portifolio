@@ -31,6 +31,10 @@
             }
             &:nth-child(2) {
                 transform: rotateZ(-10deg) translateY(80vh);
+
+                @include responsive.screen_tablet{
+                    transform: rotate(-10deg) translateY(55vh);
+                }
             }
             &:nth-child(3) {
                 transform: rotate(15deg) translateY(-5vh);
