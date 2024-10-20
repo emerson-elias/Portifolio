@@ -36,7 +36,7 @@
             span {
                 padding-left: 7vw;
                 font-size: 3vmax;
-                color: var.$Color_White_B9;
+                color: var.$Secundary_Color;
                 font-family: var.$font_Primary;
                 letter-spacing: 2px;
             }
@@ -45,7 +45,7 @@
                 font-size: 7vmax;
                 color: var.$Color_White_B9;
                 font-family: var.$font_Primary;
-                letter-spacing: 2px;
+                letter-spacing: 5px;
 
                 @include responsive.screen_small {
                     text-align: center;
@@ -58,7 +58,12 @@
             @include mixins.align(relative, flex, end, end);
             flex-direction: column;
             width: inherit;
+            padding-right: 2vw;
             height: auto;
+
+            @include responsive.screen_small{
+                padding: 0;
+            }
 
             .text-description {
                 position: relative;
@@ -110,8 +115,27 @@
                     flex-direction: column;
                 }
                 
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 0%;
+                    background-color: var.$Secundary_Color;
+                    transition: 0.3s all;
+                    pointer-events: none;
+                    z-index: -1;
+                }
+    
+                &:hover::after {
+                    height: 100%;
+                    transition: 0.3s all;
+                    pointer-events: none;
+                }
+
                 &:hover{
-                    transform: skew(-25deg);
+                    padding: 6vh 3vw;
                     transition: var.$Transition_ease;
                 }
     
@@ -121,6 +145,7 @@
                     font-family: var.$font_Tertiary;
                     letter-spacing: 2px;
                     word-wrap: break-all;
+                    transition: var.$Transition_ease;
     
                     @include responsive.screen_laptop {
                         font-size: 25px;
@@ -140,6 +165,7 @@
                     color: var.$Color_White_B9;
                     font-family: var.$font_Primary;
                     letter-spacing: 2px;
+                    transition: var.$Transition_ease;
     
                     @include responsive.screen_laptop {
                         font-size: 20px;
@@ -148,6 +174,15 @@
                         margin: 20px 0;
                     }
                 }
+
+                &:hover {
+                    h1,
+                    p,
+                    span {
+                      color: var.$gray_primary;
+                      transition: var.$Transition_ease;
+                    }
+                }     
             }
 
             .btn-projects{

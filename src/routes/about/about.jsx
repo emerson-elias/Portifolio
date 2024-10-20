@@ -82,7 +82,7 @@ export default function About() {
                         </div>
 
                         <div className="layers">
-                            <h1>Baixe meu currículo!</h1>
+                            <h1>Meu currículo!</h1>
 
                             <div className="cicle">
                                 <a href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer">

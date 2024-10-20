@@ -22,7 +22,7 @@ export default function Tools() {
                 </div>
 
                 <div className="itemLeft item2">
-                    <a href="https://www.imagine.art/dashboard?isSignUp=false" target="_blank">gsap /</a>
+                    <a href="https://gsap.com/" target="_blank">gsap /</a>
                 </div>
 
                 <div className="itemLeft item3">
@@ -34,7 +34,7 @@ export default function Tools() {
                 </div>
 
                 <div className="itemLeft item5">
-                    <a href="https://neumorphism.io/#e0e0e0" target="_blank">flaticon /</a>
+                    <a href="https://www.flaticon.com/" target="_blank">flaticon /</a>
                 </div>
 
                 <div className="itemLeft item6">
@@ -66,7 +66,7 @@ export default function Tools() {
                 </div>
 
                 <div className="itemRight item4">
-                    <a href="https://neumorphism.io/#e0e0e0" target="_blank">flaticon /</a>
+                    <a href="https://www.flaticon.com/" target="_blank">flaticon /</a>
                 </div>
 
                 <div className="itemRight item5">
@@ -78,7 +78,7 @@ export default function Tools() {
                 </div>
 
                 <div className="itemRight item7">
-                    <a href="https://www.imagine.art/dashboard?isSignUp=false" target="_blank">gsap /</a>
+                    <a href="https://gsap.com/" target="_blank">gsap /</a>
                 </div>
 
                 <div className="itemRight item8">

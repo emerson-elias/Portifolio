@@ -10,7 +10,6 @@ export default function Experience() {
                 <div className="box-tittle">
                     <span>Minhas</span>
                     <h1>Experiências</h1>
-
                 </div>
 
                 <div className="box-layers">

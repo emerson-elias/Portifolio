@@ -19,6 +19,7 @@
             width: 400px;
             height: 100vh;
         }
+
         @include responsive.screen_small {
             width: 250px;
         }
@@ -34,31 +35,32 @@
             filter: grayscale(100%);
             animation: fade 2s ease;
 
-            &:hover{
+            &:hover {
                 filter: grayscale(0%);
                 transition: var.$Transition_ease;
             }
         }
     }
 
-    .svg{
+    .svg {
         position: absolute;
         width: 12vw;
         top: 20vh;
-        left: 70vw; 
+        left: 70vw;
         z-index: -1;
         pointer-events: none;
 
-        @include responsive.screen_laptop{
+        @include responsive.screen_laptop {
             width: 25vw;
             top: 10vh;
         }
-        @include responsive.screen_small{
+
+        @include responsive.screen_small {
             width: 50vw;
             left: 50vw;
         }
 
-        svg{
+        svg {
             width: 100%;
             color: var.$Color_White_B9;
             animation: girar_left 15s linear infinite;
@@ -80,11 +82,15 @@
             font-family: var.$font_Primary;
             color: var.$Color_White_B9;
             mix-blend-mode: difference;
-            -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            -webkit-animation: tracking-in-expand 0.7s;
+            animation: tracking-in-expand 0.7s;
 
             &:nth-child(2) {
-                text-align: end;
+                transform: translateX(20vw);
+
+                @include responsive.screen_small {
+                    transform: none;
+                }
             }
 
             @include responsive.screen_small {
