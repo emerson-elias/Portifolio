@@ -10,6 +10,7 @@ import Project from "../Components/project/project.jsx"
 import Tecnology from "../Components/tecnology/tecnology.jsx"
 import Tools from "../Components/tools/tools.jsx"
 import Contate_Me from "../Components/contate-me/contate.jsx"
+import Loader from "../Components/loader/loader.jsx"
 
 export default function Home(){
 
@@ -21,6 +22,7 @@ export default function Home(){
 
     return(
         <>
+            <Loader />
             <Cursor />
             <Nav_Bar />
             <Banner />

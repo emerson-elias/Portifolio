@@ -1,0 +1,75 @@
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/key-Frames';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/variables' as var;
+
+.loader-container{
+    @include mixins.align(fixed, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: var.$Secundary_Color;
+    -webkit-animation: bounce-out-top 3.5s both;
+	animation: bounce-out-top 3.5s both;
+    animation-delay: 2s;
+    overflow: hidden;
+    z-index: 9999;
+
+    .barras{
+        @include mixins.align(absolute, flex, space-between, center);
+        width: 100vw;
+        height: auto;
+
+        span{
+            position: relative;
+            width: inherit;
+            height: 100vh;
+
+            border-left: 0.1vw solid var.$gray_primary;
+
+            @include responsive.screen_small{
+                width: 150px;
+
+                &:nth-child(1){
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    display: none;
+                }
+            }
+
+            &:nth-child(1){
+                border-left: none;
+            }
+        }
+    }
+
+    .banner-text{
+        position: relative;
+        width: 95vw;
+        height: auto;
+
+        span{
+            display: block;
+            font-size: 18vmax;
+            color: var.$gray_primary;
+            font-family: var.$font_Secondary;
+            -webkit-animation: tracking-in-expand 1s;
+            animation: tracking-in-expand 1s;
+
+            @include responsive.screen_small{
+                font-size: 100px;
+                animation: none;
+            }
+
+            &:nth-child(2){
+                text-align: end;
+            }
+        }
+    }
+}
+
+
