@@ -1,22 +1,20 @@
 import '../loader/loader.scss'
 
-export default function Loader(){
-    return(
+export default function Loader() {
+    return (
         <section className="loader-container">
 
-            <div className="barras">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div className="cube">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
-            <div className="banner-text">
-                <span>Ola ×͜×</span>
-                <span>⌬ Mundo</span>
+            <div className="loader">
+                <span>carregando...</span>
             </div>
             
         </section>

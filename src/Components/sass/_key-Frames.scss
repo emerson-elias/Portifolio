@@ -350,109 +350,43 @@
 
 /*==============================================================================================*/
 
-/* ANIMAÇÃO DE CARREGAMENTO */
+/* ANIMAÇÃO DO CUBO NO COMPONENTE DE LOADING */
+/**
+  * Cube
+  *
+  * @author jh3y - jheytompkins.com
+*/
 
-@-webkit-keyframes bounce-out-top {
+@-webkit-keyframes cube {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -webkit-transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
   }
-  5% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+
+  50% {
+    -webkit-transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
   }
-  15% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  25% {
-    -webkit-transform: translateY(-38px);
-            transform: translateY(-38px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  38% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  52% {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  70% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  85% {
-    opacity: 1;
-  }
+
   100% {
-    -webkit-transform: translateY(-800px);
-            transform: translateY(-800px);
-    opacity: 0;
+    -webkit-transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
 }
-@keyframes bounce-out-top {
+
+@keyframes cube {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -webkit-transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
   }
-  5% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+
+  50% {
+    -webkit-transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
   }
-  15% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  25% {
-    -webkit-transform: translateY(-38px);
-            transform: translateY(-38px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  38% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  52% {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  70% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  85% {
-    opacity: 1;
-  }
+
   100% {
-    -webkit-transform: translateY(-800px);
-            transform: translateY(-800px);
-    opacity: 0;
+    -webkit-transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
 }
