@@ -25,7 +25,7 @@ export default function Home() {
         const delayTimeout = setTimeout(() => {
             setIsLoading(false);
             sessionStorage.setItem("pageLoaded", "true")
-        }, 3000)
+        }, 5000)
 
         return () => clearTimeout(delayTimeout)
     }, [])
