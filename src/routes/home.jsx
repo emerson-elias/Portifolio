@@ -27,8 +27,8 @@ export default function Home() {
             setTimeout(() => {
                 setIsLoading(false)
                 sessionStorage.setItem("pageLoaded", "true")
-            }, 2000) // tempo para a transição de fade-out
-        }, 2000)
+            }, 1500) // tempo para a transição de fade-out
+        }, 3000)
 
         return () => clearTimeout(delayTimeout)
     }, [])

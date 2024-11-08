@@ -7,7 +7,8 @@
     height: auto;
     left: -4.2vmax;
     bottom: 5vmax;
-    transform: rotate(-90deg);   
+    transform: rotate(-90deg);
+    animation: fade 3s ease;
     z-index: 9; 
 
     @include responsive.screen_laptop{
