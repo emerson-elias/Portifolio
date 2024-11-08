@@ -37,7 +37,7 @@
             position: sticky;
             top: 0.5vmax;
             width: 50%;
-            height: auto;   
+            height: 100vh; 
 
             @include responsive.screen_tablet {
                 @include mixins.align(relative, flex, center, center);
@@ -47,6 +47,7 @@
             img {
                 position: relative;
                 width: 75%;
+                height: inherit;
                 object-fit: cover;
                 border-radius: 2vmax;
                 filter: grayscale(100%);

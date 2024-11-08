@@ -1,8 +1,8 @@
 import '../loader/loader.scss'
 
-export default function Loader() {
+export default function Loader({ className }) {
     return (
-        <section className="loader-container">
+        <section className={`loader-container ${className || ""}`}>
 
             <div className="cube">
                 <div></div>
@@ -13,10 +13,10 @@ export default function Loader() {
                 <div></div>
             </div>
 
-            <div className="loader">
+            <div className='loader'>
                 <span>carregando...</span>
             </div>
-            
+
         </section>
     )
 }

@@ -15,16 +15,19 @@ import Loader from "../Components/loader/loader.jsx"
 export default function Home() {
 
     const [isLoading, setIsLoading] = useState(() => !sessionStorage.getItem("pageLoaded"))
+    const [isFadingOut, setIsFadingOut] = useState(false)
 
     useEffect(() => {
-
         if (window.pageYOffset > 0) {
             window.scrollTo(0, 0)
         }
 
         const delayTimeout = setTimeout(() => {
-            setIsLoading(false)
-            sessionStorage.setItem("pageLoaded", "true")
+            setIsFadingOut(true)
+            setTimeout(() => {
+                setIsLoading(false)
+                sessionStorage.setItem("pageLoaded", "true")
+            }, 2000) // tempo para a transição de fade-out
         }, 2000)
 
         return () => clearTimeout(delayTimeout)
@@ -33,7 +36,7 @@ export default function Home() {
     return (
         <>
             {isLoading ? (
-                <Loader />
+                <Loader className={isFadingOut ? "fade-out" : ""} />
             ) : (
                 <>
                     <Cursor />
