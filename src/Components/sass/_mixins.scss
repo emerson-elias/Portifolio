@@ -46,7 +46,7 @@
     }
 }
 
-@mixin btn (){
+@mixin btn () {
     position: relative;
     width: auto;
     height: auto;
@@ -65,6 +65,7 @@
         font-size: 20px;
         padding-left: 30px;
     }
+
     @include responsive.screen_small {
         font-size: 22px;
         padding: 15px 50px;
@@ -87,6 +88,7 @@
             width: 25px;
             height: 25px;
         }
+
         @include responsive.screen_small {
             width: 40px;
             height: 40px;
@@ -108,5 +110,25 @@
         color: var.$gray_primary;
         transition: var.$Transition_ease;
         border-color: var.$Secundary_Color;
+    }
+}
+
+@mixin banner_project ($bg) {
+    position: relative;
+    background-image: $bg;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 100vh;
+
+    @include responsive.screen_tablet {
+        width: 60vw;
+        height: 80vh;
+    }
+
+    @include responsive.screen_small {
+        width: 70vw;
+        height: 70vh;
     }
 }

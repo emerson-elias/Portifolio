@@ -4,6 +4,12 @@
 @use '/src/Components/sass/variables' as var;
 
 
+$bg-project-1: url('../../../public/assets/img/1.jpg');
+$bg-project-2: url('../../../public/assets/img/2.jpg');
+$bg-project-3: url('../../../public/assets/img/3.jpg');
+$bg-project-4: url('../../../public/assets/img/4.jpg');
+
+
 .project-container {
     @include mixins.align(relative, flex, center, center);
     flex-direction: column;
@@ -17,7 +23,7 @@
         height: auto;
         margin: 25vh 0;
 
-        @include responsive.screen_small{
+        @include responsive.screen_small {
             margin: 100px 0;
             padding: 0 30px;
         }
@@ -29,17 +35,17 @@
             font-family: var.$font_Primary;
             letter-spacing: 3px;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 font-size: 40px;
             }
         }
 
-        a{
+        a {
             position: relative;
             width: 10vmax;
             height: auto;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 width: 100px;
             }
 
@@ -51,11 +57,11 @@
                 transform: rotate(90deg);
                 cursor: pointer;
 
-                @include responsive.screen_small{
+                @include responsive.screen_small {
                     width: 50%;
                     margin-left: 30px;
                 }
-    
+
                 &::after {
                     position: absolute;
                     content: 'todos';
@@ -68,8 +74,8 @@
                     padding-left: 8vmax;
                     font-family: var.$font_Primary;
                     color: var.$Color_White_B9;
-    
-                    @include responsive.screen_small{
+
+                    @include responsive.screen_small {
                         display: none;
                     }
                 }
@@ -93,11 +99,12 @@
             height: auto;
             margin: 0 0 40vh 0;
 
-            @include responsive.screen_tablet{
+            @include responsive.screen_tablet {
                 flex-direction: column;
                 margin: 0 0 10vh 0;
             }
-            &:nth-child(4){
+
+            &:nth-child(4) {
                 margin: 0;
             }
 
@@ -107,13 +114,14 @@
                 height: 100vh;
                 padding: 0 1vmax;
 
-                @include responsive.screen_tablet{
+                @include responsive.screen_tablet {
                     flex-direction: column;
                     height: auto;
                     width: inherit;
                     padding: 70px 0;
                 }
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     width: 85%;
                 }
 
@@ -127,28 +135,37 @@
                     overflow-wrap: break-word;
                     cursor: pointer;
 
-                    @include responsive.screen_tablet{
+                    @include responsive.screen_tablet {
                         font-size: 40px;
                     }
                 }
             }
 
             .view {
-                position: relative;
-                width: 40vw;
+                @include mixins.align(relative, flex, center, center);
+                width: auto;
                 height: 100vh;
                 border-radius: 20px;
                 overflow: hidden;
                 cursor: none;
 
-                @include responsive.screen_tablet{
-                    height: auto;
-                }
-                @include responsive.screen_small{
-                    width: 70vw;
+                &.view-1 {
+                    @include mixins.banner_project($bg-project-1);
                 }
 
-                .view-float{
+                &.view-2 {
+                    @include mixins.banner_project($bg-project-2);
+                }
+
+                &.view-3 {
+                    @include mixins.banner_project($bg-project-3);
+                }
+
+                &.view-4 {
+                    @include mixins.banner_project($bg-project-4);
+                }
+
+                .view-float {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -157,11 +174,11 @@
                     border-radius: 50%;
                     transform: translateX(-15vw);
                     display: grid;
-                    place-content: center; 
+                    place-content: center;
                     background-color: var.$gray_primary;
                     z-index: 2;
 
-                    span{
+                    span {
                         color: var.$Color_White_B9;
                         font-size: 2vmax;
                         letter-spacing: 2px;
@@ -171,15 +188,10 @@
 
                 img {
                     position: relative;
-                    width: 100%;
-                    height: inherit;
+                    width: 80%;
+                    height: auto;
                     object-fit: cover;
-                    transition: var.$Transition_ease;
-                }
-
-                &:hover img {
-                    transform: scale(1.2);
-                    transition: var.$Transition_ease;
+                    border-radius: 1vmax;
                 }
             }
 
@@ -189,7 +201,7 @@
                 height: 100vh;
                 padding: 1.5vmax;
 
-                @include responsive.screen_tablet{
+                @include responsive.screen_tablet {
                     width: 70%;
                     height: auto;
                     padding: 50px 0;
@@ -199,10 +211,11 @@
                     padding-top: 70vh;
                     font-size: 1.5vmax;
                     line-height: 1.2;
+                    letter-spacing: 1px;
                     color: var.$Color_White_B9;
                     font-family: var.$font_Tertiary;
 
-                    @include responsive.screen_tablet{
+                    @include responsive.screen_tablet {
                         text-align: center;
                         padding: 0;
                         font-size: 18px;
@@ -215,31 +228,31 @@
         .projects-4 {
             flex-direction: row-reverse;
 
-            @include responsive.screen_tablet{
+            @include responsive.screen_tablet {
                 flex-direction: column;
             }
         }
     }
 
-    .ancor_about{
+    .ancor_about {
         @include mixins.align(relative, flex, center, center);
         width: inherit;
         height: auto;
         margin-top: 10vh;
         padding-left: 50vw;
 
-        @include responsive.screen_small{
+        @include responsive.screen_small {
             padding: 0;
         }
 
-        a{
+        a {
             @include mixins.align(relative, flex, space-around, center);
             text-decoration: none;
             width: 25vw;
             height: auto;
             cursor: pointer;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 width: 300px;
             }
 
@@ -251,24 +264,24 @@
                 letter-spacing: 3px;
                 padding-right: 2vmax;
                 text-wrap: nowrap;
-    
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     font-size: 20px;
                 }
             }
-    
+
             .svg {
                 border: 1px solid var.$Color_White_B9;
                 padding: 0.5vmax;
                 border-radius: 50%;
                 width: 20%;
                 transform: rotate(90deg);
-    
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     width: 15%;
                 }
 
-                svg{
+                svg {
                     pointer-events: none;
                 }
             }

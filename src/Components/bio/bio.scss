@@ -51,35 +51,6 @@
             letter-spacing: 1.2px;
             line-height: 1.5;  
 
-            @include responsive.screen_tablet{
-                font-size: 20px;
-            }    
-            @include responsive.screen_small{
-                font-size: 21px;
-                text-align: center;
-            }
-
-            svg{
-                position: relative;
-                top: 0.5vmax;
-                width: 6%;
-                margin-left: 2%;
-                animation: girar_left 10s linear infinite;
-
-                @include responsive.screen_small{
-                    top: 7px;
-                    width: 12%;
-                }
-            }
-
-            i{
-                font-size: 1.5vmax;
-
-                @include responsive.screen_small{
-                    font-size: 15px;
-                }
-            }
-            
             &:nth-child(1){
                 margin-left: 7vmax;                           
             }
@@ -102,7 +73,36 @@
             }
             &:nth-child(23){
                 color: var.$Secundary_Color;                           
-            }                     
+            } 
+
+            @include responsive.screen_tablet{
+                font-size: 20px;
+            }    
+            @include responsive.screen_small{
+                font-size: 20px;
+                text-align: center;
+            }
+
+            svg{
+                position: relative;
+                top: 0.5vmax;
+                width: 6%;
+                margin-left: 2%;
+                animation: girar_left 10s linear infinite;
+
+                @include responsive.screen_small{
+                    top: 7px;
+                    width: 12%;
+                }
+            }
+
+            i{
+                font-size: 1.5vmax;
+
+                @include responsive.screen_small{
+                    font-size: 15px;
+                }
+            }                    
         }
     }
 

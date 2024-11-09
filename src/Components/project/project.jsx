@@ -2,10 +2,10 @@ import { Link } from "react-router-dom"
 
 import '../project/project.scss'
 
-import IMG_BANNER_1 from './banners-img/1.jpg'
-import IMG_BANNER_2 from './banners-img/2.jpg'
-import IMG_BANNER_3 from './banners-img/3.jpg'
-import IMG_BANNER_4 from './banners-img/4.jpg'
+import gif_1 from '/assets/gif/page-1.gif'
+import gif_2 from '/assets/gif/page-2.gif'
+import gif_3 from '/assets/gif/page-3.gif'
+import gif_4 from '/assets/gif/page-4.gif'
 
 export default function Project() {
 
@@ -31,12 +31,12 @@ export default function Project() {
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view">
-                        <img src={IMG_BANNER_1} loading="lazy" alt="" />
+                    <div className="view view-1">
+                        <img src={gif_1} alt="" />
                     </div>
 
                     <div className="info">
-                        <p>Projeto em desenvolvimento. Aguardem...</p>
+                        <p>Imagens ilustrativas. Projetos em desenvolvimento</p>
                     </div>
                 </div>
 
@@ -46,12 +46,12 @@ export default function Project() {
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view">
-                        <img src={IMG_BANNER_2} loading="lazy" alt="" />
+                    <div className="view view-2">
+                        <img src={gif_2} alt="" />
                     </div>
 
                     <div className="info">
-                        <p>Projeto em desenvolvimento. Aguardem...</p>
+                        <p>Imagens ilustrativas. Projetos em desenvolvimento</p>
                     </div>
                 </div>
 
@@ -60,12 +60,12 @@ export default function Project() {
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view">
-                        <img src={IMG_BANNER_3} loading="lazy" alt="" />
+                    <div className="view view-3">
+                        <img src={gif_3} alt="" />
                     </div>
 
                     <div className="info">
-                        <p>Projeto em desenvolvimento. Aguardem...</p>
+                        <p>Imagens ilustrativas. Projetos em desenvolvimento</p>
                     </div>
                 </div>
 
@@ -75,12 +75,12 @@ export default function Project() {
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view">
-                        <img src={IMG_BANNER_4} loading="lazy" alt="" />
+                    <div className="view view-4">
+                        <img src={gif_4} alt="" />
                     </div>
 
                     <div className="info">
-                        <p>Projeto em desenvolvimento. Aguardem...</p>
+                        <p>Imagens ilustrativas. Projetos em desenvolvimento</p>
                     </div>
                 </div>
 
