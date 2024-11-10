@@ -6,7 +6,7 @@ import styles from '../modal/modal.module.scss'
 import Backdrop from '../backdrop/backdrop.jsx'
 
 
-const Modal = ({ setShowModal }) => {
+const Modal = ({ setShowModal, modalInfo }) => {
 
     const [showAnimated, setShowAnimated] = useState(false)
 
@@ -31,6 +31,7 @@ const Modal = ({ setShowModal }) => {
                     <i className="fa-solid fa-xmark close-icon" onClick={closeModal}></i>
                 </div>
 
+                <p>{modalInfo}</p>
             </div>
         </>
     )
