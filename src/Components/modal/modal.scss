@@ -3,30 +3,129 @@
 @use '/src/Components/sass/responsive';
 @use '/src/Components/sass/variables' as var;
 
-.modal-container{
+.modal-container {
     @include mixins.align(fixed, flex, center, center);
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.80);
     -webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     z-index: 999;
+    overflow: hidden;
 
-    .iwwa--close {
-        display: inline-block;
-        width: 50em;
-        height: 50em;
-        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23000' d='M20.725 20L34.493 6.216a.516.516 0 0 0 0-.726a.526.526 0 0 0-.727.001L20 19.274L6.232 5.49a.53.53 0 0 0-.726 0a.515.515 0 0 0 0 .725L19.275 20L5.507 33.784a.513.513 0 1 0 .725.725L20 20.726L33.767 34.51a.513.513 0 0 0 .726-.725z'/%3E%3C/svg%3E");
-        background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 100% 100%;
-        mask-size: 100% 100%;
-        cursor: pointer;
-      }
+    .closer {
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        background-color: rgba(102, 51, 153, 0);
+        z-index: 99;
+
+        i {
+            font-size: 3vmax;
+            color: var.$gray_primary;
+            background-color: var.$Secundary_Color;
+            padding: 1.2vmax 1.7vmax;
+            border-radius: 50%;
+            margin-left: 90%;
+            cursor: pointer;
+        }
+    }
+
+    .row {
+        position: relative;
+        width: 90vw;
+        height: auto;
+        background-color: rgba(2, 44, 81, 0);
+
+        .name-year-project {
+            @include mixins.align(relative, flex, center, center);
+            flex-direction: column;
+            width: inherit;
+            height: auto;
+            border-bottom: 0.1vw solid var.$gray_Secundary_Color;
+
+            background-color: rgba(65, 31, 31, 0);
+
+            h1 {
+                font-size: 5vmax;
+                font-family: var.$font_Primary;
+                letter-spacing: 2px;
+                color: var.$Color_White_B9;
+                margin: 2vh 0;
+            }
+
+            span {
+                font-size: 1.6vmax;
+                font-family: var.$font_normal;
+                letter-spacing: 2px;
+                color: var.$Color_White_B9;
+                margin: 2vh 0;
+            }
+        }
+
+        .box-description {
+            @include mixins.align(relative, flex, space-between, center);
+            width: 90vw;
+            height: auto;
+            background-color: rgba(81, 2, 69, 0);
+
+            .layer-1 {
+                position: relative;
+                width: 40vw;
+                height: auto;
+
+                h1{
+                    font-size: 2.5vmax;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 2px;
+                    color: var.$Color_White_B9;
+                    margin: 7vh 0; 
+                    text-align: center;
+                }
+
+                span{
+                    position: relative;
+                    display: block;
+                    font-size: 2vmax;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 2px;
+                    color: var.$Color_White_B9;
+                    margin: 3vh 0; 
+                }
+            }
+
+            .layer-2{
+                position: relative;
+                width: 60vw;
+                height: auto;
+
+                .box-1, .box-2{
+                    position: relative;
+                    width: initial;
+                    height: 20vh;
+
+                    background-color: rgba(152, 251, 152, 0);
+
+                    h1{
+                        font-size: 2vmax;
+                        font-family: var.$font_Primary;
+                        color: var.$Color_White_B9;
+                        letter-spacing: 2px;
+                    }
+                    p{
+                        font-size: 1vmax;
+                        font-family: var.$font_normal;
+                        color: var.$Color_White_B9;
+                        letter-spacing: 1px; 
+                        padding-top: 3vh;
+                    }
+                }
+            }
+        }
+    }
 }
