@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+
 import './cursor.scss'
 
 export default function Cursor() {

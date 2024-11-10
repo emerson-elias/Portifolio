@@ -54,8 +54,14 @@
                 transition: var.$Transition_ease;
 
                 @include responsive.screen_tablet {
+                    width: 360px;
+                    height: auto;
+                }
+                
+                @include responsive.screen_small {
                     width: 260px;
                 }
+
                 &:hover {
                     filter: grayscale(0%);
                     transition: var.$Transition_ease;
