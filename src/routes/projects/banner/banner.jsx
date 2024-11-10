@@ -1,11 +1,12 @@
 import '../banner/banner.scss'
+import img from '/assets/img/pexels.jpg'
 
 export default function Banner() {
     return (
         <section className="projects-container">
 
             <div className="banner-img">
-                <img src="./assets/img/pexels.jpg" loading="lazy" alt="BANNE" />
+                <img src={img} loading="lazy" alt="BANNE" />
             </div>
 
             <div className="svg">

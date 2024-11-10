@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 
 import '../project/project.scss'
-import Modal from "../modal/modal"
+import Modal from "../modals/modal/modal"
 
 import gif_1 from '/assets/gif/page-1.gif'
 import gif_2 from '/assets/gif/page-2.gif'
@@ -12,7 +12,21 @@ import gif_4 from '/assets/gif/page-4.gif'
 
 export default function Project() {
 
+    const [showModal, setShowModal] = useState(false)
+
+
+    const openModal = () => {
+        setShowModal(true)
+    }
+
+
+ /*
     const [isModalVisible, setIsModalVisible] = useState(false)
+    const [isAnimating, setIsAnimating] = useState(false)
+
+    const handleModalClose = () => {
+        setIsAnimating(true) // Inicia a animação de saída
+    }*/
 
     return (
         <section className="project-container">
@@ -31,14 +45,15 @@ export default function Project() {
 
             <div className="row">
 
-                <div className="projects-1" >
-                    {isModalVisible ? <Modal onClose={() => setIsModalVisible(false)} /> : null}
+                <div className="projects-1">
+                    {showModal && <Modal setShowModal={setShowModal} />}
+
                     <div className="name">
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view view-1" onClick={() => setIsModalVisible(true)}>
-                        <img src={gif_1} alt="" />
+                    <div className="view view-1" onClick={openModal}>
+                        <img src={gif_1} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
@@ -48,13 +63,13 @@ export default function Project() {
 
 
                 <div className="projects-2" >
-                    {isModalVisible ? <Modal onClose={() => setIsModalVisible(false)} /> : null}
+                    { /*isModalVisible ? <Modal onClose={() => setIsModalVisible(false)} /> : null */}
                     <div className="name">
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view view-2" onClick={() => setIsModalVisible(true)}>
-                        <img src={gif_2} alt="" />
+                    <div className="view view-2" /*onClick={() => setIsModalVisible(true)}*/>
+                        <img src={gif_2} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
@@ -63,13 +78,13 @@ export default function Project() {
                 </div>
 
                 <div className="projects-3" >
-                    {isModalVisible ? <Modal onClose={() => setIsModalVisible(false)} /> : null}
+                  
                     <div className="name">
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view view-3" onClick={() => setIsModalVisible(true)}>
-                        <img src={gif_3} alt="" />
+                    <div className="view view-3" >
+                        <img src={gif_3} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">
@@ -78,13 +93,13 @@ export default function Project() {
                 </div>
 
                 <div className="projects-4" >
-                    {isModalVisible ? <Modal onClose={() => setIsModalVisible(false)} /> : null}
+                  
                     <div className="name">
                         <a>Em Breve</a>
                     </div>
 
-                    <div className="view view-4" onClick={() => setIsModalVisible(true)}>
-                        <img src={gif_4} alt="" />
+                    <div className="view view-4">
+                        <img src={gif_4} loading="lazy" alt="" />
                     </div>
 
                     <div className="info">

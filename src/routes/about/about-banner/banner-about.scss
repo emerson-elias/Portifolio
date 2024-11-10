@@ -32,8 +32,14 @@
             &:nth-child(2) {
                 transform: rotateZ(-10deg) translateY(80vh);
 
+                @include responsive.screen_large{
+                    transform: rotate(-10deg) translateY(35vh);
+                }
                 @include responsive.screen_tablet{
-                    transform: rotate(-10deg) translateY(55vh);
+                    transform: rotate(-10deg) translateY(45vh);
+                }
+                @include responsive.screen_small{
+                    transform: rotate(-10deg) translateY(75vh);
                 }
             }
             &:nth-child(3) {

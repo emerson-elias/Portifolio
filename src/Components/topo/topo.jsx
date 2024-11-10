@@ -9,7 +9,7 @@ export default function Topo() {
         const topo = topoRef.current
 
         const handleScroll = () => {
-            if (window.scrollY > 500) {
+            if (window.scrollY > 1000) {
                 topo.style.opacity = '1'
                 topo.style.pointerEvents = 'auto' 
             } else {

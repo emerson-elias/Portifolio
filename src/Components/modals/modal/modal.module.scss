@@ -1,0 +1,47 @@
+@use '/src/Components/sass/components';
+@use '/src/Components/sass/mixins';
+@use '/src/Components/sass/responsive';
+@use '/src/Components/sass/variables' as var;
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%) translateY(-100vh);
+    background-color: var.$gray_primary;
+    border-radius: 2vmax;
+    z-index: 999;
+    opacity: 0.5;
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    &.animated_modal {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    .closer {
+        position: relative;
+        width: initial;
+        height: auto;
+        padding: 3vh 0;
+
+        i {
+            font-size: 3vmax;
+            color: var.$gray_primary;
+            background-color: var.$Secundary_Color;
+            transition: var.$Transition_ease;
+            padding: 1.2vmax 1.7vmax;
+            border-radius: 50%;
+            margin-left: 90%;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.2);
+                transition: var.$Transition_ease;
+            }
+        }
+    }
+}
