@@ -44,6 +44,11 @@
                 width: inherit;
             }
 
+            @include responsive.screen_small {
+                height: auto;
+                margin-bottom: 100px;
+            }
+
             img {
                 position: relative;
                 width: 75%;
