@@ -165,20 +165,6 @@ $bg-project-4: url('../../../public/assets/img/4.jpg');
                     @include mixins.banner_project($bg-project-4);
                 }
 
-                &::after{
-                    position: absolute;
-                    content: '';
-                    top: 50%;
-                    left: 50%;
-                    width: 95%;
-                    height: 95%;
-                    transform: translate(-50%, -50%);
-                    background-color: transparent;
-                    border: 0.2vmax solid var.$gray_Secundary_Color;
-                    border-radius: 20px;
-                    pointer-events: none;
-                }
-
                 .view-float {
                     position: absolute;
                     top: 0;

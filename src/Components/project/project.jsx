@@ -11,10 +11,10 @@ import gif_4 from '/assets/gif/page-4.gif'
 
 export default function Project() {
     const [showModal, setShowModal] = useState(false)
-    const [currentProject, setCurrentProject] = useState(null) // Estado para controlar o projeto clicado
+    const [currentProject, setCurrentProject] = useState(null) 
 
-    const openModal = (projectId) => {
-        setCurrentProject(projectId)
+    const openModal = (project) => {
+        setCurrentProject(project)
         setShowModal(true)
     }
 
@@ -23,35 +23,46 @@ export default function Project() {
         setCurrentProject(null)
     }
 
-    // Dados dos projetos
     const projectsData = [
         {
             id: 1,
             title: "Em Breve",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
             gif: gif_1,
-            modalInfo: "Informações detalhadas sobre o Projeto 1."
+            modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 1.",
+            year: "2024",
+            link: "https://github.com/emerson-elias",
+            tecnology: ["html","css","sass","react","javascript","gsap"]
         },
         {
             id: 2,
             title: "Em Breve",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
             gif: gif_2,
-            modalInfo: "Informações detalhadas sobre o Projeto 2."
+            modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 2.",
+            year: "2024",
+            link: "https://github.com/emerson-elias",
+            tecnology: ["html","css","sass","react","javascript","gsap"]
         },
         {
             id: 3,
             title: "Em Breve",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
             gif: gif_3,
-            modalInfo: "Informações detalhadas sobre o Projeto 3."
+            modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 3.",
+            year: "2024",
+            link: "https://github.com/emerson-elias",
+            tecnology: ["html","css","sass","react","javascript","gsap"]
         },
         {
             id: 4,
             title: "Em Breve",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
             gif: gif_4,
-            modalInfo: "Informações detalhadas sobre o Projeto 4."
+            modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 4.",
+            year: "2024",
+            link: "https://github.com/emerson-elias",
+            tecnology: ["html","css","sass","react","javascript","gsap"]
         }
     ]
 
@@ -71,14 +82,23 @@ export default function Project() {
             <div className="row">
                 {projectsData.map((project) => (
                     <div className={`projects-${project.id}`} key={project.id}>
-                        {/* Renderizar o Modal apenas para o projeto clicado */}
-                        {showModal && currentProject === project.id && <Modal setShowModal={closeModal} modalInfo={project.modalInfo} />}
+                        {showModal && currentProject?.id === project.id && (
+                            <Modal 
+                                setShowModal={closeModal}
+                                title={currentProject.title}
+                                gif={currentProject.gif} 
+                                modalInfo={currentProject.modalInfo} 
+                                year={currentProject.year}
+                                link={currentProject.link}
+                                tecnology={currentProject.tecnology}
+                            />
+                        )}
                         
                         <div className="name">
                             <a>{project.title}</a>
                         </div>
 
-                        <div className={`view view-${project.id}`} onClick={() => openModal(project.id)}>
+                        <div className={`view view-${project.id}`} onClick={() => openModal(project)}>
                             <img src={project.gif} loading="lazy" alt={`Projeto ${project.id}`} />
                         </div>
 

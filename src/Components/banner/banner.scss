@@ -24,6 +24,7 @@
         box-sizing: border-box;
         pointer-events: none;
         animation: fade 3s ease;
+        will-change: transform;
 
         h1{
             position: relative;
@@ -34,6 +35,7 @@
             font-family: var.$font_Tertiary;
             -webkit-text-stroke: 0.1vw var.$Secundary_Color;
             animation: slider-linear 60s linear infinite;
+            will-change: transform;
 
             @include responsive.screen_small{
                 -webkit-text-stroke: 1px var.$Secundary_Color;
