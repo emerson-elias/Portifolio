@@ -161,7 +161,7 @@
                         }
 
                         @include responsive.screen_small {
-                            font-size: 15px;
+                            font-size: 20px;
                         }
 
                         &:hover {
@@ -178,6 +178,9 @@
                         @include responsive.screen_laptop {
                             width: auto;
                         }
+                        @include responsive.screen_small {
+                            flex-direction: column;
+                        }
 
                         span {
                             font-size: 1.6vmax;
@@ -191,13 +194,18 @@
                             }
 
                             @include responsive.screen_small {
-                                font-size: 15px;
+                                font-size: 20px;
+                                margin: 10px 0;                             
                             }
                         }
 
                         i {
                             font-size: 0.5vmax;
                             color: var.$Color_White_B9;
+
+                            @include responsive.screen_small{
+                              display: none;
+                            }
                         }
                     }
                 }

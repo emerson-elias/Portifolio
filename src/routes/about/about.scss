@@ -97,6 +97,8 @@
                 h1 {
                     color: var.$Color_White_B9;
                     text-align: center;
+                    font-family: var.$font_normal;
+                    font-weight: 500;
 
                     @include responsive.screen_small {
                         margin: 30px 0 30px 0;

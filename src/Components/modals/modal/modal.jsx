@@ -46,9 +46,9 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
 
                                 <div className={styles.detals}>
                                     <span>website</span>
-                                    <i className="fa-solid fa-bowling-ball"></i>
-                                    <i className="fa-solid fa-bowling-ball"></i>
-                                    <i className="fa-solid fa-bowling-ball"></i>
+                                        <i className="fa-solid fa-bowling-ball"></i>
+                                        <i className="fa-solid fa-bowling-ball"></i>
+                                        <i className="fa-solid fa-bowling-ball"></i>
                                     <span>{year}</span>
                                 </div>
                             </div>
