@@ -46,9 +46,9 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
 
                                 <div className={styles.detals}>
                                     <span>website</span>
-                                        <i className="fa-solid fa-bowling-ball"></i>
-                                        <i className="fa-solid fa-bowling-ball"></i>
-                                        <i className="fa-solid fa-bowling-ball"></i>
+                                    <i className="fa-solid fa-bowling-ball"></i>
+                                    <i className="fa-solid fa-bowling-ball"></i>
+                                    <i className="fa-solid fa-bowling-ball"></i>
                                     <span>{year}</span>
                                 </div>
                             </div>
@@ -69,9 +69,13 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
 
                                 <div className={styles.description}>
                                     <p>{modalInfo}</p>
+
+                                    <div className={styles.box_btn}>
+                                        <a href={link} target="_blank" rel="noopener noreferrer" className={styles.btn}>Mais detalhes</a>
+                                    </div>
+
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

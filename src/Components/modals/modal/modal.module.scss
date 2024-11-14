@@ -16,8 +16,6 @@
     opacity: 0.5;
     overflow-x: hidden;
 
-    background-color: rgba(238, 232, 170, 0);
-
     &.animated_modal {
         opacity: 1;
         transform: translate(-50%, -50%) translateY(0);
@@ -31,7 +29,6 @@
         height: auto;
         padding: 3vh 2vw;
         z-index: 9999;
-        background-color: rgba(255, 0, 0, 0);
 
         i {
             font-size: 3vmax;
@@ -42,11 +39,12 @@
             border-radius: 10px;
             cursor: pointer;
 
-            @include responsive.screen_laptop{
+            @include responsive.screen_laptop {
                 padding: 20px 25px;
                 font-size: 50px;
             }
-            @include responsive.screen_small{
+
+            @include responsive.screen_small {
                 padding: 10px 15px;
                 font-size: 40px;
                 margin-right: 20px;
@@ -64,8 +62,6 @@
         position: relative;
         width: 100%;
         height: 100%;
-
-        background-color: rgba(8, 155, 3, 0);
 
         .project_text_linear {
             position: absolute;
@@ -88,6 +84,7 @@
                 font-family: var.$font_Tertiary;
                 -webkit-text-stroke: 0.1vw var.$Secundary_Color;
                 animation: slider-linear 30s linear infinite;
+                mix-blend-mode: difference;
                 will-change: transform;
 
                 @include responsive.screen_small {
@@ -110,10 +107,11 @@
                     height: auto;
                     border-radius: 1vmax;
 
-                    @include responsive.screen_laptop{
+                    @include responsive.screen_laptop {
                         width: 500px;
                     }
-                    @include responsive.screen_small{
+
+                    @include responsive.screen_small {
                         width: 330px;
                     }
                 }
@@ -126,23 +124,27 @@
             width: 100vw;
             height: 130vh;
 
-            background-color: rgba(102, 51, 153, 0);
-
             .layer {
                 position: relative;
                 width: 60vw;
-                height: 80vh;
-                margin-top: 95vh;
+                height: auto;
+                top: 55vh;
 
-                background-color: rgba(0, 255, 255, 0);
+                @include responsive.screen_laptop {
+                    width: 80vw;
+                }
+                @include responsive.screen_tablet {
+                    top: 70vh;
+                }
+                @include responsive.screen_small {
+                    top: 75vh;
+                }
 
                 .box_1 {
                     @include mixins.align(relative, flex, space-between, center);
                     width: inherit;
                     height: auto;
                     border-bottom: 0.2vw solid var.$Color_White_B9;
-
-                    background-color: rgba(240, 255, 255, 0);
 
                     a {
                         font-size: 1.6vmax;
@@ -153,7 +155,13 @@
                         color: var.$Color_White_B9;
                         cursor: pointer;
 
-                        background-color: rgba(102, 51, 153, 0);
+                        @include responsive.screen_laptop {
+                            font-size: 25px;
+                        }
+
+                        @include responsive.screen_small {
+                            font-size: 15px;
+                        }
 
                         &:hover {
                             color: var.$Secundary_Color;
@@ -165,13 +173,25 @@
                         width: 20vw;
                         height: auto;
                         padding: 2vmax 1vmax;
-                        background-color: rgba(102, 51, 153, 0);
+
+                        @include responsive.screen_laptop {
+                            width: auto;
+                        }
 
                         span {
                             font-size: 1.6vmax;
                             font-family: var.$font_Primary;
                             letter-spacing: 1px;
                             color: var.$Color_White_B9;
+
+                            @include responsive.screen_laptop {
+                                font-size: 25px;
+                                margin: 0 7px;
+                            }
+
+                            @include responsive.screen_small {
+                                font-size: 15px;
+                            }
                         }
 
                         i {
@@ -185,20 +205,23 @@
                     @include mixins.align(relative, flex, space-between, center);
                     width: inherit;
                     height: 100%;
-                    top: 7vh;
+                    padding-top: 7vh;
 
-                    background-color: rgba(255, 0, 0, 0);
-
-                    @include responsive.screen_tablet{
+                    @include responsive.screen_tablet {
                         flex-direction: column;
                         justify-content: center;
+                        height: auto;
+                        padding: 7vh 0;
                     }
 
                     .tecnology {
                         position: relative;
-                        width: 50%;
+                        width: 40%;
                         height: 100%;
-                        background-color: rgba(0, 255, 255, 0);
+
+                        @include responsive.screen_tablet {
+                            width: inherit;
+                        }
 
                         h1 {
                             width: initial;
@@ -208,7 +231,9 @@
                             color: var.$Color_White_B9;
                             padding: 5vh 0;
 
-                            background-color: rgba(205, 92, 92, 0);
+                            @include responsive.screen_laptop {
+                                font-size: 30px;
+                            }
                         }
 
                         span {
@@ -219,6 +244,10 @@
                             letter-spacing: 2px;
                             font-size: 1.9vmax;
                             color: var.$Color_White_B9;
+
+                            @include responsive.screen_laptop {
+                                font-size: 30px;
+                            }
 
                             &:nth-child(1) {
                                 &:hover {
@@ -260,11 +289,15 @@
 
                     .description {
                         position: relative;
-                        width: 50%;
+                        width: 60%;
                         height: 100%;
                         padding-top: 10vh;
 
-                        background-color: rgba(21, 255, 0, 0);
+
+                        @include responsive.screen_tablet {
+                            width: inherit;
+                            padding: 10vh 0;
+                        }
 
                         p {
                             font-size: 2vmax;
@@ -274,6 +307,29 @@
                             text-indent: 100px;
                             text-align: justify;
                             color: var.$Color_White_B9;
+
+                            @include responsive.screen_laptop {
+                                font-size: 25px;
+                            }
+                        }
+
+                        .box_btn {
+                            @include mixins.align(relative, flex, end, end);
+                            width: initial;
+                            height: auto;
+                            margin: 8vh 0;
+
+                            @include responsive.screen_tablet {
+                                justify-content: center;
+                            }
+
+                            @include responsive.screen_small {
+                                margin: 100px 0 0 0;
+                            }
+
+                            .btn {
+                                @include mixins.btn();
+                            }
                         }
                     }
                 }

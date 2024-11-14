@@ -52,12 +52,13 @@
     height: auto;
     padding: 0.5vmax 3vmax;
     background-color: transparent;
-    font-size: 1.9vmax;
+    font-size: 1.8vmax;
     border: 0.1vw solid var.$Color_White_B9;
     border-radius: 10vw;
     font-family: var.$font_Secondary;
     color: var.$Color_White_B9;
     transition: var.$Transition_ease;
+    text-decoration: none;
     overflow: hidden;
     cursor: pointer;
 

@@ -86,6 +86,7 @@
                     font-family: var.$font_normal;
                     letter-spacing: 1px;
                     word-spacing: 2px;
+                    text-indent: 120px;
 
                     @include responsive.screen_laptop {
                         font-size: 18px;

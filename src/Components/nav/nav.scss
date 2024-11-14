@@ -251,7 +251,7 @@ header {
                         margin: 10px;
                         width: 50px;
                         height: 50px;
-                        padding: 20px;
+                        padding: 25px;
                         border: 0.1vw solid var.$Color_White_B9;
                     }
 
@@ -263,6 +263,10 @@ header {
                         font-size: 5vh;
                         color: var.$Color_White_B9;
                         pointer-events: none;
+
+                        @include responsive.screen_small {
+                            font-size: 30px;
+                        }
                     }
 
                     &:hover i {
