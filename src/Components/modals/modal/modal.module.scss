@@ -79,6 +79,7 @@
             h1 {
                 position: relative;
                 display: inline-block;
+                margin-left: 10vw;
                 font-size: 20vmax;
                 color: transparent;
                 font-family: var.$font_Tertiary;
@@ -134,7 +135,7 @@
                     width: 80vw;
                 }
                 @include responsive.screen_tablet {
-                    top: 70vh;
+                    top: 80vh;
                 }
                 @include responsive.screen_small {
                     top: 75vh;
@@ -309,7 +310,7 @@
                             color: var.$Color_White_B9;
 
                             @include responsive.screen_laptop {
-                                font-size: 25px;
+                                font-size: 20px;
                             }
                         }
 

@@ -81,8 +81,7 @@
             font-family: var.$font_Primary;
             color: var.$Color_White_B9;
             mix-blend-mode: difference;
-            -webkit-animation: tracking-in-expand 0.7s;
-            animation: tracking-in-expand 0.7s;
+            animation: fade 1s ease;
 
             &:nth-child(2) {
                 transform: translateX(20vw);

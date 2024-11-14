@@ -28,9 +28,9 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
                 <div className={styles.row}>
 
                     <section className={styles.project_text_linear}>
-                        <h1>- {title} -</h1>
-                        <h1>- {title} -</h1>
-                        <h1>- {title} -</h1>
+                        <h1>- {title}</h1>
+                        <h1>- {title}</h1>
+                        <h1>- {title}</h1>
 
                         <div className={styles.layer_img}>
                             <img src={gif} alt={title} />

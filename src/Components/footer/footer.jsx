@@ -6,7 +6,7 @@ export default function Footer() {
     const btnRef = useRef(null)
 
     function EmailClick() {
-        const email = 'emersonees808@gmail.com'
+        const email = 'emersonees707@gmail.com'
         const subject = 'Vamos trabalhar juntos :)'
         const body = 'Olá Emerson Elias.\n\nVi seus projetos no seu portifólio e gostaria de saber mais sobre suas habilidades, vamos trabalhar juntos?.\n\nAtenciosamente:\n---- Seu Nome ----'
         const mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
