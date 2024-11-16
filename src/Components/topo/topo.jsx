@@ -35,7 +35,7 @@ export default function Topo() {
     return (
         <section className="button-top" title="Volte ao topo" ref={topoRef}>
             <a>
-                <i className="fa-solid fa-angles-up"></i>
+                <i className="fa-solid fa-chevron-up"></i>
             </a>
         </section>
     )

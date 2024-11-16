@@ -19,33 +19,20 @@
     } 
     
     a{
-        position: relative;
+        position: relative;     
         width: auto;
         height: auto;
-        padding: 1vmax;
         display: grid;
         place-content: center;
+        padding: 1vmax;
         cursor: pointer;
-        background-color: rgba(102, 51, 153, 0);
 
         &:hover i{
             color: var.$Secundary_Color;
         }
-        
-        svg{
-            width: 3vmax;
-            color: var.$Color_White_B9;
-
-            @include responsive.screen_laptop{
-                width: 50px;
-            }
-            @include responsive.screen_small{
-                width: 37px;
-            }
-        }
 
         i{
-            font-size: 2.5vmax;
+            font-size: 2.3vmax;
             color: var.$Color_White_B9; 
             pointer-events: none;
 
