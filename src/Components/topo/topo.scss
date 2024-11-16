@@ -7,8 +7,8 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    margin-right: 30px;
-    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
     background-color: transparent;
     transition: var.$Transition_ease;
     z-index: 1;
@@ -19,17 +19,38 @@
     } 
     
     a{
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 1vmax;
+        display: grid;
+        place-content: center;
         cursor: pointer;
+        background-color: rgba(102, 51, 153, 0);
+
+        &:hover i{
+            color: var.$Secundary_Color;
+        }
         
         svg{
             width: 3vmax;
-            color: var.$Color_White;
+            color: var.$Color_White_B9;
 
             @include responsive.screen_laptop{
                 width: 50px;
             }
             @include responsive.screen_small{
                 width: 37px;
+            }
+        }
+
+        i{
+            font-size: 2.5vmax;
+            color: var.$Color_White_B9; 
+            pointer-events: none;
+
+            @include responsive.screen_laptop{
+                font-size: 30px;
             }
         }
     }
