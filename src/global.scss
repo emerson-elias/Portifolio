@@ -13,14 +13,13 @@
     -ms-overflow-style: none;  
     scrollbar-width: none;  
 } 
-body{
-    background-color: var.$gray_primary;
-    scroll-behavior: smooth;
-    background-image: url('/assets/svg/BG.svg');
+body{  
+    background: url('../assets/svg/BG.svg') var.$gray_primary;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    scroll-behavior: smooth;
 }
