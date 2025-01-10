@@ -7,7 +7,7 @@ import Topo from "../../Components/topo/topo.jsx"
 
 import Certificados from "./certificados/certificados.jsx"
 
-import hero from "/assets/img/Me-hero.png"
+import hero from "/assets/img/Me-hero.webp"
 import '../about/about.scss'
 import Banner_About from "./about-banner/banner-about.jsx"
 import Contate_Me from "../../Components/contate-me/contate.jsx"
