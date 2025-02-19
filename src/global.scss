@@ -15,11 +15,11 @@
     scrollbar-width: none;  
 } 
 body{  
+    position: relative;
     background: url('../assets/svg/background.svg') var.$gray_primary;
-    background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-height: 100vh;
-    max-height: 100dvh;
+    width: 100dvh;
+    height: 100dvh;
 }
