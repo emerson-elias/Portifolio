@@ -3,18 +3,23 @@ import { useEffect, useState } from 'react'
 import styles from '../modal/modal.module.scss'
 import Backdrop from '../backdrop/backdrop.jsx'
 
-
 const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) => {
     const [showAnimated, setShowAnimated] = useState(false)
 
     useEffect(() => {
         setShowAnimated(true)
+        document.body.style.overflow = 'hidden' // Bloqueia o scroll ao abrir o modal
+
+        return () => {
+            document.body.style.overflow = '' // Restaura o scroll ao desmontar o modal
+        }
     }, [])
 
     const closeModal = () => {
         setShowAnimated(false)
         setTimeout(() => {
             setShowModal(false)
+            document.body.style.overflow = '' // Garante que o scroll volte ao normal ao fechar
         }, 500)
     }
 
@@ -38,40 +43,38 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
                     </section>
 
                     <div className={styles.box}>
-
                         <div className={styles.layer}>
-
                             <div className={styles.box_1}>
-                                <a href={link} target="_blank" rel="noopener noreferrer">Acesse <i className="fa-solid fa-arrow-trend-up"></i> </a>
+                                <a href={link} target="_blank" rel="noopener noreferrer">
+                                    Acesse <i className="fa-solid fa-arrow-trend-up"></i>
+                                </a>
 
                                 <div className={styles.detals}>
                                     <span>website</span>
-                                        <i className="fa-solid fa-bowling-ball"></i>
-                                        <i className="fa-solid fa-bowling-ball"></i>
-                                        <i className="fa-solid fa-bowling-ball"></i>
+                                    <i className="fa-solid fa-bowling-ball"></i>
+                                    <i className="fa-solid fa-bowling-ball"></i>
+                                    <i className="fa-solid fa-bowling-ball"></i>
                                     <span>{year}</span>
                                 </div>
                             </div>
 
                             <div className={styles.box_2}>
-
                                 <div className={styles.tecnology}>
-
                                     <h1>tecnologias</h1>
-
                                     <div>
                                         {tecnology.map((tech, index) => (
-                                            <span key={index}>{tech}</span> // Exibe cada tecnologia em sua posição
+                                            <span key={index}>{tech}</span>
                                         ))}
                                     </div>
-
                                 </div>
 
                                 <div className={styles.description}>
                                     <p>{modalInfo}</p>
 
                                     <div className={styles.box_btn}>
-                                        <a href={link} target="_blank" rel="noopener noreferrer" className={styles.btn}>Mais detalhes</a>
+                                        <a href={link} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+                                            Mais detalhes
+                                        </a>
                                     </div>
 
                                 </div>
@@ -79,7 +82,6 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
                         </div>
                     </div>
                 </div>
-
             </section>
         </>
     )

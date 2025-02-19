@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link , useLocation} from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 import './nav.scss'
 
@@ -22,11 +22,15 @@ export default function NavBar() {
             b1.classList.toggle('b-one')
             b2.classList.toggle('b-dwo')
             b3.classList.toggle('b-there')
-            animate.forEach((el) => {
-                el.classList.toggle('animate-aux')
-            })
+            animate.forEach((el) => el.classList.toggle('animate-aux'))
             burguer.classList.toggle('burguer-aux')
+
+            // Bloquear ou desbloquear o scroll de fundo
+            const isMenuOpen = ancora.classList.contains('collapse-true')
+            document.body.style.overflow = isMenuOpen ? 'hidden' : ''
         }
+
+        elements.burguer.addEventListener('click', toggleClasses)
 
         elements.liItems.forEach((item) => {
             item.addEventListener('click', toggleClasses)
@@ -38,9 +42,12 @@ export default function NavBar() {
         })    
 
         return () => {
+            elements.burguer.removeEventListener('click', toggleClasses)
+
             elements.liItems.forEach((item) => {
                 item.removeEventListener('click', toggleClasses)
             })
+
             window.removeEventListener('scroll', () => { })
         }
     }, [])
@@ -49,7 +56,6 @@ export default function NavBar() {
 
     useEffect(() => {
         if (location.hash) {
-          
             setTimeout(() => {
                 const element = document.querySelector(location.hash)
                 if (element) {
@@ -62,16 +68,13 @@ export default function NavBar() {
     return (
         <header>
             <nav className="navbar">
-
                 <div className="active-bar">
-
                     <Link to={"/"}>
                         <span>emerson</span>
                         <span>
                             <i className="game-icons--polar-star"></i> moraes
                         </span>
                     </Link>
-
                 </div>
 
                 <li className="burguer">
@@ -81,7 +84,6 @@ export default function NavBar() {
                 </li>
 
                 <ul id="ancora">
-
                     <li><Link id="animate" to={"/about"}>Sobre mim</Link></li>
                     <li><Link id="animate" to={"/#tecnologias"}>Tecnologias</Link></li>
                     <li><Link id="animate" to={"/projetos"}>Projetos</Link></li>
@@ -104,7 +106,6 @@ export default function NavBar() {
                             <i className="fa-regular fa-file"></i>
                         </a>
                     </div>
-
                 </ul>
             </nav>
         </header>
