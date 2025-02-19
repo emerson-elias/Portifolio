@@ -7,13 +7,13 @@
 
 .banner {
     @include mixins.align(relative, flex, center, center);
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     z-index: 1;
     overflow: hidden;
 
     @include responsive.screen_small{
-        height: 110vh;
+       height: 110dvh;
     }
 
     .banner-text-linear{
@@ -62,7 +62,7 @@
 
             @include responsive.screen_laptop{
                 width: inherit;
-                height: 10vh;
+                height: 10dvh;
             }
 
             h1{
