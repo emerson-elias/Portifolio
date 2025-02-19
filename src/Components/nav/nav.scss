@@ -6,7 +6,7 @@
 header {
     @include mixins.align(fixed, flex, center, center);
     position: fixed;
-    width: 100dvw;
+    width: 100vw;
     height: auto;
     box-sizing: border-box;
     z-index: 99;

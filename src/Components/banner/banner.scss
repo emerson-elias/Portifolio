@@ -7,10 +7,14 @@
 
 .banner {
     @include mixins.align(relative, flex, center, center);
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
     overflow: hidden;
+
+    @include responsive.screen_small{
+        height: 110vh;
+    }
 
     .banner-text-linear{
         position: absolute;
@@ -58,7 +62,7 @@
 
             @include responsive.screen_laptop{
                 width: inherit;
-                height: 10dvh;
+                height: 10vh;
             }
 
             h1{
