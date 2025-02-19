@@ -19,7 +19,7 @@
 body {
     position: relative;
     width: 100vw;
-    height: 100svh; /* ou 100lvh, dependendo do comportamento desejado */
+    height: 100lvh; /* ou 100lvh, dependendo do comportamento desejado */
     overflow-x: hidden;
 
     &::before {
