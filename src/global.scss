@@ -19,11 +19,10 @@
 body {
     position: relative;
     width: 100vw;
-    height: 100lvh; /* ou 100lvh, dependendo do comportamento desejado */
+    height: 100svh; /* Usando small viewport height para evitar saltos */
     overflow-x: hidden;
 
-    &::before {
-        content: '';
+    .background {
         position: fixed;
         top: 0;
         left: 0;
@@ -33,6 +32,6 @@ body {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: -1;
+        z-index: -1; /* Coloca o fundo atrás do conteúdo */
     }
 }
