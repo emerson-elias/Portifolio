@@ -4,30 +4,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
 }
-
 ::-webkit-scrollbar {
     width: 0;  
     display: none;
     scroll-behavior: smooth; 
     -ms-overflow-style: none;  
     scrollbar-width: none;  
-}
-
-body {
+} 
+body{  
+    background: url('../assets/svg/background.svg') var.$gray_primary;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
-    height: calc(var(--vh) * 100); // Altura sempre fixa, mesmo com a barra do navegador
-    overflow-x: hidden;
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(var(--vh) * 100);
-    background: url('../assets/img/1.jpg') center center / cover no-repeat;
-    z-index: -1;
+    height: 800px;
 }
