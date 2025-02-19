@@ -25,7 +25,6 @@ export default function NavBar() {
             animate.forEach((el) => el.classList.toggle('animate-aux'))
             burguer.classList.toggle('burguer-aux')
 
-            // Bloquear ou desbloquear o scroll de fundo
             const isMenuOpen = ancora.classList.contains('collapse-true')
             document.body.style.overflow = isMenuOpen ? 'hidden' : ''
         }
