@@ -12,10 +12,6 @@
     z-index: 1;
     overflow: hidden;
 
-    @include responsive.screen_small{
-       height: 110dvh;
-    }
-
     .banner-text-linear{
         position: absolute;
         width: inherit;
