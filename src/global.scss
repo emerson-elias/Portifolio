@@ -16,7 +16,8 @@
 } 
 body{  
     position: relative;
-    background: url('../assets/svg/background.svg') var.$gray_primary;
+    background: url('../assets/img/1.jpg') var.$gray_primary;
+    background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
