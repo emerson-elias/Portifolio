@@ -19,7 +19,7 @@
 body {
     position: relative;
     width: 100vw;
-    height: 100svh; /* Usando small viewport height para evitar saltos */
+    height: var(--real-height); /* Usando small viewport height para evitar saltos */
     overflow-x: hidden;
 
     .background {
