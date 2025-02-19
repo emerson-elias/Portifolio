@@ -31,10 +31,13 @@
     <script src="https://kit.fontawesome.com/091f30ca3a.js" crossorigin="anonymous"></script>
     <script>
       function setRealHeight() {
-          document.documentElement.style.setProperty("--real-height", `${window.innerHeight}vh`)
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty("--vh", `${vh}px`);
       }
-      setRealHeight()
-      window.addEventListener("resize", setRealHeight)
-    </script>
+  
+      window.addEventListener("resize", setRealHeight);
+      setRealHeight();
+  </script>
+  
   </body>
 </html>
