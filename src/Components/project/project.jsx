@@ -26,12 +26,12 @@ export default function Project() {
     const projectsData = [
         {
             id: 1,
-            title: "Em Breve",
+            title: "Recanto Belle Vue",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
             gif: gif_1,
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 1.",
-            year: "2024",
-            link: "https://github.com/emerson-elias",
+            year: "2025",
+            link: "https://recanto-belle-vue.vercel.app/",
             tecnology: ["html","css","sass","react","javascript","gsap"]
         },
         {

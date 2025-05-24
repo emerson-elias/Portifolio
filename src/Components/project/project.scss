@@ -112,7 +112,7 @@ $bg-project-4: url('../../../public/assets/img/4.jpg');
                 position: relative;
                 width: 40vw;
                 height: 100vh;
-                padding: 0 1vmax;
+                padding: 3vmax 1vmax;
 
                 @include responsive.screen_tablet {
                     flex-direction: column;
@@ -126,12 +126,11 @@ $bg-project-4: url('../../../public/assets/img/4.jpg');
                 }
 
                 a {
-                    font-size: 10vmax;
+                    font-size: 7vmax;
                     color: var.$Secundary_Color;
                     font-family: var.$font_Tertiary;
                     letter-spacing: 3px;
                     white-space: normal;
-                    word-wrap: break-word;
                     overflow-wrap: break-word;
                     cursor: pointer;
 
