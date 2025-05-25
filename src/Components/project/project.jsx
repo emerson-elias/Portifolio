@@ -11,7 +11,7 @@ import gif_4 from '/assets/gif/page-4.gif'
 
 export default function Project() {
     const [showModal, setShowModal] = useState(false)
-    const [currentProject, setCurrentProject] = useState(null) 
+    const [currentProject, setCurrentProject] = useState(null)
 
     const openModal = (project) => {
         setCurrentProject(project)
@@ -32,7 +32,7 @@ export default function Project() {
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 1.",
             year: "2025",
             link: "https://recanto-belle-vue.vercel.app/",
-            tecnology: ["html","css","sass","react","javascript","gsap"]
+            tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
         },
         {
             id: 2,
@@ -42,7 +42,7 @@ export default function Project() {
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 2.",
             year: "2024",
             link: "https://github.com/emerson-elias",
-            tecnology: ["html","css","sass","react","javascript","gsap"]
+            tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
         },
         {
             id: 3,
@@ -52,7 +52,7 @@ export default function Project() {
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 3.",
             year: "2024",
             link: "https://github.com/emerson-elias",
-            tecnology: ["html","css","sass","react","javascript","gsap"]
+            tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
         },
         {
             id: 4,
@@ -62,7 +62,7 @@ export default function Project() {
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 4.",
             year: "2024",
             link: "https://github.com/emerson-elias",
-            tecnology: ["html","css","sass","react","javascript","gsap"]
+            tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
         }
     ]
 
@@ -83,19 +83,21 @@ export default function Project() {
                 {projectsData.map((project) => (
                     <div className={`projects-${project.id}`} key={project.id}>
                         {showModal && currentProject?.id === project.id && (
-                            <Modal 
+                            <Modal
                                 setShowModal={closeModal}
                                 title={currentProject.title}
-                                gif={currentProject.gif} 
-                                modalInfo={currentProject.modalInfo} 
+                                gif={currentProject.gif}
+                                modalInfo={currentProject.modalInfo}
                                 year={currentProject.year}
                                 link={currentProject.link}
                                 tecnology={currentProject.tecnology}
                             />
                         )}
-                        
+
                         <div className="name">
-                            <a>{project.title}</a>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                {project.title}
+                            </a>
                         </div>
 
                         <div className={`view view-${project.id}`} onClick={() => openModal(project)}>
