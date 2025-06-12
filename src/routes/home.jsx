@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react"
 
-import Cursor from "../components/cursor/cursor.jsx"
-
-
 /*
 import Bio from "../components/bio/bio.jsx"
 import Banner from "../components/banner/banner.jsx"
@@ -12,9 +9,12 @@ import Project from "../components/project/project.jsx"
 import Tecnology from "../components/tecnology/tecnology.jsx"
 import Tools from "../components/tools/tools.jsx"
 import Contate_Me from "../components/contate-me/contate.jsx"*/
-import Loader from "../Components/loader/loader.jsx"
-import NavBar from "../Components/nav/nav.jsx"
-import Banner from "../Components/banner/banner.jsx"
+
+
+import Cursor from "../components/cursor/cursor.jsx"
+import Banner from "../components/banner/banner.jsx"
+import Sound from "../components/sound/sound.jsx"
+import Loader from "../components/loader/loader.jsx"
 
 export default function Home() {
 
@@ -44,8 +44,10 @@ export default function Home() {
             ) : (
                 <>
                     <Cursor />
-                    <NavBar />
-                    <Banner />{/*
+                    <Banner />
+                    <Sound />
+                    
+                    {/*
                     <Bio />
                     <Project />
                     <Topo />

@@ -1,4 +1,4 @@
-@use '/src/Components/sass/variables' as var;
+@use '/src/sass/variables' as var;
 
 * {
     padding: 0;
@@ -14,7 +14,7 @@
     scrollbar-width: none;  
 } 
 body{  
-    background: url('../assets/svg/background.svg') var.$gray_primary;
+    background: url('/assets/svg/background.svg') var.$gray_primary;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;

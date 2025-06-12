@@ -1,14 +1,15 @@
 import { createBrowserRouter } from "react-router-dom"
 import Home from "./routes/home"
+/*
 import About from "./routes/about/about"
-import Projects from "./routes/projects/projects"
+import Projects from "./routes/projects/projects"*/
 
 
 const rotas = createBrowserRouter([
    {
       path: "/",
       element: <Home />
-   }
+   }/*
    ,
    {
       path: "/about",
@@ -18,7 +19,7 @@ const rotas = createBrowserRouter([
    {
       path: "/projetos",
       element: <Projects />
-   }
+   }*/
 ])
 
 export default rotas
