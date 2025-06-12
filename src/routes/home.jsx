@@ -13,7 +13,8 @@ import Tecnology from "../components/tecnology/tecnology.jsx"
 import Tools from "../components/tools/tools.jsx"
 import Contate_Me from "../components/contate-me/contate.jsx"*/
 import Loader from "../components/loader/loader.jsx"
-import NavBar from "../Components/nav/nav.jsx"
+import NavBar from "../components/nav/nav.jsx"
+import Banner from "../components/banner/banner.jsx"
 
 export default function Home() {
 
@@ -43,8 +44,8 @@ export default function Home() {
             ) : (
                 <>
                     <Cursor />
-                    <NavBar />{/*
-                    <Banner />
+                    <NavBar />
+                    <Banner />{/*
                     <Bio />
                     <Project />
                     <Topo />

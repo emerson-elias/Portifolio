@@ -1,10 +1,10 @@
-@use '/src/Components/sass/key-Frames';
-@use '/src/Components/sass/mixins';
-@use '/src/Components/sass/responsive';
-@use '/src/Components/sass/variables' as var;
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
 
 
-.banner {
+.banner_container {
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: 100vh;
@@ -15,7 +15,7 @@
         height: 110vh;
     }
 
-    .banner-text-linear {
+    .banner_text_linear {
         position: absolute;
         width: inherit;
         height: inherit;
@@ -53,7 +53,7 @@
             padding: 100px 0 0 0;
         }
 
-        .layer-1 {
+        .layer_1 {
             position: relative;
             width: auto;
             height: 50vh;
@@ -76,7 +76,7 @@
             }
         }
 
-        .layer-2 {
+        .layer_2 {
             position: relative;
             width: 70%;
             margin-left: 2%;
@@ -164,7 +164,7 @@
             }
         }
 
-        .layer-3 {
+        .layer_3 {
             position: relative;
             top: 15vh;
             width: 15%;
@@ -184,8 +184,8 @@
                 left: 40%;
             }
 
-            #magnect-1,
-            #magnect-2 {
+            #magnect_1,
+            #magnect_2 {
                 @include mixins.align(absolute, flex, center, center);
                 top: 0;
                 left: 0;
