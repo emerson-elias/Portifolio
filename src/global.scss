@@ -16,45 +16,22 @@
 }
 
 html {
-    // Definido pelo JavaScript, mas o fallback é para caso o JS não carregue
-    // ou se o navegador não entender 'var(--vh)'. '1vh' é um bom fallback geral.
     --vh: 1vh;
 }
 
 body {
-    // Apenas estilos aplicados ao body aqui, como margem e padding
-    margin: 0;
-    padding: 0;
-    // Ocultar o overflow no body é crucial para que o fundo fixo funcione bem
-    overflow: hidden;
-    // Garanta que o body tenha a altura total da viewport calculada
     height: calc(var(--vh) * 100);
-    width: 100%;
 }
 
-// O estilo para .fixed-background-image deve estar no nível global,
-// não aninhado dentro de 'body'.
 .fixed-background-image {
     position: fixed;
+    background: url("/assets/svg/background.svg") var.$gray_primary;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
-    width: 100vw; // 100% da largura do viewport
-    // Use a altura dinâmica calculada pelo JS
+    width: 100vw;
     height: calc(var(--vh) * 100);
-    background: url("/assets/svg/background.svg") var.$gray_primary; // Use seu background e cor
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1; // Coloca a imagem de fundo atrás de todo o conteúdo
-}
-
-// Além disso, certifique-se de que o seu #root tenha um z-index maior
-// e gerencie o overflow para que o conteúdo do seu app possa rolar.
-#root {
-    position: relative; // Essencial para que o z-index funcione corretamente
-    z-index: 0; // Garante que o conteúdo do #root fique acima do background (-1)
-    height: 100%; // Ocupa 100% da altura do pai (o body, que já tem a altura correta)
-    width: 100%;
-    overflow-y: auto; // Permite que o conteúdo DENTRO do #root role
-    -webkit-overflow-scrolling: touch; // Melhoria de rolagem para iOS
+    z-index: -1;
 }
