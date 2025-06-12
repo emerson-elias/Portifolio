@@ -3,13 +3,13 @@
 @use 'responsive';
 
 @mixin background() {
-    background: url('/assets/img/banner-projetos.jpg') var.$gray_primary;
+    background: url('/assets/svg/background.svg') var.$gray_primary;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100lvh;
+    height: 100dvh;
 }
 
 @mixin align($position, $flex, $centralization, $align) {
