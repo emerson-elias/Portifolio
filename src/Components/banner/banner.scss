@@ -12,8 +12,6 @@
     overflow: hidden;
     z-index: 1;
 
-    background-color: rosybrown;
-
     @include responsive.screen_small {
         //height: 110lvh;
     }
