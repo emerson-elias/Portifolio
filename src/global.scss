@@ -1,4 +1,5 @@
 @use '/src/Components/sass/variables' as var;
+@use '/src/Components/sass/mixins';
 
 * {
     padding: 0;
@@ -6,21 +7,17 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
+
 ::-webkit-scrollbar {
-    width: 0;  
+    width: 0;
     display: none;
-    scroll-behavior: smooth; 
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-} 
-body{  
-    background: url('/assets/svg/background.svg') var.$gray_primary;
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100lvh;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    @include mixins.background();
 
     background-color: rebeccapurple;
 }

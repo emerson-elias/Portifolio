@@ -20,12 +20,12 @@ header {
         @include mixins.align(relative, flex, space-between, center);
         width: inherit;
         height: 13vh;
-        padding: 1.3vmax 1.1vmax 1.3vmax 1.1vmax;
+        padding: 1.3vmax 1.1vmax;
         text-transform: uppercase;
 
         @include responsive.screen_small {
             height: auto;
-            padding: 15px 5px 15px 5px;
+            padding: 15px 5px;
         }
 
         .active-bar {
@@ -73,12 +73,14 @@ header {
                     }
                 }
 
-                &:hover span {
-                    color: var.$Secundary_Color;
-                }
+                &:hover {
+                    span {
+                        color: var.$Secundary_Color;
+                    }
 
-                &:hover i {
-                    background-color: var.$Secundary_Color;
+                    i {
+                        background-color: var.$Secundary_Color;
+                    }
                 }
             }
         }
@@ -91,15 +93,15 @@ header {
             padding: 1.5vmax;
             list-style: none;
             transition: var.$Transition_ease;
+            pointer-events: all;
             z-index: 9999;
             cursor: pointer;
-            pointer-events: all;
 
             span {
                 position: relative;
                 width: 3vmax;
                 height: 0.12vmax;
-                margin: 3px 0 3px 0;
+                margin: 3px 0;
                 border-radius: 1vmax;
                 transform-origin: center center;
                 background-color: var.$Color_White;
@@ -118,16 +120,10 @@ header {
 
         ul {
             @include mixins.align(fixed, flex, center, center);
-            background-color: var.$gray_primary;
-            background-image: url('/public/assets/svg/background.svg');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            @include mixins.background();
             top: 0;
             right: 0;
             padding-top: 70px;
-            width: 100vw;
-            height: 100vh;
             flex-direction: column;
             transform: translateY(-120%);
             transition: 0.8s ease;
@@ -176,12 +172,6 @@ header {
                     z-index: -1;
                 }
 
-                &:hover::after {
-                    height: 100%;
-                    transition: 0.3s all;
-                    pointer-events: none;
-                }
-
                 a {
                     font-size: 15vh;
                     letter-spacing: 2px;
@@ -205,9 +195,17 @@ header {
                     }
                 }
 
-                &:hover a {
-                    color: var.$gray_primary;
-                    transition: 0.5s ease !important;
+                &:hover {
+                    a {
+                        color: var.$gray_primary;
+                        transition: 0.5s ease !important;
+                    }
+
+                    &::after {
+                        height: 100%;
+                        transition: 0.3s all;
+                        pointer-events: none;
+                    }
                 }
             }
 
@@ -254,10 +252,6 @@ header {
                         border: 0.1vw solid var.$Color_White_B9;
                     }
 
-                    &:hover {
-                        transform: scale(1.7);
-                    }
-
                     i {
                         font-size: 5vh;
                         color: var.$Color_White_B9;
@@ -268,8 +262,12 @@ header {
                         }
                     }
 
-                    &:hover i {
-                        color: var.$Secundary_Color;
+                    &:hover {
+                        transform: scale(1.7);
+
+                        i {
+                            color: var.$Secundary_Color;
+                        }
                     }
                 }
             }
