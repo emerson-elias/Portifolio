@@ -1,13 +1,27 @@
-@use '/src/Components/sass/components';
-@use '/src/Components/sass/mixins';
-@use '/src/Components/sass/responsive';
-@use '/src/Components/sass/variables' as var;
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+/* ======================= CLASSES AUXILIARES ============================*/
+
+.burguer-aux {
+    transform: rotate(360deg);
+    margin-right: 15px;
+}
+
+.header_aux {
+    @include responsive.screen_small {
+        background-color: var.$gray_primary;
+        transition: var.$Transition_ease;
+        background: url('../assets/svg/background.svg') var.$gray_primary;
+    }
+}
+
+/* ======================= CLASSES AUXILIARES ============================*/
 
 header {
     @include mixins.align(fixed, flex, center, center);
-    position: fixed;
     width: 100vw;
-    height: auto;
     transition: var.$Transition_ease;
     pointer-events: none;
     z-index: 99;
@@ -169,6 +183,7 @@ header {
 
             li {
                 @include mixins.align(relative, flex, center, center);
+                @include mixins.effect_affter();
                 width: auto;
                 margin-top: 120px;
                 margin: 20px;
@@ -185,18 +200,9 @@ header {
                     margin: 10px 0 20px 0;
                 }
 
-                &::after {
-                    position: absolute;
-                    content: '';
-                    top: 50%;
-                    left: 50%;
-                    width: 100vw;
-                    height: 0%;
-                    transform: translate(-50%, -50%);
-                    background-color: var.$Secundary_Color;
-                    transition: 0.3s all;
-                    pointer-events: none;
-                    z-index: -1;
+                .animate-aux {
+                    transform: translateY(0);
+                    transition: 1s ease-out;
                 }
 
                 a {
@@ -300,28 +306,4 @@ header {
             }
         }
     }
-}
-
-/* ======================= CLASSES AUXILIARES ============================*/
-
-/*
-
-.header_aux {
-    @include responsive.screen_small {
-        background-color: var.$gray_primary !important;
-        transition: var.$Transition_ease !important;
-        background: url('../assets/svg/background.svg') var.$gray_primary !important;
-    }
-}
-*/
-/*===================== BARRAS QUE FORMAM O BURGUER E A SETA =================*/
-
-.burguer-aux {
-    transform: rotate(360deg) !important;
-    margin-right: 15px !important;
-}
-
-.animate-aux {
-    transform: translateY(0) !important;
-    transition: 1s ease-out !important;
 }

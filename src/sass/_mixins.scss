@@ -1,6 +1,22 @@
 @use 'variables' as var;
 @use 'responsive';
 
+@mixin effect_affter() {
+    &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 0%;
+        transform: translate(-50%, -50%);
+        background-color: var.$Secundary_Color;
+        transition: 0.3s all;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
 @mixin background($height) {
     background: url('/assets/svg/background.svg') var.$gray_primary;
     background-attachment: fixed;
