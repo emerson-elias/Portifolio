@@ -1,10 +1,9 @@
-@use '/src/Components/sass/responsive';
-@use '/src/Components/sass/variables' as var;
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
 
-.sound-container{
+.sound_container{
     position: fixed;
     width: 12vmax;
-    height: auto;
     left: -4.2vmax;
     bottom: 5vmax;
     transform: rotate(-90deg);
@@ -16,6 +15,7 @@
         left: -50px;
         bottom: 80px;
     }
+
     @include responsive.screen_small{
         left: -55px;
     }

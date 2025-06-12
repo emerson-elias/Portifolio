@@ -1,13 +1,14 @@
 import { useRef, useState } from 'react'
-import './sound.scss'
-import music from './music/sappheiros.mp3'
+
+import styles from './sound.module.scss'
+import music from '/assets/music/sappheiros.mp3'
 
 export default function Sound() {
     
     const musicRef = useRef(null)
     const [soundState, setSoundState] = useState('OFF')
 
-    const handleSound = () => {
+    const Sound = () => {
         const musicElement = musicRef.current
 
         // Verifique se o áudio está disponível
@@ -25,9 +26,9 @@ export default function Sound() {
     }
 
     return (
-        <section className="sound-container" title='Vamos aumentar a experiência?'>
-            <a className="sound" onClick={handleSound}>
-                <span>musica : </span>
+        <section className={styles.sound_container} title='Vamos aumentar a experiência?'>
+            <a className={styles.sound} onClick={Sound}>
+                <span>música : </span>
                 <span>{soundState}</span>
                 <audio ref={musicRef} loop src={music}></audio>
             </a>

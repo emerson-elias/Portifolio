@@ -97,6 +97,28 @@ header {
             z-index: 9999;
             cursor: pointer;
 
+            /* CLASSES AUXILIARES */
+
+            .span-one {
+                width: 30px;
+                height: 3px;
+                transform: rotate(-40deg);
+                transition: var.$Transition_ease;
+            }
+
+            .span-dwo {
+                transition: var.$Transition_ease;
+                width: 50px;
+                transform: translateX(15px);
+            }
+
+            .span-there {
+                width: 30px;
+                height: 3px;
+                transform: rotate(40deg);
+                transition: var.$Transition_ease;
+            }
+
             span {
                 position: relative;
                 width: 3vmax;
@@ -138,6 +160,11 @@ header {
 
             @include responsive.screen_small {
                 padding-top: 40px;
+            }
+
+            &.collapse-true {
+                transform: translate(0%) !important;
+                opacity: 1 !important;
             }
 
             li {
@@ -277,10 +304,7 @@ header {
 
 /* ======================= CLASSES AUXILIARES ============================*/
 
-.collapse-true {
-    transform: translate(0%) !important;
-    opacity: 1 !important;
-}
+/*
 
 .header_aux {
     @include responsive.screen_small {
@@ -289,7 +313,7 @@ header {
         background: url('../assets/svg/background.svg') var.$gray_primary !important;
     }
 }
-
+*/
 /*===================== BARRAS QUE FORMAM O BURGUER E A SETA =================*/
 
 .burguer-aux {
@@ -300,24 +324,4 @@ header {
 .animate-aux {
     transform: translateY(0) !important;
     transition: 1s ease-out !important;
-}
-
-.b-one {
-    width: 30px !important;
-    height: 3px !important;
-    transform: rotate(-40deg) !important;
-    transition: var.$Transition_ease;
-}
-
-.b-dwo {
-    transition: var.$Transition_ease;
-    width: 50px !important;
-    transform: translateX(15px);
-}
-
-.b-there {
-    width: 30px !important;
-    height: 3px !important;
-    transform: rotate(40deg) !important;
-    transition: var.$Transition_ease;
 }
