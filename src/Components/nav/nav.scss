@@ -8,10 +8,9 @@ header {
     position: fixed;
     width: 100vw;
     height: auto;
-    box-sizing: border-box;
-    z-index: 99;
     transition: var.$Transition_ease;
     pointer-events: none;
+    z-index: 99;
 
     @include responsive.screen_tablet_rotate {
         height: 20vh;
@@ -131,7 +130,7 @@ header {
             height: 100vh;
             flex-direction: column;
             transform: translateY(-120%);
-            transition: 0.8s ease;      
+            transition: 0.8s ease;
             opacity: 0;
             pointer-events: all;
             z-index: 999;

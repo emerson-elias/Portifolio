@@ -40,7 +40,7 @@ export default function Home() {
             ) : (
                 <>
                     <Cursor />
-                    <Nav_Bar />
+               
                     <Banner />
                     <Bio />
                     <Project />
