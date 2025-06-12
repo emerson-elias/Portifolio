@@ -6,39 +6,26 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
-
 ::-webkit-scrollbar {
-    width: 0;
+    width: 0;  
     display: none;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    scroll-behavior: smooth; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+} 
+
+html {
+  // A variável --vh é definida aqui pelo JS, mas é bom ter um fallback
+  // para browsers que não rodem o JS ou por algum motivo
+  --vh: 1vh; // Fallback default
 }
 
-body {
-
-  // Ou ao invés de body, você pode aplicar ao #root
-  // #root {
-  //   min-height: 100vh; // Garante que o root tenha altura para o background
-  //   width: 100%;
-  //   background-image: url("/assets/svg/background.svg"); // Caminho correto!
-  //   background-size: cover; // Ajusta a imagem para cobrir a área
-  //   background-position: center; // Centraliza a imagem
-  //   background-repeat: no-repeat; // Evita repetição
-  // }
+body{  
+    background: url('/assets/svg/background.svg') var.$gray_primary;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: calc(var(--vh) * 100);
 }
-
-#root {
-  min-height: 100vh; // Garante que o root tenha altura total da viewport
-  width: 100%;
-  position: relative; // Pode ser útil dependendo do seu layout
-  z-index: 1; // Para garantir que o conteúdo fique acima do fundo se for um pseudo-elemento
-  background-image: url("/assets/svg/background.svg"); // Caminho correto!
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  // Outros estilos do seu #root aqui
-}
-
-// Outros estilos globais...
