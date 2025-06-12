@@ -17,7 +17,6 @@ export default function NavBar() {
         burguer.classList.toggle('burguer-aux')
         animateRefs.current.forEach(el => el.classList.toggle('animate-aux'))
 
-        // Burger spans
         burguer.children[0].classList.toggle('span-one')
         burguer.children[1].classList.toggle('span-dwo')
         burguer.children[2].classList.toggle('span-there')
