@@ -1,4 +1,3 @@
-@use '/src/Components/sass/components';
 @use '/src/Components/sass/key-Frames';
 @use '/src/Components/sass/mixins';
 @use '/src/Components/sass/responsive';
@@ -8,12 +7,12 @@
 .banner {
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
-    height: 100lvh;
+    height: 100vh;
     overflow: hidden;
     z-index: 1;
 
     @include responsive.screen_small {
-        //height: 110lvh;
+        height: 110vh;
     }
 
     .banner-text-linear {
