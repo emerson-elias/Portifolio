@@ -1,6 +1,6 @@
 @use '/src/sass/variables' as var;
-@use '/src/sass/mixins';
 
+// Reset básico
 * {
     padding: 0;
     margin: 0;
@@ -8,16 +8,62 @@
     -webkit-font-smoothing: antialiased;
 }
 
+// Estilos para esconder a scrollbar (boa prática)
 ::-webkit-scrollbar {
     width: 0;
     display: none;
     scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none; // Para IE/Edge
+    scrollbar-width: none; // Para Firefox
 }
 
+// HTML: Garante que a raiz do documento tenha a altura do viewport e esconde o overflow
+html {
+    // Essa variável é definida pelo JavaScript (useMobileVhFix)
+    // 1vh é um fallback para ambientes onde o JS não roda ou para desktop
+    --vh: 1vh; 
+    height: 100%; // Ocupa 100% da viewport (fallback para desktop)
+    overflow: hidden; // Impede que o HTML gere rolagem
+}
+
+// BODY: Garante que o corpo do documento tenha a altura do viewport e esconde o overflow
 body {
-    background: var.$gray_primary url('/assets/svg/background.svg') no-repeat center center / cover fixed;
-    width: 100vw;
-    height: 700px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; // Impede que o BODY gere rolagem
+    width: 100vw; // Ocupa a largura total da viewport
+    // Aqui usamos a altura dinâmica calculada pelo JS
+    height: calc(var(--vh) * 100); 
+}
+
+// O DIV DEDICADO PARA A IMAGEM DE FUNDO FIXA
+.fixed-background-image {
+    position: fixed; // Isso fixa o elemento na tela
+    top: 0;
+    left: 0;
+    width: 100vw; // Ocupa a largura total da viewport
+    // E aqui usamos a altura dinâmica para ele se ajustar perfeitamente à tela visível
+    height: calc(var(--vh) * 100); 
+    
+    // Suas propriedades de background
+    background: url("/assets/svg/background.svg") var.$gray_primary;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    z-index: -1; // Coloca este div atrás de todo o resto do conteúdo
+}
+
+// O #ROOT (onde seu app React é montado)
+#root {
+    position: relative; // Necessário para z-index funcionar e para posicionamento interno
+    z-index: 0; // Garante que o #root e seu conteúdo fiquem ACIMA do background (-1)
+    
+    // O #root deve ocupar toda a altura do body (que já é a altura dinâmica da tela)
+    height: 100%; 
+    width: 100%;
+    
+    // A rolagem do conteúdo do seu app deve acontecer AQUI, e não no html/body
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; // Para rolagem suave em iOS
 }
