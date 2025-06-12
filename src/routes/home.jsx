@@ -12,9 +12,9 @@ import Project from "../components/project/project.jsx"
 import Tecnology from "../components/tecnology/tecnology.jsx"
 import Tools from "../components/tools/tools.jsx"
 import Contate_Me from "../components/contate-me/contate.jsx"*/
-import Loader from "../components/loader/loader.jsx"
-import NavBar from "../components/nav/nav.jsx"
-import Banner from "../components/banner/banner.jsx"
+import Loader from "../Components/loader/loader.jsx"
+import NavBar from "../Components/nav/nav.jsx"
+import Banner from "../Components/banner/banner.jsx"
 
 export default function Home() {
 
