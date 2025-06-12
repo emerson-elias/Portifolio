@@ -15,6 +15,12 @@
         pointer-events: none;
         z-index: -1;
     }
+
+    &:hover::after {
+        height: 100%;
+        transition: 0.3s all;
+        pointer-events: none;
+    }
 }
 
 @mixin background($height) {

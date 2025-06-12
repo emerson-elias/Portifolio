@@ -11,10 +11,11 @@ import Tools from "../components/tools/tools.jsx"
 import Contate_Me from "../components/contate-me/contate.jsx"*/
 
 
-import Cursor from "../components/cursor/cursor.jsx"
-import Banner from "../components/banner/banner.jsx"
-import Sound from "../components/sound/sound.jsx"
-import Loader from "../components/loader/loader.jsx"
+import Cursor from "../components/global/cursor/cursor.jsx"
+import Banner from "../components/home/banner/banner.jsx"
+import Sound from "../components/global/sound/sound.jsx"
+import Loader from "../components/global/loader/loader.jsx"
+import NavBar from "../components/global/nav/nav.jsx"
 
 export default function Home() {
 
@@ -44,6 +45,7 @@ export default function Home() {
             ) : (
                 <>
                     <Cursor />
+                    <NavBar />
                     <Banner />
                     <Sound />
                     

@@ -26,6 +26,7 @@
         cursor: pointer;
 
         span {
+            position: relative;
             text-align: center;
             font-size: 1.2vmax;
             font-family: var.$font_Primary;
@@ -34,6 +35,12 @@
 
             @include responsive.screen_laptop {
                 font-size: 17px;
+            }
+        }
+
+        &:hover{
+            span{
+                color: var.$Secundary_Color;
             }
         }
     }

@@ -1,0 +1,99 @@
+@use '/src/sass/animate';
+@use '/src/sass/responsive';
+@use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
+
+.projects_container {
+    @include mixins.align(relative, flex, center, center);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .banner_img {
+        @include mixins.align(absolute, flex, center, center);
+        width: 27vw;
+        height: auto;
+
+        @include responsive.screen_laptop {
+            width: 400px;
+            height: 100vh;
+        }
+
+        @include responsive.screen_small {
+            width: 250px;
+        }
+
+        img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 1vmax;
+            transition: var.$Transition_ease;
+            transform: rotate(-10deg);
+            filter: grayscale(100%);
+            animation: fade 2s ease;
+
+            &:hover {
+                filter: grayscale(0%);
+                transition: var.$Transition_ease;
+            }
+        }
+    }
+
+    .svg {
+        position: absolute;
+        width: 12vw;
+        top: 20vh;
+        left: 70vw;
+        z-index: -1;
+        pointer-events: none;
+
+        @include responsive.screen_laptop {
+            width: 25vw;
+            top: 10vh;
+        }
+
+        @include responsive.screen_small {
+            width: 50vw;
+            left: 50vw;
+        }
+
+        svg {
+            width: 100%;
+            color: var.$Color_White_B9;
+            animation: girar_left 15s linear infinite;
+        }
+    }
+
+    .title_large {
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: inherit;
+        height: auto;
+        pointer-events: none;
+
+        span {
+            position: relative;
+            width: 95vw;
+            font-size: 15vmax;
+            font-family: var.$font_Primary;
+            color: var.$Color_White_B9;
+            mix-blend-mode: difference;
+            animation: fade 1s ease;
+
+            &:nth-child(2) {
+                transform: translateX(20vw);
+
+                @include responsive.screen_small {
+                    transform: none;
+                }
+            }
+
+            @include responsive.screen_small {
+                text-align: center;
+                font-size: 75px;
+            }
+        }
+    }
+}

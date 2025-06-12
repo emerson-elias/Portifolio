@@ -1,0 +1,186 @@
+@use '/src/sass/animate';
+@use '/src/sass/responsive';
+@use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
+
+.all_project_container {
+    @include mixins.align(relative, flex, center, center);
+    width: 100vw;
+    height: auto;
+    margin-bottom: 30vh;
+    padding: 20vh 0;
+    overflow: hidden;
+
+    @include responsive.screen_tablet {
+        margin-bottom: 180px;
+    }
+    @include responsive.screen_small {
+        padding: 0;
+    }
+
+    .row {
+        @include mixins.align(relative, flex, center, center);
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+
+        .title {
+            position: relative;
+            width: inherit;
+            height: auto;
+            margin: 25vh 0;
+
+            @include responsive.screen_tablet {
+                margin: 100px 0;
+            }
+            @include responsive.screen_small {
+                width: 95%;
+                margin: 0 0 170px 0;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 15%;
+                transform: translate(-50%, -50%);
+                width: 15vw;
+                height: 0.1vw;
+                background-color: var.$gray_Secundary_Color;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 85%;
+                transform: translate(-50%, -50%);
+                width: 15vw;
+                height: 0.1vw;
+                background-color: var.$gray_Secundary_Color;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 3vmax;
+                font-family: var.$font_Tertiary;
+                letter-spacing: 2px;
+                color: var.$Color_White_B9;
+
+                @include responsive.screen_small {
+                    font-size: 25px;
+                }
+
+                span {
+                    color: transparent;
+                    -webkit-text-stroke: 0.05vw var.$Secundary_Color;
+
+                    @include responsive.screen_small {
+                        -webkit-text-stroke-width: 1px;
+                    }
+                }
+            }
+        }
+
+        .layers {
+            @include mixins.align(relative, flex, space-between, center);
+            @include mixins.effect_affter();
+            width: 100vw;
+            padding: 4vh 6vw;
+            height: auto;
+            border-bottom: 0.1vw solid var.$gray_Secundary_Color;
+            will-change: transform;
+
+            @include responsive.screen_small {
+                padding: 10px 40px;
+            }
+
+            .title_project {
+                position: relative;
+                width: 70vw;
+                height: auto;
+
+                @include responsive.screen_small {
+                    width: 270px;
+                }
+
+                h1 {
+                    text-align: start;
+                    font-size: 6vmax;
+                    color: var.$Color_White_B9;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 3px;
+                    transition: 0.3s all;
+
+                    @include responsive.screen_small {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            &:hover h1 {
+                color: var.$gray_primary;
+                transition: 0.3s all;
+                padding-left: 3vw;
+                transform: skew(-25deg);
+            }
+
+            .box_img_project{
+                position: absolute;
+                top: -10vh;
+                left: 48vw;
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                pointer-events: none;
+
+                @include responsive.screen_small {
+                    display: none;
+                }
+
+                img{
+                    position: relative;
+                    width: 30vw;
+                    border-radius: 10%;
+                }
+            }
+
+            .svg {
+                position: relative;
+                width: 6vw;
+                height: 6vw;
+                padding: 1vmax;
+                transform: rotate(90deg);
+                cursor: pointer;
+
+                @include responsive.screen_small {
+                    width: 70px;
+                    height: 70px;
+                    margin-left: 30px;
+                }
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                    color: var.$Color_White_B9;
+                    transition: 0.3s all;
+                    pointer-events: none;
+                }
+            }
+
+            &:hover svg {
+                transition: 0.3s all;
+                color: var.$gray_primary;
+                transform: scale(1.5);
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import "./global.scss"
 
 import { RouterProvider } from "react-router-dom"
 import rotas from "./routes"
-import Sound from "./components/sound/sound.jsx"
+import Sound from "./components/global/sound/sound.jsx"
 
 function App() {
   return (

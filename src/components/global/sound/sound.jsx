@@ -28,8 +28,7 @@ export default function Sound() {
     return (
         <section className={styles.sound_container} title='Vamos aumentar a experiência?'>
             <a className={styles.sound} onClick={eventSound}>
-                <span>música : </span>
-                <span>{soundState}</span>
+                <span>música : {soundState}</span>
                 <audio ref={musicRef} loop src={music}></audio>
             </a>
         </section>
