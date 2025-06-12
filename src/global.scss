@@ -16,7 +16,7 @@
 }
 
 body {
-    @include mixins.background();
+    @include mixins.background(100lvh);
 
     background-color: rebeccapurple;
 }

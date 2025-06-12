@@ -1,15 +1,14 @@
 @use 'variables' as var;
-@use 'components';
 @use 'responsive';
 
-@mixin background() {
+@mixin background($height) {
     background: url('/assets/svg/background.svg') var.$gray_primary;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100dvh;
+    height: $height;
 }
 
 @mixin align($position, $flex, $centralization, $align) {
