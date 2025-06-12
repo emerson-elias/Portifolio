@@ -9,8 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100dvh; // altura dinâmica real
-    min-height: 100svh; // fallback seguro
+    height: 100lvh;
 }
 
 @mixin align($position, $flex, $centralization, $align) {

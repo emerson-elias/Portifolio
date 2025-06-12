@@ -39,16 +39,9 @@ export default function Home() {
                 <Loader className={isFadingOut ? "fade-out" : ""} />
             ) : (
                 <>
-                    <Cursor />
-                    <Nav_Bar />
+       
                     <Banner />
-                    <Bio />
-                    <Project />
-                    <Topo />
-                    <Tecnology />
-                    <Tools />
-                    <Contate_Me />
-                    <Footer />
+
                 </>
             )}
         </>
