@@ -7,10 +7,10 @@ import hook from "./hooks/view.js"
 
 function App() {
     hook()
-    
+
     return (
         <>
-            <div className="fixed-background-image"></div>
+            <section className="fixed-background-image"></section>
             <Sound />
             <RouterProvider router={rotas} />
         </>
