@@ -1,4 +1,5 @@
 @use '/src/sass/variables' as var;
+@use '/src/sass/mixins';
 
 * {
     padding: 0;
@@ -15,23 +16,8 @@
     scrollbar-width: none;
 }
 
-html {
-    --vh: 1vh;
-}
-
 body {
-    height: calc(var(--vh) * 100);
-}
-
-.fixed-background-image {
-    position: fixed;
-    background: url("/assets/svg/background.svg") var.$gray_primary;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0;
+    background: var.$gray_primary url('/assets/svg/background.svg') no-repeat center center / cover fixed;
     width: 100vw;
-    height: calc(var(--vh) * 100);
-    z-index: -1;
+    height: 700px;
 }
