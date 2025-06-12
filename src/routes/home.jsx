@@ -42,7 +42,12 @@ export default function Home() {
                     <Cursor />
                     <Nav_Bar />
                     <Banner />
-
+                    <Bio />
+                    <Project />
+                    <Topo />
+                    <Tecnology />
+                    <Tools />
+                    <Contate_Me />
                     <Footer />
                 </>
             )}
