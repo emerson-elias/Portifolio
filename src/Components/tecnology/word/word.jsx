@@ -1,4 +1,4 @@
-import '../word/word.scss'
+import './word.scss'
 
 export default function Word() {
     return (

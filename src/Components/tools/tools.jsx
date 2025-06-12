@@ -1,4 +1,4 @@
-import '../tools/tools.scss'
+import './tools.scss'
 
 export default function Tools() {
     return (

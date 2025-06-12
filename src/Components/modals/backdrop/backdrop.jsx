@@ -1,4 +1,4 @@
-import styles from '../backdrop/backdrop.module.scss'
+import styles from './backdrop.module.scss'
 
 const Backdrop = ({ closeModal, showBackdrop }) => {
     return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import styles from '../modal/modal.module.scss'
+import styles from './modal.module.scss'
 import Backdrop from '../backdrop/backdrop.jsx'
 
 const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) => {

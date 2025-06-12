@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react"
 
-import Nav_Bar from "../Components/nav/nav.jsx"
-import Bio from "../Components/bio/bio.jsx"
-import Banner from "../Components/banner/banner.jsx"
-import Cursor from "../Components/cursor/cursor.jsx"
-import Topo from "../Components/topo/topo.jsx"
-import Footer from "../Components/footer/footer.jsx"
-import Project from "../Components/project/project.jsx"
-import Tecnology from "../Components/tecnology/tecnology.jsx"
-import Tools from "../Components/tools/tools.jsx"
-import Contate_Me from "../Components/contate-me/contate.jsx"
-import Loader from "../Components/loader/loader.jsx"
+import Cursor from "../components/cursor/cursor.jsx"
+/*
+import Nav_Bar from "../components/nav/nav.jsx"
+import Bio from "../components/bio/bio.jsx"
+import Banner from "../components/banner/banner.jsx"
+import Topo from "../components/topo/topo.jsx"
+import Footer from "../components/footer/footer.jsx"
+import Project from "../components/project/project.jsx"
+import Tecnology from "../components/tecnology/tecnology.jsx"
+import Tools from "../components/tools/tools.jsx"
+import Contate_Me from "../components/contate-me/contate.jsx"*/
+import Loader from "../components/loader/loader.jsx"
 
 export default function Home() {
 
@@ -27,7 +28,7 @@ export default function Home() {
             setTimeout(() => {
                 setIsLoading(false)
                 sessionStorage.setItem("pageLoaded", "true")
-            }, 1500) // tempo para a transição de fade-out
+            }, 1500)
         }, 3000)
 
         return () => clearTimeout(delayTimeout)
@@ -40,9 +41,15 @@ export default function Home() {
             ) : (
                 <>
                     <Cursor />
-                    <Nav_Bar />
+                   {/*  <Nav_Bar />
                     <Banner />
                     <Bio />
+                    <Project />
+                    <Topo />
+                    <Tecnology />
+                    <Tools />
+                    <Contate_Me />
+                    <Footer />*/}
                 </>
             )}
         </>

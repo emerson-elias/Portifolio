@@ -1,4 +1,4 @@
-import '../contate-me/contate.scss'
+import './contate.scss'
 
 export default function Contate() {
     return (

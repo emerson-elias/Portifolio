@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
-import '../project/project.scss'
+import './project.scss'
 import Modal from "../modals/modal/modal"
 
 import gif_1 from '/assets/gif/page-1.gif'
