@@ -9,24 +9,26 @@
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: 100lvh;
-    z-index: 1;
     overflow: hidden;
+    z-index: 1;
 
-    @include responsive.screen_small{
-        height: 110lvh;
+    background-color: rosybrown;
+
+    @include responsive.screen_small {
+        //height: 110lvh;
     }
 
-    .banner-text-linear{
+    .banner-text-linear {
         position: absolute;
         width: inherit;
-        height: inherit;                 
+        height: inherit;
         white-space: nowrap;
         box-sizing: border-box;
         pointer-events: none;
         animation: fade 3s ease;
         will-change: transform;
 
-        h1{
+        h1 {
             position: relative;
             top: 42vh;
             display: inline-block;
@@ -38,99 +40,102 @@
             animation: slider-linear 60s linear infinite;
             will-change: transform;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 -webkit-text-stroke: 1px var.$Secundary_Color;
             }
-        }   
+        }
     }
 
-    .row{
+    .row {
         @include mixins.align(relative, flex, space-between, center);
         width: 90vw;
         height: auto;
-        
-        @include responsive.screen_laptop{
+
+        @include responsive.screen_laptop {
             flex-direction: column;
-            padding: 100px 0 0 0;       
+            padding: 100px 0 0 0;
         }
 
-        .layer-1{
+        .layer-1 {
             position: relative;
             width: auto;
             height: 50vh;
             animation: fade 3s ease;
 
-            @include responsive.screen_laptop{
+            @include responsive.screen_laptop {
                 width: inherit;
                 height: 10vh;
             }
 
-            h1{
+            h1 {
                 font-size: 2vmax;
                 color: var.$Color_White;
                 text-wrap: nowrap;
                 font-family: var.$font_Primary;
-                
-                @include responsive.screen_tablet{
+
+                @include responsive.screen_tablet {
                     font-size: 20px;
                 }
-            }                                           
+            }
         }
 
-        .layer-2{
+        .layer-2 {
             position: relative;
             width: 70%;
             margin-left: 2%;
             height: auto;
             animation: fade 3s ease;
 
-            @include responsive.screen_laptop{
-                width: 90%;               
+            @include responsive.screen_laptop {
+                width: 90%;
             }
-            @include responsive.screen_tablet{
+
+            @include responsive.screen_tablet {
                 top: -30px;
                 width: 100%;
             }
 
-            .box{
+            .box {
                 position: relative;
                 width: initial;
                 height: auto;
                 overflow: hidden;
 
-                h1{
+                h1 {
                     font-size: 10vmax;
                     color: #ffffffe3;
                     text-wrap: nowrap;
                     font-weight: 500;
                     font-family: var.$font_Primary;
-                    
-                    @include responsive.screen_laptop{
+
+                    @include responsive.screen_laptop {
                         font-size: 100px;
                     }
-                    @include responsive.screen_tablet_rotate{
+
+                    @include responsive.screen_tablet_rotate {
                         text-align: center;
                         font-size: 50px;
                     }
-                    @include responsive.screen_small{
-                        font-size: 60px;             
+
+                    @include responsive.screen_small {
+                        font-size: 60px;
                     }
 
-                    span{
+                    span {
                         color: var.$Secundary_Color;
                     }
                 }
 
-                &:nth-child(2){              
+                &:nth-child(2) {
                     margin-left: 5vmax;
 
-                    @include responsive.screen_small{
+                    @include responsive.screen_small {
                         margin: 0;
                     }
                 }
             }
 
-            p{
+            p {
                 margin-top: 1vmax;
                 width: 70%;
                 margin-left: 20%;
@@ -141,7 +146,7 @@
                 line-height: 1.5vmax;
                 font-family: var.$font_Primary;
 
-                @include responsive.screen_laptop{
+                @include responsive.screen_laptop {
                     margin-left: 0;
                     width: 100%;
                     font-size: 25px;
@@ -149,53 +154,57 @@
                     letter-spacing: 1px;
                     line-height: 25px;
                 }
-                @include responsive.screen_tablet_rotate{
+
+                @include responsive.screen_tablet_rotate {
                     font-size: 15px;
                 }
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     margin-top: 25px;
                     font-size: 20px;
                     text-align: center;
                 }
             }
         }
-        
-        .layer-3{
+
+        .layer-3 {
             position: relative;
             top: 15vh;
             width: 15%;
             height: 50vh;
-            animation: fade 3s ease;    
+            animation: fade 3s ease;
 
-            @include responsive.screen_laptop{
+            @include responsive.screen_laptop {
                 top: 0;
                 left: 50%;
                 width: 50%;
                 height: 25vh;
             }
-            @include responsive.screen_small{
+
+            @include responsive.screen_small {
                 width: 100%;
                 top: 20px;
                 left: 40%;
             }
 
-            #magnect-1, #magnect-2 {
+            #magnect-1,
+            #magnect-2 {
                 @include mixins.align(absolute, flex, center, center);
                 top: 0;
-                left: 0;     
+                left: 0;
                 width: 10vmax;
                 height: 10vmax;
                 border-radius: 100%;
                 background-color: transparent;
                 border: 2px solid var.$Color_White;
                 cursor: pointer;
-                
-                svg{
+
+                svg {
                     position: relative;
                     width: 5vmax;
                     transform: rotate(180deg);
                 }
             }
-        }                    
+        }
     }
 }
