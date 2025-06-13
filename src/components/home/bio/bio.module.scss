@@ -1,0 +1,151 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.bio_container{
+    @include mixins.align(relative, flex, center, center);
+    flex-direction: column;                
+    width: 100vw;
+    height: auto;
+    padding: 50vh 0 30vh 0;
+    overflow: hidden;
+
+    @include responsive.screen_small{
+        padding: 150px 0;
+    }
+
+    .bio_titlle{
+        position: relative;
+        width: 80vw;
+        height: auto;
+        margin-bottom: 5vh;
+
+        h1{
+            color: var.$Color_White_B9;
+            font-family: var.$font_Tertiary;
+            font-size: 1.5vmax;
+            letter-spacing: 2px;
+
+            @include responsive.screen_small{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .bio{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+
+        @include responsive.screen_small{
+            width: 85%;
+        }
+
+        span{
+            margin: 0 5px;
+            color: var.$Color_White_B9;
+            font-family: var.$font_Primary;
+            font-size: 2vmax;
+            letter-spacing: 1.2px;
+            line-height: 1.5;  
+
+            &:nth-child(1){
+                margin-left: 7vmax;                           
+            }
+            &:nth-child(3){
+                color: var.$Secundary_Color;                           
+            }
+            &:nth-child(7){
+                margin-left: 15vmax;                           
+            }
+            &:nth-child(11){
+                color: var.$Secundary_Color;                          
+            }
+            &:nth-child(17){
+                color: var.$Secundary_Color;
+                margin: 0 50px;                            
+            }
+            &:nth-child(20){
+                color: var.$Secundary_Color;
+                margin-left: 10vmax;                           
+            }
+            &:nth-child(23){
+                color: var.$Secundary_Color;                           
+            } 
+
+            @include responsive.screen_tablet{
+                font-size: 20px;
+            }    
+            @include responsive.screen_small{
+                font-size: 20px;
+                text-align: center;
+            }
+
+            svg{
+                position: relative;
+                top: 0.5vmax;
+                width: 6%;
+                margin-left: 2%;
+                animation: girar_left 10s linear infinite;
+
+                @include responsive.screen_small{
+                    top: 7px;
+                    width: 12%;
+                }
+            }
+
+            i{
+                font-size: 1.5vmax;
+
+                @include responsive.screen_small{
+                    font-size: 15px;
+                }
+            }                    
+        }
+    }
+
+    .btn_sobre_mim{
+        position: relative;
+        margin-left: 50vw;
+        top: 2vh;
+
+        @include responsive.screen_small{
+            top: 30px;
+            margin-left: 0;
+        }
+        
+        a{
+            position: absolute;
+            display: grid;
+            place-content: center;
+            width: 15vmax;
+            height: 3vmax;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid var.$Color_White_B9;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var.$Color_White_B9;
+            font-family: var.$font_Primary;
+            font-size: 1.5vmax;
+
+            @include responsive.screen_small{
+                width: 160px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            &:nth-child(2){
+                z-index: -1;
+                pointer-events: none;
+            }
+        }
+
+        &:hover a{
+            color: var.$Secundary_Color;
+            border: 2px solid var.$Secundary_Color;
+        }
+    }
+}
