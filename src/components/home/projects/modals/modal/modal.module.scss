@@ -1,0 +1,312 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%) translateY(-100vh);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
+    opacity: 0.5;
+    overflow-x: hidden;
+
+    &.animated_modal {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    .closer {
+        @include mixins.align(fixed, flex, end, end);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 3vh 2vw;
+        z-index: 9999;
+
+        i {
+            font-size: 3vmax;
+            color: var.$gray_primary;
+            background-color: var.$Secundary_Color;
+            transition: var.$Transition_ease;
+            padding: 1.2vmax 1.5vmax;
+            border-radius: 10px;
+            cursor: pointer;
+
+            @include responsive.screen_laptop {
+                padding: 20px 25px;
+                font-size: 50px;
+            }
+
+            @include responsive.screen_small {
+                padding: 10px 15px;
+                font-size: 40px;
+                margin-right: 20px;
+            }
+
+            &:hover {
+                background-color: var.$gray_primary;
+                transition: var.$Transition_ease;
+                color: var.$Secundary_Color;
+            }
+        }
+    }
+
+    .row {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .project_text_linear {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            white-space: nowrap;
+            pointer-events: none;
+            animation: fade 3s ease;
+            will-change: transform;
+            pointer-events: none;
+
+            h1 {
+                position: relative;
+                display: inline-block;
+                margin-left: 10vw;
+                font-size: 20vmax;
+                color: transparent;
+                font-family: var.$font_Tertiary;
+                -webkit-text-stroke: 0.1vw var.$Secundary_Color;
+                animation: slider-linear 30s linear infinite;
+                mix-blend-mode: difference;
+                will-change: transform;
+
+                @include responsive.screen_small {
+                    -webkit-text-stroke: 1px var.$Secundary_Color;
+                }
+            }
+
+            .layer_img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: auto;
+                height: auto;
+                z-index: -1;
+
+                img {
+                    position: relative;
+                    width: 35vw;
+                    height: auto;
+                    border-radius: 1vmax;
+
+                    @include responsive.screen_laptop {
+                        width: 500px;
+                    }
+
+                    @include responsive.screen_small {
+                        width: 330px;
+                    }
+                }
+            }
+        }
+
+        .box {
+            @include mixins.align(relative, flex, center, center);
+            flex-direction: column;
+            width: 100vw;
+            height: 130vh;
+
+            .layer {
+                position: relative;
+                width: 60vw;
+                height: auto;
+                top: 55vh;
+
+                @include responsive.screen_laptop {
+                    width: 80vw;
+                }
+                @include responsive.screen_tablet {
+                    top: 80vh;
+                }
+                @include responsive.screen_small {
+                    top: 75vh;
+                }
+
+                .box_1 {
+                    @include mixins.align(relative, flex, space-between, center);
+                    width: inherit;
+                    height: auto;
+                    border-bottom: 0.2vw solid var.$Color_White_B9;
+
+                    a {
+                        font-size: 1.6vmax;
+                        font-family: var.$font_Primary;
+                        letter-spacing: 1px;
+                        padding: 2vmax 1vmax;
+                        text-decoration: none;
+                        color: var.$Color_White_B9;
+                        cursor: pointer;
+
+                        @include responsive.screen_laptop {
+                            font-size: 25px;
+                        }
+
+                        @include responsive.screen_small {
+                            font-size: 20px;
+                        }
+
+                        &:hover {
+                            color: var.$Secundary_Color;
+                        }
+                    }
+
+                    .detals {
+                        @include mixins.align(relative, flex, space-between, center);
+                        width: 20vw;
+                        height: auto;
+                        padding: 2vmax 1vmax;
+
+                        @include responsive.screen_laptop {
+                            width: auto;
+                        }
+                        @include responsive.screen_small {
+                            flex-direction: column;
+                        }
+
+                        span {
+                            font-size: 1.6vmax;
+                            font-family: var.$font_Primary;
+                            letter-spacing: 1px;
+                            color: var.$Color_White_B9;
+
+                            @include responsive.screen_laptop {
+                                font-size: 25px;
+                                margin: 0 7px;
+                            }
+
+                            @include responsive.screen_small {
+                                font-size: 20px;
+                                margin: 10px 0;                             
+                            }
+                        }
+
+                        i {
+                            font-size: 0.5vmax;
+                            color: var.$Color_White_B9;
+
+                            @include responsive.screen_small{
+                              display: none;
+                            }
+                        }
+                    }
+                }
+
+                .box_2 {
+                    @include mixins.align(relative, flex, space-between, center);
+                    width: inherit;
+                    height: 100%;
+                    padding-top: 7vh;
+
+                    @include responsive.screen_tablet {
+                        flex-direction: column;
+                        justify-content: center;
+                        height: auto;
+                        padding: 7vh 0;
+                    }
+
+                    .tecnology {
+                        position: relative;
+                        width: 40%;
+                        height: 100%;
+
+                        @include responsive.screen_tablet {
+                            width: inherit;
+                        }
+
+                        h1 {
+                            width: initial;
+                            font-family: var.$font_Secondary;
+                            letter-spacing: 2px;
+                            font-size: 2.2vmax;
+                            color: var.$Color_White_B9;
+                            padding: 5vh 0;
+
+                            @include responsive.screen_laptop {
+                                font-size: 30px;
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            width: initial;
+                            margin: 1vmax 0;
+                            font-family: var.$font_Primary;
+                            letter-spacing: 2px;
+                            font-size: 1.9vmax;
+                            color: var.$Color_White_B9;
+                            cursor: pointer;
+
+                            @include responsive.screen_laptop {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+
+                    .description {
+                        position: relative;
+                        width: 60%;
+                        height: 100%;
+                        padding-top: 10vh;
+
+
+                        @include responsive.screen_tablet {
+                            width: inherit;
+                            padding: 10vh 0;
+                        }
+
+                        p {
+                            font-size: 2vmax;
+                            margin: 1vmax 0;
+                            font-family: var.$font_normal;
+                            font-size: 1.5vmax;
+                            text-indent: 100px;
+                            text-align: justify;
+                            color: var.$Color_White_B9;
+
+                            @include responsive.screen_laptop {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .box_btn {
+                            @include mixins.align(relative, flex, end, end);
+                            width: initial;
+                            height: auto;
+                            margin: 8vh 0;
+
+                            @include responsive.screen_tablet {
+                                justify-content: center;
+                            }
+
+                            @include responsive.screen_small {
+                                margin: 100px 0 0 0;
+                            }
+
+                            .btn {
+                                @include mixins.btn();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ import Banner from "./banner/banner"
 import Loader from "../global/loader/loader"
 import NavBar from "../global/nav/nav"
 import Bio from "./bio/bio"
+import Project from "./projects/project"
 
 export default function Home() {
     const { allAssetsLoaded } = useAssetsLoaded()
@@ -37,6 +38,7 @@ export default function Home() {
             <NavBar />
             <Banner />
             <Bio />
+            <Project />
         </>
     )
 }
