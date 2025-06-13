@@ -3,7 +3,9 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 const AssetLoaderContext = createContext({
     allAssetsLoaded: false,
     imagesLoaded: false,
-    fontsLoaded: false
+    fontsLoaded: false,
+    gifsLoaded: false,
+    audioLoaded: false
 })
 
 export const useAssetsLoaded = () => {
@@ -14,65 +16,83 @@ export const useAssetsLoaded = () => {
     return context
 }
 
-export const AssetLoaderProvider = ({ children, imgsUrls = [], fontFamilies = [] }) => {
+export const AssetLoaderProvider = ({ children, imgsUrls = [], fontFamilies = [], gifsUrls = [], audioUrls = [] }) => {
     const [assets, setAssets] = useState({
         allAssetsLoaded: false,
         imagesLoaded: false,
-        fontsLoaded: false
+        fontsLoaded: false,
+        gifsLoaded: false,
+        audioLoaded: false
     })
 
-    const loadImages = useCallback(() => {
-        if (imgsUrls.length === 0) {
-            setAssets(prev => ({ ...prev, imagesLoaded: true }))
-            return
-        }
+    // Função otimizada para carregar qualquer tipo de mídia
+    const loadMedia = useCallback((urls, type) => {
+        if (urls.length === 0) return Promise.resolve()
 
-        const imagePromises = imgsUrls.map(url => {
-            return new Promise((resolve, reject) => {
-                const img = new Image()
-                img.src = url
-                img.onload = resolve
-                img.onerror = () => reject(`Failed to load image: ${url}`)
-            })
+        return Promise.allSettled(
+            urls.map(url => new Promise((resolve) => {
+                const media = type === 'audio' ? new Audio() : new Image()
+                media.src = url
+
+                if (type === 'audio') {
+                    media.load()
+                    media.addEventListener('canplaythrough', () => resolve(), { once: true })
+                    media.addEventListener('error', () => resolve()) // Não rejeita para continuar o fluxo
+                } else {
+                    media.onload = () => resolve()
+                    media.onerror = () => resolve() // Continua mesmo com erro
+                }
+            }))
+        )
+    }, [])
+
+    // Carregamento otimizado em paralelo
+    const loadAllAssets = useCallback(async () => {
+        try {
+            await Promise.all([
+                loadMedia(imgsUrls, 'image').then(() => {
+                    setAssets(prev => ({ ...prev, imagesLoaded: true }))
+                }),
+                loadMedia(gifsUrls, 'image').then(() => {
+                    setAssets(prev => ({ ...prev, gifsLoaded: true }))
+                }),
+                loadMedia(audioUrls, 'audio').then(() => {
+                    setAssets(prev => ({ ...prev, audioLoaded: true }))
+                }),
+                (async () => {
+                    if (fontFamilies.length === 0 || !document.fonts) {
+                        setAssets(prev => ({ ...prev, fontsLoaded: true }))
+                        return
+                    }
+                    await Promise.allSettled(
+                        fontFamilies.map(font => document.fonts.load(`1em "${font}"`))
+                    )
+                    setAssets(prev => ({ ...prev, fontsLoaded: true }))
+                })()
+            ])
+        } catch (error) {
+            console.error('Asset loading error:', error)
+        }
+    }, [imgsUrls, gifsUrls, audioUrls, fontFamilies, loadMedia])
+
+    useEffect(() => {
+        let mounted = true
+
+        loadAllAssets().then(() => {
+            if (mounted) {
+                sessionStorage.setItem("pageLoaded", "true")
+            }
         })
 
-        Promise.allSettled(imagePromises)
-            .then(() => setAssets(prev => ({ ...prev, imagesLoaded: true })))
-            .catch(err => console.warn(err))
-    }, [imgsUrls])
+        return () => { mounted = false }
+    }, [loadAllAssets])
 
-    const loadFonts = useCallback(() => {
-        if (fontFamilies.length === 0) {
-            setAssets(prev => ({ ...prev, fontsLoaded: true }))
-            return
-        }
-
-        if (!document.fonts) {
-            console.warn("FontFace API not supported")
-            setAssets(prev => ({ ...prev, fontsLoaded: true }))
-            return
-        }
-
-        const fontPromises = fontFamilies.map(font =>
-            document.fonts.load(`1em "${font}"`)
-        )
-
-        Promise.allSettled(fontPromises)
-            .then(() => setAssets(prev => ({ ...prev, fontsLoaded: true })))
-            .catch(err => console.error("Font loading failed:", err))
-    }, [fontFamilies])
-
+    // Atualiza allAssetsLoaded quando todos estiverem prontos
     useEffect(() => {
-        loadImages()
-        loadFonts()
-    }, [loadImages, loadFonts])
-
-    useEffect(() => {
-        if (assets.imagesLoaded && assets.fontsLoaded) {
+        if (assets.imagesLoaded && assets.fontsLoaded && assets.gifsLoaded && assets.audioLoaded) {
             setAssets(prev => ({ ...prev, allAssetsLoaded: true }))
-            sessionStorage.setItem("pageLoaded", "true")
         }
-    }, [assets.imagesLoaded, assets.fontsLoaded])
+    }, [assets.imagesLoaded, assets.fontsLoaded, assets.gifsLoaded, assets.audioLoaded])
 
     return (
         <AssetLoaderContext.Provider value={assets}>

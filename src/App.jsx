@@ -27,8 +27,24 @@ function App() {
         "aquire bold",
     ]
 
+    const gifs = [
+        '/assets/gif/page-1.gif',
+        '/assets/gif/page-2.gif',
+        '/assets/gif/page-3.gif',
+        '/assets/gif/page-4.gif',
+    ]
+
+    const audioFiles = [
+        '/assets/music/sappheiros.mp3',
+    ]
+
     return (
-        <AssetLoaderProvider imgsUrls={imgs} fontFamilies={fonts}>
+        <AssetLoaderProvider
+            imgsUrls={imgs}
+            fontFamilies={fonts}
+            gifsUrls={gifs}
+            audioUrls={audioFiles}
+        >
             <section className="fixed-background-image"></section>
             <Sound />
             <Outlet />
