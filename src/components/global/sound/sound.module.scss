@@ -4,8 +4,8 @@
 .sound_container {
     position: fixed;
     width: 12vmax;
-    left: -4.2vmax;
-    bottom: 5vmax;
+    left: -4vmax;
+    bottom: 6vmax;
     transform: rotate(-90deg);
     animation: fade 3s ease;
     z-index: 9;
@@ -17,7 +17,8 @@
     }
 
     @include responsive.screen_small {
-        left: -55px;
+        width: 170px;
+        left: -60px;
     }
 
     .sound {
@@ -26,7 +27,6 @@
         cursor: pointer;
 
         span {
-            position: relative;
             text-align: center;
             font-size: 1.2vmax;
             font-family: var.$font_Primary;

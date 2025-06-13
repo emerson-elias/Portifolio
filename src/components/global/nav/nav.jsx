@@ -31,13 +31,16 @@ export default function NavBar() {
         }
 
         const burguer = burguerRef.current
+        
         burguer?.addEventListener('click', toggleClasses)
-        liRefs.current.forEach(item => item.addEventListener('click', toggleClasses))
+
+        liRefs.current.filter(Boolean).forEach(item => item?.addEventListener('click', toggleClasses))
+
         window.addEventListener('scroll', handleScroll)
 
         return () => {
             burguer?.removeEventListener('click', toggleClasses)
-            liRefs.current.forEach(item => item.removeEventListener('click', toggleClasses))
+            liRefs.current.filter(Boolean).forEach(item => item?.removeEventListener('click', toggleClasses))
             window.removeEventListener('scroll', handleScroll)
         }
     }, [])
@@ -76,7 +79,6 @@ export default function NavBar() {
                         { to: '/about', label: 'Sobre mim' },
                         { to: '/#tecnologias', label: 'Tecnologias' },
                         { to: '/projetos', label: 'Projetos' },
-
                     ].map((link, index) => (
                         <li key={index} ref={el => (liRefs.current[index] = el)}>
                             <Link
