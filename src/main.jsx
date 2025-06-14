@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -11,10 +11,17 @@ const router = createBrowserRouter([
         path: '/',
         element: <App />,
         children: [
-            { index: true, element: <Home /> },
-            { path: 'projetos', element: <Projects /> },
+            {
+                index: true,
+                element: <Home />
+            },
+            {
+                path: 'projetos',
+                element: <Projects />
+            },
         ]
     }
+
 ], {
     basename: import.meta.env.BASE_URL
 })

@@ -7,7 +7,7 @@ import useView from "./hooks/view"
 import "./global.scss"
 
 function App() {
-    useView()
+    //useView()
 
     const imgs = [
         '/assets/img/1.jpg',

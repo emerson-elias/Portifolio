@@ -14,13 +14,13 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
+/*
 html {
     --vh: 1vh;
     height: 100%;
     overflow: hidden;
-}
-
+}*/
+/*
 body {
     margin: 0;
     padding: 0;
@@ -28,21 +28,22 @@ body {
     height: calc(var(--vh) * 100);
     background-color: var.$gray_primary;
     overflow: hidden;
-}
+}*/
 
-.fixed-background-image {
+#bg {
     position: fixed;
-    background: url("/assets/svg/background.svg") ;
+    background: url("/assets/svg/background.svg")  var.$gray_primary;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     top: 0;
     left: 0;
     width: 100vw;
-    height: calc(var(--vh) * 100);
-    z-index: -1;
+    height: 100svh;
+    object-fit: cover;
 }
-
+/*
 #root {
     position: relative;
     height: 100%;
@@ -50,4 +51,4 @@ body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     z-index: 0;
-}
+}*/
