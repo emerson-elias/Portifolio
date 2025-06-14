@@ -1,0 +1,130 @@
+@use '/src/sass/animate';
+@use '/src/sass/responsive';
+@use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
+
+.tools-container {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 20vmax;
+    overflow: hidden;
+
+    .tittle-svg{
+        @include mixins.align(relative, flex, end, end);
+        width: inherit;
+        height: auto;
+
+        .layer{
+            position: relative;
+            width: auto;
+            height: auto;
+            margin-right: 10vmax;
+
+            svg{
+                position: relative;
+                width: 10vmax;
+                transform: rotate(180deg);
+                border-radius: 50%;
+                padding: 2vmax;
+            }
+
+            h1{
+                text-align: center;
+                font-size: 3vmax;
+                margin-top: 2vmax;
+                letter-spacing: 2px;
+                color: var.$Color_White_B9;
+                font-family: var.$font_Primary;
+            }
+        }
+    }
+
+    .wrapper-one, .wrapper-dwo {
+        @include mixins.align(relative, flex, center, center);
+        width: 110%;
+        height: 20vh; 
+        border: 2px solid var.$Secundary_Color;
+        border-left: none;
+        border-right: none;
+
+        @include responsive.screen_small{
+            height: 80px;
+        }
+
+        .itemLeft,
+        .itemRight {
+            position: absolute;
+            width: 600px;
+            height: auto;
+            text-align: center;
+            animation-timing-function: linear;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+
+            a {   
+                text-wrap: nowrap;
+                text-decoration: none;
+                font-size: 5vmax;
+                letter-spacing: 3px;
+                font-family: var.$font_Secondary;
+                transition: var.$Transition_ease;
+
+                @include responsive.screen_small {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .itemLeft {
+            left: max(calc(600px * 7), 100%);
+            animation-name: scrollLeft;
+        }
+        .itemRight {
+            right: max(calc(600px * 7), calc(100% + 600px));
+            animation-name: scrollRight;
+        }
+        .item1 {
+            animation-delay: calc(60s / 8 * (8 - 1) * -1);
+        }
+        .item2 {
+            animation-delay: calc(60s / 8 * (8 - 2) * -1);
+        }
+        .item3 {
+            animation-delay: calc(60s / 8 * (8 - 3) * -1);
+        }
+        .item4 {
+            animation-delay: calc(60s / 8 * (8 - 4) * -1);
+        }
+        .item5 {
+            animation-delay: calc(60s / 8 * (8 - 5) * -1);
+        }
+        .item6 {
+            animation-delay: calc(60s / 8 * (8 - 6) * -1);
+        }
+        .item7 {
+            animation-delay: calc(60s / 8 * (8 - 7) * -1);
+        }
+        .item8 {
+            animation-delay: calc(60s / 8 * (8 - 8) * -1);
+        }
+    }
+
+    .wrapper-one{
+        transform: rotate(5deg) translateX(-5%);
+        background-color: var.$Secundary_Color;
+
+        a{
+            color: var.$gray_primary;
+        }
+    }
+    
+    .wrapper-dwo{
+        transform: rotate(-5deg) translateX(-5%);
+        background-color: var.$gray_primary;
+
+        a{
+            color: var.$Secundary_Color;
+        }
+    }
+}

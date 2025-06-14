@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
 import { useAssetsLoaded } from "../../contexts/AssetLoaderProvider"
 
-import Cursor from "../global/cursor/cursor"
 import Banner from "./banner/banner"
 import Loader from "../global/loader/loader"
-import NavBar from "../global/nav/nav"
+
 import Bio from "./bio/bio"
 import Project from "./projects/project"
+import Tools from "./tools/tools"
+import Tecnology from "./tecnology/tecnology"
+import Contate from "./contate-me/contate"
 
 export default function Home() {
     const { allAssetsLoaded } = useAssetsLoaded()
@@ -29,11 +31,12 @@ export default function Home() {
 
     return (
         <>
-            <Cursor />
-            <NavBar />
             <Banner />
             <Bio />
             <Project />
+            <Tecnology />
+            <Tools />
+            <Contate />
         </>
     )
 }
