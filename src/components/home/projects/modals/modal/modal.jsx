@@ -8,18 +8,14 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
 
     useEffect(() => {
         setShowAnimated(true)
-        document.body.style.overflow = 'hidden' // Bloqueia o scroll ao abrir o modal
-
-        return () => {
-            document.body.style.overflow = '' // Restaura o scroll ao desmontar o modal
-        }
+        
     }, [])
 
     const closeModal = () => {
         setShowAnimated(false)
+        
         setTimeout(() => {
             setShowModal(false)
-            document.body.style.overflow = '' // Garante que o scroll volte ao normal ao fechar
         }, 500)
     }
 

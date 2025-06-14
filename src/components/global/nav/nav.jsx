@@ -20,14 +20,13 @@ export default function NavBar() {
         burguer.children[0].classList.toggle('span-one')
         burguer.children[1].classList.toggle('span-dwo')
         burguer.children[2].classList.toggle('span-there')
-
-       // document.body.style.overflow = ancora.classList.contains('collapse-true') ? 'hidden' : ''
     }
 
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('header')
             const root = document.getElementById('root')
+
             if (header && root) {
                 header.classList.toggle('header_aux', root.scrollTop > 100)
             }
@@ -90,6 +89,7 @@ export default function NavBar() {
                         { to: '/about', label: 'Sobre mim' },
                         { to: '/#tecnologias', label: 'Tecnologias' },
                         { to: '/projetos', label: 'Projetos' },
+                        
                     ].map((link, index) => (
                         <li key={index} ref={el => (liRefs.current[index] = el)}>
                             <Link

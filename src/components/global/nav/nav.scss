@@ -14,7 +14,7 @@
     @include responsive.screen_small {
         background-color: var.$gray_primary;
         transition: var.$Transition_ease;
-        background: url('../assets/svg/background.svg') var.$gray_primary;
+        background: url('/assets/svg/background.svg') var.$gray_primary;
     }
 }
 

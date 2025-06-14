@@ -14,11 +14,6 @@ export default function Home() {
     const [isExiting, setIsExiting] = useState(false)
 
     useEffect(() => {
-        window.history.scrollRestoration = "manual"
-        window.scrollTo({ top: 0, behavior: "instant" })
-    }, [])
-
-    useEffect(() => {
         if (allAssetsLoaded) {
             setIsExiting(true)
 

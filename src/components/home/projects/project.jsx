@@ -7,13 +7,13 @@ import Modal from "./modals/modal/modal"
 import './project.scss'
 
 export default function Project() {
+    const [showModal, setShowModal] = useState(false)
+    const [currentProject, setCurrentProject] = useState(null)
+
     const {
         gifsLoaded,
         fontsLoaded,
     } = useAssetsLoaded()
-
-    const [showModal, setShowModal] = useState(false)
-    const [currentProject, setCurrentProject] = useState(null)
 
     const openModal = (project) => {
         setCurrentProject(project)
@@ -50,7 +50,7 @@ export default function Project() {
             id: 3,
             title: "Em Breve",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
-            gif:'/assets/gif/page-3.gif',
+            gif: '/assets/gif/page-3.gif',
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 3.",
             year: "2024",
             link: "https://github.com/emerson-elias",
@@ -60,7 +60,7 @@ export default function Project() {
             id: 4,
             title: "Em Breve",
             description: "Imagens ilustrativas. Projeto em desenvolvimento.",
-            gif:'/assets/gif/page-4.gif',
+            gif: '/assets/gif/page-4.gif',
             modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 4.",
             year: "2024",
             link: "https://github.com/emerson-elias",

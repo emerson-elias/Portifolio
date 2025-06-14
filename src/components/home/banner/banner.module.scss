@@ -8,12 +8,8 @@
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     z-index: 1;
-
-    @include responsive.screen_small {
-        height: 110vh;
-    }
+    overflow: hidden;
 
     .banner_text_linear {
         position: absolute;
@@ -32,7 +28,7 @@
             margin-left: 10vw;
             font-size: 60vh;
             color: transparent;
-            font-family: 'aquire bold';
+            font-family: var.$font_Tertiary;
             -webkit-text-stroke: 0.1vw var.$Secundary_Color;
             animation: slider-linear 60s linear infinite;
             will-change: transform;
@@ -50,7 +46,7 @@
 
         @include responsive.screen_laptop {
             flex-direction: column;
-            padding: 100px 0 0 0;
+            padding: 190px 0 0 0;
         }
 
         .layer_1 {
@@ -100,7 +96,7 @@
 
                 h1 {
                     font-size: 10vmax;
-                    color: #ffffffe3;
+                    color: var.$Color_White_F3;
                     text-wrap: nowrap;
                     font-weight: 500;
                     font-family: var.$font_Primary;

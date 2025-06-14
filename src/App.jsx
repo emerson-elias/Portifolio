@@ -3,6 +3,7 @@ import { AssetLoaderProvider } from "./contexts/AssetLoaderProvider"
 
 import Sound from "./components/global/sound/sound"
 import useView from "./hooks/view"
+import ScrollToTop from "./hooks/scrollTop"
 
 import "./global.scss"
 
@@ -45,6 +46,7 @@ function App() {
             gifsUrls={gifs}
             audioUrls={audioFiles}
         >
+            <ScrollToTop />
             <section className="fixed-background-image"></section>
             <Sound />
             <Outlet />
