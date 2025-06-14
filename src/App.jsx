@@ -10,6 +10,8 @@ import useView from "./hooks/view"
 import ScrollToTop from "./hooks/scrollTop"
 
 import "./global.scss"
+import Footer from "./components/global/footer/footer"
+import Contate from "./components/home/contate-me/contate"
 
 const imgs = [
     '/assets/img/1.jpg',
@@ -50,15 +52,16 @@ function App() {
             gifsUrls={gifs}
             audioUrls={audioFiles}
         >
-            <ScrollToTop />
             <Cursor />
+            <ScrollToTop />
             <Sound />
 
             <section className="fixed-background-image" />
             <NavBar />
             <Topo />
             <Outlet />
-
+            <Contate />
+            <Footer />
         </AssetLoaderProvider>
     )
 }

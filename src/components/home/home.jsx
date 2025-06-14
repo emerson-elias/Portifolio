@@ -8,7 +8,6 @@ import Bio from "./bio/bio"
 import Project from "./projects/project"
 import Tools from "./tools/tools"
 import Tecnology from "./tecnology/tecnology"
-import Contate from "./contate-me/contate"
 
 export default function Home() {
     const { allAssetsLoaded } = useAssetsLoaded()
@@ -36,7 +35,6 @@ export default function Home() {
             <Project />
             <Tecnology />
             <Tools />
-            <Contate />
         </>
     )
 }
