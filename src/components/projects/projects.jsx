@@ -36,6 +36,11 @@ export default function Projects() {
         }
     ]
 
+    useEffect(() => {
+        window.history.scrollRestoration = "manual"
+        window.scrollTo({ top: 0, behavior: "instant" })
+    }, [])
+
     // Configuração inicial das animações
     useEffect(() => {
         if (!allAssetsLoaded) return
