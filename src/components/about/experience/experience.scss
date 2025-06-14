@@ -10,11 +10,12 @@
     margin-bottom: 30vh;
     overflow: hidden;
 
-    @include responsive.screen_tablet{
+    @include responsive.screen_tablet {
         margin-bottom: 25vh;
     }
-    @include responsive.screen_small{
-        margin: 120px 0 100px 0; 
+
+    @include responsive.screen_small {
+        margin: 120px 0 100px 0;
     }
 
     .row {
@@ -60,7 +61,7 @@
             padding-right: 2vw;
             height: auto;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 padding: 0;
             }
 
@@ -70,11 +71,12 @@
                 height: auto;
                 margin: 10vh 0;
 
-                @include responsive.screen_tablet{
+                @include responsive.screen_tablet {
                     width: 85vw;
                     margin: 10vh auto;
                 }
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     width: 75vw;
                 }
 
@@ -90,6 +92,7 @@
                     @include responsive.screen_laptop {
                         font-size: 18px;
                     }
+
                     @include responsive.screen_small {
                         text-align: justify;
                         font-size: 17px;
@@ -100,21 +103,23 @@
             .layers {
                 @include mixins.align(relative, flex, space-between, center);
                 width: 70%;
-                height: auto;
-                padding: 6vh 0;
+                height: 100%;
+                padding: 3vmax 0;
                 transition: var.$Transition_ease;
                 border-bottom: 0.1vw solid var.$gray_Secundary_Color;
                 will-change: transform;
-    
-                @include responsive.screen_tablet{
+
+                @include responsive.screen_tablet {
                     width: inherit;
                     padding: 30px 40px;
                 }
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     align-items: start;
                     flex-direction: column;
+                    height: 170px;
                 }
-                
+
                 &::after {
                     position: absolute;
                     content: '';
@@ -127,71 +132,71 @@
                     pointer-events: none;
                     z-index: -1;
                 }
-    
-                &:hover::after {
-                    height: 100%;
-                    transition: 0.3s all;
-                    pointer-events: none;
-                }
 
-                &:hover{
-                    padding: 6vh 3vw;
-                    transition: var.$Transition_ease;
-                }
-    
-                h1, p{
+                h1,
+                p {
                     font-size: 2vmax;
                     color: var.$Color_White_B9;
                     font-family: var.$font_Tertiary;
                     letter-spacing: 2px;
                     word-wrap: break-all;
                     transition: var.$Transition_ease;
-    
+
                     @include responsive.screen_laptop {
                         font-size: 25px;
                     }
                 }
-    
-                h1{
+
+                h1 {
                     width: 20vw;
-                    
-                    @include responsive.screen_tablet{
+
+                    @include responsive.screen_tablet {
                         width: 100%;
                     }
                 }
-    
+
                 span {
                     font-size: 1.5vmax;
                     color: var.$Color_White_B9;
                     font-family: var.$font_Primary;
                     letter-spacing: 2px;
                     transition: var.$Transition_ease;
-    
+
                     @include responsive.screen_laptop {
                         font-size: 20px;
                     }
+
                     @include responsive.screen_small {
                         margin: 20px 0;
                     }
                 }
 
                 &:hover {
+                    padding: 3vmax 3vmax;
+                    transition: var.$Transition_ease;
+
                     h1,
                     p,
                     span {
-                      color: var.$gray_primary;
-                      transition: var.$Transition_ease;
+                        color: var.$gray_primary;
+                        transition: var.$Transition_ease;
                     }
-                }     
+
+                    &::after {
+                        height: 100%;
+                        transition: 0.3s all;
+                        pointer-events: none;
+                    }
+                }
             }
 
-            .btn-projects{
+            .btn-projects {
                 position: relative;
                 width: initial;
                 height: auto;
                 margin: 20vh 2vw 0 0;
 
-                @include responsive.screen_small{
+                @include responsive.screen_small {
                     margin: 100px auto;
                 }
 
@@ -199,6 +204,6 @@
                     @include mixins.btn();
                 }
             }
-        }  
+        }
     }
 }
