@@ -5,13 +5,17 @@
 
 .loader_container {
     @include mixins.align(fixed, flex, center, center);
+    background: url("/assets/svg/background.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-color: var.$gray_primary;
+    transition: opacity 0.5s ease;
     overflow: hidden;
     z-index: 9999;
-    transition: opacity 0.5s ease;
 
     &.exit {
         opacity: 0;
