@@ -100,6 +100,7 @@
             height: auto;
             border-bottom: 0.1vw solid var.$gray_Secundary_Color;
             will-change: transform;
+            cursor: pointer;
 
             @include responsive.screen_small {
                 padding: 10px 40px;
