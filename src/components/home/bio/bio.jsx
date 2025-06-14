@@ -109,7 +109,7 @@ export default function About() {
 
             <div className={styles.btn_sobre_mim} ref={btn_container}>
 
-                <Link to={'/about'} ref={btn_one}>me conheça +</Link>
+                <Link to={'/sobre'} ref={btn_one}>me conheça +</Link>
                 <a ref={btn_dwo}></a>
 
             </div>

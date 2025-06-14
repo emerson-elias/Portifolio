@@ -113,7 +113,7 @@ export default function NavBar() {
 
                 <ul id="ancora" ref={ancoraRef}>
                     {[
-                        { to: '/about', label: 'Sobre mim' },
+                        { to: '/sobre', label: 'Sobre mim' },
                         { to: '/#tecnologias', label: 'Tecnologias' },
                         { to: '/projetos', label: 'Projetos' },
 

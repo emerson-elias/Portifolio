@@ -123,7 +123,7 @@ export default function Project() {
 
             <div className="ancor_about">
 
-                <Link id="animate" to="/about">
+                <Link id="animate" to="/sobre">
 
                     <h1>Quem sou?</h1>
 

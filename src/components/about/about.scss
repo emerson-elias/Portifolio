@@ -1,0 +1,189 @@
+@use '/src/sass/animate';
+@use '/src/sass/responsive';
+@use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
+
+.about-container {
+    @include mixins.align(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+
+    @include responsive.screen_tablet {
+        overflow: hidden;
+    }
+
+    .about-info {
+        @include mixins.align(relative, flex, center, flex-start);
+        width: 80vw;
+        height: auto;
+        padding: 10vh 0 40vh 0;
+
+        @include responsive.screen_laptop {
+            width: 90vw;
+        }
+        @include responsive.screen_tablet {
+            flex-direction: column;
+            align-items: center;
+            padding: 10vh 0 20vh 0;
+        }
+        @include responsive.screen_small {
+            padding: 10vh 0 0 0;
+        }
+
+        .box-img {
+            position: sticky;
+            top: 0.5vmax;
+            width: 50%;
+            height: 100vh; 
+
+            @include responsive.screen_tablet {
+                @include mixins.align(relative, flex, center, center);
+                width: inherit;
+            }
+
+            @include responsive.screen_small {
+                height: auto;
+                margin-bottom: 100px;
+            }
+
+            img {
+                position: relative;
+                width: 75%;
+                height: inherit;
+                object-fit: cover;
+                border-radius: 2vmax;
+                filter: grayscale(100%);
+                transition: var.$Transition_ease;
+
+                @include responsive.screen_tablet {
+                    width: 360px;
+                    height: auto;
+                }
+                
+                @include responsive.screen_small {
+                    width: 260px;
+                }
+
+                &:hover {
+                    filter: grayscale(0%);
+                    transition: var.$Transition_ease;
+                }
+            }
+        }
+
+        .about-description {
+            position: relative;
+            margin-top: 10vh;
+            width: 50%;
+            height: auto;
+
+            @include responsive.screen_tablet {
+                width: 90%;
+            }
+
+            .tittle {
+                position: relative;
+                width: initial;
+
+                span {
+                    font-size: 12vmax;
+                    font-family: var.$font_Primary;
+                    color: var.$Secundary_Color;
+                }
+
+                h1 {
+                    color: var.$Color_White_B9;
+                    text-align: center;
+                    font-family: var.$font_normal;
+                    font-weight: 500;
+
+                    @include responsive.screen_small {
+                        margin: 30px 0 30px 0;
+                    }
+                }
+            }
+
+            .layers {
+                position: relative;
+                width: initial;
+                margin: 5vmax 0;
+                border-right: 3px solid var.$Color_White_B9;
+
+                @include responsive.screen_tablet {
+                    margin: 50px 0;
+                }
+
+                h1 {
+                    text-align: end;
+                    color: var.$Color_White_B9;
+                    padding-right: 3vmax;
+                    margin: 2vmax 0;
+                    letter-spacing: 2px;
+                    font-family: var.$font_Primary;
+                }
+
+                p {
+                    text-align: end;
+                    font-size: 1.3vmax;
+                    color: var.$Color_White_B9;
+                    font-family: var.$font_normal;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    padding-right: 3vmax;
+
+                    @include responsive.screen_laptop {
+                        font-size: 15px;
+                    }
+                    @include responsive.screen_small {
+                        font-size: 18px;
+                        padding: 0 10px;
+                    }
+
+                    a {
+                        color: var.$Secundary_Color;
+                        text-decoration: none;
+                        font-style: italic;
+                        margin: 0 3px;
+                        text-wrap: nowrap;
+                        cursor: pointer;
+                    }
+                }
+
+                .cicle {
+                    position: relative;
+                    margin-left: 60%;
+
+                    @include responsive.screen_laptop {
+                        margin-left: 40%;
+                    }
+
+                    a {
+                        display: flex;
+                        width: 12vmax;
+                        height: auto;
+
+                        @include responsive.screen_laptop {
+                            width: 180px;
+                        }
+                        @include responsive.screen_small {
+                            width: 150px;
+                        }
+
+                        svg {
+                            width: 100%;
+                            pointer-events: none;
+                        }
+
+                        text {
+                            font-size: 2vmax;
+                            font-family: var.$font_Primary;
+                            -webkit-animation: flicker 2s linear infinite both;
+                            animation: flicker 2s linear infinite both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

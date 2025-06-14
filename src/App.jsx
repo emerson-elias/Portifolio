@@ -1,17 +1,11 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom' 
 import { AssetLoaderProvider } from "./contexts/AssetLoaderProvider"
 
 import Sound from "./components/global/sound/sound"
-import Cursor from "./components/global/cursor/cursor"
-import NavBar from "./components/global/nav/nav"
-import Topo from "./components/global/topo/topo"
-
 import useView from "./hooks/view"
 import ScrollToTop from "./hooks/scrollTop"
 
 import "./global.scss"
-import Footer from "./components/global/footer/footer"
-import Contate from "./components/home/contate-me/contate"
 
 const imgs = [
     '/assets/img/1.jpg',
@@ -52,16 +46,10 @@ function App() {
             gifsUrls={gifs}
             audioUrls={audioFiles}
         >
-            <Cursor />
             <ScrollToTop />
             <Sound />
-
             <section className="fixed-background-image" />
-            <NavBar />
-            <Topo />
             <Outlet />
-            <Contate />
-            <Footer />
         </AssetLoaderProvider>
     )
 }
