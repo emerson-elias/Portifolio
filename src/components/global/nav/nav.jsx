@@ -21,29 +21,40 @@ export default function NavBar() {
         burguer.children[1].classList.toggle('span-dwo')
         burguer.children[2].classList.toggle('span-there')
 
-        document.body.style.overflow = ancora.classList.contains('collapse-true') ? 'hidden' : ''
+       // document.body.style.overflow = ancora.classList.contains('collapse-true') ? 'hidden' : ''
     }
 
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('header')
-            if (header) header.classList.toggle('header_aux', window.scrollY > 100)
+            const root = document.getElementById('root')
+            if (header && root) {
+                header.classList.toggle('header_aux', root.scrollTop > 100)
+            }
         }
 
+        const root = document.getElementById('root')
         const burguer = burguerRef.current
-        
+
         burguer?.addEventListener('click', toggleClasses)
 
-        liRefs.current.filter(Boolean).forEach(item => item?.addEventListener('click', toggleClasses))
+        liRefs.current
+            .filter(Boolean)
+            .forEach(item => item?.addEventListener('click', toggleClasses))
 
-        window.addEventListener('scroll', handleScroll)
+        root?.addEventListener('scroll', handleScroll)
 
         return () => {
             burguer?.removeEventListener('click', toggleClasses)
-            liRefs.current.filter(Boolean).forEach(item => item?.removeEventListener('click', toggleClasses))
-            window.removeEventListener('scroll', handleScroll)
+
+            liRefs.current
+                .filter(Boolean)
+                .forEach(item => item?.removeEventListener('click', toggleClasses))
+
+            root?.removeEventListener('scroll', handleScroll)
         }
     }, [])
+
 
     const location = useLocation()
 
