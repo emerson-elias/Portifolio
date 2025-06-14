@@ -40,8 +40,9 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100svh;
+    height: 100lvh;
     object-fit: cover;
+    z-index: -1;
 }
 /*
 #root {
