@@ -3,7 +3,7 @@
 @use '/src/sass/mixins';
 @use '/src/sass/variables' as var;
 
-.banner-about{
+.banner_about{
     @include mixins.align(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
@@ -11,11 +11,15 @@
     padding-top: 15vh;
     overflow: hidden;
 
-    .imgs-banners {
+    .imgs_banners {
         @include mixins.align(absolute, flex, space-between, center);
         top: 15vh;
         width: 85vw;
         height: auto;
+
+        @include responsive.screen_small(){
+            display: none;
+        }
 
         img {
             width: 15vw;
@@ -31,16 +35,6 @@
             }
             &:nth-child(2) {
                 transform: rotateZ(-10deg) translateY(80vh);
-
-                @include responsive.screen_large{
-                    transform: rotate(-10deg) translateY(35vh);
-                }
-                @include responsive.screen_tablet{
-                    transform: rotate(-10deg) translateY(45vh);
-                }
-                @include responsive.screen_small{
-                    transform: rotate(-10deg) translateY(75vh);
-                }
             }
             &:nth-child(3) {
                 transform: rotate(15deg) translateY(-5vh);
@@ -52,7 +46,7 @@
         }
     }
 
-    .banner-word {
+    .banner_word {
         @include mixins.align(relative, flex, center, center);
         flex-direction: column;
         width: inherit;

@@ -1,14 +1,14 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 
-import '../certificados/certificados.scss';
+import '../certificates/certificates.scss'
 
-import MINERACAO from '/assets/certificados/certificado-mineração.png';
-import MONITOR from '/assets/certificados/certificado-monitor.png';
-import POTENCIALIZA from '/assets/certificados/certificado-potencializa.png';
-import DIPLOMA from '/assets/certificados/diploma.png';
+import MINERACAO from '/assets/certificados/certificado-mineração.png'
+import MONITOR from '/assets/certificados/certificado-monitor.png'
+import POTENCIALIZA from '/assets/certificados/certificado-potencializa.png'
+import DIPLOMA from '/assets/certificados/diploma.png'
 
-export default function Certificados() {
+export default function Certificates () {
 
     const containerRefs = useRef([])
     const imgRefs = useRef([])

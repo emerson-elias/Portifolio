@@ -3,7 +3,7 @@
 @use '/src/sass/mixins';
 @use '/src/sass/variables' as var;
 
-.about-container {
+.description-container {
     @include mixins.align(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
@@ -13,7 +13,7 @@
         overflow: hidden;
     }
 
-    .about-info {
+    .description-info {
         @include mixins.align(relative, flex, center, flex-start);
         width: 80vw;
         height: auto;

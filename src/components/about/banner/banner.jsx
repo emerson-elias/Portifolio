@@ -1,16 +1,20 @@
-import '../about-banner/banner-about.scss'
+import styles from './banner.module.scss'
+
+import img1 from '/assets/img/natureza.jpg'
+import img2 from '/assets/img/livro.jpg'
+import img3 from '/assets/img/minimalismo.jpg'
 
 export default function Banner_About(){
     return(
-        <section className="banner-about">
+        <section className={styles.banner_about}>
             
-              <div className="imgs-banners">
-                    <img src="/assets/img/natureza.jpg" alt="natureza" />
-                    <img src="/assets/img/livro.jpg" alt="livro" />
-                    <img src="/assets/img/minimalismo.jpg" alt="minimalismo" />
+              <div className={styles.imgs_banners}>
+                    <img src={img1} alt="natureza" />
+                    <img src={img2} alt="livro" />
+                    <img src={img3} alt="minimalismo" />
                 </div>
 
-                <div className="banner-word">
+                <div className={styles.banner_word}>
                     <span>designs</span>
                     <span>minimalismo</span>
                     <span>natureza</span>
