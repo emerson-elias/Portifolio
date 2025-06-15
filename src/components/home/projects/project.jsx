@@ -10,7 +10,7 @@ const projectsData = [
     {
         id: 1,
         title: "Recanto Belle Vue",
-        description: "Repouse em um encanto e aconchego.",
+        description: "Repouse em um encanto e aconchego",
         gif: '/assets/gif/page-1.gif',
         modalInfo: "Este projeto consiste na criação de um site para uma pousada, com foco em apresentar meus conhecimentos nas tecnologias de forma visualmente atrativa e funcional. A proposta do design foi transmitir acolhimento, tranquilidade e conexão com a natureza, refletindo a experiência que o hóspede encontra ao visitar o local",
         year: "2025",
@@ -20,7 +20,7 @@ const projectsData = [
     {
         id: 2,
         title: "Em Breve",
-        description: "Imagens ilustrativas. Projeto em desenvolvimento.",
+        description: "Imagens ilustrativas. Projeto em desenvolvimento",
         gif: '/assets/gif/page-2.gif',
         modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 2.",
         year: "2024",
@@ -30,7 +30,7 @@ const projectsData = [
     {
         id: 3,
         title: "Em Breve",
-        description: "Imagens ilustrativas. Projeto em desenvolvimento.",
+        description: "Imagens ilustrativas. Projeto em desenvolvimento",
         gif: '/assets/gif/page-3.gif',
         modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 3.",
         year: "2024",
@@ -40,7 +40,7 @@ const projectsData = [
     {
         id: 4,
         title: "Em Breve",
-        description: "Imagens ilustrativas. Projeto em desenvolvimento.",
+        description: "Imagens ilustrativas. Projeto em desenvolvimento",
         gif: '/assets/gif/page-4.gif',
         modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 4.",
         year: "2024",
