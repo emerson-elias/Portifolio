@@ -166,6 +166,10 @@ header {
             pointer-events: all;
             z-index: 999;
 
+            @include responsive.screen_laptop {
+                justify-content: center;
+            }
+
             @include responsive.screen_tablet_rotate {
                 padding: 30px;
                 margin: 0;
@@ -185,14 +189,14 @@ header {
                 @include mixins.effect_affter();
                 z-index: 1;
 
+                @include responsive.screen_laptop {
+                    margin: 30px 0;
+                }
+
                 @include responsive.screen_tablet_rotate {
                     margin: 0;
                     width: 40vw;
                     height: 40vh;
-                }
-
-                @include responsive.screen_small {
-                    margin: 10px 0 20px 0;
                 }
 
                 .animate-aux {
