@@ -15,12 +15,35 @@
     scrollbar-width: none;
 }
 
+html {
+    --vh: 1vh;
+    height: 100%;
+}
+
 body {
+    width: 100vw;
+    height: calc(var(--vh) * 100);
+    background-color: var.$gray_primary;
+  //  overflow: hidden;
+}
+
+.fixed-background-image {
+    position: fixed;
     background: url("/assets/svg/background.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 100vh;
-    background-color: var.$gray_primary;
+    height: calc(var(--vh) * 100);
+    z-index: -1;
+}
+
+#root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
 }
