@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +25,7 @@ body {
     width: 100vw;
     height: calc(var(--vh) * 100);
     background-color: var.$gray_primary;
-  //  overflow: hidden;
+    overflow: hidden;
 }
 
 .fixed-background-image {
@@ -38,12 +39,14 @@ body {
     width: 100vw;
     height: calc(var(--vh) * 100);
     z-index: -1;
+    pointer-events: none;
+    user-select: none;
 }
 
 #root {
     position: relative;
-    height: 100%;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
+    height: inherit;
+    width: inherit;
+    overflow: auto;
     z-index: 0;
 }

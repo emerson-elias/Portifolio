@@ -22,11 +22,13 @@
         @include responsive.screen_laptop {
             width: 90vw;
         }
+
         @include responsive.screen_tablet {
             flex-direction: column;
             align-items: center;
             padding: 10vh 0 20vh 0;
         }
+
         @include responsive.screen_small {
             padding: 10vh 0 0 0;
         }
@@ -35,7 +37,7 @@
             position: sticky;
             top: 0.5vmax;
             width: 50%;
-            height: 100vh; 
+            height: 100vh;
 
             @include responsive.screen_tablet {
                 @include mixins.align(relative, flex, center, center);
@@ -60,7 +62,7 @@
                     width: 360px;
                     height: auto;
                 }
-                
+
                 @include responsive.screen_small {
                     width: 260px;
                 }
@@ -135,6 +137,7 @@
                     @include responsive.screen_laptop {
                         font-size: 15px;
                     }
+
                     @include responsive.screen_small {
                         font-size: 18px;
                         padding: 0 10px;
@@ -166,6 +169,7 @@
                         @include responsive.screen_laptop {
                             width: 180px;
                         }
+
                         @include responsive.screen_small {
                             width: 150px;
                         }

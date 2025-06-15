@@ -31,7 +31,7 @@ export default function Tools() {
                 {tools.map((tool, index) => (
                     <div key={index} className={`itemLeft item${index + 1}`}>
                         <a href={tool.url} target="_blank" rel="noopener noreferrer">
-                            {tool.name} /
+                            {tool.name} 
                         </a>
                     </div>
                 ))}
@@ -41,7 +41,7 @@ export default function Tools() {
                 {[...tools].reverse().map((tool, index) => (
                     <div key={index} className={`itemRight item${index + 1}`}>
                         <a href={tool.url} target="_blank" rel="noopener noreferrer">
-                            {tool.name} /
+                            {tool.name} 
                         </a>
                     </div>
                 ))}

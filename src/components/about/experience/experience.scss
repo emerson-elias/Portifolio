@@ -77,11 +77,12 @@
                 }
 
                 @include responsive.screen_small {
-                    width: 75vw;
+                    width: 80%;
+
+                    background-color: rgba(102, 51, 153, 0);
                 }
 
                 p {
-                    text-align: start;
                     font-size: 1.5vmax;
                     color: var.$Color_White_B9;
                     font-family: var.$font_normal;
@@ -94,8 +95,9 @@
                     }
 
                     @include responsive.screen_small {
-                        text-align: justify;
                         font-size: 17px;
+                        text-indent: 0;
+                        line-height: 1.3;
                     }
                 }
             }

@@ -20,7 +20,7 @@ export default function Banner_About(){
                     <span>natureza</span>
                     <span>músicas</span>
                     <span>livros</span>
-                    <span>passeios</span>
+                    <span>games</span>
 
                     <svg width="198" height="201" viewBox="0 0 198 201" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" clipRule="evenodd" d="M98.9555 0.895508V42.1212H98.3555V0.895508H98.9555Z" fill="#fff" />

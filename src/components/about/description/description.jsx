@@ -26,7 +26,7 @@ export default function Description() {
                             <h1>Quem eu Sou</h1>
 
                             <p>Olá! meu nome é Emerson Elias, tenho 26 anos e
-                                atualmente moro na cidade de Marabá-PA.
+                                atualmente moro na cidade de Marabá-PA
                             </p>
 
                         </div>
@@ -35,8 +35,8 @@ export default function Description() {
                             <h1>O que faço</h1>
 
                             <p>Sou desenvolvedor front-end, mas estou atuando no
-                                <a href="https://www.grupolideronline.com.br/" target="_blank">Grupo Líder </a>
-                                como Analista de Suporte, neste cargo sou responsável por toda a parte de T.I da empresa.
+                                <a href="https://www.grupolideronline.com.br/" target="_blank"> Grupo Líder </a>
+                                como Analista de Suporte, neste cargo sou responsável por toda a parte de T.I da empresa
                             </p>
 
                         </div>
@@ -46,7 +46,7 @@ export default function Description() {
 
                             <p>Sou naturalista de São Luís - MA, uma linda ilha,
                                 mais conhecida como "ilha do amor" que é repleta de belezas naturais
-                                e muitas histórias em cada esquina.
+                                e muitas histórias em cada esquina
                             </p>
 
                         </div>
@@ -59,7 +59,7 @@ export default function Description() {
                                 participei de diversos projetos,
                                 um deles é o <a href="https://sol.sbc.org.br/index.php/sbie/article/view/12799/12653" target="_blank">Potencializa 3D</a>,
                                 além disso tive a oportunidade de ser monitor de algoritmos,
-                                o que reforçou ainda mais minha paixão pelo desenvolvimento.</p>
+                                o que reforçou ainda mais minha paixão pelo desenvolvimento</p>
                         </div>
 
                         <div className="layers">
