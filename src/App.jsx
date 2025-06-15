@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom'
 import { AssetLoaderProvider } from "./contexts/AssetLoaderProvider"
 
 import Sound from "./components/global/sound/sound"
-import useView from "./hooks/view"
 import ScrollToTop from "./hooks/scrollTop"
 
 import "./global.scss"
@@ -37,7 +36,6 @@ const audioFiles = [
 ]
 
 function App() {
-    useView()
 
     return (
         <AssetLoaderProvider
@@ -48,7 +46,7 @@ function App() {
         >
             <ScrollToTop />
             <Sound />
-            <section className="fixed-background-image" />
+            {/*<section className="fixed-background-image" />*/}
             <Outlet />
         </AssetLoaderProvider>
     )
