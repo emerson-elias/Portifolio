@@ -204,11 +204,11 @@ header {
                 }
 
                 a {
-                    font-size: 15vh;
+                    padding: 1vmax 0;
+                    font-size: 7vmax;
                     letter-spacing: 2px;
                     text-decoration: none;
                     text-wrap: nowrap;
-                    transform: translateY(-50vh);
                     color: var.$Color_White_B9;
                     font-family: var.$font_Primary;
                     transition: 1s ease;
@@ -239,11 +239,7 @@ header {
                 top: 50%;
                 padding-left: 0.5vmax;
                 left: 0;
-                right: 0;
-                width: 100vw;
-                height: auto;
                 z-index: 1;
-                pointer-events: none;
 
                 @include responsive.screen_tablet_rotate {
                     top: 40%;
@@ -274,7 +270,7 @@ header {
                         width: 50px;
                         height: 50px;
                         padding: 25px;
-                        border: 0.1vw solid var.$Color_White_B9;
+                        border: 2px solid var.$Color_White_B9;
                     }
 
                     i {

@@ -25,7 +25,7 @@ const socialLinks = [
     {
         href: "https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view",
         className: "cv",
-        iconClass: "fa-regular fa-file",
+        iconClass: "fa-regular fa-file-lines",
         ariaLabel: "Currículo",
     }
 ]
