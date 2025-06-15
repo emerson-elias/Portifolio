@@ -12,7 +12,7 @@ const projectsData = [
         title: "Recanto Belle Vue",
         description: "Repouse em um encanto e aconchego.",
         gif: '/assets/gif/page-1.gif',
-        modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 1.",
+        modalInfo: "Este projeto consiste na criação de um site para uma pousada, com foco em apresentar meus conhecimentos nas tecnologias de forma visualmente atrativa e funcional. A proposta do design foi transmitir acolhimento, tranquilidade e conexão com a natureza, refletindo a experiência que o hóspede encontra ao visitar o local",
         year: "2025",
         link: "https://recanto-belle-vue.vercel.app/",
         tecnology: ["html", "css", "sass", "react", "javascript", "gsap", "swiper"]
