@@ -1,7 +1,14 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import './nav.scss'
+
+const links = [
+    { to: '/sobre', label: 'Sobre mim' },
+    { to: '/#tecnologias', label: 'Tecnologias' },
+    { to: '/projetos', label: 'Projetos' },
+    { href: '#contatos', label: 'Contatos', isAnchor: true }
+]
 
 const socialLinks = [
     {
@@ -31,68 +38,34 @@ const socialLinks = [
 ]
 
 export default function NavBar() {
-    const ancoraRef = useRef(null)
-    const burguerRef = useRef(null)
-    const animateRefs = useRef([])
-    const liRefs = useRef([])
+    const [menuOpen, setMenuOpen] = useState(false)
+    const location = useLocation()
 
-    const toggleClasses = () => {
-        const ancora = ancoraRef.current
-        const burguer = burguerRef.current
-
-        ancora.classList.toggle('collapse-true')
-        burguer.classList.toggle('burguer-aux')
-        animateRefs.current.forEach(el => el.classList.toggle('animate-aux'))
-
-        burguer.children[0].classList.toggle('span-one')
-        burguer.children[1].classList.toggle('span-dwo')
-        burguer.children[2].classList.toggle('span-there')
-    }
+    const toggleMenu = () => setMenuOpen(prev => !prev)
 
     useEffect(() => {
-        const handleScroll = () => {
-            const header = document.querySelector('header')
-            const root = document.getElementById('root')
+        const root = document.getElementById('root')
 
+        const Scroll = () => {
+            const header = document.querySelector('header')
             if (header && root) {
-                header.classList.toggle('header_aux', root.scrollTop > 100)
+                header.classList.toggle('mobile', root.scrollTop > 100)
             }
         }
 
-        const root = document.getElementById('root')
-        const burguer = burguerRef.current
-
-        burguer?.addEventListener('click', toggleClasses)
-
-        liRefs.current
-            .filter(Boolean)
-            .forEach(item => item?.addEventListener('click', toggleClasses))
-
-        root?.addEventListener('scroll', handleScroll)
-
-        return () => {
-            burguer?.removeEventListener('click', toggleClasses)
-
-            liRefs.current
-                .filter(Boolean)
-                .forEach(item => item?.removeEventListener('click', toggleClasses))
-
-            root?.removeEventListener('scroll', handleScroll)
-        }
+        root?.addEventListener('scroll', Scroll)
+        return () => root?.removeEventListener('scroll', Scroll)
     }, [])
-
-
-    const location = useLocation()
 
     useEffect(() => {
         if (location.hash) {
-            setTimeout(() => {
-                const element = document.querySelector(location.hash)
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
-                }
-            }, 4)
+            const element = document.querySelector(location.hash)
+            if (element) {
+                element.scrollIntoView({ behavior: 'auto' })
+            }
         }
+
+        setMenuOpen(false) // fecha o menu ao navegar
     }, [location])
 
     return (
@@ -105,37 +78,25 @@ export default function NavBar() {
                     </Link>
                 </div>
 
-                <li className="burguer" ref={burguerRef}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </li>
+                <button
+                    className={`burguer ${menuOpen ? 'rotate' : ''}`}
+                    onClick={toggleMenu}
+                >
+                    <span className={menuOpen ? 'span-one' : ''}></span>
+                    <span className={menuOpen ? 'span-dwo' : ''}></span>
+                    <span className={menuOpen ? 'span-there' : ''}></span>
+                </button>
 
-                <ul id="ancora" ref={ancoraRef}>
-                    {[
-                        { to: '/sobre', label: 'Sobre mim' },
-                        { to: '/#tecnologias', label: 'Tecnologias' },
-                        { to: '/projetos', label: 'Projetos' },
-
-                    ].map((link, index) => (
-                        <li key={index} ref={el => (liRefs.current[index] = el)}>
-                            <Link
-                                ref={el => (animateRefs.current[index] = el)}
-                                to={link.to}
-                            >
-                                {link.label}
-                            </Link>
+                <ul id="ancora" className={menuOpen ? 'collapse' : ''}>
+                    {links.map((link, index) => (
+                        <li key={index}>
+                            {link.isAnchor ? (
+                                <a href={link.href}>{link.label}</a>
+                            ) : (
+                                <Link to={link.to}>{link.label}</Link>
+                            )}
                         </li>
                     ))}
-
-                    <li ref={el => (liRefs.current[3] = el)}>
-                        <a
-                            ref={el => (animateRefs.current[3] = el)}
-                            href="#contatos"
-                        >
-                            Contatos
-                        </a>
-                    </li>
 
                     <div className="midia">
                         {socialLinks.map(({ href, className, iconClass, ariaLabel }) => (
@@ -151,7 +112,6 @@ export default function NavBar() {
                             </a>
                         ))}
                     </div>
-
                 </ul>
             </nav>
         </header>

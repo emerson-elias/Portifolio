@@ -5,16 +5,21 @@
 
 /* ======================= CLASSES AUXILIARES ============================*/
 
-.burguer-aux {
+.rotate {
     transform: rotate(360deg);
     margin-right: 15px;
 }
 
-.header_aux {
+.mobile {
     @include responsive.screen_small {
         background-color: var.$gray_primary;
         background: url('/assets/svg/background.svg') var.$gray_primary;
     }
+}
+
+.collapse {
+    transform: translate(0%) !important;
+    opacity: 1 !important;
 }
 
 /* ======================= CLASSES AUXILIARES ============================*/
@@ -44,8 +49,6 @@ header {
         .active-bar {
             @include mixins.align(relative, flex, center, baseline);
             flex-direction: column;
-            width: auto;
-            height: inherit;
             margin: 0 0 0 12px;
             pointer-events: all;
             z-index: 9999;
@@ -54,7 +57,6 @@ header {
                 text-decoration: none;
 
                 span {
-                    position: relative;
                     display: block;
                     font-size: 1.4vmax;
                     letter-spacing: 1px;
@@ -66,10 +68,6 @@ header {
                     }
 
                     @include responsive.screen_laptop {
-                        font-size: 20px;
-                    }
-
-                    @include responsive.screen_small {
                         font-size: 20px;
                     }
 
@@ -101,11 +99,10 @@ header {
         .burguer {
             @include mixins.align(relative, flex, center, center);
             flex-direction: column;
-            width: auto;
-            height: auto;
             padding: 1.5vmax;
-            list-style: none;
             transition: var.$Transition_ease;
+            background-color: transparent;
+            border: none;
             pointer-events: all;
             z-index: 9999;
             cursor: pointer;
@@ -133,7 +130,6 @@ header {
             }
 
             span {
-                position: relative;
                 width: 3vmax;
                 height: 0.12vmax;
                 margin: 3px 0;
@@ -157,11 +153,11 @@ header {
             @include mixins.align(fixed, flex, space-around, center);
             @include mixins.background(100vh);
             top: 0;
-            right: 0;
+            left: 0;
             padding-top: 4vmax;
             flex-direction: column;
             transform: translateY(-120%);
-            transition: 0.8s ease;
+            transition: 0.5s ease;
             opacity: 0;
             pointer-events: all;
             z-index: 999;
@@ -173,15 +169,6 @@ header {
             @include responsive.screen_tablet_rotate {
                 padding: 30px;
                 margin: 0;
-            }
-
-            @include responsive.screen_small {
-                padding-top: 40px;
-            }
-
-            &.collapse-true {
-                transform: translate(0%) !important;
-                opacity: 1 !important;
             }
 
             li {
@@ -199,10 +186,6 @@ header {
                     height: 40vh;
                 }
 
-                .animate-aux {
-                    transform: translateY(0);
-                }
-
                 a {
                     padding: 1vmax 0;
                     font-size: 7vmax;
@@ -211,7 +194,7 @@ header {
                     text-wrap: nowrap;
                     color: var.$Color_White_B9;
                     font-family: var.$font_Primary;
-                    transition: 1s ease;
+                    transition: 0.5s ease;
 
                     @include responsive.screen_laptop {
                         font-size: 50px;
@@ -229,7 +212,8 @@ header {
                 &:hover {
                     a {
                         color: var.$gray_primary;
-                        transition: 0.5s ease !important;
+                        transition: 0.5s ease;
+                        letter-spacing: 1vmax;
                     }
                 }
             }
