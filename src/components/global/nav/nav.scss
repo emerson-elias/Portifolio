@@ -13,7 +13,6 @@
 .header_aux {
     @include responsive.screen_small {
         background-color: var.$gray_primary;
-        transition: var.$Transition_ease;
         background: url('/assets/svg/background.svg') var.$gray_primary;
     }
 }
@@ -23,7 +22,6 @@
 header {
     @include mixins.align(fixed, flex, center, center);
     width: 100vw;
-    transition: var.$Transition_ease;
     pointer-events: none;
     z-index: 99;
 
