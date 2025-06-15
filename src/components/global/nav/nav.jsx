@@ -133,7 +133,7 @@ export default function NavBar() {
                             ref={el => (animateRefs.current[3] = el)}
                             href="#contatos"
                         >
-                            Contato
+                            Contatos
                         </a>
                     </li>
 

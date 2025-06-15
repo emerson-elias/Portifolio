@@ -156,11 +156,11 @@ header {
         }
 
         ul {
-            @include mixins.align(fixed, flex, center, center);
+            @include mixins.align(fixed, flex, space-around, center);
             @include mixins.background(100vh);
             top: 0;
             right: 0;
-            padding-top: 70px;
+            padding-top: 4vmax;
             flex-direction: column;
             transform: translateY(-120%);
             transition: 0.8s ease;
@@ -185,10 +185,6 @@ header {
             li {
                 @include mixins.align(relative, flex, center, center);
                 @include mixins.effect_affter();
-                width: auto;
-                margin-top: 120px;
-                margin: 20px;
-                padding: 1vmax;
                 z-index: 1;
 
                 @include responsive.screen_tablet_rotate {
