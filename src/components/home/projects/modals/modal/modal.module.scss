@@ -7,13 +7,13 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 100vw;
+    width: auto;
     height: 100vh;
     transform: translate(-50%, -50%) translateY(-100vh);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 999;
     opacity: 0.5;
     overflow-x: hidden;
+    z-index: 999;
 
     &.animated_modal {
         opacity: 1;
@@ -133,9 +133,11 @@
                 @include responsive.screen_laptop {
                     width: 80vw;
                 }
+
                 @include responsive.screen_tablet {
                     top: 80vh;
                 }
+
                 @include responsive.screen_small {
                     top: 75vh;
                 }
@@ -177,6 +179,7 @@
                         @include responsive.screen_laptop {
                             width: auto;
                         }
+
                         @include responsive.screen_small {
                             flex-direction: column;
                         }
@@ -194,7 +197,7 @@
 
                             @include responsive.screen_small {
                                 font-size: 20px;
-                                margin: 10px 0;                             
+                                margin: 10px 0;
                             }
                         }
 
@@ -202,8 +205,8 @@
                             font-size: 0.5vmax;
                             color: var.$Color_White_B9;
 
-                            @include responsive.screen_small{
-                              display: none;
+                            @include responsive.screen_small {
+                                display: none;
                             }
                         }
                     }

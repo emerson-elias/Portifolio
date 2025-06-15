@@ -35,7 +35,7 @@
 
         .box-img {
             position: sticky;
-            top: 0.5vmax;
+            top: 0;
             width: 50%;
             height: 100vh;
 
@@ -54,7 +54,7 @@
                 width: 75%;
                 height: inherit;
                 object-fit: cover;
-                border-radius: 2vmax;
+                border-radius: 1vmax;
                 filter: grayscale(100%);
                 transition: var.$Transition_ease;
 

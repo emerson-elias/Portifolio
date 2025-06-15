@@ -5,88 +5,83 @@ import styles from './cursor.module.scss'
 
 export default function Cursor() {
     const cursorRef = useRef(null)
-    const cursorTextRef = useRef(null) // Referência para o texto dentro do cursor
+    const cursorTextRef = useRef(null)
 
     useEffect(() => {
         const cursor = cursorRef.current
         const cursorText = cursorTextRef.current
 
-        const Move_Cursor = (e) => {
+        const moveCursor = (e) => {
             gsap.to(cursor, {
                 duration: 0.3,
                 x: e.clientX - cursor.offsetWidth / 2,
                 y: e.clientY - cursor.offsetHeight / 2,
-                ease: "power2.out"
+                ease: 'power2.out'
             })
         }
 
-        const Cursor_Element_Enter = () => {
+        const scaleCursorUp = () => {
             gsap.to(cursor, {
-                scale: 15, // Aumenta o tamanho do cursor
+                scale: 15,
                 duration: 0.3,
-                ease: "power2.out"
+                ease: 'power2.out'
             })
         }
 
-        const Cursor_Element_Out = () => {
+        const scaleCursorDown = () => {
             gsap.to(cursor, {
-                scale: 1, // Volta ao tamanho original
+                scale: 1,
                 duration: 0.3,
-                ease: "power2.out"
+                ease: 'power2.out'
             })
         }
 
-        const Show_Cursor_Text = () => {
+        const showCursorText = () => {
             gsap.to(cursorText, {
-                opacity: 1, // Mostra o texto
+                opacity: 1,
                 duration: 0.3,
-                ease: "power2.out"
+                ease: 'power2.out'
             })
         }
 
-        const Hide_Cursor_Text = () => {
+        const hideCursorText = () => {
             gsap.to(cursorText, {
-                opacity: 0, // Oculta o texto
+                opacity: 0,
                 duration: 0.3,
-                ease: "power2.out"
+                ease: 'power2.out'
             })
         }
 
-        // Adiciona eventos de movimento do cursor
-        document.addEventListener('mousemove', Move_Cursor)
+        const handleMouseOver = (e) => {
+            const link = e.target.closest('a, [data-link]')
+            const view = e.target.closest('.view')
 
-        // Adiciona eventos de escala para todos os links <a>
-        document.querySelectorAll('a').forEach(anchor => {
-            anchor.addEventListener('mouseover', Cursor_Element_Enter)
-            anchor.addEventListener('mouseout', Cursor_Element_Out)
-        })
+            if (link) scaleCursorUp()
+            if (view) {
+                scaleCursorUp()
+                showCursorText()
+            }
+        }
 
-        // Adiciona eventos para mostrar texto ao passar sobre divs com a classe "view"
-        const viewDivs = document.querySelectorAll('.view')
-        viewDivs.forEach(viewDiv => {
-            viewDiv.addEventListener('mouseenter', () => {
-                Cursor_Element_Enter() // Aumenta o cursor
-                Show_Cursor_Text() // Mostra o texto
-            })
-            viewDiv.addEventListener('mouseleave', () => {
-                Cursor_Element_Out() // Volta o cursor ao tamanho normal
-                Hide_Cursor_Text() // Oculta o texto
-            })
-        })
+        const handleMouseOut = (e) => {
+            const link = e.target.closest('a, [data-link]')
+            const view = e.target.closest('.view')
 
-        // Função de limpeza
+            if (link) scaleCursorDown()
+            if (view) {
+                scaleCursorDown()
+                hideCursorText()
+            }
+        }
+
+        document.addEventListener('mousemove', moveCursor)
+        document.addEventListener('mouseover', handleMouseOver)
+        document.addEventListener('mouseout', handleMouseOut)
+
         return () => {
-            document.removeEventListener('mousemove', Move_Cursor)
-
-            document.querySelectorAll('a').forEach(anchor => {
-                anchor.removeEventListener('mouseover', Cursor_Element_Enter)
-                anchor.removeEventListener('mouseout', Cursor_Element_Out)
-            })
-
-            viewDivs.forEach(viewDiv => {
-                viewDiv.removeEventListener('mouseenter', Show_Cursor_Text)
-                viewDiv.removeEventListener('mouseleave', Hide_Cursor_Text)
-            })
+            document.removeEventListener('mousemove', moveCursor)
+            document.removeEventListener('mouseover', handleMouseOver)
+            document.removeEventListener('mouseout', handleMouseOut)
         }
     }, [])
 

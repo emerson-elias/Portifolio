@@ -27,7 +27,7 @@ export default function Experience() {
                     <div className='layers'>
                         <h1>Lider Comercio e Indústria</h1>
                         <span>analista de suporte</span>
-                        <p>2024</p>
+                        <p>2025</p>
                     </div>
 
                     <div className="btn-projects">

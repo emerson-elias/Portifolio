@@ -10,7 +10,6 @@ import Tools from "./tools/tools"
 import Tecnology from "./tecnology/tecnology"
 import Cursor from "../global/cursor/cursor"
 import Footer from "../global/footer/footer"
-import Topo from "../global/topo/topo"
 import Contate from "../global/contate-me/contate"
 import NavBar from "../global/nav/nav"
 
@@ -38,7 +37,6 @@ export default function Home() {
             <Cursor />
             <NavBar />
             <Banner />
-            <Topo />
             <Bio />
             <Project />
             <Tecnology />

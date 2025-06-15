@@ -4,7 +4,6 @@ import { useAssetsLoaded } from "../../contexts/AssetLoaderProvider"
 import Loader from "../global/loader/loader"
 import NavBar from "../global/nav/nav"
 import Cursor from "../global/cursor/cursor"
-import Topo from "../global/topo/topo"
 import Contate from "../global/contate-me/contate"
 import Footer from "../global/footer/footer"
 
@@ -39,7 +38,6 @@ export default function About() {
             <Description />
             <Certificates />
             <Experience />
-            <Topo />
             <Contate />
             <Footer />
         </>

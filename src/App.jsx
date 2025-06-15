@@ -4,6 +4,7 @@ import { AssetLoaderProvider } from "./contexts/AssetLoaderProvider"
 import Sound from "./components/global/sound/sound"
 import useView from "./hooks/view"
 import ScrollToTop from "./hooks/scrollTop"
+import Topo from './components/global/topo/topo'
 
 import "./global.scss"
 
@@ -49,6 +50,7 @@ function App() {
             <ScrollToTop />
             <Sound />
             <section className="fixed-background-image" />
+            <Topo />
             <Outlet />
         </AssetLoaderProvider>
     )
