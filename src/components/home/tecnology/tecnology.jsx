@@ -87,13 +87,13 @@ export default function Tecnology() {
 
     return (
         <>
-            <section className="tecnology-container">
+            <section className="tecnology-container" id="tecnologias">
 
                 <div className="row">
                     <div className="container-title">
 
                         <div className="box">
-                            <h1 id="tecnologias">skills</h1>
+                            <h1>skills</h1>
                             <p>Minhas principais ferramentas de desenvolvimento</p>
                             <Link to="/projetos">
                                 <button>meus projetos</button>

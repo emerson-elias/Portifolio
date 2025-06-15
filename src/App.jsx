@@ -49,7 +49,7 @@ function App() {
         >
             <ScrollToTop />
             <Sound />
-            <section className="fixed-background-image" />
+            <section className="background" />
             <Topo />
             <Outlet />
         </AssetLoaderProvider>

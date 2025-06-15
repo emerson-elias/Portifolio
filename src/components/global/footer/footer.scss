@@ -3,25 +3,25 @@
 @use '/src/sass/mixins';
 @use '/src/sass/variables' as var;
 
-.footer-container{
+.footer-container {
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 
-    .text-linear{
+    .text-linear {
         position: absolute;
-        top: 15vh;  
+        top: 15vh;
         width: 100vw;
         height: auto;
         white-space: nowrap;
         z-index: -1;
 
-        @include responsive.screen_small{
+        @include responsive.screen_small {
             top: 180px;
         }
 
-        h1{
+        h1 {
             position: relative;
             display: inline-block;
             font-size: 20vmax;
@@ -31,20 +31,20 @@
             font-family: var.$font_Tertiary;
             animation: slider-linear 50s linear infinite;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 -webkit-text-stroke: 1px var.$Secundary_Color;
             }
         }
     }
 
-    .row{
+    .row {
         @include mixins.align(relative, flex, center, center);
         flex-direction: column;
         top: 12vh;
         width: 100vw;
         height: auto;
 
-        &::after{
+        &::after {
             position: absolute;
             content: '';
             top: 50%;
@@ -55,25 +55,25 @@
             height: 80vh;
             background-color: var.$Secundary_Color;
             border-radius: 100%;
-            z-index: -1;
             pointer-events: none;
+            z-index: -1;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 width: 600px;
             }
         }
 
-        .btn-container{
+        .btn-container {
             position: relative;
             width: auto;
             height: auto;
             margin: 4vmax;
             border-radius: 5vmax;
 
-            .btn-contact{
+            .btn-contact {
                 position: relative;
                 width: auto;
-                height: auto;    
+                height: auto;
                 padding: 1.1vmax 2vmax;
                 border-radius: 5vmax;
                 font-size: 1.2vmax;
@@ -82,30 +82,30 @@
                 border: 1px solid var.$Color_White;
                 color: var.$gray_primary;
                 cursor: pointer;
-    
-                @include responsive.screen_small{
+
+                @include responsive.screen_small {
                     font-size: 15px;
                 }
-    
-                &:hover{
-                   background-color: var.$Secundary_Color;
-                   border: 1px solid var.$gray_primary;
+
+                &:hover {
+                    background-color: var.$Secundary_Color;
+                    border: 1px solid var.$gray_primary;
                 }
             }
         }
 
-        .information{
+        .information {
             position: relative;
             width: 40%;
             height: auto;
             margin-bottom: 3vmax;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 width: 75%;
                 margin: 0;
             }
 
-            p{
+            p {
                 text-align: center;
                 font-size: 1.4vmax;
                 font-family: var.$font_Secondary;
@@ -113,66 +113,69 @@
                 letter-spacing: 1px;
                 line-height: 1.5vmax;
 
-                @include responsive.screen_small{
+                @include responsive.screen_small {
                     font-size: 17px;
                     line-height: 18px;
                 }
             }
 
-            .layer{
+            .layer {
                 position: relative;
                 width: initial;
                 height: auto;
                 text-align: center;
 
-                h1{
+                h1 {
                     font-family: var.$font_Primary;
                     margin: 2vmax 0 0.5vmax 0;
                     font-size: 1.5vmax;
                     letter-spacing: 2px;
 
-                    @include responsive.screen_small{
+                    @include responsive.screen_small {
                         font-size: 18px;
                         margin-top: 30px;
                     }
                 }
 
-                a{
-                    font-size: 1.3vmax; 
+                a {
+                    font-size: 1.3vmax;
                     cursor: pointer;
-                    
-                    @include responsive.screen_small{
+
+                    @include responsive.screen_small {
                         font-size: 15px;
                     }
                 }
             }
         }
-        
-        .social-row{
+
+        .social-row {
             position: relative;
 
-            @include responsive.screen_small{
+            @include responsive.screen_small {
                 top: 50px;
             }
 
-            h1{
+            h1 {
                 font-family: var.$font_Primary;
                 text-align: center;
                 font-size: 1.5vmax;
                 margin: 1.5vmax;
                 letter-spacing: 1px;
 
-                @include responsive.screen_small{
+                @include responsive.screen_small {
                     font-size: 18px;
                 }
             }
 
-            .midia{
+            .midia {
                 @include mixins.align(relative, flex, center, center);
                 width: 100%;
                 height: auto;
 
-                .cv, .instagram, .linkedin, .git-icon-footer{
+                .cv,
+                .instagram,
+                .linkedin,
+                .git-icon-footer {
                     @include mixins.align(relative, flex, center, center);
                     width: 7vh;
                     height: 7vh;
@@ -182,27 +185,27 @@
                     border: 1px solid var.$gray_primary;
                     transition: var.$Transition_ease;
 
-                    @include responsive.screen_small{
-                       width: 6vh;
-                       height: 6vh;
+                    @include responsive.screen_small {
+                        width: 6vh;
+                        height: 6vh;
                     }
 
-                    &:hover{
+                    &:hover {
                         transform: scale(1.7);
                         border: none;
                         border: 1px solid var.$Secundary_Color;
                     }
-                    
-                    i{
+
+                    i {
                         font-size: 4vh;
                         color: var.$gray_primary;
                         pointer-events: none;
 
-                        @include responsive.screen_small{
+                        @include responsive.screen_small {
                             font-size: 3vh;
                         }
                     }
-                }                
+                }
             }
         }
     }

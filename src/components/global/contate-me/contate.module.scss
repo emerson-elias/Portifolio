@@ -58,5 +58,9 @@
             transform: rotate(45deg) scale(1.2);
             transition: var.$Transition_ease;
         }
+
+        svg {
+            pointer-events: none;
+        }
     }
 }

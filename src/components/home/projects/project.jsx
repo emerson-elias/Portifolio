@@ -73,7 +73,7 @@ export default function Project() {
     return (
         <section className="project-container">
 
-            <div className="title" id="projetos">
+            <div className="title">
 
                 <h1>Projetos</h1>
 
