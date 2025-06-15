@@ -125,12 +125,11 @@ $bg-project-4: url('/assets/img/4.jpg');
 
                 a {
                     font-size: 7vmax;
+                    padding: 0.8vmax 0;
                     color: var.$Secundary_Color;
                     font-family: var.$font_Tertiary;
                     letter-spacing: 3px;
-                    white-space: normal;
                     text-decoration: none;
-                    overflow-wrap: break-word;
                     cursor: pointer;
 
                     @include responsive.screen_tablet {
@@ -190,6 +189,7 @@ $bg-project-4: url('/assets/img/4.jpg');
                     height: auto;
                     object-fit: cover;
                     border-radius: 1vmax;
+                    pointer-events: none;
                 }
             }
 
