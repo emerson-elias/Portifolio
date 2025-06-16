@@ -1,13 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import gsap from 'gsap'
 
 import './nav.scss'
 
 const links = [
-    { to: '/sobre', label: 'Sobre mim' },
-    { to: '/#tecnologias', label: 'Tecnologias' },
-    { to: '/projetos', label: 'Projetos' },
-    { href: '#contatos', label: 'Contatos', isAnchor: true }
+    {
+        to: '/sobre',
+        label: 'Sobre mim'
+    },
+    {
+        to: '/#tecnologias',
+        label: 'Tecnologias'
+    },
+    {
+        to: '/projetos',
+        label: 'Projetos'
+    },
+    {
+        href: '#contatos',
+        label: 'Contatos',
+        isAnchor: true
+    }
 ]
 
 const socialLinks = [
@@ -41,32 +55,79 @@ export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false)
     const location = useLocation()
 
+    const ulRef = useRef(null)
+    const linksRef = useRef([])
+    const tlRef = useRef(null)
+    const socialLinksRef = useRef([])
+
     const toggleMenu = () => setMenuOpen(prev => !prev)
 
     useEffect(() => {
         const root = document.getElementById('root')
 
-        const Scroll = () => {
+        const onScroll = () => {
             const header = document.querySelector('header')
             if (header && root) {
                 header.classList.toggle('mobile', root.scrollTop > 100)
             }
         }
 
-        root?.addEventListener('scroll', Scroll)
-        return () => root?.removeEventListener('scroll', Scroll)
+        root?.addEventListener('scroll', onScroll)
+        return () => root?.removeEventListener('scroll', onScroll)
     }, [])
 
     useEffect(() => {
         if (location.hash) {
             const element = document.querySelector(location.hash)
-            if (element) {
-                element.scrollIntoView({ behavior: 'auto' })
-            }
+            if (element) element.scrollIntoView({ behavior: 'auto' })
         }
 
-        setMenuOpen(false) // fecha o menu ao navegar
+        setMenuOpen(false)
     }, [location])
+
+    useEffect(() => {
+        const ul = ulRef.current
+        const links = linksRef.current
+        const socials = socialLinksRef.current
+
+        gsap.set([...links, ...socials], {
+            y: 150,
+            opacity: 0
+        })
+
+        gsap.set(ul, {
+            clipPath: 'inset(0% 0% 100% 0%)'
+        })
+
+        tlRef.current = gsap.timeline({
+            paused: true,
+            defaults: { ease: 'power2.out' },
+            onReverseComplete: () => {
+                ul.classList.remove('open')
+            }
+        })
+
+        tlRef.current
+            .to(ul, {
+                duration: 0.5,
+                clipPath: 'inset(0% 0% 0% 0%)',
+                onStart: () => ul.classList.add('open')
+            })
+            .to([...links, ...socials], {
+                y: 0,
+                opacity: 1,
+                duration: 0.5,
+                stagger: 0.1
+            }, '-=0.3')
+    }, [])
+
+    useEffect(() => {
+        if (menuOpen) {
+            tlRef.current?.play()
+        } else {
+            tlRef.current?.reverse()
+        }
+    }, [menuOpen])
 
     return (
         <header>
@@ -78,28 +139,25 @@ export default function NavBar() {
                     </Link>
                 </div>
 
-                <button
-                    className={`burguer ${menuOpen ? 'rotate' : ''}`}
-                    onClick={toggleMenu}
-                >
+                <button className={`burguer ${menuOpen ? 'rotate' : ''}`} onClick={toggleMenu}>
                     <span className={menuOpen ? 'span-one' : ''}></span>
                     <span className={menuOpen ? 'span-dwo' : ''}></span>
                     <span className={menuOpen ? 'span-there' : ''}></span>
                 </button>
 
-                <ul id="ancora" className={menuOpen ? 'collapse' : ''}>
+                <ul id="ancora" ref={ulRef} className="collapse">
                     {links.map((link, index) => (
                         <li key={index}>
                             {link.isAnchor ? (
-                                <a href={link.href}>{link.label}</a>
+                                <a href={link.href} ref={el => linksRef.current[index] = el}>{link.label}</a>
                             ) : (
-                                <Link to={link.to}>{link.label}</Link>
+                                <Link to={link.to} ref={el => linksRef.current[index] = el}>{link.label}</Link>
                             )}
                         </li>
                     ))}
 
                     <div className="midia">
-                        {socialLinks.map(({ href, className, iconClass, ariaLabel }) => (
+                        {socialLinks.map(({ href, className, iconClass, ariaLabel }, i) => (
                             <a
                                 key={href}
                                 className={className}
@@ -107,11 +165,13 @@ export default function NavBar() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={ariaLabel}
+                                ref={el => socialLinksRef.current[i] = el}
                             >
                                 <i className={iconClass}></i>
                             </a>
                         ))}
                     </div>
+
                 </ul>
             </nav>
         </header>

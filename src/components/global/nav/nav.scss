@@ -17,9 +17,8 @@
     }
 }
 
-.collapse {
-    transform: translate(0%) !important;
-    opacity: 1 !important;
+.open {
+    clip-path: inset(0% 0% 0% 0%);
 }
 
 /* ======================= CLASSES AUXILIARES ============================*/
@@ -156,11 +155,13 @@ header {
             left: 0;
             padding-top: 4vmax;
             flex-direction: column;
-            transform: translateY(-120%);
-            transition: 0.5s ease;
-            opacity: 0;
-            pointer-events: all;
+            pointer-events: none;
+            will-change: transform;
+            clip-path: inset(0% 0% 100% 0%);
+            transition: clip-path 0.5s ease;
+            overflow: hidden;
             z-index: 999;
+            opacity: 1;
 
             @include responsive.screen_laptop {
                 justify-content: center;
@@ -174,6 +175,8 @@ header {
             li {
                 @include mixins.align(relative, flex, center, center);
                 @include mixins.effect_affter();
+                width: 100vw;
+                overflow: hidden;
                 z-index: 1;
 
                 @include responsive.screen_laptop {
@@ -187,6 +190,7 @@ header {
                 }
 
                 a {
+                    display: inline-block;
                     padding: 1vmax 0;
                     font-size: 7vmax;
                     letter-spacing: 2px;
@@ -195,6 +199,9 @@ header {
                     color: var.$Color_White_B9;
                     font-family: var.$font_Primary;
                     transition: 0.5s ease;
+                    will-change: transform;
+                    pointer-events: all;
+                    opacity: 0;
 
                     @include responsive.screen_laptop {
                         font-size: 50px;
