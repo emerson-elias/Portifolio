@@ -100,14 +100,15 @@ export default function NavBar() {
         })
 
         gsap.set(ul, {
-            clipPath: 'inset(0% 0% 100% 0%)'
+            clipPath: 'inset(0% 0% 100% 0%)',
+            opacity: 1
         })
 
         tlRef.current = gsap.timeline({
             paused: true,
             defaults: { ease: 'power2.out' },
             onReverseComplete: () => {
-                ul.classList.remove('open')
+                ul.style.pointerEvents = 'none'
             }
         })
 
@@ -115,7 +116,9 @@ export default function NavBar() {
             .to(ul, {
                 duration: 0.5,
                 clipPath: 'inset(0% 0% 0% 0%)',
-                onStart: () => ul.classList.add('open')
+                onStart: () => {
+                    ul.style.pointerEvents = 'auto'
+                }
             })
             .to([...links, ...socials], {
                 y: 0,

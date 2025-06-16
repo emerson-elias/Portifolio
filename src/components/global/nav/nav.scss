@@ -17,10 +17,6 @@
     }
 }
 
-.open {
-    clip-path: inset(0% 0% 0% 0%);
-}
-
 /* ============================= CLASSES ==================================*/
 
 header {
@@ -164,10 +160,10 @@ header {
             flex-direction: column;
             will-change: transform;
             transition: clip-path 0.5s ease;
-            pointer-events: all;
-            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
             z-index: 999;
-            opacity: 1;
+            overflow: hidden;
 
             @include responsive.screen_laptop {
                 justify-content: center;
