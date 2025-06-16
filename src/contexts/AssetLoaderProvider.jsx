@@ -11,7 +11,7 @@ const AssetLoaderContext = createContext({
 export const useAssetsLoaded = () => {
     const context = useContext(AssetLoaderContext)
     if (!context) {
-        throw new Error('useAssetsLoaded must be used within an AssetLoaderProvider')
+        throw new Error('useAssetsLoaded deve ser usado dentro de um AssetLoaderProvider')
     }
     return context
 }

@@ -136,6 +136,7 @@ header {
                 transform-origin: center center;
                 background-color: var.$Color_White;
                 transition: var.$Transition_ease;
+                pointer-events: none;
 
                 @include responsive.screen_small {
                     width: 40px;
@@ -144,6 +145,12 @@ header {
 
                 &:nth-child(2) {
                     width: 2vmax;
+                }
+            }
+
+            &:hover{
+                span{
+                    background-color: var.$Secundary_Color
                 }
             }
         }

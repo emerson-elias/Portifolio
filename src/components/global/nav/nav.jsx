@@ -65,6 +65,12 @@ export default function NavBar() {
     useEffect(() => {
         const root = document.getElementById('root')
 
+        if (menuOpen) {
+            root.style.overflow = 'hidden'
+        } else {
+            root.style.overflow = 'auto'
+        }
+
         const onScroll = () => {
             const header = document.querySelector('header')
             if (header && root) {
@@ -73,8 +79,10 @@ export default function NavBar() {
         }
 
         root?.addEventListener('scroll', onScroll)
-        return () => root?.removeEventListener('scroll', onScroll)
-    }, [])
+        return () => {
+            root?.removeEventListener('scroll', onScroll)
+        }
+    }, [menuOpen])
 
     useEffect(() => {
         if (location.hash) {
@@ -139,11 +147,11 @@ export default function NavBar() {
                     </Link>
                 </div>
 
-                <button className={`burguer ${menuOpen ? 'rotate' : ''}`} onClick={toggleMenu}>
+                <a className={`burguer ${menuOpen ? 'rotate' : ''}`} onClick={toggleMenu}>
                     <span className={menuOpen ? 'span-one' : ''}></span>
                     <span className={menuOpen ? 'span-dwo' : ''}></span>
                     <span className={menuOpen ? 'span-there' : ''}></span>
-                </button>
+                </a>
 
                 <ul id="ancora" ref={ulRef} className="collapse">
                     {links.map((link, index) => (
