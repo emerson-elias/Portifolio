@@ -163,7 +163,6 @@ header {
             padding-top: 4vmax;
             flex-direction: column;
             will-change: transform;
-            clip-path: inset(0% 0% 100% 0%);
             transition: clip-path 0.5s ease;
             pointer-events: all;
             overflow: hidden;
