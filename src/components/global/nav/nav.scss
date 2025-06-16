@@ -148,8 +148,8 @@ header {
                 }
             }
 
-            &:hover{
-                span{
+            &:hover {
+                span {
                     background-color: var.$Secundary_Color
                 }
             }
@@ -162,10 +162,10 @@ header {
             left: 0;
             padding-top: 4vmax;
             flex-direction: column;
-            pointer-events: none;
             will-change: transform;
             clip-path: inset(0% 0% 100% 0%);
             transition: clip-path 0.5s ease;
+            pointer-events: all;
             overflow: hidden;
             z-index: 999;
             opacity: 1;
@@ -182,9 +182,6 @@ header {
             li {
                 @include mixins.align(relative, flex, center, center);
                 @include mixins.effect_affter();
-                width: 100vw;
-                overflow: hidden;
-                z-index: 1;
 
                 @include responsive.screen_laptop {
                     margin: 20px 0;
@@ -206,8 +203,8 @@ header {
                     color: var.$Color_White_B9;
                     font-family: var.$font_Primary;
                     transition: 0.5s ease;
-                    will-change: transform;
                     pointer-events: all;
+                    will-change: transform;
                     opacity: 0;
 
                     @include responsive.screen_laptop {
@@ -223,12 +220,10 @@ header {
                     }
                 }
 
-                &:hover {
-                    a {
-                        color: var.$gray_primary;
-                        transition: 0.5s ease;
-                        letter-spacing: 1vmax;
-                    }
+                &:hover a {
+                    color: var.$gray_primary;
+                    transition: 0.5s ease;
+                    letter-spacing: 1vmax;
                 }
             }
 
@@ -250,10 +245,7 @@ header {
                     margin: 20px 0 0 0;
                 }
 
-                .linkedin,
-                .git-icon-footer,
-                .instagram,
-                .cv {
+                a {
                     @include mixins.align(relative, flex, center, center);
                     width: 8vh;
                     height: 8vh;
@@ -281,12 +273,8 @@ header {
                         }
                     }
 
-                    &:hover {
-                        transform: scale(1.7);
-
-                        i {
-                            color: var.$Secundary_Color;
-                        }
+                    &:hover i {
+                        color: var.$Secundary_Color;
                     }
                 }
             }

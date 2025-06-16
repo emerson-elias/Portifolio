@@ -27,25 +27,21 @@ const links = [
 const socialLinks = [
     {
         href: "https://www.linkedin.com/in/emerson-elias-9b2894228/",
-        className: "linkedin",
         iconClass: "fa-brands fa-linkedin-in",
         ariaLabel: "LinkedIn",
     },
     {
         href: "https://github.com/emerson-elias",
-        className: "git-icon-footer",
         iconClass: "fa-brands fa-github-alt",
         ariaLabel: "GitHub",
     },
     {
         href: "https://www.instagram.com/emersoneliass_/",
-        className: "instagram",
         iconClass: "fa-brands fa-instagram",
         ariaLabel: "Instagram",
     },
     {
         href: "https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view",
-        className: "cv",
         iconClass: "fa-regular fa-file-lines",
         ariaLabel: "Currículo",
     }
@@ -165,10 +161,9 @@ export default function NavBar() {
                     ))}
 
                     <div className="midia">
-                        {socialLinks.map(({ href, className, iconClass, ariaLabel }, i) => (
+                        {socialLinks.map(({ href, iconClass, ariaLabel }, i) => (
                             <a
                                 key={href}
-                                className={className}
                                 href={href}
                                 target="_blank"
                                 rel="noopener noreferrer"
