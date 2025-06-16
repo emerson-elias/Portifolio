@@ -48,7 +48,7 @@ export default function Footer() {
                     <div className="midia">
 
                         <a className="cv" href="https://drive.google.com/file/d/15zY3xHj9nhE3uaiNlSTSQ8_slmKK5OPp/view" target="_blank" rel="noopener noreferrer">
-                            <i className="fa-regular fa-file"></i>
+                            <i className="fa-regular fa-file-lines"></i>
                         </a>
 
                         <a className="instagram" href="https://www.instagram.com/emersoneliass_/" target="_blank" rel="noopener noreferrer">
