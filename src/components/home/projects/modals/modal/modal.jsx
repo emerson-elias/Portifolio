@@ -8,12 +8,12 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
 
     useEffect(() => {
         setShowAnimated(true)
-        
+
     }, [])
 
     const closeModal = () => {
         setShowAnimated(false)
-        
+
         setTimeout(() => {
             setShowModal(false)
         }, 500)

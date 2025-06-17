@@ -7,8 +7,8 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
     transform: translate(-50%, -50%) translateY(-100vh);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     opacity: 0.5;
@@ -25,7 +25,6 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
         padding: 3vh 2vw;
         z-index: 9999;
 
@@ -58,17 +57,12 @@
     }
 
     .row {
-        position: relative;
-        width: 100%;
-        height: 100%;
 
         .project_text_linear {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: auto;
-            height: auto;
             white-space: nowrap;
             pointer-events: none;
             animation: fade 3s ease;
@@ -97,14 +91,10 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: auto;
-                height: auto;
                 z-index: -1;
 
                 img {
-                    position: relative;
                     width: 35vw;
-                    height: auto;
                     border-radius: 1vmax;
                     pointer-events: none;
 
@@ -123,30 +113,22 @@
             @include mixins.align(relative, flex, center, center);
             flex-direction: column;
             width: 100vw;
-            height: 130vh;
+            margin-top: 72vh;
 
             .layer {
-                position: relative;
-                width: 60vw;
-                height: auto;
-                top: 55vh;
+                @include mixins.align(relative, flex, center, center);
+                flex-direction: column;
+                width: 65vw;
+                margin: 3vmax 0;
 
                 @include responsive.screen_laptop {
-                    width: 80vw;
-                }
-
-                @include responsive.screen_tablet {
-                    top: 80vh;
-                }
-
-                @include responsive.screen_small {
-                    top: 75vh;
+                    width: 90%;
+                    padding: 0 30px;
                 }
 
                 .box_1 {
                     @include mixins.align(relative, flex, space-between, center);
-                    width: inherit;
-                    height: auto;
+                    width: 100%;
                     border-bottom: 0.2vw solid var.$Color_White_B9;
 
                     a {
@@ -166,10 +148,10 @@
                             font-size: 20px;
                         }
 
-                        i{
+                        i {
                             pointer-events: none;
                         }
-                        
+
                         &:hover {
                             color: var.$Secundary_Color;
                         }
@@ -219,14 +201,12 @@
 
                 .box_2 {
                     @include mixins.align(relative, flex, space-between, center);
-                    width: inherit;
-                    height: 100%;
-                    padding-top: 7vh;
+                    width: 100%;
+                    padding: 1vmax 0;
 
-                    @include responsive.screen_tablet {
+                    @include responsive.screen_laptop {
                         flex-direction: column;
                         justify-content: center;
-                        height: auto;
                         padding: 7vh 0;
                     }
 
@@ -235,7 +215,7 @@
                         width: 40%;
                         height: 100%;
 
-                        @include responsive.screen_tablet {
+                        @include responsive.screen_laptop {
                             width: inherit;
                         }
 
@@ -265,17 +245,19 @@
                             @include responsive.screen_laptop {
                                 font-size: 30px;
                             }
+
+                            @include responsive.screen_small {
+                                margin: 12px 0;
+                            }
                         }
                     }
 
                     .description {
-                        position: relative;
                         width: 60%;
                         height: 100%;
                         padding-top: 10vh;
 
-
-                        @include responsive.screen_tablet {
+                        @include responsive.screen_laptop {
                             width: inherit;
                             padding: 10vh 0;
                         }
