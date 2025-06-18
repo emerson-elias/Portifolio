@@ -21,37 +21,75 @@
     }
 
     .closer {
-        @include mixins.align(fixed, flex, end, end);
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 3vh 2vw;
+        @include mixins.align(fixed, flex, center, end);
+        top: -8vmax;
+        right: -8vmax;
+        width: 16vmax;
+        height: 16vmax;
+        padding: 2vmax;
+        border: 0.2vw solid var.$Color_White_B9;
+        transition: 1s ease;
+        border-radius: 3vmax;
+        transform: rotate(45deg);
+        overflow: hidden;
         z-index: 9999;
+        cursor: pointer;
+
+        @include responsive.screen_laptop {
+            width: 180px;
+            height: 180px;
+            padding: 30px;
+        }
+
+        @include responsive.screen_small {
+            top: -75px;
+            right: -75px;
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 40%;
+            width: 1vmax;
+            height: 1vmax;
+            background-color: var.$Secundary_Color;
+            transition: 1s ease;
+            transform: scale(0);
+            border-radius: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
 
         i {
-            font-size: 3vmax;
-            color: var.$gray_primary;
-            background-color: var.$Secundary_Color;
-            transition: var.$Transition_ease;
-            padding: 1.2vmax 1.5vmax;
-            border-radius: 10px;
-            cursor: pointer;
+            font-size: 3.7vmax;
+            color: var.$Color_White_B9;
+            transition: 1s ease;
+            transform: rotate(-45deg);
 
             @include responsive.screen_laptop {
-                padding: 20px 25px;
                 font-size: 50px;
             }
 
             @include responsive.screen_small {
-                padding: 10px 15px;
                 font-size: 40px;
-                margin-right: 20px;
+            }
+        }
+
+        &:hover {
+            transition: 1s ease;
+            border-color: var.$gray_primary;
+
+            &::after {
+                transform: scale(50);
             }
 
-            &:hover {
-                background-color: var.$gray_primary;
-                transition: var.$Transition_ease;
-                color: var.$Secundary_Color;
+            i {
+                transform: rotate(-230deg);
+                color: var.$gray_primary;
             }
         }
     }

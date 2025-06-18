@@ -23,8 +23,8 @@ const Modal = ({ setShowModal, title, gif, modalInfo, year, link, tecnology }) =
         <>
             <Backdrop showBackdrop={showAnimated} closeModal={closeModal} />
             <section className={`${styles.modal} ${showAnimated && styles.animated_modal}`}>
-                <div className={styles.closer}>
-                    <i className="fa-solid fa-xmark" onClick={closeModal}></i>
+                <div className={styles.closer} onClick={closeModal}>
+                    <i className="fa-solid fa-xmark"></i>
                 </div>
                 <div className={styles.row}>
 
