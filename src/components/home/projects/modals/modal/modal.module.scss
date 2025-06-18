@@ -285,7 +285,7 @@
                             }
 
                             @include responsive.screen_small {
-                                margin: 12px 0;
+                                margin: 12px 5px;
                             }
                         }
                     }
@@ -311,8 +311,9 @@
 
                             @include responsive.screen_laptop {
                                 font-size: 20px;
-                                text-align: center;
+                                text-align: start;
                                 text-indent: 0;
+                                line-height: 1.3;
                             }
                         }
 
