@@ -9,7 +9,12 @@
     width: 100vw;
     height: auto;
     padding-top: 15vh;
+    margin-bottom: 10vmax;
     overflow: hidden;
+
+    @include responsive.screen_small() {
+        padding-top: 12vh;
+    }
 
     .imgs_banners {
         @include mixins.align(absolute, flex, space-between, center);
@@ -50,11 +55,9 @@
     }
 
     .banner_word {
-        @include mixins.align(relative, flex, center, center);
+        @include mixins.align(relative, flex, space-between, center);
         flex-direction: column;
         width: inherit;
-        height: auto;
-        margin-bottom: 10vmax;
         overflow: hidden;
 
         span {
@@ -91,7 +94,7 @@
 
             &:nth-child(3) {
                 text-align: start;
-                padding-left: 6%;
+                padding-left: 7%;
                 animation: rotateX 2s ease;
                 color: transparent;
                 -webkit-text-stroke: 0.1vw var.$Secundary_Color;
@@ -106,7 +109,7 @@
 
             &:nth-child(5) {
                 position: relative;
-                margin-top: -1%;
+                //   margin-top: -1%;
                 text-align: start;
                 padding-left: 15%;
                 animation: left 2s ease;

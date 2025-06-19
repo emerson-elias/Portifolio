@@ -23,58 +23,63 @@ $bg-project-4: url('/assets/img/4.jpg');
         @include responsive.screen_small {
             margin: 100px 0;
             padding: 0 30px;
+            flex-direction: column;
         }
 
         h1 {
             @include mixins.animate();
+            width: 50vmax;
             text-align: start;
             font-size: 7vmax;
             color: var.$Color_White_B9;
-            font-family: var.$font_Primary; 
+            font-family: var.$font_Primary;
             transition: var.$Transition_ease;
             letter-spacing: 3px;
 
             @include responsive.screen_small {
+                width: 100%;
                 font-size: 40px;
             }
         }
 
         a {
-            width: 10vmax;
+            width: 12vmax;
+            text-decoration: none;
+            color: var.$Color_White_B9;
 
             @include responsive.screen_small {
-                width: 100px;
+                width: auto;
+                margin: 40px 0 0 170px;
             }
 
             .svg {
-                border: 1px solid var.$Color_White_B9;
-                padding: 1vmax;
-                border-radius: 50%;
-                width: 40%;
-                transform: rotate(90deg);
+                @include mixins.align(relative, flex, space-around, center);
+                pointer-events: none;
                 cursor: pointer;
 
                 @include responsive.screen_small {
-                    width: 50%;
-                    margin-left: 30px;
+                    width: 130px;
                 }
 
-                &::after {
-                    position: absolute;
-                    content: 'todos';
-                    width: inherit;
-                    height: auto;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) rotate(-90deg);
-                    font-size: 2vmax;
-                    padding-left: 8vmax;
-                    font-family: var.$font_Primary;
-                    color: var.$Color_White_B9;
+                svg {
+                    border: 1px solid var.$Color_White_B9;
+                    padding: 1vmax;
+                    border-radius: 50%;
+                    width: 40%;
+                    transform: rotate(90deg);
+                }
 
-                    @include responsive.screen_small {
-                        display: none;
-                    }
+                span {
+                    font-size: 2vmax;
+                    font-family: var.$font_Primary;
+                }
+            }
+
+            &:hover {
+                color: var.$Secundary_Color;
+
+                svg {
+                    border-color: var.$Secundary_Color;
                 }
             }
         }
@@ -234,7 +239,6 @@ $bg-project-4: url('/assets/img/4.jpg');
     .ancor_about {
         @include mixins.align(relative, flex, center, center);
         width: inherit;
-        height: auto;
         margin-top: 10vh;
         padding-left: 50vw;
 
@@ -243,43 +247,49 @@ $bg-project-4: url('/assets/img/4.jpg');
         }
 
         a {
-            @include mixins.align(relative, flex, space-around, center);
             text-decoration: none;
-            width: 25vw;
-            height: auto;
+            color: var.$Color_White_B9;
             cursor: pointer;
 
             @include responsive.screen_small {
                 width: 300px;
             }
 
-            h1 {
-                text-align: start;
-                font-size: 2.5vmax;
-                color: var.$Color_White_B9;
-                font-family: var.$font_Primary;
-                letter-spacing: 3px;
-                padding-right: 2vmax;
-                text-wrap: nowrap;
+            .ancora {
+                @include mixins.align(relative, flex, center, center);
+                pointer-events: none;
 
-                @include responsive.screen_small {
-                    font-size: 20px;
-                }
-            }
+                span {
+                    text-align: start;
+                    font-size: 2.5vmax;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 3px;
+                    padding-right: 2vmax;
+                    text-wrap: nowrap;
 
-            .svg {
-                border: 1px solid var.$Color_White_B9;
-                padding: 0.5vmax;
-                border-radius: 50%;
-                width: 20%;
-                transform: rotate(90deg);
-
-                @include responsive.screen_small {
-                    width: 15%;
+                    @include responsive.screen_small {
+                        font-size: 20px;
+                    }
                 }
 
                 svg {
-                    pointer-events: none;
+                    border: 1px solid var.$Color_White_B9;
+                    padding: 1vmax;
+                    border-radius: 50%;
+                    width: 13%;
+                    transform: rotate(90deg);
+
+                    @include responsive.screen_small {
+                        width: 15%;
+                    }
+                }
+            }
+
+            &:hover {
+                color: var.$Secundary_Color;
+
+                svg {
+                    border-color: var.$Secundary_Color;
                 }
             }
         }

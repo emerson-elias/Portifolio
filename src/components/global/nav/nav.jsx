@@ -26,14 +26,14 @@ const links = [
 
 const socialLinks = [
     {
-        href: "https://www.linkedin.com/in/emerson-elias-9b2894228/",
-        iconClass: "fa-brands fa-linkedin-in",
-        ariaLabel: "LinkedIn",
-    },
-    {
         href: "https://github.com/emerson-elias",
         iconClass: "fa-brands fa-github-alt",
         ariaLabel: "GitHub",
+    },
+    {
+        href: "https://www.linkedin.com/in/emerson-elias-9b2894228/",
+        iconClass: "fa-brands fa-linkedin-in",
+        ariaLabel: "LinkedIn",
     },
     {
         href: "https://www.instagram.com/emersoneliass_/",

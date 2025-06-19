@@ -154,7 +154,6 @@
                 }
 
                 .cicle {
-                    position: relative;
                     margin-left: 60%;
 
                     @include responsive.screen_laptop {
@@ -164,7 +163,9 @@
                     a {
                         display: flex;
                         width: 12vmax;
-                        height: auto;
+                        color: var.$Color_White_B9;
+                        -webkit-animation: flicker 2s linear infinite both;
+                        animation: flicker 2s linear infinite both;
 
                         @include responsive.screen_laptop {
                             width: 180px;
@@ -182,8 +183,10 @@
                         text {
                             font-size: 2vmax;
                             font-family: var.$font_Primary;
-                            -webkit-animation: flicker 2s linear infinite both;
-                            animation: flicker 2s linear infinite both;
+                        }
+
+                        &:hover{
+                            color: var.$Secundary_Color;
                         }
                     }
                 }
