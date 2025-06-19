@@ -3,7 +3,7 @@
 @use '/src/sass/mixins';
 @use '/src/sass/variables' as var;
 
-.banner_about{
+.banner_about {
     @include mixins.align(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
@@ -17,7 +17,7 @@
         width: 85vw;
         height: auto;
 
-        @include responsive.screen_small(){
+        @include responsive.screen_small() {
             display: none;
         }
 
@@ -33,12 +33,15 @@
             &:nth-child(1) {
                 transform: rotate(-15deg) translateY(15vh);
             }
+
             &:nth-child(2) {
                 transform: rotateZ(-10deg) translateY(80vh);
             }
+
             &:nth-child(3) {
                 transform: rotate(15deg) translateY(-5vh);
             }
+
             &:hover {
                 filter: grayscale(0%);
                 transition: var.$Transition_ease;
@@ -53,14 +56,15 @@
         height: auto;
         margin-bottom: 10vmax;
         overflow: hidden;
-        pointer-events: none;
 
         span {
+            @include mixins.animate();
             width: inherit;
             height: auto;
             margin: 0.6vmax 0;
             font-size: 10vmax;
             font-family: var.$font_Primary;
+            transition: var.$Transition_ease;
             color: var.$Color_White_B9;
             mix-blend-mode: difference;
 
@@ -68,11 +72,13 @@
                 font-size: 65px;
                 margin: 35px 0;
             }
+
             &:nth-child(1) {
                 text-align: start;
                 padding-left: 4%;
                 animation: left 2s ease;
             }
+
             &:nth-child(2) {
                 text-align: center;
                 padding-left: 7%;
@@ -82,6 +88,7 @@
                     padding: 0;
                 }
             }
+
             &:nth-child(3) {
                 text-align: start;
                 padding-left: 6%;
@@ -89,12 +96,14 @@
                 color: transparent;
                 -webkit-text-stroke: 0.1vw var.$Secundary_Color;
             }
+
             &:nth-child(4) {
                 text-align: end;
                 padding-right: 8%;
                 animation: rotateZ 2s ease;
 
             }
+
             &:nth-child(5) {
                 position: relative;
                 margin-top: -1%;
@@ -102,6 +111,7 @@
                 padding-left: 15%;
                 animation: left 2s ease;
             }
+
             &:nth-child(6) {
                 position: relative;
                 text-align: end;

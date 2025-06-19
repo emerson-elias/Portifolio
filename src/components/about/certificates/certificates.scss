@@ -11,9 +11,10 @@
     margin: 15vh 0 18vh 0;
     overflow: hidden;
 
-    @include responsive.screen_tablet{
+    @include responsive.screen_tablet {
         margin-bottom: 5vh;
     }
+
     @include responsive.screen_small {
         margin-top: 150px;
     }
@@ -25,10 +26,12 @@
         overflow: hidden;
 
         span {
+            @include mixins.animate();
             display: block;
             font-size: 10vmax;
             color: var.$Color_White_B9;
             font-family: var.$font_Primary;
+            transition: var.$Transition_ease;
             letter-spacing: 2px;
             word-break: break-all;
 
@@ -59,9 +62,10 @@
             top: 0;
             left: 60%;
 
-            @include responsive.screen_laptop{
+            @include responsive.screen_laptop {
                 left: 50%;
             }
+
             @include responsive.screen_small {
                 left: 10%;
                 width: 150px;

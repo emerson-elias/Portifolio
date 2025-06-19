@@ -18,7 +18,6 @@ $bg-project-4: url('/assets/img/4.jpg');
     .title {
         @include mixins.align(relative, flex, space-around, center);
         width: inherit;
-        height: auto;
         margin: 25vh 0;
 
         @include responsive.screen_small {
@@ -27,10 +26,12 @@ $bg-project-4: url('/assets/img/4.jpg');
         }
 
         h1 {
+            @include mixins.animate();
             text-align: start;
             font-size: 7vmax;
             color: var.$Color_White_B9;
-            font-family: var.$font_Primary;
+            font-family: var.$font_Primary; 
+            transition: var.$Transition_ease;
             letter-spacing: 3px;
 
             @include responsive.screen_small {
@@ -39,9 +40,7 @@ $bg-project-4: url('/assets/img/4.jpg');
         }
 
         a {
-            position: relative;
             width: 10vmax;
-            height: auto;
 
             @include responsive.screen_small {
                 width: 100px;

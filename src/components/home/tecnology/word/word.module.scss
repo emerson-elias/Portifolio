@@ -2,26 +2,29 @@
 @use '/src/sass/mixins';
 @use '/src/sass/variables' as var;
 
-.word_container{
+.word_container {
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: auto;
     overflow: hidden;
 
-    .text_large{
+    .text_large {
         @include mixins.align(relative, flex, center, center);
         flex-direction: column;
-        width: 90vw; 
+        width: 90vw;
         height: auto;
         padding-top: 30vh;
 
-        span{
+        span {
+            @include mixins.animate();
             width: inherit;
             margin: 1vmax 0;
             font-size: 5vmax;
             text-align: end;
+            letter-spacing: 3px;
             color: var.$Color_White_B9;
             font-family: var.$font_Tertiary;
+            transition: var.$Transition_ease;
 
             @include responsive.screen_small {
                 font-size: 40px;
@@ -29,7 +32,7 @@
                 margin: 10px 0;
             }
 
-            &:nth-child(2){
+            &:nth-child(2) {
                 color: transparent;
                 -webkit-text-stroke: 0.1vw var.$Secundary_Color;
             }

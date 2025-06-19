@@ -42,9 +42,11 @@
             }
 
             h1 {
+                @include mixins.animate();
                 font-size: 7vmax;
                 color: var.$Color_White_B9;
                 font-family: var.$font_Primary;
+                transition: var.$Transition_ease;
                 letter-spacing: 5px;
 
                 @include responsive.screen_small {
@@ -78,8 +80,6 @@
 
                 @include responsive.screen_small {
                     width: 80%;
-
-                    background-color: rgba(102, 51, 153, 0);
                 }
 
                 p {

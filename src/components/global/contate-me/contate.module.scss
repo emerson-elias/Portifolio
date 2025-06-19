@@ -15,12 +15,14 @@
     }
 
     span {
+        @include mixins.animate();
         width: 90vw;
         margin: 0.5vmax 0;
         font-size: 5vmax;
         text-align: start;
         color: var.$Color_White_B9;
-        font-family: var.$font_Tertiary;
+        font-family: var.$font_Tertiary; 
+        transition: var.$Transition_ease;
         letter-spacing: 3px;
         text-wrap: nowrap;
 

@@ -71,27 +71,30 @@
         flex-direction: column;
         width: inherit;
         height: auto;
-        pointer-events: none;
 
         span {
-            position: relative;
+            @include mixins.animate();
             width: 95vw;
             font-size: 15vmax;
             font-family: var.$font_Primary;
             color: var.$Color_White_B9;
+            transition: var.$Transition_ease;
             mix-blend-mode: difference;
-            animation: fade 1s ease;
 
             &:nth-child(2) {
-                transform: translateX(20vw);
+                padding-left: 15vw;
 
-                @include responsive.screen_small {
-                    transform: none;
+                @include responsive.screen_tablet {
+                    padding: 0;
                 }
             }
 
-            @include responsive.screen_small {
+            @include responsive.screen_tablet {
                 text-align: center;
+                font-size: 120px;
+            }
+
+            @include responsive.screen_small {
                 font-size: 75px;
             }
         }

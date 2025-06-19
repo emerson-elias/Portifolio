@@ -216,9 +216,8 @@ header {
                 }
 
                 &:hover a {
+                    @include mixins.animate();
                     color: var.$gray_primary;
-                    transition: 0.5s ease;
-                    letter-spacing: 1vmax;
                 }
             }
 

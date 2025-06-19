@@ -1,6 +1,13 @@
 @use 'variables' as var;
 @use 'responsive';
 
+@mixin animate() {
+    &:hover {
+        transition: var.$Transition_ease;
+        letter-spacing: 0.7vmax;
+    }
+}
+
 @mixin effect_affter() {
     &::after {
         position: absolute;
