@@ -37,6 +37,7 @@ $bg-project-4: url('/assets/img/4.jpg');
 
             @include responsive.screen_small {
                 font-size: 40px;
+                padding-left: 15px;
             }
         }
 
@@ -44,10 +45,6 @@ $bg-project-4: url('/assets/img/4.jpg');
             width: 12vmax;
             text-decoration: none;
             color: var.$Color_White_B9;
-
-            @include responsive.screen_small {
-                width: auto;
-            }
 
             .svg {
                 @include mixins.align(relative, flex, space-around, center);

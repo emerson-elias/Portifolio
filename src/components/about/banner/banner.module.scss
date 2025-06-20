@@ -7,7 +7,6 @@
     @include mixins.align(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    height: auto;
     padding-top: 15vh;
     margin-bottom: 10vmax;
     overflow: hidden;
@@ -20,7 +19,6 @@
         @include mixins.align(absolute, flex, space-between, center);
         top: 15vh;
         width: 85vw;
-        height: auto;
 
         @include responsive.screen_small() {
             display: none;
@@ -28,7 +26,6 @@
 
         img {
             width: 15vw;
-            height: auto;
             object-fit: cover;
             filter: grayscale(100%);
             border-radius: 1vmax;
@@ -45,11 +42,6 @@
 
             &:nth-child(3) {
                 transform: rotate(15deg) translateY(-5vh);
-            }
-
-            &:hover {
-                filter: grayscale(0%);
-                transition: var.$Transition_ease;
             }
         }
     }
