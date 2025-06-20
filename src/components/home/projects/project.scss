@@ -23,7 +23,6 @@ $bg-project-4: url('/assets/img/4.jpg');
         @include responsive.screen_small {
             margin: 100px 0;
             padding: 0 30px;
-            flex-direction: column;
         }
 
         h1 {
@@ -37,7 +36,6 @@ $bg-project-4: url('/assets/img/4.jpg');
             letter-spacing: 3px;
 
             @include responsive.screen_small {
-                width: 100%;
                 font-size: 40px;
             }
         }
@@ -49,7 +47,6 @@ $bg-project-4: url('/assets/img/4.jpg');
 
             @include responsive.screen_small {
                 width: auto;
-                margin: 40px 0 0 170px;
             }
 
             .svg {
@@ -72,6 +69,10 @@ $bg-project-4: url('/assets/img/4.jpg');
                 span {
                     font-size: 2vmax;
                     font-family: var.$font_Primary;
+
+                    @include responsive.screen_small {
+                       display: none;
+                    }
                 }
             }
 
