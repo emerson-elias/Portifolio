@@ -87,8 +87,7 @@
         .layers {
             @include mixins.align(relative, flex, space-between, center);
             width: 100vw;
-            padding: 4vh 6vw;
-            height: auto;
+            padding: 2vw 6vw;
             border-bottom: 0.1vw solid var.$gray_Secundary_Color;
             will-change: transform;
 
@@ -109,41 +108,18 @@
                 z-index: -1;
             }
 
-            &:hover::after {
-                height: 100%;
+            h1 {
+                text-align: start;
+                font-size: 6vmax;
+                color: var.$Color_White_B9;
+                font-family: var.$font_Primary;
+                letter-spacing: 3px;
                 transition: 0.3s all;
-                pointer-events: none;
-            }
-
-            .title-project {
-                position: relative;
-                width: 70vw;
-                height: auto;
 
                 @include responsive.screen_small {
-                    width: 270px;
+                    font-size: 35px;
+                    margin: 15px 0;
                 }
-
-                h1 {
-                    text-align: start;
-                    font-size: 6vmax;
-                    color: var.$Color_White_B9;
-                    font-family: var.$font_Primary;
-                    letter-spacing: 3px;
-                    transition: 0.3s all;
-
-                    @include responsive.screen_small {
-                        font-size: 35px;
-                        margin: 15px 0;
-                    }
-                }
-            }
-
-            &:hover h1 {
-                color: var.$gray_primary;
-                transition: 0.3s all;
-                padding-left: 3vw;
-                transform: skew(-25deg);
             }
 
             .certi-icon {
@@ -164,20 +140,30 @@
                 }
             }
 
-            .year {
-                position: relative;
-                width: 10vw;
-                height: auto;
+            h2 {
+                font-size: 4vmax;
+                font-family: var.$font_Primary;
+                color: var.$gray_primary;
+                transition: 0.3s all;
 
-                h1 {
-                    font-size: 4vmax;
-                    font-family: var.$font_Primary;
+                @include responsive.screen_small {
+                    display: none;
+                }
+            }
+
+            &:hover {
+
+                &::after {
+                    height: 100%;
+                    transition: 0.3s all;
+                    pointer-events: none;
+                }
+
+                &:hover h1,h2 {
                     color: var.$gray_primary;
                     transition: 0.3s all;
-
-                    @include responsive.screen_small {
-                        display: none;
-                    }
+                    padding-left: 3vw;
+                    transform: skew(-25deg);
                 }
             }
         }
