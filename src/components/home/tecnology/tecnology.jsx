@@ -82,7 +82,7 @@ export default function Tecnology() {
             gsap.set(img, { opacity: 0 })
         })
 
-        const handleMouseMove = (e, index) => {
+        const mouseMove = (e, index) => {
             const container = containers[index]
             const img = imgs[index]
 
@@ -102,7 +102,7 @@ export default function Tecnology() {
             })
         }
 
-        const handleMouseLeave = (index) => {
+        const mouseLeave = (index) => {
             const img = imgs[index]
             gsap.to(img, {
                 x: 0,
@@ -115,16 +115,16 @@ export default function Tecnology() {
 
         containers.forEach((container, index) => {
             if (container) {
-                container.addEventListener('mousemove', (e) => handleMouseMove(e, index))
-                container.addEventListener('mouseleave', () => handleMouseLeave(index))
+                container.addEventListener('mousemove', (e) => mouseMove(e, index))
+                container.addEventListener('mouseleave', () => mouseLeave(index))
             }
         })
 
         return () => {
             containers.forEach((container, index) => {
                 if (container) {
-                    container.removeEventListener('mousemove', (e) => handleMouseMove(e, index))
-                    container.removeEventListener('mouseleave', () => handleMouseLeave(index))
+                    container.removeEventListener('mousemove', (e) => mouseMove(e, index))
+                    container.removeEventListener('mouseleave', () => mouseLeave(index))
                 }
             })
         }

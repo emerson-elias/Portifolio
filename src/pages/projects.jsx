@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import { useAssetsLoaded } from '../../contexts/AssetLoaderProvider'
+import { useAssetsLoaded } from "../contexts/AssetLoaderProvider"
 
-import Banner from './banner/banner_project'
-import Loader from '../global/loader/loader'
-import List from './list/list'
-import NavBar from '../global/nav/nav'
-import Footer from '../global/footer/footer'
-import Cursor from '../global/cursor/cursor'
-import Contate from '../global/contate-me/contate'
+import Banner from '../components/projects/banner/banner_project'
+import Loader from '../components/global/loader/loader'
+import List from '../components/projects/list/list'
+import NavBar from '../components/global/nav/nav'
+import Footer from '../components/global/footer/footer'
+import Cursor from '../components/global/cursor/cursor'
+import Contate from '../components/global/contate-me/contate'
 
 export default function Projects() {
     const { allAssetsLoaded } = useAssetsLoaded()
