@@ -16,6 +16,12 @@
         margin-right: 15px;
         margin-bottom: 20px;
     } 
+
+    &.colorBottom{
+        i{
+            color: var.$gray_primary;
+        }
+    }
     
     a{
         position: relative;     
