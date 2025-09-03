@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
-
+import gsap from 'gsap'
 import styles from './banner.module.scss'
+import Linear from '../../global/textLianer/linear'
 
 export default function Banner() {
     const layer3Ref = useRef(null)
@@ -63,11 +64,9 @@ export default function Banner() {
 
     return (
         <section className={styles.banner_container}>
-            <section className={styles.banner_text_linear}>
-                <h1>- criando - experiências</h1>
-                <h1>- criando - experiências</h1>
-                <h1>- criando - experiências</h1>
-                <h1>- criando - experiências</h1>
+
+            <section className={styles.text_linear}>
+                 <Linear text={'criando - experiências'} size='60vh'/>
             </section>
 
             <section className={styles.row}>

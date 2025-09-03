@@ -3,10 +3,10 @@
 @use '/src/sass/variables' as var;
 
 .contate_container {
-    @include mixins.align(relative, flex, center, center);
+    @include mixins.align(relative, flex, center, start);
     flex-direction: column;
     width: 100vw;
-    height: auto;
+    padding: 0 5vw;
     margin: 10vh 0 20vh 0;
     overflow: hidden;
 
@@ -16,19 +16,17 @@
 
     span {
         @include mixins.animate();
-        width: 90vw;
         margin: 0.5vmax 0;
         font-size: 5vmax;
         text-align: start;
         color: var.$Color_White_B9;
-        font-family: var.$font_Tertiary; 
+        font-family: var.$font_Tertiary;
         transition: var.$Transition_ease;
         letter-spacing: 3px;
         text-wrap: nowrap;
 
         @include responsive.screen_small {
             font-size: 40px;
-            width: 85vw;
             margin: 10px 0;
         }
 
@@ -39,30 +37,24 @@
     }
 
     .arrow {
-        position: absolute;
-        left: 70%;
-        width: 10vw;
-        height: auto;
-        color: var.$Color_White_B9;
-        transform: rotate(100deg);
-        transition: var.$Transition_ease;
+        @include mixins.align(absolute, flex, center, center);
+        left: 60%;
+        width: 30vw;
+        height: 30vw;
         will-change: transform;
 
-        @include responsive.screen_laptop {
-            width: 130px;
+        svg {
+            width: 45%;
+            height: 45%;
+            transform: rotate(100deg);
+            color: var.$Color_White_B9;
+            transition: var.$Transition_ease;
+            pointer-events: none;
         }
 
-        @include responsive.screen_small {
-            width: 70px;
-        }
-
-        &:hover {
+        &:hover svg {
             transform: rotate(45deg) scale(1.2);
             transition: var.$Transition_ease;
-        }
-
-        svg {
-            pointer-events: none;
         }
     }
 }

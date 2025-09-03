@@ -1,30 +1,19 @@
 import { useEffect, useRef, useCallback } from 'react'
+
 import gsap from 'gsap'
 
 import styles from './list.module.scss'
 
-const projects = [
-    {
-        id: 1,
-        img: '/assets/img/1.jpg',
-        link: 'https://recanto-belle-vue.vercel.app/',
-        name: 'Recanto',
-    },
-    {
-        id: 2,
-        img: '/assets/img/1.jpg',
-        link: 'https://recanto-belle-vue.vercel.app/',
-        name: 'Belle',
-    },
-    {
-        id: 3,
-        img: '/assets/img/1.jpg',
-        link: 'https://recanto-belle-vue.vercel.app/',
-        name: 'Vue',
-    }
-]
+export default function List({ data }) {
+    if (!data) return null
 
-export default function List() {
+    const projects = data.map(item => ({
+        id: item.id,
+        img: item.img_bg,
+        link: item.link,
+        title: item.title,
+    }))
+
     const containerRefs = useRef([])
     const bannersRefs = useRef([])
 
@@ -106,7 +95,7 @@ export default function List() {
                         ref={el => containerRefs.current[index] = el}
                     >
                         <div className={styles.title_project}>
-                            <h1>{project.name}</h1>
+                            <h1>{project.title}</h1>
                         </div>
 
                         <div
@@ -115,7 +104,7 @@ export default function List() {
                         >
                             <img
                                 src={project.img}
-                                alt={`Projeto ${project.name}`}
+                                alt={`Projeto ${project.title}`}
                                 loading="lazy"
                             />
                         </div>
@@ -125,7 +114,7 @@ export default function List() {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            title={`Acesse ${project.name}`}
+                            title={`Acesse ${project.title}`}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
                                 <path d="M90.54,0H89.46C71.61,23.72,49,47,27.43,65.3l.87,1.08c22-14.14,39.61-31.56,60.72-52C88.8,69,86.41,139.09,84.23,180H95.77c-2.18-40.92-4.79-111-5-165.64,20.89,19.81,38.75,37.66,60.94,52l.87-1.08C130.81,47.67,108.39,23.72,90.54,0Z" fill="currentColor" />

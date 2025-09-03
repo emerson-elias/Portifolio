@@ -1,5 +1,7 @@
 import { useRef } from 'react'
 
+import Linear from '../textLianer/linear'
+
 import './footer.scss'
 
 export default function Footer() {
@@ -19,8 +21,7 @@ export default function Footer() {
         <footer className='footer-container' id='contatos'>
 
             <section className='text-linear'>
-                <h1> - entre em contato comigo</h1>
-                <h1> - entre em contato comigo</h1>
+                <Linear text={'- entre em contato comigo'} size='20vmax'/>
             </section>
 
             <section className='row'>

@@ -1,57 +1,17 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
-
 import { useAssetsLoaded } from "../../../contexts/AssetLoaderProvider"
+
 import Modal from "./modals/modal/modal"
+import ProjectGif from "./projectGif/projectGif"
 
 import './project.scss'
 
-const projectsData = [
-    {
-        id: 1,
-        title: "Recanto Belle Vue",
-        description: "Repouse em um encanto e aconchego",
-        gif: '/assets/gif/page-1.gif',
-        modalInfo: "Este projeto consiste na criação de um site para uma pousada, com foco em apresentar meus conhecimentos nas tecnologias de forma visualmente atrativa e funcional. A proposta do design foi transmitir acolhimento, tranquilidade e conexão com a natureza, refletindo a experiência que o hóspede encontra ao visitar o local",
-        year: "2025",
-        link: "https://recanto-belle-vue.vercel.app/",
-        tecnology: ["html", "css", "sass", "react", "javascript", "gsap", "swiper"]
-    },
-    {
-        id: 2,
-        title: "Em Breve",
-        description: "Imagens ilustrativas. Projeto em desenvolvimento",
-        gif: '/assets/gif/page-2.gif',
-        modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 2.",
-        year: "2024",
-        link: "https://github.com/emerson-elias",
-        tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
-    },
-    {
-        id: 3,
-        title: "Em Breve",
-        description: "Imagens ilustrativas. Projeto em desenvolvimento",
-        gif: '/assets/gif/page-3.gif',
-        modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 3.",
-        year: "2024",
-        link: "https://github.com/emerson-elias",
-        tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
-    },
-    {
-        id: 4,
-        title: "Em Breve",
-        description: "Imagens ilustrativas. Projeto em desenvolvimento",
-        gif: '/assets/gif/page-4.gif',
-        modalInfo: "Este foi um projeto desenvolvido a partir de uma necessidade real de ter algo visível para mostrar pros clientes e ao mesmo tempo o cliente ter uma noção do trabalho da empresa 4.",
-        year: "2024",
-        link: "https://github.com/emerson-elias",
-        tecnology: ["html", "css", "sass", "react", "javascript", "gsap"]
-    }
-]
-
-export default function Project() {
+export default function Project({ data }) {
     const [showModal, setShowModal] = useState(false)
     const [currentProject, setCurrentProject] = useState(null)
+
+    if (!data) return null
 
     const {
         gifsLoaded,
@@ -89,9 +49,8 @@ export default function Project() {
             </div>
 
             <div className="row">
-
-                {projectsData.map((project) => (
-                    <div className={`projects-${project.id}`} key={project.id}>
+                {data.slice(0, 4).map((project) => (
+                    <div className='projects' key={project.id}>
                         {showModal && currentProject?.id === project.id && (
                             <Modal
                                 setShowModal={closeModal}
@@ -100,7 +59,9 @@ export default function Project() {
                                 modalInfo={currentProject.modalInfo}
                                 year={currentProject.year}
                                 link={currentProject.link}
+                                link_github={currentProject.link_github}
                                 tecnology={currentProject.tecnology}
+                                bg_view={currentProject.bg_view}
                             />
                         )}
 
@@ -110,8 +71,12 @@ export default function Project() {
                             </a>
                         </div>
 
-                        <div className={`view view-${project.id}`} onClick={() => openModal(project)}>
-                            <img src={project.gif} loading="lazy" alt={`Projeto ${project.id}`} />
+                        <div className={'view'}
+                            style={{ backgroundImage: `url(${project.img_bg})` }}
+                            onClick={() => openModal(project)}
+                        >
+
+                            <ProjectGif gif={project.gif} background={project.bg_view} />
                         </div>
 
                         <div className="info">
@@ -119,7 +84,6 @@ export default function Project() {
                         </div>
                     </div>
                 ))}
-
             </div>
 
             <div className="ancor_about">

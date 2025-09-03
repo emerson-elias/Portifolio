@@ -1,0 +1,31 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+
+.projectGif_container {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    padding: 2vmax;
+    border-radius: 1vmax;
+    z-index: 2;
+
+    @include responsive.screen_large {
+        height: 250px;
+    }
+
+    @include responsive.screen_laptop {
+        height: 200px;
+    }
+
+    @include responsive.screen_small {
+        height: 160px;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none;
+    }
+}

@@ -7,7 +7,7 @@ const tools = [
     { name: 'clippy css', url: 'https://bennettfeely.com/clippy/' },
     { name: 'flaticon', url: 'https://www.flaticon.com/' },
     { name: 'animista', url: 'https://animista.net/' },
-    { name: 'aos scroll', url: 'https://swiperjs.com/' },
+    { name: 'swiper', url: 'https://swiperjs.com/' },
     { name: 'pure css', url: 'https://purecss.io/' }
 ]
 

@@ -151,23 +151,3 @@
         border-color: var.$Secundary_Color;
     }
 }
-
-@mixin banner_project ($bg) {
-    position: relative;
-    background-image: $bg;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 40vw;
-    height: 100vh;
-
-    @include responsive.screen_tablet {
-        width: 60vw;
-        height: 80vh;
-    }
-
-    @include responsive.screen_small {
-        width: 70vw;
-        height: 70vh;
-    }
-}

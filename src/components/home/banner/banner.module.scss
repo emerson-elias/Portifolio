@@ -3,7 +3,6 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-
 .banner_container {
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
@@ -11,33 +10,11 @@
     z-index: 1;
     overflow: hidden;
 
-    .banner_text_linear {
+    .text_linear {
         position: absolute;
-        width: inherit;
-        height: inherit;
-        white-space: nowrap;
-        box-sizing: border-box;
-        pointer-events: none;
-        animation: fade 3s ease;
-        will-change: transform;
-
-        h1 {
-            position: relative;
-            top: 42vh;
-            display: inline-block;
-            margin-left: 10vw;
-            font-size: 60vh;
-            color: transparent;
-            font-weight: normal;
-            font-family: var.$font_Tertiary;
-            -webkit-text-stroke: 0.1vw var.$Secundary_Color;
-            animation: slider-linear 60s linear infinite;
-            will-change: transform;
-
-            @include responsive.screen_small {
-                -webkit-text-stroke: 1px var.$Secundary_Color;
-            }
-        }
+        top: 27vh;
+        width: 100%;
+        height: 100%;
     }
 
     .row {
@@ -219,7 +196,7 @@
                     border-color: var.$Secundary_Color;
                 }
 
-                svg{
+                svg {
                     color: var.$Secundary_Color !important;
                 }
             }

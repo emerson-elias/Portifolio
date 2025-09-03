@@ -3,20 +3,17 @@
 
 .sound_container {
     position: fixed;
-    width: 12vmax;
     left: -4vmax;
     bottom: 6vmax;
     transform: rotate(-90deg);
     z-index: 9;
 
     @include responsive.screen_laptop {
-        width: 150px;
         left: -50px;
         bottom: 80px;
     }
 
     @include responsive.screen_small {
-        width: 170px;
         left: -60px;
     }
 
@@ -38,6 +35,12 @@
 
             &.colorBottom {
                 color: var.$gray_primary;
+            }
+        }
+
+        &:hover {
+            span {
+                color: var.$Secundary_Color;
             }
         }
     }

@@ -20,321 +20,214 @@
         transform: translate(-50%, -50%) translateY(0);
     }
 
-    .closer {
-        @include mixins.align(fixed, flex, center, end);
-        top: -8vmax;
-        right: -8vmax;
-        width: 16vmax;
-        height: 16vmax;
-        padding: 2vmax;
-        border: 0.2vw solid var.$Color_White_B9;
-        transition: 1s ease;
-        border-radius: 3vmax;
-        transform: rotate(45deg);
-        overflow: hidden;
-        z-index: 9999;
-        cursor: pointer;
-
-        @include responsive.screen_laptop {
-            width: 180px;
-            height: 180px;
-            padding: 30px;
-        }
-
-        @include responsive.screen_small {
-            top: -75px;
-            right: -75px;
-            width: 150px;
-            height: 150px;
-            padding: 10px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 40%;
-            width: 1vmax;
-            height: 1vmax;
-            background-color: var.$Secundary_Color;
-            transition: 1s ease;
-            transform: scale(0);
-            border-radius: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        i {
-            font-size: 3.7vmax;
-            color: var.$Color_White_B9;
-            transition: 1s ease;
-            transform: rotate(-45deg);
-
-            @include responsive.screen_laptop {
-                font-size: 50px;
-            }
-
-            @include responsive.screen_small {
-                font-size: 40px;
-            }
-        }
-
-        &:hover {
-            transition: 1s ease;
-            border-color: var.$gray_primary;
-
-            &::after {
-                transform: scale(50);
-            }
-
-            i {
-                transform: rotate(-230deg);
-                color: var.$gray_primary;
-            }
-        }
-    }
-
     .row {
 
-        .project_text_linear {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            white-space: nowrap;
-            pointer-events: none;
-            animation: fade 3s ease;
-            will-change: transform;
-            pointer-events: none;
+        .columnOne {
+            position: relative;
+            width: 100%;
+            height: 100vh;
 
-            h1 {
-                position: relative;
-                display: inline-block;
-                margin-left: 10vw;
-                font-size: 20vmax;
-                color: transparent;
-                font-weight: normal;
-                font-family: var.$font_Tertiary;
-                -webkit-text-stroke: 0.1vw var.$Secundary_Color;
-                animation: slider-linear 30s linear infinite;
-                mix-blend-mode: difference;
-                will-change: transform;
-
-                @include responsive.screen_small {
-                    -webkit-text-stroke: 1px var.$Secundary_Color;
-                }
-            }
-
-            .layer_img {
+            .layerImg {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) scale(1.5);
+                transform-origin: center;
                 z-index: -1;
-
-                img {
-                    width: 35vw;
-                    border-radius: 1vmax;
-                    pointer-events: none;
-
-                    @include responsive.screen_laptop {
-                        width: 500px;
-                    }
-
-                    @include responsive.screen_small {
-                        width: 330px;
-                    }
-                }
             }
         }
 
-        .box {
+        .columnTwo {
             @include mixins.align(relative, flex, center, center);
             flex-direction: column;
             width: 100vw;
-            margin-top: 72vh;
+            height: 100vh;
+            padding: 0 15vw;
+            margin-top: -25vh;
 
-            .layer {
-                @include mixins.align(relative, flex, center, center);
-                flex-direction: column;
-                width: 65vw;
-                margin: 3vmax 0;
+            @include responsive.screen_large {
+                margin-top: -220px;
+            }
 
-                @include responsive.screen_laptop {
-                    width: 90%;
-                    padding: 0 15px;
+            @include responsive.screen_laptop {
+                margin-top: -10px;
+            }
+
+            @include responsive.screen_small {
+                height: auto;
+                padding: 0 35px;
+                margin-top: -180px;
+            }
+
+            .boxOne {
+                @include mixins.align(relative, flex, space-between, center);
+                width: 100%;
+                border-bottom: 0.2vw solid var.$Color_White_B9;
+
+                a {
+                    font-size: 1.6vmax;
+                    font-family: var.$font_Primary;
+                    letter-spacing: 1px;
+                    padding: 2vmax 1vmax;
+                    text-decoration: none;
+                    color: var.$Color_White_B9;
+                    cursor: pointer;
+
+                    @include responsive.screen_laptop {
+                        font-size: 25px;
+                    }
+
+                    @include responsive.screen_small {
+                        font-size: 20px;
+                    }
+
+                    i {
+                        pointer-events: none;
+                    }
+
+                    &:hover {
+                        color: var.$Secundary_Color;
+                    }
                 }
 
-                .box_1 {
+                .detals {
                     @include mixins.align(relative, flex, space-between, center);
-                    width: 100%;
-                    border-bottom: 0.2vw solid var.$Color_White_B9;
+                    width: 20vw;
+                    height: auto;
+                    padding: 2vmax 1vmax;
 
-                    a {
+                    @include responsive.screen_laptop {
+                        width: auto;
+                    }
+
+                    @include responsive.screen_small {
+                        flex-direction: column;
+                    }
+
+                    span {
                         font-size: 1.6vmax;
                         font-family: var.$font_Primary;
                         letter-spacing: 1px;
-                        padding: 2vmax 1vmax;
-                        text-decoration: none;
                         color: var.$Color_White_B9;
-                        cursor: pointer;
 
                         @include responsive.screen_laptop {
                             font-size: 25px;
+                            margin: 0 7px;
                         }
 
                         @include responsive.screen_small {
                             font-size: 20px;
-                        }
-
-                        i {
-                            pointer-events: none;
-                        }
-
-                        &:hover {
-                            color: var.$Secundary_Color;
+                            margin: 10px 0;
                         }
                     }
 
-                    .detals {
-                        @include mixins.align(relative, flex, space-between, center);
-                        width: 20vw;
-                        height: auto;
-                        padding: 2vmax 1vmax;
+                    i {
+                        font-size: 0.5vmax;
+                        color: var.$Color_White_B9;
+
+                        @include responsive.screen_small {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .boxTwo {
+                @include mixins.align(relative, flex, space-between, center);
+                width: 100%;
+                padding: 1vmax 0;
+
+                @include responsive.screen_laptop {
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 7vh 0;
+                }
+
+                .tecnology {
+                    position: relative;
+                    width: 40%;
+                    height: 100%;
+
+                    @include responsive.screen_laptop {
+                        width: inherit;
+                    }
+
+                    h1 {
+                        width: initial;
+                        font-family: var.$font_Secondary;
+                        letter-spacing: 2px;
+                        font-size: 2.2vmax;
+                        color: var.$Color_White_B9;
+                        padding: 5vh 0;
 
                         @include responsive.screen_laptop {
-                            width: auto;
+                            font-size: 30px;
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        width: initial;
+                        margin: 1vmax 0;
+                        font-family: var.$font_Primary;
+                        letter-spacing: 2px;
+                        font-size: 1.9vmax;
+                        color: var.$Color_White_B9;
+                        cursor: pointer;
+
+                        @include responsive.screen_laptop {
+                            font-size: 30px;
                         }
 
                         @include responsive.screen_small {
-                            flex-direction: column;
-                        }
-
-                        span {
-                            font-size: 1.6vmax;
-                            font-family: var.$font_Primary;
-                            letter-spacing: 1px;
-                            color: var.$Color_White_B9;
-
-                            @include responsive.screen_laptop {
-                                font-size: 25px;
-                                margin: 0 7px;
-                            }
-
-                            @include responsive.screen_small {
-                                font-size: 20px;
-                                margin: 10px 0;
-                            }
-                        }
-
-                        i {
-                            font-size: 0.5vmax;
-                            color: var.$Color_White_B9;
-
-                            @include responsive.screen_small {
-                                display: none;
-                            }
+                            margin: 12px 5px;
                         }
                     }
                 }
 
-                .box_2 {
-                    @include mixins.align(relative, flex, space-between, center);
-                    width: 100%;
-                    padding: 1vmax 0;
+                .description {
+                    width: 60%;
+                    height: 100%;
+                    padding-top: 10vh;
 
                     @include responsive.screen_laptop {
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 7vh 0;
+                        width: inherit;
+                        padding: 10vh 0;
                     }
 
-                    .tecnology {
-                        position: relative;
-                        width: 40%;
-                        height: 100%;
+                    p {
+                        font-size: 2vmax;
+                        margin: 1vmax 0;
+                        font-family: var.$font_normal;
+                        font-size: 1.5vmax;
+                        text-indent: 100px;
+                        text-align: justify;
+                        color: var.$Color_White_B9;
 
                         @include responsive.screen_laptop {
-                            width: inherit;
-                        }
-
-                        h1 {
-                            width: initial;
-                            font-family: var.$font_Secondary;
-                            letter-spacing: 2px;
-                            font-size: 2.2vmax;
-                            color: var.$Color_White_B9;
-                            padding: 5vh 0;
-
-                            @include responsive.screen_laptop {
-                                font-size: 30px;
-                            }
-                        }
-
-                        span {
-                            display: block;
-                            width: initial;
-                            margin: 1vmax 0;
-                            font-family: var.$font_Primary;
-                            letter-spacing: 2px;
-                            font-size: 1.9vmax;
-                            color: var.$Color_White_B9;
-                            cursor: pointer;
-
-                            @include responsive.screen_laptop {
-                                font-size: 30px;
-                            }
-
-                            @include responsive.screen_small {
-                                margin: 12px 5px;
-                            }
+                            font-size: 20px;
+                            text-align: start;
+                            text-indent: 0;
+                            line-height: 1.3;
                         }
                     }
 
-                    .description {
-                        width: 60%;
-                        height: 100%;
-                        padding-top: 10vh;
+                    .box_btn {
+                        @include mixins.align(relative, flex, end, end);
+                        width: initial;
+                        height: auto;
+                        margin: 8vh 0;
 
-                        @include responsive.screen_laptop {
-                            width: inherit;
-                            padding: 10vh 0;
+                        @include responsive.screen_tablet {
+                            justify-content: center;
                         }
 
-                        p {
-                            font-size: 2vmax;
-                            margin: 1vmax 0;
-                            font-family: var.$font_normal;
-                            font-size: 1.5vmax;
-                            text-indent: 100px;
-                            text-align: justify;
-                            color: var.$Color_White_B9;
-
-                            @include responsive.screen_laptop {
-                                font-size: 20px;
-                                text-align: start;
-                                text-indent: 0;
-                                line-height: 1.3;
-                            }
+                        @include responsive.screen_small {
+                            margin: 100px 0 0 0;
                         }
 
-                        .box_btn {
-                            @include mixins.align(relative, flex, end, end);
-                            width: initial;
-                            height: auto;
-                            margin: 8vh 0;
-
-                            @include responsive.screen_tablet {
-                                justify-content: center;
-                            }
-
-                            @include responsive.screen_small {
-                                margin: 100px 0 0 0;
-                            }
-
-                            .btn {
-                                @include mixins.btn();
-                            }
+                        .btn {
+                            @include mixins.btn();
                         }
                     }
                 }

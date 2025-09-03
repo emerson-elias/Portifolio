@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useAssetsLoaded } from "../contexts/AssetLoaderProvider"
 
+import { Database } from "../components/projects/data/data"
+
 import Banner from "../components/home/banner/banner"
 import Loader from "../components/global/loader/loader"
 
@@ -38,7 +40,7 @@ export default function Home() {
             <NavBar />
             <Banner />
             <Bio />
-            <Project />
+            <Project data={Database} />
             <Tecnology />
             <Tools />
             <Contate />

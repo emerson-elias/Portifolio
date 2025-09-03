@@ -1,0 +1,79 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.closer_container {
+    @include mixins.align(fixed, flex, center, end);
+    top: -8vmax;
+    right: -8vmax;
+    width: 16vmax;
+    height: 16vmax;
+    padding: 2vmax;
+    border: 0.2vw solid var.$Color_White_B9;
+    transition: 1s ease;
+    border-radius: 3vmax;
+    transform: rotate(45deg);
+    overflow: hidden;
+    z-index: 9999;
+    cursor: pointer;
+
+    @include responsive.screen_laptop {
+        top: -90px;
+        right: -90px;
+        width: 180px;
+        height: 180px;
+        padding: 30px;
+    }
+
+    @include responsive.screen_small {
+        top: -75px;
+        right: -75px;
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 40%;
+        width: 1vmax;
+        height: 1vmax;
+        background-color: var.$Secundary_Color;
+        transition: 1s ease;
+        transform: scale(0);
+        border-radius: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    i {
+        font-size: 3.7vmax;
+        color: var.$Color_White_B9;
+        transition: 1s ease;
+        transform: rotate(-45deg);
+
+        @include responsive.screen_laptop {
+            font-size: 50px;
+        }
+
+        @include responsive.screen_small {
+            font-size: 40px;
+        }
+    }
+
+    &:hover {
+        transition: 1s ease;
+        border-color: var.$gray_primary;
+
+        &::after {
+            transform: scale(50);
+        }
+
+        i {
+            transform: rotate(-230deg);
+            color: var.$gray_primary;
+        }
+    }
+}

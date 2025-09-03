@@ -12,7 +12,7 @@ export default function Loader({ isExiting }) {
                 <div></div>
             </div>
             <div className={styles.loader}>
-                <span>carregando...</span>
+                <span>carregando</span>
             </div>
         </section>
     )

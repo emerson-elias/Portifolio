@@ -9,7 +9,7 @@
     overflow: hidden;
 
     .text_large {
-        @include mixins.align(relative, flex, center, center);
+        @include mixins.align(relative, flex, center, end);
         flex-direction: column;
         width: 90vw;
         height: auto;
@@ -17,7 +17,6 @@
 
         span {
             @include mixins.animate();
-            width: inherit;
             margin: 1vmax 0;
             font-size: 5vmax;
             text-align: end;
