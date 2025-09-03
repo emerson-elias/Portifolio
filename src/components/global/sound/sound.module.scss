@@ -1,47 +1,49 @@
+@use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
 .sound_container {
-    position: fixed;
-    left: -4vmax;
+    @include mixins.align(fixed, flex, center, center);
+    left: -5vmax;
     bottom: 6vmax;
+    width: 15vmax;
+    height: 4vmax;
     transform: rotate(-90deg);
     z-index: 9;
+    cursor: pointer;
 
-    @include responsive.screen_laptop {
+    background-color: rgba(188, 143, 143, 0);
+
+    @include responsive.screen_large {
         left: -50px;
         bottom: 80px;
     }
 
-    @include responsive.screen_small {
-        left: -60px;
+    @include responsive.screen_laptop {
+        width: 200px;
+        left: -65px;
     }
 
-    .sound {
-        padding: 1vmax;
-        pointer-events: all;
-        cursor: pointer;
+    @include responsive.screen_small {
+        height: 40px;
+        left: -80px;
+    }
 
-        span {
-            text-align: center;
-            font-size: 1.2vmax;
-            font-family: var.$font_Primary;
-            letter-spacing: 2px;
-            color: var.$Color_White;
+    span {
+        text-align: center;
+        font-size: 1.2vmax;
+        font-family: var.$font_Primary;
+        letter-spacing: 2px;
+        color: var.$Color_White;
 
-            @include responsive.screen_laptop {
-                font-size: 17px;
-            }
-
-            &.colorBottom {
-                color: var.$gray_primary;
-            }
+        @include responsive.screen_laptop {
+            font-size: 17px;
         }
+    }
 
-        &:hover {
-            span {
-                color: var.$Secundary_Color;
-            }
+    &:hover {
+        span {
+            color: var.$Secundary_Color;
         }
     }
 }
