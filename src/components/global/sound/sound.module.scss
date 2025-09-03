@@ -4,15 +4,13 @@
 
 .sound_container {
     @include mixins.align(fixed, flex, center, center);
-    left: -5vmax;
-    bottom: 6vmax;
-    width: 15vmax;
+    left: -4.5vmax;
+    bottom: 5vmax;
+    width: 13vmax;
     height: 4vmax;
     transform: rotate(-90deg);
     z-index: 9;
     cursor: pointer;
-
-    background-color: rgba(188, 143, 143, 0);
 
     @include responsive.screen_large {
         left: -50px;

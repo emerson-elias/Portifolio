@@ -7,6 +7,7 @@
     @include mixins.align(relative, flex, center, center);
     width: 100vw;
     height: 100vh;
+    padding: 0 5vw;
     overflow: hidden;
 
     .banner_img {
@@ -67,25 +68,31 @@
     }
 
     .title_large {
-        @include mixins.align(relative, flex, center, center);
+        @include mixins.align(relative, flex, center, start);
         flex-direction: column;
-        width: inherit;
-        height: auto;
+        width: 100%;
+        pointer-events: none;
+
+        @include responsive.screen_tablet {
+            align-items: center;
+        }
 
         span {
             @include mixins.animate();
-            width: 95vw;
+            position: relative;
+            margin: 1vmax 0;
             font-size: 15vmax;
             font-family: var.$font_Primary;
             color: var.$Color_White_B9;
             transition: var.$Transition_ease;
             mix-blend-mode: difference;
+            pointer-events: all;
 
             &:nth-child(2) {
-                padding-left: 17vw;
+                left: 15%;
 
                 @include responsive.screen_tablet {
-                    padding: 0;
+                    left: 0;
                 }
             }
 

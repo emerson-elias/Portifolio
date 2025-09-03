@@ -29,13 +29,15 @@
         }
 
         .box-tittle {
-            position: relative;
+            @include mixins.align(relative, flex, center, start);
+            flex-direction: column;
             width: 80vw;
             height: auto;
 
             span {
                 padding-left: 7vw;
                 font-size: 3vmax;
+                margin: 0.5vmax 0;
                 color: var.$Secundary_Color;
                 font-family: var.$font_Primary;
                 letter-spacing: 2px;

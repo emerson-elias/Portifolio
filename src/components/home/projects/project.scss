@@ -10,9 +10,10 @@
     overflow: hidden;
 
     .title {
-        @include mixins.align(relative, flex, space-around, center);
+        @include mixins.align(relative, flex, space-between, center);
         width: inherit;
         margin: 25vh 0;
+        padding: 0 10vw;
 
         @include responsive.screen_small {
             margin: 100px 0;
@@ -21,8 +22,7 @@
 
         h1 {
             @include mixins.animate();
-            width: 50vmax;
-            text-align: start;
+            width: 20vmax;
             font-size: 7vmax;
             color: var.$Color_White_B9;
             font-family: var.$font_Primary;
