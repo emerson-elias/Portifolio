@@ -5,7 +5,7 @@
 .sound_container {
     @include mixins.align(fixed, flex, center, center);
     left: -4.5vmax;
-    bottom: 5vmax;
+    bottom: 4vmax;
     width: 13vmax;
     height: 4vmax;
     transform: rotate(-90deg);
@@ -14,7 +14,7 @@
 
     @include responsive.screen_large {
         left: -50px;
-        bottom: 80px;
+        bottom: 70px;
     }
 
     @include responsive.screen_laptop {

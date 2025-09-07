@@ -7,14 +7,12 @@
     bottom: 0;
     opacity: 0;
     margin-right: 20px;
-    margin-bottom: 10px;
-    background-color: transparent;
     transition: var.$Transition_ease;
     z-index: 1;
 
     @include responsive.screen_small{ 
         margin-right: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     } 
 
     &.colorBottom{

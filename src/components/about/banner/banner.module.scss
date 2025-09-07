@@ -9,7 +9,6 @@
     width: 100vw;
     padding: 15vh 5vw 0 5vw;
     margin-bottom: 10vmax;
-    overflow: hidden;
 
     @include responsive.screen_small() {
         padding: 12vh 2vw 2vw 2vw;
@@ -38,6 +37,10 @@
 
             &:nth-child(2) {
                 transform: rotateZ(-10deg) translateY(80vh);
+
+                @include responsive.screen_large {
+                    transform: rotateZ(-10deg) translateY(50vh);
+                }
             }
 
             &:nth-child(3) {
