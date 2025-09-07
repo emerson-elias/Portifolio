@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useAssetsLoaded } from "../../../contexts/AssetLoaderProvider"
 
 import Modal from "./modals/modal/modal"
-import ProjectGif from "./projectGif/projectGif"
+import ProjectVideo from "./projectVideo/projectVideo"
 
 import './project.scss'
 
@@ -55,7 +55,7 @@ export default function Project({ data }) {
                             <Modal
                                 setShowModal={closeModal}
                                 title={currentProject.title}
-                                gif={currentProject.gif}
+                                video={currentProject.video}
                                 modalInfo={currentProject.modalInfo}
                                 year={currentProject.year}
                                 link={currentProject.link}
@@ -75,8 +75,9 @@ export default function Project({ data }) {
                             style={{ backgroundImage: `url(${project.img_bg})` }}
                             onClick={() => openModal(project)}
                         >
-
-                            <ProjectGif gif={project.gif} background={project.bg_view} />
+                            <div className="boxVideo">
+                                <ProjectVideo video={project.video} background={project.bg_view} />
+                            </div>
                         </div>
 
                         <div className="info">

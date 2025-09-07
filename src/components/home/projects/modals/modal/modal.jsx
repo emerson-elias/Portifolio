@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import Backdrop from '../backdrop/backdrop'
 import Linear from '../../../../global/textLianer/linear'
-import ProjectGif from '../../projectGif/projectGif'
+import ProjectVideo from '../../projectVideo/projectVideo'
 import Closer from '../../closer/closer'
 
 import styles from './modal.module.scss'
@@ -10,7 +10,7 @@ import styles from './modal.module.scss'
 const Modal = ({
     setShowModal,
     title,
-    gif,
+    video,
     modalInfo,
     year,
     link,
@@ -43,8 +43,8 @@ const Modal = ({
                     <div className={styles.columnOne}>
                         <Linear text={title} size='20vmax' />
 
-                        <div className={styles.layerImg}>
-                            <ProjectGif gif={gif} background={bg_view} />
+                        <div className={styles.layerVideo}>
+                            <ProjectVideo video={video} background={bg_view} />
                         </div>
                     </div>
 
